@@ -1,0 +1,35 @@
+{
+  "answers": {
+    "closure": {
+      "answered": 10
+    },
+    "feasibility": {
+      "SAT": 4,
+      "UNRESOLVED": 2,
+      "UNSAT": 4
+    },
+    "partition": {
+      "UNRESOLVED": 2,
+      "false": 4,
+      "true": 4
+    },
+    "selection": {
+      "nonempty": 10
+    }
+  },
+  "premises": {
+    "ge8": 7,
+    "histogram": {
+      "0": 18,
+      "1": 1,
+      "2": 10,
+      "3": 1,
+      "4": 3,
+      "8": 7
+    }
+  },
+  "verdict_reasons": {
+    "family_not_certified": 20,
+    "ok": 20
+  }
+}

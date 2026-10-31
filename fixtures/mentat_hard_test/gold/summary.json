@@ -1,0 +1,53 @@
+{
+  "answers": {
+    "closure": {
+      "answered": 80
+    },
+    "feasibility": {
+      "SAT": 20,
+      "UNRESOLVED": 10,
+      "UNSAT": 20
+    },
+    "partition": {
+      "UNRESOLVED": 8,
+      "false": 16,
+      "true": 16
+    },
+    "selection": {
+      "nonempty": 30
+    }
+  },
+  "counts": {
+    "classes": 1047,
+    "gold_constraints": 1727,
+    "interpretations": [
+      "base",
+      "alt"
+    ],
+    "unresolved_outcomes": 92
+  },
+  "premises": {
+    "ge8": 69,
+    "histogram": {
+      "0": 72,
+      "1": 7,
+      "10": 13,
+      "11": 6,
+      "12": 13,
+      "13": 4,
+      "14": 4,
+      "2": 13,
+      "3": 17,
+      "4": 5,
+      "5": 4,
+      "6": 6,
+      "7": 7,
+      "8": 13,
+      "9": 16
+    }
+  },
+  "verdict_reasons": {
+    "family_not_certified": 110,
+    "ok": 90
+  }
+}

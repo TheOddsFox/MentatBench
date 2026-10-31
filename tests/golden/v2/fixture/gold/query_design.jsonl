@@ -1,0 +1,12 @@
+{"anchor": true, "family": "closure", "league": "L1", "qid": "closure-0"}
+{"anchor": true, "family": "selection", "league": "L1", "qid": "selection-0"}
+{"anchor": true, "family": "feasibility", "league": "L1", "qid": "feasibility-0"}
+{"anchor": true, "family": "partition", "league": "L1", "qid": "partition-0"}
+{"anchor": true, "family": "closure", "league": "L2", "qid": "closure-1"}
+{"anchor": true, "family": "selection", "league": "L2", "qid": "selection-1"}
+{"anchor": true, "family": "feasibility", "league": "L2", "qid": "feasibility-1"}
+{"anchor": true, "family": "partition", "league": "L2", "qid": "partition-1"}
+{"anchor": true, "family": "closure", "league": "L3", "qid": "closure-2"}
+{"anchor": true, "family": "selection", "league": "L3", "qid": "selection-2"}
+{"anchor": true, "family": "feasibility", "league": "L3", "qid": "feasibility-2"}
+{"anchor": true, "family": "partition", "league": "L3", "qid": "partition-2"}

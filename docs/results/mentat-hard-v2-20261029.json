@@ -1,0 +1,305 @@
+{
+  "ci": "mentat-hard-v2-20261029-ci.json",
+  "code_commit": "36cd81e (python tree identical to b8990f1)",
+  "date": "2026-10-29",
+  "fixture": "mentat_hard_test v2 1f4613bec957dd4de9b261b48241dbeeb3faf127a1a7686a6cf938b9a6aefc2e",
+  "prereg": "docs/results/mentat-hard-v2-prereg-20261029.md",
+  "q_n_kind": "repaired base; strict Q_N is 0 when base_repaired",
+  "reference": "d3_27b-q8_0",
+  "runs": {
+    "clef-flash_9b": {
+      "Q_N": 12.4401,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 49,
+        "unresolved_caught": 7,
+        "unresolved_truth": 92
+      },
+      "build_s": 1235.1,
+      "components": {
+        "bindings": 0.0839,
+        "groups": 0.1936,
+        "readings": 0.39,
+        "relations": 0.4186
+      },
+      "mcc_mean": 0.2715,
+      "mcc_mean_3": 0.232,
+      "readings_detail": {
+        "alt_repeats_base": 74,
+        "alt_right": 23,
+        "ambiguous_rows": 92,
+        "base_right": 54,
+        "decoy_both_right": 49,
+        "decoy_rows": 88
+      },
+      "relation_floor": "3.169600009918213",
+      "strict_Q_N": 0.0
+    },
+    "clef_27b-q8_0": {
+      "Q_N": 14.3235,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 21,
+        "unresolved_caught": 14,
+        "unresolved_truth": 92
+      },
+      "build_s": 3565.1,
+      "components": {
+        "bindings": 0.3098,
+        "groups": 0.1725,
+        "readings": 0.5279,
+        "relations": 0.4616
+      },
+      "mcc_mean": 0.3679,
+      "mcc_mean_3": 0.3146,
+      "readings_detail": {
+        "alt_repeats_base": 61,
+        "alt_right": 25,
+        "ambiguous_rows": 92,
+        "base_right": 58,
+        "decoy_both_right": 70,
+        "decoy_rows": 88
+      },
+      "relation_floor": "1.9682590961456299",
+      "strict_Q_N": 0.0
+    },
+    "d3_27b-q8_0": {
+      "Q_N": 19.2913,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 0,
+        "unresolved_caught": 0,
+        "unresolved_truth": 92
+      },
+      "build_s": 2795.6,
+      "components": {
+        "bindings": 0.0,
+        "groups": 0.1991,
+        "readings": 0.5894,
+        "relations": 0.7036
+      },
+      "mcc_mean": 0.373,
+      "mcc_mean_3": 0.3009,
+      "readings_detail": {
+        "alt_repeats_base": 71,
+        "alt_right": 1,
+        "ambiguous_rows": 92,
+        "base_right": 70,
+        "decoy_both_right": 88,
+        "decoy_rows": 88
+      },
+      "relation_floor": "0.0004711151123046875",
+      "strict_Q_N": 0.0
+    },
+    "d3_9b-q8_0": {
+      "Q_N": 16.3572,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 8,
+        "unresolved_caught": 0,
+        "unresolved_truth": 92
+      },
+      "build_s": 964.0,
+      "components": {
+        "bindings": -0.0092,
+        "groups": 0.1178,
+        "readings": 0.5628,
+        "relations": 0.5485
+      },
+      "mcc_mean": 0.305,
+      "mcc_mean_3": 0.219,
+      "readings_detail": {
+        "alt_repeats_base": 79,
+        "alt_right": 16,
+        "ambiguous_rows": 92,
+        "base_right": 57,
+        "decoy_both_right": 80,
+        "decoy_rows": 88
+      },
+      "relation_floor": "0.8568763732910155",
+      "strict_Q_N": 0.0
+    },
+    "empty": {
+      "Q_N": 17.0271,
+      "base_repaired": false,
+      "build_s": 13.7,
+      "relation_floor": null,
+      "strict_Q_N": 17.0271
+    },
+    "gold_view": {
+      "Q_N": 100.0,
+      "base_repaired": false,
+      "bindings_detail": {
+        "flagged_unresolved": 92,
+        "unresolved_caught": 92,
+        "unresolved_truth": 92
+      },
+      "build_s": 0.9,
+      "components": {
+        "bindings": 1.0,
+        "groups": 1.0,
+        "readings": 1.0,
+        "relations": 1.0
+      },
+      "mcc_mean": 1.0,
+      "mcc_mean_3": 1.0,
+      "readings_detail": {
+        "alt_repeats_base": 0,
+        "alt_right": 92,
+        "ambiguous_rows": 92,
+        "base_right": 92,
+        "decoy_both_right": 88,
+        "decoy_rows": 88
+      },
+      "relation_floor": null,
+      "strict_Q_N": 100.0
+    },
+    "kev_9b-bf16": {
+      "Q_N": 15.3872,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 129,
+        "unresolved_caught": 2,
+        "unresolved_truth": 92
+      },
+      "build_s": 1134.6,
+      "components": {
+        "bindings": -0.0185,
+        "groups": 0.0318,
+        "readings": 0.3466,
+        "relations": 0.3993
+      },
+      "mcc_mean": 0.1898,
+      "mcc_mean_3": 0.1375,
+      "readings_detail": {
+        "alt_repeats_base": 77,
+        "alt_right": 14,
+        "ambiguous_rows": 92,
+        "base_right": 28,
+        "decoy_both_right": 51,
+        "decoy_rows": 88
+      },
+      "relation_floor": "1.390245314691547",
+      "strict_Q_N": 0.0
+    },
+    "laya_latest": {
+      "Q_N": 12.3861,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 2643,
+        "unresolved_caught": 84,
+        "unresolved_truth": 92
+      },
+      "build_s": 231.8,
+      "components": {
+        "bindings": 0.0195,
+        "groups": 0.0407,
+        "readings": 0.3303,
+        "relations": 0.0571
+      },
+      "mcc_mean": 0.1119,
+      "mcc_mean_3": 0.0391,
+      "readings_detail": {
+        "alt_repeats_base": 85,
+        "alt_right": 49,
+        "ambiguous_rows": 92,
+        "base_right": 35,
+        "decoy_both_right": 42,
+        "decoy_rows": 88
+      },
+      "relation_floor": "1.7976931348623157e+308",
+      "strict_Q_N": 0.0
+    },
+    "nimble_9b-bf16": {
+      "Q_N": 11.0135,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 0,
+        "unresolved_caught": 0,
+        "unresolved_truth": 92
+      },
+      "build_s": 1301.3,
+      "components": {
+        "bindings": 0.0,
+        "groups": 0.0914,
+        "readings": 0.456,
+        "relations": 0.4108
+      },
+      "mcc_mean": 0.2395,
+      "mcc_mean_3": 0.1674,
+      "readings_detail": {
+        "alt_repeats_base": 76,
+        "alt_right": 23,
+        "ambiguous_rows": 92,
+        "base_right": 52,
+        "decoy_both_right": 57,
+        "decoy_rows": 88
+      },
+      "relation_floor": "4.9401350021362305",
+      "strict_Q_N": 0.0
+    },
+    "oracle": {
+      "Q_N": 100.0,
+      "base_repaired": false,
+      "build_s": 0.4,
+      "relation_floor": null,
+      "strict_Q_N": 100.0
+    },
+    "pplx-decider_27b": {
+      "Q_N": 13.1157,
+      "base_repaired": true,
+      "bindings_detail": {
+        "flagged_unresolved": 0,
+        "unresolved_caught": 0,
+        "unresolved_truth": 92
+      },
+      "build_s": 2914.4,
+      "components": {
+        "bindings": 0.0,
+        "groups": 0.1262,
+        "readings": 0.6339,
+        "relations": 0.5381
+      },
+      "mcc_mean": 0.3246,
+      "mcc_mean_3": 0.2215,
+      "readings_detail": {
+        "alt_repeats_base": 84,
+        "alt_right": 12,
+        "ambiguous_rows": 92,
+        "base_right": 79,
+        "decoy_both_right": 84,
+        "decoy_rows": 88
+      },
+      "relation_floor": "1.2975387089085118",
+      "strict_Q_N": 0.0
+    },
+    "rules": {
+      "Q_N": 32.3156,
+      "base_repaired": false,
+      "bindings_detail": {
+        "flagged_unresolved": 0,
+        "unresolved_caught": 0,
+        "unresolved_truth": 92
+      },
+      "build_s": 0.9,
+      "components": {
+        "bindings": 0.0,
+        "groups": 0.0,
+        "readings": 0.1056,
+        "relations": 0.2775
+      },
+      "mcc_mean": 0.0958,
+      "mcc_mean_3": 0.0925,
+      "readings_detail": {
+        "alt_repeats_base": 62,
+        "alt_right": 23,
+        "ambiguous_rows": 92,
+        "base_right": 34,
+        "decoy_both_right": 11,
+        "decoy_rows": 88
+      },
+      "relation_floor": null,
+      "strict_Q_N": 32.3156
+    }
+  }
+}

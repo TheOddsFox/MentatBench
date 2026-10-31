@@ -1,0 +1,19 @@
+{
+ "dev": {
+  "content_hash": "218003c63135ace753a1b2449ee002dc2813c7e99bed8c0956fd5a52187c3964",
+  "name": "mentat_hard_dev",
+  "path": "<scratch>\\v31\\builds\\final2\\dev5",
+  "seed": 20261027,
+  "split": "dev",
+  "version": "3.1"
+ },
+ "heldout": {
+  "content_hash": "208c3d36682aae43e3e53901bcb865d1fbbfda723c81a7ba525f33f35bfaee26",
+  "name": "mentat_hard_test",
+  "path": "<scratch>\\v31-heldout",
+  "seed": 777000001,
+  "split": "test",
+  "version": "3.1"
+ },
+ "sample_seed": "audit-v3.1:2026-10-30"
+}

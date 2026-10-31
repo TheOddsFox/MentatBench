@@ -1,0 +1,33 @@
+{"id": "L1:0", "op": "decide_binding", "qid": "b00"}
+{"id": "L1:1", "op": "decide_binding", "qid": "b01"}
+{"a": "L1:0", "b": "L2:0", "op": "decide_relation", "qid": "r00"}
+{"a": "L1:1", "b": "L2:0", "op": "decide_relation", "qid": "r01"}
+{"a": "L1:2", "b": "L2:0", "op": "decide_relation", "qid": "r02"}
+{"a": "L1:3", "b": "L2:0", "op": "decide_relation", "qid": "r03"}
+{"members": ["L1:0", "L1:1", "L1:2"], "op": "decide_group", "qid": "g00", "source": "curated"}
+{"members": ["L1:0", "L1:2", "L1:3"], "op": "decide_group", "qid": "g01", "source": "curated"}
+{"members": ["L1:1", "L1:2"], "op": "decide_group", "qid": "g02", "source": "curated"}
+{"members": ["L1:4", "L1:0", "L1:1", "L1:2", "L2:4"], "op": "decide_group", "qid": "rd00", "source": "reading"}
+{"members": ["L1:3", "L1:0", "L1:1", "L1:2", "L2:4"], "op": "decide_group", "qid": "rd01", "source": "reading"}
+{"id": "L2:0", "op": "decide_binding", "qid": "b10"}
+{"id": "L2:1", "op": "decide_binding", "qid": "b11"}
+{"a": "L2:0", "b": "L3:0", "op": "decide_relation", "qid": "r10"}
+{"a": "L2:1", "b": "L3:0", "op": "decide_relation", "qid": "r11"}
+{"a": "L2:2", "b": "L3:0", "op": "decide_relation", "qid": "r12"}
+{"a": "L2:3", "b": "L3:0", "op": "decide_relation", "qid": "r13"}
+{"members": ["L2:0", "L2:1", "L2:2"], "op": "decide_group", "qid": "g10", "source": "curated"}
+{"members": ["L2:0", "L2:2", "L2:3"], "op": "decide_group", "qid": "g11", "source": "curated"}
+{"members": ["L2:1", "L2:2"], "op": "decide_group", "qid": "g12", "source": "curated"}
+{"members": ["L2:4", "L2:0", "L2:1", "L2:2", "L3:4"], "op": "decide_group", "qid": "rd10", "source": "reading"}
+{"members": ["L2:3", "L2:0", "L2:1", "L2:2", "L3:4"], "op": "decide_group", "qid": "rd11", "source": "reading"}
+{"id": "L3:0", "op": "decide_binding", "qid": "b20"}
+{"id": "L3:1", "op": "decide_binding", "qid": "b21"}
+{"a": "L3:0", "b": "L1:0", "op": "decide_relation", "qid": "r20"}
+{"a": "L3:1", "b": "L1:0", "op": "decide_relation", "qid": "r21"}
+{"a": "L3:2", "b": "L1:0", "op": "decide_relation", "qid": "r22"}
+{"a": "L3:3", "b": "L1:0", "op": "decide_relation", "qid": "r23"}
+{"members": ["L3:0", "L3:1", "L3:2"], "op": "decide_group", "qid": "g20", "source": "curated"}
+{"members": ["L3:0", "L3:2", "L3:3"], "op": "decide_group", "qid": "g21", "source": "curated"}
+{"members": ["L3:1", "L3:2"], "op": "decide_group", "qid": "g22", "source": "curated"}
+{"members": ["L3:4", "L3:0", "L3:1", "L3:2", "L1:4"], "op": "decide_group", "qid": "rd20", "source": "reading"}
+{"members": ["L3:3", "L3:0", "L3:1", "L3:2", "L1:4"], "op": "decide_group", "qid": "rd21", "source": "reading"}

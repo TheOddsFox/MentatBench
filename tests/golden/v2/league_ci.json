@@ -1,0 +1,149 @@
+{
+ "B": 50,
+ "fixture": "fixture",
+ "gaps": {
+  "wrong": {
+   "Q_N": {
+    "hi": 0.0,
+    "lo": 0.0,
+    "point": 0.0
+   },
+   "bindings": {
+    "hi": 1.0,
+    "lo": 0.0,
+    "point": 0.292893
+   },
+   "groups": {
+    "hi": 0.591752,
+    "lo": 0.462543,
+    "point": 0.534941
+   },
+   "held_out_relations": {
+    "hi": 0.47682,
+    "lo": 0.0,
+    "point": 0.246222
+   },
+   "readings": {
+    "hi": 1.0,
+    "lo": 1.0,
+    "point": 1.0
+   },
+   "relations": {
+    "hi": 0.366667,
+    "lo": 0.119357,
+    "point": 0.249823
+   }
+  }
+ },
+ "interval": "95% percentile (numpy, linear) of the draws",
+ "layout": "relation-headline/1",
+ "leagues": 3,
+ "legacy_means": false,
+ "q_n_kind": "repaired",
+ "reference": "run",
+ "roles": {
+  "Q_N": "diagnostic",
+  "bindings": "secondary",
+  "groups": "diagnostic",
+  "held_out_relations": "diagnostic",
+  "readings": "diagnostic",
+  "relations": "primary"
+ },
+ "runs": {
+  "run": {
+   "adapter": null,
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 6,
+    "groups": 9,
+    "held_out_relations": 6,
+    "readings": 12,
+    "relations": 12
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 100.0,
+     "lo": 100.0,
+     "point": 100.0
+    },
+    "bindings": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "groups": {
+     "hi": 1.0,
+     "lo": 0.666667,
+     "point": 0.85769
+    },
+    "held_out_relations": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "readings": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "relations": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    }
+   }
+  },
+  "wrong": {
+   "adapter": null,
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 6,
+    "groups": 9,
+    "held_out_relations": 6,
+    "readings": 12,
+    "relations": 12
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 100.0,
+     "lo": 100.0,
+     "point": 100.0
+    },
+    "bindings": {
+     "hi": 1.0,
+     "lo": 0.0,
+     "point": 0.707107
+    },
+    "groups": {
+     "hi": 0.408248,
+     "lo": 0.204124,
+     "point": 0.322749
+    },
+    "held_out_relations": {
+     "hi": 1.0,
+     "lo": 0.52318,
+     "point": 0.753778
+    },
+    "readings": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "point": 0.0
+    },
+    "relations": {
+     "hi": 0.880643,
+     "lo": 0.633333,
+     "point": 0.750177
+    }
+   }
+  }
+ },
+ "seed": 0,
+ "stamp": {
+  "content_hash": "abababababababababababababababababababababababababababababababab",
+  "name": "golden_v2",
+  "status": "active",
+  "version": "2"
+ }
+}

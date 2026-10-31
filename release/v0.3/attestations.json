@@ -1,0 +1,39 @@
+{
+  "schema": "mentat-bench-attestations/1",
+  "gates": {
+    "6": {
+      "statement": "Every hidden query of the dev and test fixtures has a verdict row; certificates are checked by the engine; gold_view and the oracle reach Q_N 100 on dev, test and the private split.",
+      "evidence": [
+        "tests/test_mentat_hard_v3_gold_view.py",
+        "docs/results/mentat-hard-v3-20261030.md",
+        "docs/results/mentat-hard-v3-private-20261030.md",
+        "fixtures/mentat_hard_dev/gold/verdicts.jsonl",
+        "fixtures/mentat_hard_test/gold/verdicts.jsonl"
+      ],
+      "signer": "TheOddsFox (repository owner)",
+      "date": "2026-10-31"
+    },
+    "8": {
+      "statement": "Blinded two-judge answerability audits (#76, #80); the tool logs show the judges read only their instructions and the sample; the adjudication rule was pre-registered.",
+      "evidence": [
+        "docs/results/mentat-hard-v3-audit/notes.md",
+        "docs/results/mentat-hard-v3.1-audit/notes.md",
+        "docs/results/mentat-hard-v3-audit/JUDGE.md",
+        "docs/results/mentat-hard-v3.1-audit/JUDGE.md",
+        "docs/results/mentat-hard-v3-prereg-20261030.md"
+      ],
+      "signer": "TheOddsFox (repository owner)",
+      "date": "2026-10-31"
+    },
+    "11": {
+      "statement": "The public correction process: docs/corrections.md, the versioned registry fixtures/VERSIONS.json, the regenerate check, and superseded versions kept.",
+      "evidence": [
+        "docs/corrections.md",
+        "fixtures/VERSIONS.json",
+        "python/mentat_bench/corrections.py"
+      ],
+      "signer": "TheOddsFox (repository owner)",
+      "date": "2026-10-31"
+    }
+  }
+}

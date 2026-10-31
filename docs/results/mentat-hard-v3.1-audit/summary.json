@@ -1,0 +1,432 @@
+{
+ "all_pass": true,
+ "bar": 0.8,
+ "judges": [
+  "judge1_answers",
+  "judge2_answers"
+ ],
+ "parts": {
+  "bindings": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "deep_relations": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "groups": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 0.9667,
+     "correct": 29,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "groups_kind": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 0.9667,
+     "correct": 29,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30
+  },
+  "groups_kind_decoy": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 15,
+     "missing": 0,
+     "n": 15
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 15,
+     "missing": 0,
+     "n": 15
+    }
+   },
+   "n": 15
+  },
+  "groups_kind_real": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 0.9333,
+     "correct": 14,
+     "missing": 0,
+     "n": 15
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 15,
+     "missing": 0,
+     "n": 15
+    }
+   },
+   "n": 15
+  },
+  "groups_real": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 0.9333,
+     "correct": 14,
+     "missing": 0,
+     "n": 15
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 15,
+     "missing": 0,
+     "n": 15
+    }
+   },
+   "n": 15
+  },
+  "heldout_relations": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 0.9667,
+     "correct": 29,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "reading_decoys": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "readings_alt": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "readings_base": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "relations": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 30,
+     "missing": 0,
+     "n": 30
+    }
+   },
+   "n": 30,
+   "pass": true
+  },
+  "relations_EQUIV": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    }
+   },
+   "n": 6
+  },
+  "relations_EXCLUDES": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    }
+   },
+   "n": 6
+  },
+  "relations_IMPLIED_BY": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    }
+   },
+   "n": 6
+  },
+  "relations_IMPLIES": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    }
+   },
+   "n": 6
+  },
+  "relations_NONE": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 6,
+     "missing": 0,
+     "n": 6
+    }
+   },
+   "n": 6
+  },
+  "relations_real": {
+   "adjudicated": {
+    "derivable": 0,
+    "not_derivable": 0,
+    "unadjudicated": 0
+   },
+   "both_missed": [],
+   "judges": {
+    "judge1_answers": {
+     "acc": 1.0,
+     "correct": 24,
+     "missing": 0,
+     "n": 24
+    },
+    "judge2_answers": {
+     "acc": 1.0,
+     "correct": 24,
+     "missing": 0,
+     "n": 24
+    }
+   },
+   "n": 24
+  }
+ }
+}

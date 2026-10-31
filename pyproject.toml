@@ -1,0 +1,13 @@
+[project]
+name = "mentat_bench"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy"]
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.pytest.ini_options]
+markers = ["slow: long-running tests (independent audits, regeneration)"]
+pythonpath = ["python"]
+testpaths = ["tests"]

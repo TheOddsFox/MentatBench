@@ -1,0 +1,197 @@
+{
+  "build_policy": {
+    "adapter": "gold_view",
+    "admit": true,
+    "admit_max_literals": 131072,
+    "batch_size": 1,
+    "candidates_gold_informed": true,
+    "candidates_sha256": "3e6a1d94d4ea8b547f3a685bb750de0bab3adcc6eb93bd26dfb7bcb5488e8965",
+    "complement_dedup": false,
+    "complement_fallback": "all",
+    "gold_backed": true,
+    "group_budget_frac": 1.0,
+    "group_max_members": 64,
+    "group_sources": [
+      "file"
+    ],
+    "groups": true,
+    "groups_disabled_reason": null,
+    "max_calls": null,
+    "max_df": 4000,
+    "max_group_calls": 20000,
+    "max_group_drop_frac": 0.9,
+    "max_group_drops": 20000,
+    "max_pairs": null,
+    "max_relation_drop_frac": 0.25,
+    "max_relation_drops": 20000,
+    "model": null,
+    "pair_order": "index",
+    "relation_floor": null,
+    "repair_budget_s": null,
+    "top_k": 24
+  },
+  "cell": "<external>/gold_view#524f3cfe",
+  "engine": {
+    "captured_at": "run_time",
+    "mtime_utc": "2026-10-29T16:26:48+00:00",
+    "path": "target/release/mb-engine.exe",
+    "sha256": "2df1bdfbb802612e1a93857c2fb8ee5cfc17fb164c54c55034cb8edc4ed7937c"
+  },
+  "fixture": {
+    "captured_at": "run_time",
+    "files": {
+      "candidates.jsonl": "3e6a1d94d4ea8b547f3a685bb750de0bab3adcc6eb93bd26dfb7bcb5488e8965",
+      "corpus.jsonl": "a3e8efd14fa852971b4005bcad8a96d5102e87b085fabbd4cc2613c848db34e0",
+      "fixture.json": "cdd6436a6f79b3c8c088b95164ea27998a2f1d85e92a05d56260a99f50c40bde",
+      "gold/answers.jsonl": "36b76ee6b24b865997c3481317f5de4984ca9afbbc64d94d239e5ac501fe1f68",
+      "gold/bindings.jsonl": "624fdfa89178a2a8db4fc081c9a1a5eebf3a61a0e03711271aee3efd7079e5a1",
+      "gold/meta.jsonl": "566069f6cf724592b2a3895eca25c4cb30a812aa515bd78fd7aa5ff1d2587a30",
+      "gold/provenance.jsonl": "50d19ee621654e66853d86b6e686cd5b549a08a3393b5c92866edbcd0c6828ae",
+      "gold/query_design.jsonl": "10f20356621072497cbf1d6068a2e10352cca605131d0e1bf78f842c29751c1a",
+      "gold/suite_labels.jsonl": "638a17384284cb953e0a649aae4c03a23f52fe611640adbb6e876825dc2691d5",
+      "gold/summary.json": "ca540a5636f747ac56957315b1d0016c8ab3f594b135f5ce10e248f157a46f76",
+      "gold/theory.json": "7974049518eb30eafbcf59c2690d85ad7977137abe051be643b0962e32bc1987",
+      "gold/usage.json": "90d35a556ad3005b046494b9b32c2c0cd28932123ca2a5cb38f5f11761250234",
+      "gold/verdicts.jsonl": "e7b8135f3ae3ec8e03f1e61c0f2e5d08cb1d50ddca1339387ce9d84f3727f376",
+      "gold/world.json": "c963394a252ca8930eff7da86e6e85945cc8742b27555ba85d940ceb178f557b",
+      "queries.jsonl": "f1d37ae2f665da19047f5e5c580ebd8108d67d90c32d368387914d1b02cbc8a4"
+    },
+    "name": "mentat_hard_test",
+    "path": "fixtures/mentat_hard_test",
+    "version": "2"
+  },
+  "generated_utc": "2026-10-29T18:03:09+00:00",
+  "hardware": {
+    "cpu_count": 32,
+    "cpu_model": "AMD64 Family 25 Model 8 Stepping 2, AuthenticAMD",
+    "cuda": {
+      "CUDA_DEVICE_ORDER": null,
+      "CUDA_VISIBLE_DEVICES": ""
+    },
+    "gpu_count": 2,
+    "gpus": [
+      {
+        "driver": "576.02",
+        "index": 0,
+        "memory_mb": 49140.0,
+        "name": "NVIDIA RTX A6000",
+        "uuid": "GPU-2ab4ac0a-07d7-54b5-b757-0156f2ecc91b"
+      },
+      {
+        "driver": "576.02",
+        "index": 1,
+        "memory_mb": 49140.0,
+        "name": "NVIDIA RTX A6000",
+        "uuid": "GPU-42afa11f-6cd7-9a92-3f41-668f3b0654ca"
+      }
+    ],
+    "gpus_captured_at": "run_time",
+    "machine": "AMD64",
+    "os": "Windows-10-10.0.26200-SP0",
+    "ram_gb": 255.84
+  },
+  "model": {
+    "adapter": "gold_view",
+    "calibrate": null,
+    "dtype": null,
+    "id": null,
+    "prefix_cache": null,
+    "revision": null
+  },
+  "profile": {
+    "captured_at": "run_time",
+    "changed_since_run": false,
+    "content": {
+      "build_deadline_s": 5400.0,
+      "max_bytes": 536870912,
+      "max_expr_nodes": 2000000,
+      "max_interpretations": 8,
+      "max_weight_bits": 32,
+      "query_timeout_s": 60.0,
+      "spend_ceiling_usd": 25.0
+    },
+    "path": "profiles/mentat-hard-v1.json",
+    "sha256": "d8804e8167219dfe189a399cbffe724331dad2537beb1a50999b74ed05752a02",
+    "sha256_now": "d8804e8167219dfe189a399cbffe724331dad2537beb1a50999b74ed05752a02"
+  },
+  "repairs": {
+    "base_repaired": false,
+    "contradiction_rate": 0.0,
+    "derived_dropped": 0,
+    "equiv_rejected": 0,
+    "group_errors": 0,
+    "group_scope_rejected": 0,
+    "groups_downgraded": 0,
+    "groups_dropped": 0,
+    "groups_dropped_pct": 0.0,
+    "prior_calls": 0,
+    "relation_rejected": null,
+    "relations_asked": 10000,
+    "relations_dropped": 0,
+    "resumed": false
+  },
+  "repo": {
+    "captured_at": "run_time",
+    "commit": "8255fe4b3535c739012b1a35d8bd37165e7b7927",
+    "dirty": false
+  },
+  "schema": "mentat-bench-runcard/1",
+  "scores": {
+    "Q_N_repaired": 100.0,
+    "Q_N_strict": 100.0,
+    "active_Q_N": "not_applicable",
+    "anchor_Q_N": 100.0,
+    "base_repaired": false,
+    "decision_bind_mcc": 1.0,
+    "decision_grp_mcc": 1.0,
+    "decision_read_mcc": 1.0,
+    "decision_rel_mcc": 1.0,
+    "exact_query_success": 1.0,
+    "false_entailment": 0,
+    "false_refutation": 0,
+    "families": {
+      "closure": 1.0,
+      "feasibility": 1.0,
+      "partition": 1.0,
+      "selection": 1.0
+    },
+    "weighted_Q_N": 100.0
+  },
+  "status": {
+    "ceiling": null,
+    "incomplete": false,
+    "partial": [],
+    "status": "complete"
+  },
+  "submission": {
+    "digest": "e2283075b73bb2645b12d18816169cb80ac07005a6603c6b1667087e332cf1ee",
+    "seal_sha256": "6c1650e14c8d27e723107eb1dbc382a69ec9b52dbe43bc56a3b48ee19ac3b3a6",
+    "sealed_at_utc": "2026-10-29T17:28:15+00:00",
+    "sealed_files": 7
+  },
+  "timestamps": {
+    "captured_utc": "2026-10-29T17:28:12+00:00",
+    "cell_json_utc": "2026-10-29T17:28:16+00:00",
+    "score_json_utc": "2026-10-29T17:28:16+00:00",
+    "sealed_at_utc": "2026-10-29T17:28:15+00:00"
+  },
+  "usage": {
+    "call_seconds": 0.027015,
+    "calls": 14194,
+    "cost_usd": 0.0,
+    "gpu_seconds": 0,
+    "items": 14194,
+    "peak_rss_mb": 124.418,
+    "retries": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "wall_seconds": 0.975
+  },
+  "versions": {
+    "captured_at": "run_time",
+    "duckdb": "1.4.4",
+    "python": "3.11.9",
+    "torch": "2.7.1+cu118",
+    "transformers": "4.52.4"
+  }
+}
