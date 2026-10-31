@@ -1,0 +1,33 @@
+Bar: every judge >= 80% on a part. Pass or fail:
+  part                   n   judge1_answers   judge2_answers   result
+  bindings              30      30/30 1.000      30/30 1.000     PASS
+  relations             30      29/30 0.967      29/30 0.967     PASS
+  groups                30      30/30 1.000      30/30 1.000     PASS
+  readings_base         30      30/30 1.000      30/30 1.000     PASS
+  readings_alt          30      30/30 1.000      30/30 1.000     PASS
+  reading_decoys        30      30/30 1.000      30/30 1.000     PASS
+  heldout_relations     30      30/30 1.000      30/30 1.000     PASS
+
+Report only (no bar):
+  part                   n   judge1_answers   judge2_answers   result
+  groups_kind           30      30/30 1.000      30/30 1.000         
+  groups_kind_decoy     15      15/15 1.000      15/15 1.000         
+  groups_kind_real      15      15/15 1.000      15/15 1.000         
+  groups_real           15      15/15 1.000      15/15 1.000         
+  relations_EQUIV        6       6/6  1.000       6/6  1.000         
+  relations_EXCLUDES     6       6/6  1.000       6/6  1.000         
+  relations_IMPLIED_BY   6       5/6  0.833       6/6  1.000         
+  relations_IMPLIES      6       6/6  1.000       5/6  0.833         
+  relations_NONE         6       6/6  1.000       6/6  1.000         
+  relations_real        24      23/24 0.958      23/24 0.958         
+
+Both judges missed (kept in the score; adjudicated as derivable from the prompt or not):
+  bindings               0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+  relations              0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+  groups                 0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+  readings_base          0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+  readings_alt           0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+  reading_decoys         0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+  heldout_relations      0 missed by both: derivable 0, not derivable 0, unadjudicated 0
+
+all pass-parts pass: True

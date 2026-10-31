@@ -1,0 +1,206 @@
+{
+  "build_policy": {
+    "adapter": "local",
+    "admit": true,
+    "admit_max_literals": 131072,
+    "batch_size": 128,
+    "candidates_gold_informed": true,
+    "candidates_sha256": "3e6a1d94d4ea8b547f3a685bb750de0bab3adcc6eb93bd26dfb7bcb5488e8965",
+    "complement_dedup": false,
+    "complement_fallback": "all",
+    "gold_backed": false,
+    "group_budget_frac": 1.0,
+    "group_max_members": 64,
+    "group_sources": [
+      "file"
+    ],
+    "groups": true,
+    "groups_disabled_reason": null,
+    "max_calls": null,
+    "max_df": 4000,
+    "max_group_calls": 20000,
+    "max_group_drop_frac": 0.9,
+    "max_group_drops": 20000,
+    "max_pairs": null,
+    "max_relation_drop_frac": 0.25,
+    "max_relation_drops": 20000,
+    "model": {
+      "child_version": "5",
+      "id": "kev:9b-bf16",
+      "kind": "local",
+      "ollama_version": "0.40.11",
+      "prompt_sha256": "15c9c1ce78e6faae14a17dc750f7bc0ec9b10b948f548a2c17afc2f1975f6833",
+      "revision": "925e229ef61d4490c842c289a4d2456fac4cd25b0acfb01b1e9e971a04109d3f"
+    },
+    "pair_order": "index",
+    "relation_floor": 1.390245314691547,
+    "repair_budget_s": null,
+    "top_k": 24
+  },
+  "cell": "<external>/kev_9b-bf16#184bcf1e",
+  "engine": {
+    "captured_at": "run_time",
+    "mtime_utc": "2026-10-27T17:32:46+00:00",
+    "path": "<external>/mb-engine-mh.exe",
+    "sha256": "2df1bdfbb802612e1a93857c2fb8ee5cfc17fb164c54c55034cb8edc4ed7937c"
+  },
+  "fixture": {
+    "captured_at": "run_time",
+    "files": {
+      "candidates.jsonl": "3e6a1d94d4ea8b547f3a685bb750de0bab3adcc6eb93bd26dfb7bcb5488e8965",
+      "corpus.jsonl": "a3e8efd14fa852971b4005bcad8a96d5102e87b085fabbd4cc2613c848db34e0",
+      "fixture.json": "cdd6436a6f79b3c8c088b95164ea27998a2f1d85e92a05d56260a99f50c40bde",
+      "gold/answers.jsonl": "36b76ee6b24b865997c3481317f5de4984ca9afbbc64d94d239e5ac501fe1f68",
+      "gold/bindings.jsonl": "624fdfa89178a2a8db4fc081c9a1a5eebf3a61a0e03711271aee3efd7079e5a1",
+      "gold/meta.jsonl": "566069f6cf724592b2a3895eca25c4cb30a812aa515bd78fd7aa5ff1d2587a30",
+      "gold/provenance.jsonl": "50d19ee621654e66853d86b6e686cd5b549a08a3393b5c92866edbcd0c6828ae",
+      "gold/query_design.jsonl": "10f20356621072497cbf1d6068a2e10352cca605131d0e1bf78f842c29751c1a",
+      "gold/suite_labels.jsonl": "638a17384284cb953e0a649aae4c03a23f52fe611640adbb6e876825dc2691d5",
+      "gold/summary.json": "ca540a5636f747ac56957315b1d0016c8ab3f594b135f5ce10e248f157a46f76",
+      "gold/theory.json": "7974049518eb30eafbcf59c2690d85ad7977137abe051be643b0962e32bc1987",
+      "gold/usage.json": "90d35a556ad3005b046494b9b32c2c0cd28932123ca2a5cb38f5f11761250234",
+      "gold/verdicts.jsonl": "e7b8135f3ae3ec8e03f1e61c0f2e5d08cb1d50ddca1339387ce9d84f3727f376",
+      "gold/world.json": "c963394a252ca8930eff7da86e6e85945cc8742b27555ba85d940ceb178f557b",
+      "queries.jsonl": "f1d37ae2f665da19047f5e5c580ebd8108d67d90c32d368387914d1b02cbc8a4"
+    },
+    "name": "mentat_hard_test",
+    "path": "fixtures/mentat_hard_test",
+    "version": "2"
+  },
+  "generated_utc": "2026-10-29T18:03:06+00:00",
+  "hardware": {
+    "cpu_count": 32,
+    "cpu_model": "AMD64 Family 25 Model 8 Stepping 2, AuthenticAMD",
+    "cuda": {
+      "CUDA_DEVICE_ORDER": null,
+      "CUDA_VISIBLE_DEVICES": null
+    },
+    "gpu_count": 2,
+    "gpus": [
+      {
+        "driver": "576.02",
+        "index": 0,
+        "memory_mb": 49140.0,
+        "name": "NVIDIA RTX A6000",
+        "uuid": "GPU-2ab4ac0a-07d7-54b5-b757-0156f2ecc91b"
+      },
+      {
+        "driver": "576.02",
+        "index": 1,
+        "memory_mb": 49140.0,
+        "name": "NVIDIA RTX A6000",
+        "uuid": "GPU-42afa11f-6cd7-9a92-3f41-668f3b0654ca"
+      }
+    ],
+    "gpus_captured_at": "run_time",
+    "machine": "AMD64",
+    "os": "Windows-10-10.0.26200-SP0",
+    "ram_gb": 255.84
+  },
+  "model": {
+    "adapter": "local",
+    "calibrate": null,
+    "dtype": null,
+    "id": "kev:9b-bf16",
+    "prefix_cache": null,
+    "revision": "925e229ef61d4490c842c289a4d2456fac4cd25b0acfb01b1e9e971a04109d3f"
+  },
+  "profile": {
+    "captured_at": "run_time",
+    "changed_since_run": false,
+    "content": {
+      "build_deadline_s": 5400.0,
+      "max_bytes": 536870912,
+      "max_expr_nodes": 2000000,
+      "max_interpretations": 8,
+      "max_weight_bits": 32,
+      "query_timeout_s": 60.0,
+      "spend_ceiling_usd": 25.0
+    },
+    "path": "profiles/mentat-hard-v1.json",
+    "sha256": "d8804e8167219dfe189a399cbffe724331dad2537beb1a50999b74ed05752a02",
+    "sha256_now": "d8804e8167219dfe189a399cbffe724331dad2537beb1a50999b74ed05752a02"
+  },
+  "repairs": {
+    "base_repaired": true,
+    "contradiction_rate": 0.0012,
+    "derived_dropped": 0,
+    "equiv_rejected": 66,
+    "group_errors": 0,
+    "group_scope_rejected": 0,
+    "groups_downgraded": 13,
+    "groups_dropped": 101,
+    "groups_dropped_pct": 10.52,
+    "prior_calls": 0,
+    "relation_rejected": null,
+    "relations_asked": 10000,
+    "relations_dropped": 12,
+    "resumed": false
+  },
+  "repo": {
+    "captured_at": "run_time",
+    "commit": "36cd81ebb794d1e19339031544d5e658882ed732",
+    "dirty": false
+  },
+  "schema": "mentat-bench-runcard/1",
+  "scores": {
+    "Q_N_repaired": 15.387177000308366,
+    "Q_N_strict": 0.0,
+    "active_Q_N": "not_applicable",
+    "anchor_Q_N": 15.387177000308366,
+    "base_repaired": true,
+    "decision_bind_mcc": -0.018463373862161948,
+    "decision_grp_mcc": 0.031846948592659914,
+    "decision_read_mcc": 0.3466031937219225,
+    "decision_rel_mcc": 0.3992590460507665,
+    "exact_query_success": 0.085,
+    "false_entailment": 18,
+    "false_refutation": 16,
+    "families": {
+      "closure": 0.0062708605803481225,
+      "feasibility": 0.04,
+      "partition": 0.35,
+      "selection": 0.21921621943198658
+    },
+    "weighted_Q_N": 14.25394214124511
+  },
+  "status": {
+    "ceiling": null,
+    "incomplete": false,
+    "partial": [],
+    "status": "complete"
+  },
+  "submission": {
+    "digest": "d322d575261c66eb726fc1a7a90a8b78ec7ea6cf43a7bdb15b109f9eae85d3c7",
+    "seal_sha256": "041d593f1b6277dcbe3ad2b816cd370524bf3c655b6dfc1394c6c54d3f0b6a5b",
+    "sealed_at_utc": "2026-10-29T14:54:21+00:00",
+    "sealed_files": 7
+  },
+  "timestamps": {
+    "captured_utc": "2026-10-29T14:34:50+00:00",
+    "cell_json_utc": "2026-10-29T14:54:22+00:00",
+    "score_json_utc": "2026-10-29T14:54:21+00:00",
+    "sealed_at_utc": "2026-10-29T14:54:21+00:00"
+  },
+  "usage": {
+    "call_seconds": 1133.974163,
+    "calls": 202,
+    "child_cpu_seconds": 16.0,
+    "child_peak_rss_mb": 25.28515625,
+    "cost_usd": 0.0,
+    "gpu_seconds": 0.0,
+    "items": 14194,
+    "peak_rss_mb": 66.316,
+    "retries": 0,
+    "tokens_in": 2341704,
+    "tokens_out": 0,
+    "wall_seconds": 1134.567
+  },
+  "versions": {
+    "captured_at": "run_time",
+    "duckdb": "1.4.4",
+    "python": "3.11.9",
+    "torch": "2.7.1+cu118",
+    "transformers": "4.52.4"
+  }
+}

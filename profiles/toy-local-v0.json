@@ -1,0 +1,9 @@
+{
+  "build_deadline_s": 7200.0,
+  "max_bytes": 536870912,
+  "max_expr_nodes": 2000000,
+  "max_interpretations": 8,
+  "max_weight_bits": 32,
+  "query_timeout_s": 60.0,
+  "spend_ceiling_usd": 25.0
+}

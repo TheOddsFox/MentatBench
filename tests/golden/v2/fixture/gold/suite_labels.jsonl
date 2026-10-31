@@ -1,0 +1,33 @@
+{"held_out": false, "k": null, "label": "bound", "missing": null, "op": "decide_binding", "order": null, "qid": "b00", "stratum": "real"}
+{"held_out": true, "k": null, "label": "unresolved", "missing": null, "op": "decide_binding", "order": null, "qid": "b01", "stratum": "real"}
+{"held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "r00", "stratum": "real"}
+{"held_out": true, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "r01", "stratum": "real"}
+{"held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "r02", "stratum": "real"}
+{"held_out": true, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "r03", "stratum": "real"}
+{"held_out": false, "k": 1, "label": "at_least_k", "missing": null, "op": "decide_group", "order": null, "qid": "g00", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"held_out": false, "k": 2, "label": "at_least_k", "missing": null, "op": "decide_group", "order": null, "qid": "g01", "stratum": "real", "terms": [["at_least_k", 2], ["at_most_k", 2]]}
+{"held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "g02", "stratum": "decoy", "terms": []}
+{"held_out": false, "k": null, "label": "reading", "missing": null, "op": "decide_group", "order": null, "qid": "rd00", "readings": {"alt": "L1:2", "base": "L1:0"}, "stratum": "reading"}
+{"held_out": false, "k": null, "label": "reading", "missing": null, "op": "decide_group", "order": null, "qid": "rd01", "readings": {"alt": "L1:1", "base": "L1:1"}, "stratum": "reading_decoy"}
+{"held_out": false, "k": null, "label": "bound", "missing": null, "op": "decide_binding", "order": null, "qid": "b10", "stratum": "real"}
+{"held_out": true, "k": null, "label": "unresolved", "missing": null, "op": "decide_binding", "order": null, "qid": "b11", "stratum": "real"}
+{"held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "r10", "stratum": "real"}
+{"held_out": true, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "r11", "stratum": "real"}
+{"held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "r12", "stratum": "real"}
+{"held_out": true, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "r13", "stratum": "real"}
+{"held_out": false, "k": 1, "label": "at_least_k", "missing": null, "op": "decide_group", "order": null, "qid": "g10", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"held_out": false, "k": 2, "label": "at_least_k", "missing": null, "op": "decide_group", "order": null, "qid": "g11", "stratum": "real", "terms": [["at_least_k", 2], ["at_most_k", 2]]}
+{"held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "g12", "stratum": "decoy", "terms": []}
+{"held_out": false, "k": null, "label": "reading", "missing": null, "op": "decide_group", "order": null, "qid": "rd10", "readings": {"alt": "L2:2", "base": "L2:0"}, "stratum": "reading"}
+{"held_out": false, "k": null, "label": "reading", "missing": null, "op": "decide_group", "order": null, "qid": "rd11", "readings": {"alt": "L2:1", "base": "L2:1"}, "stratum": "reading_decoy"}
+{"held_out": false, "k": null, "label": "bound", "missing": null, "op": "decide_binding", "order": null, "qid": "b20", "stratum": "real"}
+{"held_out": true, "k": null, "label": "unresolved", "missing": null, "op": "decide_binding", "order": null, "qid": "b21", "stratum": "real"}
+{"held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "r20", "stratum": "real"}
+{"held_out": true, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "r21", "stratum": "real"}
+{"held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "r22", "stratum": "real"}
+{"held_out": true, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "r23", "stratum": "real"}
+{"held_out": false, "k": 1, "label": "at_least_k", "missing": null, "op": "decide_group", "order": null, "qid": "g20", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"held_out": false, "k": 2, "label": "at_least_k", "missing": null, "op": "decide_group", "order": null, "qid": "g21", "stratum": "real", "terms": [["at_least_k", 2], ["at_most_k", 2]]}
+{"held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "g22", "stratum": "decoy", "terms": []}
+{"held_out": false, "k": null, "label": "reading", "missing": null, "op": "decide_group", "order": null, "qid": "rd20", "readings": {"alt": "L3:2", "base": "L3:0"}, "stratum": "reading"}
+{"held_out": false, "k": null, "label": "reading", "missing": null, "op": "decide_group", "order": null, "qid": "rd21", "readings": {"alt": "L3:1", "base": "L3:1"}, "stratum": "reading_decoy"}

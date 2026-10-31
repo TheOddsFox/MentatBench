@@ -1,0 +1,30 @@
+{
+  "content_hash": "1f4613bec957dd4de9b261b48241dbeeb3faf127a1a7686a6cf938b9a6aefc2e",
+  "files": {
+    "candidates.jsonl": "3e6a1d94d4ea8b547f3a685bb750de0bab3adcc6eb93bd26dfb7bcb5488e8965",
+    "corpus.jsonl": "a3e8efd14fa852971b4005bcad8a96d5102e87b085fabbd4cc2613c848db34e0",
+    "fixture.json": "cdd6436a6f79b3c8c088b95164ea27998a2f1d85e92a05d56260a99f50c40bde",
+    "gold/answers.jsonl": "36b76ee6b24b865997c3481317f5de4984ca9afbbc64d94d239e5ac501fe1f68",
+    "gold/bindings.jsonl": "624fdfa89178a2a8db4fc081c9a1a5eebf3a61a0e03711271aee3efd7079e5a1",
+    "gold/meta.jsonl": "566069f6cf724592b2a3895eca25c4cb30a812aa515bd78fd7aa5ff1d2587a30",
+    "gold/provenance.jsonl": "50d19ee621654e66853d86b6e686cd5b549a08a3393b5c92866edbcd0c6828ae",
+    "gold/query_design.jsonl": "10f20356621072497cbf1d6068a2e10352cca605131d0e1bf78f842c29751c1a",
+    "gold/suite_labels.jsonl": "638a17384284cb953e0a649aae4c03a23f52fe611640adbb6e876825dc2691d5",
+    "gold/summary.json": "ca540a5636f747ac56957315b1d0016c8ab3f594b135f5ce10e248f157a46f76",
+    "gold/theory.json": "7974049518eb30eafbcf59c2690d85ad7977137abe051be643b0962e32bc1987",
+    "gold/usage.json": "90d35a556ad3005b046494b9b32c2c0cd28932123ca2a5cb38f5f11761250234",
+    "gold/verdicts.jsonl": "e7b8135f3ae3ec8e03f1e61c0f2e5d08cb1d50ddca1339387ce9d84f3727f376",
+    "gold/world.json": "c963394a252ca8930eff7da86e6e85945cc8742b27555ba85d940ceb178f557b",
+    "queries.jsonl": "f1d37ae2f665da19047f5e5c580ebd8108d67d90c32d368387914d1b02cbc8a4"
+  },
+  "generator": {
+    "code_sha256": "a2719dd08143473361561af888e9b1081ea087a13ce7d5ac8da0cb2c8926e0f1",
+    "module": "mentat_bench.fixtures_hard",
+    "params": {
+      "seed": 20261028,
+      "split": "test"
+    }
+  },
+  "name": "mentat_hard_test",
+  "version": "2"
+}

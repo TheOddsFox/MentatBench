@@ -1,0 +1,796 @@
+{
+ "B": 2000,
+ "fixture": "mentat_hard_private",
+ "gaps": {
+  "clef-flash_9b": {
+   "Q_N": {
+    "hi": 6.954995,
+    "lo": -3.537821,
+    "point": 1.708197
+   },
+   "bindings": {
+    "hi": 0.026309,
+    "lo": -0.104148,
+    "point": -0.022349
+   },
+   "groups": {
+    "hi": 0.032864,
+    "lo": -0.060233,
+    "point": -0.011625
+   },
+   "held_out_relations": {
+    "hi": 0.362001,
+    "lo": 0.307136,
+    "point": 0.333441
+   },
+   "readings": {
+    "hi": 0.163204,
+    "lo": 0.027879,
+    "point": 0.094604
+   },
+   "relations": {
+    "hi": 0.331071,
+    "lo": 0.288584,
+    "point": 0.309513
+   }
+  },
+  "clef_27b-q8_0": {
+   "Q_N": {
+    "hi": 3.921596,
+    "lo": -3.626907,
+    "point": 0.053858
+   },
+   "bindings": {
+    "hi": -0.141075,
+    "lo": -0.451954,
+    "point": -0.308661
+   },
+   "groups": {
+    "hi": 0.034937,
+    "lo": -0.047162,
+    "point": -0.003494
+   },
+   "held_out_relations": {
+    "hi": 0.275899,
+    "lo": 0.231008,
+    "point": 0.251933
+   },
+   "readings": {
+    "hi": 0.08804,
+    "lo": -0.040747,
+    "point": 0.02514
+   },
+   "relations": {
+    "hi": 0.261642,
+    "lo": 0.232028,
+    "point": 0.247361
+   }
+  },
+  "d3_9b-q8_0": {
+   "Q_N": {
+    "hi": 6.024448,
+    "lo": -6.902904,
+    "point": -0.350095
+   },
+   "bindings": {
+    "hi": 0.009884,
+    "lo": -0.226231,
+    "point": -0.080266
+   },
+   "groups": {
+    "hi": 0.115264,
+    "lo": 0.041926,
+    "point": 0.079145
+   },
+   "held_out_relations": {
+    "hi": 0.211107,
+    "lo": 0.181749,
+    "point": 0.197178
+   },
+   "readings": {
+    "hi": 0.051158,
+    "lo": -0.058989,
+    "point": -0.007844
+   },
+   "relations": {
+    "hi": 0.165278,
+    "lo": 0.135567,
+    "point": 0.150513
+   }
+  },
+  "empty": {
+   "Q_N": {
+    "hi": 4.724067,
+    "lo": -6.316629,
+    "point": -0.586458
+   }
+  },
+  "gold_view": {
+   "Q_N": {
+    "hi": -78.3854,
+    "lo": -87.16619,
+    "point": -82.94316
+   },
+   "bindings": {
+    "hi": -1.0,
+    "lo": -1.0,
+    "point": -1.0
+   },
+   "groups": {
+    "hi": -0.788709,
+    "lo": -0.854396,
+    "point": -0.819008
+   },
+   "held_out_relations": {
+    "hi": -0.294385,
+    "lo": -0.353118,
+    "point": -0.324081
+   },
+   "readings": {
+    "hi": -0.352125,
+    "lo": -0.49319,
+    "point": -0.417465
+   },
+   "relations": {
+    "hi": -0.277175,
+    "lo": -0.318207,
+    "point": -0.298596
+   }
+  },
+  "kev_9b-bf16": {
+   "Q_N": {
+    "hi": 4.440501,
+    "lo": -5.915159,
+    "point": -0.583188
+   },
+   "bindings": {
+    "hi": 0.023118,
+    "lo": -0.103251,
+    "point": -0.033453
+   },
+   "groups": {
+    "hi": 0.208924,
+    "lo": 0.127475,
+    "point": 0.166547
+   },
+   "held_out_relations": {
+    "hi": 0.334718,
+    "lo": 0.290337,
+    "point": 0.313477
+   },
+   "readings": {
+    "hi": 0.25949,
+    "lo": 0.172114,
+    "point": 0.217747
+   },
+   "relations": {
+    "hi": 0.322817,
+    "lo": 0.290679,
+    "point": 0.306516
+   }
+  },
+  "laya_latest": {
+   "Q_N": {
+    "hi": 8.238604,
+    "lo": -4.766798,
+    "point": 1.796618
+   },
+   "bindings": {
+    "hi": 0.02769,
+    "lo": -0.04419,
+    "point": -0.009746
+   },
+   "groups": {
+    "hi": 0.227262,
+    "lo": 0.131681,
+    "point": 0.182276
+   },
+   "held_out_relations": {
+    "hi": 0.651869,
+    "lo": 0.601766,
+    "point": 0.625869
+   },
+   "readings": {
+    "hi": 0.239457,
+    "lo": 0.082183,
+    "point": 0.166431
+   },
+   "relations": {
+    "hi": 0.663484,
+    "lo": 0.624781,
+    "point": 0.643768
+   }
+  },
+  "nimble_9b-bf16": {
+   "Q_N": {
+    "hi": 10.874717,
+    "lo": 0.33244,
+    "point": 5.262239
+   },
+   "bindings": {
+    "hi": 0.0,
+    "lo": -0.240526,
+    "point": -0.148447
+   },
+   "groups": {
+    "hi": 0.10805,
+    "lo": 0.034808,
+    "point": 0.073659
+   },
+   "held_out_relations": {
+    "hi": 0.357104,
+    "lo": 0.322896,
+    "point": 0.341157
+   },
+   "readings": {
+    "hi": 0.19219,
+    "lo": 0.044775,
+    "point": 0.11574
+   },
+   "relations": {
+    "hi": 0.328644,
+    "lo": 0.296092,
+    "point": 0.312111
+   }
+  },
+  "oracle": {
+   "Q_N": {
+    "hi": -78.3854,
+    "lo": -87.16619,
+    "point": -82.94316
+   }
+  },
+  "pplx-decider_27b": {
+   "Q_N": {
+    "hi": 8.60509,
+    "lo": -2.419453,
+    "point": 2.979579
+   },
+   "bindings": {
+    "hi": 0.0,
+    "lo": 0.0,
+    "point": 0.0
+   },
+   "groups": {
+    "hi": 0.071311,
+    "lo": 0.001335,
+    "point": 0.037891
+   },
+   "held_out_relations": {
+    "hi": 0.188615,
+    "lo": 0.149263,
+    "point": 0.169871
+   },
+   "readings": {
+    "hi": 0.002804,
+    "lo": -0.073671,
+    "point": -0.035647
+   },
+   "relations": {
+    "hi": 0.182892,
+    "lo": 0.150593,
+    "point": 0.16757
+   }
+  },
+  "rules": {
+   "Q_N": {
+    "hi": -10.874542,
+    "lo": -23.842619,
+    "point": -17.185358
+   },
+   "bindings": {
+    "hi": 0.0,
+    "lo": 0.0,
+    "point": 0.0
+   },
+   "groups": {
+    "hi": 0.211291,
+    "lo": 0.145604,
+    "point": 0.180992
+   },
+   "held_out_relations": {
+    "hi": 0.472446,
+    "lo": 0.415768,
+    "point": 0.445494
+   },
+   "readings": {
+    "hi": 0.61002,
+    "lo": 0.377426,
+    "point": 0.496489
+   },
+   "relations": {
+    "hi": 0.439894,
+    "lo": 0.402872,
+    "point": 0.421878
+   }
+  }
+ },
+ "interval": "95% percentile (numpy, linear) of the draws",
+ "layout": "relation-headline/1",
+ "leagues": 18,
+ "legacy_means": false,
+ "q_n_kind": "repaired",
+ "reference": "d3_27b-q8_0",
+ "roles": {
+  "Q_N": "diagnostic",
+  "bindings": "secondary",
+  "groups": "diagnostic",
+  "held_out_relations": "diagnostic",
+  "readings": "diagnostic",
+  "relations": "primary"
+ },
+ "runs": {
+  "clef-flash_9b": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 20.852005,
+     "lo": 10.056417,
+     "point": 15.348643
+    },
+    "bindings": {
+     "hi": 0.104148,
+     "lo": -0.026309,
+     "point": 0.022349
+    },
+    "groups": {
+     "hi": 0.224328,
+     "lo": 0.158756,
+     "point": 0.192616
+    },
+    "held_out_relations": {
+     "hi": 0.37787,
+     "lo": 0.30745,
+     "point": 0.342477
+    },
+    "readings": {
+     "hi": 0.543934,
+     "lo": 0.427191,
+     "point": 0.487931
+    },
+    "relations": {
+     "hi": 0.416508,
+     "lo": 0.366509,
+     "point": 0.391891
+    }
+   }
+  },
+  "clef_27b-q8_0": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 21.283796,
+     "lo": 13.182769,
+     "point": 17.002982
+    },
+    "bindings": {
+     "hi": 0.451954,
+     "lo": 0.141075,
+     "point": 0.308661
+    },
+    "groups": {
+     "hi": 0.208329,
+     "lo": 0.158381,
+     "point": 0.184486
+    },
+    "held_out_relations": {
+     "hi": 0.449082,
+     "lo": 0.399324,
+     "point": 0.423986
+    },
+    "readings": {
+     "hi": 0.622342,
+     "lo": 0.478457,
+     "point": 0.557395
+    },
+    "relations": {
+     "hi": 0.473402,
+     "lo": 0.43701,
+     "point": 0.454043
+    }
+   }
+  },
+  "d3_27b-q8_0": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 21.6146,
+     "lo": 12.83381,
+     "point": 17.05684
+    },
+    "bindings": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "point": 0.0
+    },
+    "groups": {
+     "hi": 0.211291,
+     "lo": 0.145604,
+     "point": 0.180992
+    },
+    "held_out_relations": {
+     "hi": 0.705615,
+     "lo": 0.646882,
+     "point": 0.675919
+    },
+    "readings": {
+     "hi": 0.647875,
+     "lo": 0.50681,
+     "point": 0.582535
+    },
+    "relations": {
+     "hi": 0.722825,
+     "lo": 0.681793,
+     "point": 0.701404
+    }
+   }
+  },
+  "d3_9b-q8_0": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 21.642791,
+     "lo": 13.136728,
+     "point": 17.406935
+    },
+    "bindings": {
+     "hi": 0.226231,
+     "lo": -0.009884,
+     "point": 0.080266
+    },
+    "groups": {
+     "hi": 0.128944,
+     "lo": 0.074106,
+     "point": 0.101846
+    },
+    "held_out_relations": {
+     "hi": 0.506051,
+     "lo": 0.455197,
+     "point": 0.478741
+    },
+    "readings": {
+     "hi": 0.653177,
+     "lo": 0.514068,
+     "point": 0.590379
+    },
+    "relations": {
+     "hi": 0.575454,
+     "lo": 0.528125,
+     "point": 0.550892
+    }
+   }
+  },
+  "empty": {
+   "adapter": "empty",
+   "decisions": false,
+   "diagnostic": true,
+   "items": null,
+   "metrics": {
+    "Q_N": {
+     "hi": 20.181302,
+     "lo": 15.26787,
+     "point": 17.643298
+    }
+   }
+  },
+  "gold_view": {
+   "adapter": "gold_view",
+   "decisions": true,
+   "diagnostic": true,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 100.0,
+     "lo": 100.0,
+     "point": 100.0
+    },
+    "bindings": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "groups": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "held_out_relations": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "readings": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    },
+    "relations": {
+     "hi": 1.0,
+     "lo": 1.0,
+     "point": 1.0
+    }
+   }
+  },
+  "kev_9b-bf16": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 21.962146,
+     "lo": 13.220109,
+     "point": 17.640029
+    },
+    "bindings": {
+     "hi": 0.103251,
+     "lo": -0.023118,
+     "point": 0.033453
+    },
+    "groups": {
+     "hi": 0.0448,
+     "lo": -0.013728,
+     "point": 0.014445
+    },
+    "held_out_relations": {
+     "hi": 0.397214,
+     "lo": 0.337068,
+     "point": 0.362441
+    },
+    "readings": {
+     "hi": 0.423734,
+     "lo": 0.296547,
+     "point": 0.364788
+    },
+    "relations": {
+     "hi": 0.412655,
+     "lo": 0.379917,
+     "point": 0.394889
+    }
+   }
+  },
+  "laya_latest": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 20.328837,
+     "lo": 10.744267,
+     "point": 15.260222
+    },
+    "bindings": {
+     "hi": 0.04419,
+     "lo": -0.02769,
+     "point": 0.009746
+    },
+    "groups": {
+     "hi": 0.025387,
+     "lo": -0.024669,
+     "point": -0.001284
+    },
+    "held_out_relations": {
+     "hi": 0.064594,
+     "lo": 0.035831,
+     "point": 0.05005
+    },
+    "readings": {
+     "hi": 0.484741,
+     "lo": 0.346557,
+     "point": 0.416104
+    },
+    "relations": {
+     "hi": 0.068507,
+     "lo": 0.046425,
+     "point": 0.057636
+    }
+   }
+  },
+  "nimble_9b-bf16": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 14.976728,
+     "lo": 8.099879,
+     "point": 11.794601
+    },
+    "bindings": {
+     "hi": 0.240526,
+     "lo": 0.0,
+     "point": 0.148447
+    },
+    "groups": {
+     "hi": 0.131678,
+     "lo": 0.081977,
+     "point": 0.107333
+    },
+    "held_out_relations": {
+     "hi": 0.3638,
+     "lo": 0.307491,
+     "point": 0.334761
+    },
+    "readings": {
+     "hi": 0.540007,
+     "lo": 0.376912,
+     "point": 0.466795
+    },
+    "relations": {
+     "hi": 0.40892,
+     "lo": 0.36992,
+     "point": 0.389293
+    }
+   }
+  },
+  "oracle": {
+   "adapter": "oracle",
+   "decisions": false,
+   "diagnostic": true,
+   "items": null,
+   "metrics": {
+    "Q_N": {
+     "hi": 100.0,
+     "lo": 100.0,
+     "point": 100.0
+    }
+   }
+  },
+  "pplx-decider_27b": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 18.660437,
+     "lo": 9.635768,
+     "point": 14.077261
+    },
+    "bindings": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "point": 0.0
+    },
+    "groups": {
+     "hi": 0.175757,
+     "lo": 0.110779,
+     "point": 0.143101
+    },
+    "held_out_relations": {
+     "hi": 0.541807,
+     "lo": 0.478678,
+     "point": 0.506048
+    },
+    "readings": {
+     "hi": 0.664781,
+     "lo": 0.55808,
+     "point": 0.618182
+    },
+    "relations": {
+     "hi": 0.561654,
+     "lo": 0.511516,
+     "point": 0.533834
+    }
+   }
+  },
+  "rules": {
+   "adapter": "local",
+   "decisions": true,
+   "diagnostic": false,
+   "items": {
+    "bindings": 2832,
+    "groups": 1000,
+    "held_out_relations": 3505,
+    "readings": 340,
+    "relations": 10000
+   },
+   "metrics": {
+    "Q_N": {
+     "hi": 38.149081,
+     "lo": 30.410674,
+     "point": 34.242198
+    },
+    "bindings": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "point": 0.0
+    },
+    "groups": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "point": 0.0
+    },
+    "held_out_relations": {
+     "hi": 0.246328,
+     "lo": 0.21366,
+     "point": 0.230425
+    },
+    "readings": {
+     "hi": 0.205268,
+     "lo": -0.027817,
+     "point": 0.086046
+    },
+    "relations": {
+     "hi": 0.290605,
+     "lo": 0.268794,
+     "point": 0.279526
+    }
+   }
+  }
+ },
+ "seed": 0,
+ "stamp": {
+  "content_hash": "0f687621845d48e9404f7fd2d3c801988dd55558c35bb6a625850f8a2707a8bd",
+  "name": "mentat_hard_private",
+  "sealed": true
+ }
+}

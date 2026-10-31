@@ -1,0 +1,6 @@
+[workspace]
+members = ["crates/*"]
+# vendor/varisat is varisat 0.2.2 patched for O(1) model reads (see vendor/PATCH.md); its own tests
+# read the model buffer the patch removed, so it is not a workspace member.
+exclude = ["vendor/varisat"]
+resolver = "2"

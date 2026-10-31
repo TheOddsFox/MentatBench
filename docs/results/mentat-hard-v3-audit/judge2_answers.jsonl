@@ -1,0 +1,180 @@
+{"id": "A001", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A002", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 3, "chain": [3, 1, 2]}}
+{"id": "A003", "answer": {"base": "B", "alt": "B"}}
+{"id": "A004", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A005", "answer": {"status": "bound"}}
+{"id": "A006", "answer": {"base": "C", "alt": "B"}}
+{"id": "A007", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A008", "answer": {"base": "C", "alt": "C"}}
+{"id": "A009", "answer": {"base": "A", "alt": "C"}}
+{"id": "A010", "answer": {"base": "A", "alt": "A"}}
+{"id": "A011", "answer": {"status": "bound"}}
+{"id": "A012", "answer": {"base": "C", "alt": "C"}}
+{"id": "A013", "answer": {"relation": "NONE"}}
+{"id": "A014", "answer": {"base": "A", "alt": "C"}}
+{"id": "A015", "answer": {"relation": "EXCLUDES"}}
+{"id": "A016", "answer": {"base": "C", "alt": "D"}}
+{"id": "A017", "answer": {"base": "B", "alt": "B"}}
+{"id": "A018", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A019", "answer": {"relation": "EQUIV"}}
+{"id": "A020", "answer": {"kind": "at_least_k", "lower": 1, "upper": 3, "chain": []}}
+{"id": "A021", "answer": {"base": "C", "alt": "C"}}
+{"id": "A022", "answer": {"base": "A", "alt": "D"}}
+{"id": "A023", "answer": {"relation": "NONE"}}
+{"id": "A024", "answer": {"status": "unresolved"}}
+{"id": "A025", "answer": {"relation": "EXCLUDES"}}
+{"id": "A026", "answer": {"relation": "EQUIV"}}
+{"id": "A027", "answer": {"relation": "IMPLIES"}}
+{"id": "A028", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A029", "answer": {"base": "A", "alt": "A"}}
+{"id": "A030", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 2, "chain": [1, 2]}}
+{"id": "A031", "answer": {"relation": "NONE"}}
+{"id": "A032", "answer": {"relation": "IMPLIES"}}
+{"id": "A033", "answer": {"base": "A", "alt": "A"}}
+{"id": "A034", "answer": {"base": "A", "alt": "A"}}
+{"id": "A035", "answer": {"kind": "none", "lower": 0, "upper": 5, "chain": []}}
+{"id": "A036", "answer": {"status": "bound"}}
+{"id": "A037", "answer": {"relation": "EXCLUDES"}}
+{"id": "A038", "answer": {"relation": "IMPLIES"}}
+{"id": "A039", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A040", "answer": {"status": "bound"}}
+{"id": "A041", "answer": {"base": "A", "alt": "D"}}
+{"id": "A042", "answer": {"kind": "none", "lower": 0, "upper": 3, "chain": []}}
+{"id": "A043", "answer": {"status": "bound"}}
+{"id": "A044", "answer": {"status": "unresolved"}}
+{"id": "A045", "answer": {"relation": "NONE"}}
+{"id": "A046", "answer": {"relation": "IMPLIES"}}
+{"id": "A047", "answer": {"base": "B", "alt": "B"}}
+{"id": "A048", "answer": {"relation": "EQUIV"}}
+{"id": "A049", "answer": {"base": "D", "alt": "B"}}
+{"id": "A050", "answer": {"status": "bound"}}
+{"id": "A051", "answer": {"relation": "EQUIV"}}
+{"id": "A052", "answer": {"base": "C", "alt": "C"}}
+{"id": "A053", "answer": {"kind": "none", "lower": 0, "upper": 3, "chain": []}}
+{"id": "A054", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A055", "answer": {"base": "B", "alt": "B"}}
+{"id": "A056", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 2, "chain": [2, 1]}}
+{"id": "A057", "answer": {"status": "unresolved"}}
+{"id": "A058", "answer": {"base": "D", "alt": "B"}}
+{"id": "A059", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A060", "answer": {"base": "A", "alt": "A"}}
+{"id": "A061", "answer": {"base": "A", "alt": "B"}}
+{"id": "A062", "answer": {"base": "C", "alt": "D"}}
+{"id": "A063", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A064", "answer": {"base": "B", "alt": "C"}}
+{"id": "A065", "answer": {"relation": "EXCLUDES"}}
+{"id": "A066", "answer": {"base": "D", "alt": "D"}}
+{"id": "A067", "answer": {"base": "C", "alt": "D"}}
+{"id": "A068", "answer": {"base": "A", "alt": "A"}}
+{"id": "A069", "answer": {"base": "D", "alt": "D"}}
+{"id": "A070", "answer": {"status": "unresolved"}}
+{"id": "A071", "answer": {"base": "B", "alt": "B"}}
+{"id": "A072", "answer": {"base": "A", "alt": "A"}}
+{"id": "A073", "answer": {"relation": "NONE"}}
+{"id": "A074", "answer": {"kind": "at_most_k", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A075", "answer": {"relation": "IMPLIES"}}
+{"id": "A076", "answer": {"relation": "NONE"}}
+{"id": "A077", "answer": {"relation": "NONE"}}
+{"id": "A078", "answer": {"relation": "EQUIV"}}
+{"id": "A079", "answer": {"base": "B", "alt": "B"}}
+{"id": "A080", "answer": {"relation": "EQUIV"}}
+{"id": "A081", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A082", "answer": {"status": "unresolved"}}
+{"id": "A083", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A084", "answer": {"status": "unresolved"}}
+{"id": "A085", "answer": {"base": "D", "alt": "C"}}
+{"id": "A086", "answer": {"base": "C", "alt": "C"}}
+{"id": "A087", "answer": {"status": "unresolved"}}
+{"id": "A088", "answer": {"status": "unresolved"}}
+{"id": "A089", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 2, "chain": [2, 1]}}
+{"id": "A090", "answer": {"relation": "EQUIV"}}
+{"id": "A091", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A092", "answer": {"status": "bound"}}
+{"id": "A093", "answer": {"base": "A", "alt": "B"}}
+{"id": "A094", "answer": {"relation": "EXCLUDES"}}
+{"id": "A095", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A096", "answer": {"base": "D", "alt": "D"}}
+{"id": "A097", "answer": {"status": "bound"}}
+{"id": "A098", "answer": {"base": "A", "alt": "D"}}
+{"id": "A099", "answer": {"base": "D", "alt": "B"}}
+{"id": "A100", "answer": {"status": "bound"}}
+{"id": "A101", "answer": {"relation": "IMPLIES"}}
+{"id": "A102", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A103", "answer": {"status": "unresolved"}}
+{"id": "A104", "answer": {"relation": "EQUIV"}}
+{"id": "A105", "answer": {"base": "C", "alt": "D"}}
+{"id": "A106", "answer": {"base": "D", "alt": "D"}}
+{"id": "A107", "answer": {"relation": "IMPLIES"}}
+{"id": "A108", "answer": {"status": "bound"}}
+{"id": "A109", "answer": {"base": "B", "alt": "A"}}
+{"id": "A110", "answer": {"base": "C", "alt": "A"}}
+{"id": "A111", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A112", "answer": {"relation": "IMPLIES"}}
+{"id": "A113", "answer": {"base": "D", "alt": "A"}}
+{"id": "A114", "answer": {"relation": "IMPLIES"}}
+{"id": "A115", "answer": {"status": "unresolved"}}
+{"id": "A116", "answer": {"base": "B", "alt": "B"}}
+{"id": "A117", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A118", "answer": {"relation": "EXCLUDES"}}
+{"id": "A119", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A120", "answer": {"status": "unresolved"}}
+{"id": "A121", "answer": {"kind": "none", "lower": 0, "upper": 3, "chain": []}}
+{"id": "A122", "answer": {"base": "B", "alt": "C"}}
+{"id": "A123", "answer": {"relation": "NONE"}}
+{"id": "A124", "answer": {"relation": "EXCLUDES"}}
+{"id": "A125", "answer": {"base": "A", "alt": "A"}}
+{"id": "A126", "answer": {"status": "bound"}}
+{"id": "A127", "answer": {"relation": "NONE"}}
+{"id": "A128", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A129", "answer": {"relation": "EXCLUDES"}}
+{"id": "A130", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A131", "answer": {"relation": "EXCLUDES"}}
+{"id": "A132", "answer": {"base": "B", "alt": "C"}}
+{"id": "A133", "answer": {"relation": "IMPLIES"}}
+{"id": "A134", "answer": {"status": "unresolved"}}
+{"id": "A135", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A136", "answer": {"base": "C", "alt": "D"}}
+{"id": "A137", "answer": {"base": "A", "alt": "A"}}
+{"id": "A138", "answer": {"base": "D", "alt": "C"}}
+{"id": "A139", "answer": {"relation": "NONE"}}
+{"id": "A140", "answer": {"relation": "IMPLIES"}}
+{"id": "A141", "answer": {"base": "B", "alt": "A"}}
+{"id": "A142", "answer": {"relation": "NONE"}}
+{"id": "A143", "answer": {"relation": "EQUIV"}}
+{"id": "A144", "answer": {"relation": "NONE"}}
+{"id": "A145", "answer": {"status": "bound"}}
+{"id": "A146", "answer": {"status": "unresolved"}}
+{"id": "A147", "answer": {"status": "bound"}}
+{"id": "A148", "answer": {"base": "A", "alt": "B"}}
+{"id": "A149", "answer": {"kind": "none", "lower": 0, "upper": 3, "chain": []}}
+{"id": "A150", "answer": {"base": "B", "alt": "B"}}
+{"id": "A151", "answer": {"status": "unresolved"}}
+{"id": "A152", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A153", "answer": {"relation": "EQUIV"}}
+{"id": "A154", "answer": {"kind": "at_least_k", "lower": 2, "upper": 2, "chain": []}}
+{"id": "A155", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A156", "answer": {"base": "C", "alt": "B"}}
+{"id": "A157", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A158", "answer": {"status": "bound"}}
+{"id": "A159", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A160", "answer": {"relation": "EXCLUDES"}}
+{"id": "A161", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A162", "answer": {"relation": "EXCLUDES"}}
+{"id": "A163", "answer": {"status": "unresolved"}}
+{"id": "A164", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A165", "answer": {"relation": "EQUIV"}}
+{"id": "A166", "answer": {"base": "C", "alt": "D"}}
+{"id": "A167", "answer": {"base": "C", "alt": "C"}}
+{"id": "A168", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A169", "answer": {"base": "C", "alt": "D"}}
+{"id": "A170", "answer": {"base": "B", "alt": "B"}}
+{"id": "A171", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A172", "answer": {"relation": "NONE"}}
+{"id": "A173", "answer": {"base": "A", "alt": "A"}}
+{"id": "A174", "answer": {"base": "D", "alt": "D"}}
+{"id": "A175", "answer": {"relation": "EXCLUDES"}}
+{"id": "A176", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A177", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A178", "answer": {"relation": "EQUIV"}}
+{"id": "A179", "answer": {"status": "bound"}}
+{"id": "A180", "answer": {"base": "B", "alt": "D"}}

@@ -1,0 +1,25 @@
+{
+  "classes": 1728,
+  "controlled": true,
+  "gold_constraints": 53724,
+  "interpretations": [
+    "base",
+    "alt"
+  ],
+  "markets": 5104,
+  "name": "toy10k",
+  "notes": [
+    "Outcome IDs are unsalted SHA-256 prefixes of market keys: stable across scales, enumerable from the public generator (not a hidden set). Row order is hash order.",
+    "Top level: corpus.jsonl, queries.jsonl, fixture.json. Gold-bearing files are under gold/ (submission, answers.jsonl, verdicts.jsonl, query_design.jsonl, summary.json).",
+    "Dated propositions are sampled per season; anchor queries use base-season dated propositions only.",
+    "Each dated Yes/No pair is complementary in every interpretation (iff(Yes, not No)).",
+    "gold/query_design.jsonl premises = material premises by single-drop ablation (set by finalize, needs mb-engine).",
+    "Gold constraints are pair-expanded over records (one constraint per record pair). Class-level refs would be equivalent under the binding semantics, but the current alias definitions (var of the first bound outcome) fail the engine's alias_binding_cycle check, so the expansion is kept until the alias representation is settled.",
+    "No evidence scope: queries carry no per-query evidence field (decision D-F)."
+  ],
+  "outcomes": 10232,
+  "queries": 40,
+  "seasons": 4,
+  "seed": 20261018,
+  "unresolved_outcomes": 200
+}

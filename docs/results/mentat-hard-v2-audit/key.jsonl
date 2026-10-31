@@ -1,0 +1,150 @@
+{"id": "A001", "qid": "g01152", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "C"}}
+{"id": "A002", "qid": "g00799", "type": "group", "stratum": "real", "gold": [["exactly_one", null]], "kind": "exactly_one", "n": 3}
+{"id": "A003", "qid": "r04944", "type": "relation", "stratum": "EQUIV", "suite_stratum": "real", "gold": "EQUIV"}
+{"id": "A004", "qid": "g00547", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 2}
+{"id": "A005", "qid": "g01144", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A006", "qid": "g00563", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 2}
+{"id": "A007", "qid": "r05958", "type": "relation", "stratum": "EQUIV", "suite_stratum": "real", "gold": "EQUIV"}
+{"id": "A008", "qid": "b00548", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A009", "qid": "g01133", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A010", "qid": "g01067", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "B"}}
+{"id": "A011", "qid": "g00707", "type": "group", "stratum": "real", "gold": [["at_most_one", null]], "kind": "at_most_one", "n": 2}
+{"id": "A012", "qid": "g01059", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "A"}}
+{"id": "A013", "qid": "g01186", "type": "reading", "stratum": "reading", "gold": {"base": "D", "alt": "C"}}
+{"id": "A014", "qid": "g01146", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A015", "qid": "g00627", "type": "group", "stratum": "real", "gold": [["exactly_one", null]], "kind": "exactly_one", "n": 3}
+{"id": "A016", "qid": "g01107", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "C", "alt": "C"}}
+{"id": "A017", "qid": "b00159", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A018", "qid": "r00897", "type": "relation", "stratum": "IMPLIED_BY", "suite_stratum": "real", "gold": "IMPLIED_BY"}
+{"id": "A019", "qid": "g01172", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "C", "alt": "C"}}
+{"id": "A020", "qid": "g00305", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 5}
+{"id": "A021", "qid": "g01173", "type": "reading", "stratum": "reading", "gold": {"base": "A", "alt": "C"}}
+{"id": "A022", "qid": "g01117", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "D"}}
+{"id": "A023", "qid": "r02306", "type": "relation", "stratum": "IMPLIED_BY", "suite_stratum": "real", "gold": "IMPLIED_BY"}
+{"id": "A024", "qid": "r09110", "type": "relation", "stratum": "EXCLUDES", "suite_stratum": "real", "gold": "EXCLUDES"}
+{"id": "A025", "qid": "b02633", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A026", "qid": "g01035", "type": "reading", "stratum": "reading", "gold": {"base": "A", "alt": "C"}}
+{"id": "A027", "qid": "g00360", "type": "group", "stratum": "real", "gold": [["at_most_k", 5]], "kind": "at_most_k", "n": 6}
+{"id": "A028", "qid": "g00351", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 2}
+{"id": "A029", "qid": "g01065", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "C", "alt": "C"}}
+{"id": "A030", "qid": "r01354", "type": "relation", "stratum": "EXCLUDES", "suite_stratum": "real", "gold": "EXCLUDES"}
+{"id": "A031", "qid": "g01105", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A032", "qid": "b01685", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A033", "qid": "g01124", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "A"}}
+{"id": "A034", "qid": "g01033", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A035", "qid": "r09320", "type": "relation", "stratum": "EQUIV", "suite_stratum": "real", "gold": "EQUIV"}
+{"id": "A036", "qid": "g01030", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "A"}}
+{"id": "A037", "qid": "g00165", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 5}
+{"id": "A038", "qid": "r02636", "type": "relation", "stratum": "IMPLIES", "suite_stratum": "real", "gold": "IMPLIES"}
+{"id": "A039", "qid": "b00767", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A040", "qid": "g00628", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 3}
+{"id": "A041", "qid": "g01080", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "B"}}
+{"id": "A042", "qid": "g01147", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A043", "qid": "r02899", "type": "relation", "stratum": "NONE", "suite_stratum": "hard_distractor", "gold": "NONE"}
+{"id": "A044", "qid": "b02242", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A045", "qid": "g01091", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A046", "qid": "g00459", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 4}
+{"id": "A047", "qid": "g01025", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A048", "qid": "g01166", "type": "reading", "stratum": "reading", "gold": {"base": "A", "alt": "C"}}
+{"id": "A049", "qid": "r02639", "type": "relation", "stratum": "EXCLUDES", "suite_stratum": "trivial", "gold": "EXCLUDES"}
+{"id": "A050", "qid": "g01051", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A051", "qid": "r09228", "type": "relation", "stratum": "IMPLIES", "suite_stratum": "real", "gold": "IMPLIES"}
+{"id": "A052", "qid": "g00454", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 2}
+{"id": "A053", "qid": "g01112", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "B"}}
+{"id": "A054", "qid": "g00205", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 4}
+{"id": "A055", "qid": "b01839", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A056", "qid": "g00471", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 5}
+{"id": "A057", "qid": "b00405", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A058", "qid": "g01062", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A059", "qid": "g01158", "type": "reading", "stratum": "reading", "gold": {"base": "D", "alt": "B"}}
+{"id": "A060", "qid": "b01270", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A061", "qid": "r08890", "type": "relation", "stratum": "EQUIV", "suite_stratum": "real", "gold": "EQUIV"}
+{"id": "A062", "qid": "b01059", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A063", "qid": "g01073", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "A"}}
+{"id": "A064", "qid": "g01141", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "D"}}
+{"id": "A065", "qid": "g00307", "type": "group", "stratum": "real", "gold": [["at_most_k", 2]], "kind": "at_most_k", "n": 4}
+{"id": "A066", "qid": "b01782", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A067", "qid": "g01185", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "C"}}
+{"id": "A068", "qid": "g01029", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A069", "qid": "r01942", "type": "relation", "stratum": "IMPLIES", "suite_stratum": "real", "gold": "IMPLIES"}
+{"id": "A070", "qid": "b02198", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A071", "qid": "g00678", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 4}
+{"id": "A072", "qid": "g01114", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A073", "qid": "g01151", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A074", "qid": "g01072", "type": "reading", "stratum": "reading", "gold": {"base": "A", "alt": "B"}}
+{"id": "A075", "qid": "g00756", "type": "group", "stratum": "real", "gold": [["exactly_one", null]], "kind": "exactly_one", "n": 3}
+{"id": "A076", "qid": "b00324", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A077", "qid": "g01027", "type": "reading", "stratum": "reading", "gold": {"base": "D", "alt": "B"}}
+{"id": "A078", "qid": "b02600", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A079", "qid": "b00351", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A080", "qid": "b00742", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A081", "qid": "r03042", "type": "relation", "stratum": "IMPLIES", "suite_stratum": "real", "gold": "IMPLIES"}
+{"id": "A082", "qid": "b01077", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A083", "qid": "r04995", "type": "relation", "stratum": "IMPLIED_BY", "suite_stratum": "real", "gold": "IMPLIED_BY"}
+{"id": "A084", "qid": "g00535", "type": "group", "stratum": "real", "gold": [["at_most_one", null]], "kind": "at_most_one", "n": 2}
+{"id": "A085", "qid": "g01121", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A086", "qid": "r01429", "type": "relation", "stratum": "IMPLIED_BY", "suite_stratum": "real", "gold": "IMPLIED_BY"}
+{"id": "A087", "qid": "g00223", "type": "group", "stratum": "real", "gold": [["at_most_one", null]], "kind": "at_most_one", "n": 2}
+{"id": "A088", "qid": "r06355", "type": "relation", "stratum": "IMPLIES", "suite_stratum": "real", "gold": "IMPLIES"}
+{"id": "A089", "qid": "g01157", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A090", "qid": "g01181", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A091", "qid": "g00833", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 6}
+{"id": "A092", "qid": "g01063", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A093", "qid": "r03458", "type": "relation", "stratum": "IMPLIED_BY", "suite_stratum": "real", "gold": "IMPLIED_BY"}
+{"id": "A094", "qid": "g00792", "type": "group", "stratum": "real", "gold": [["at_most_one", null]], "kind": "at_most_one", "n": 2}
+{"id": "A095", "qid": "r05623", "type": "relation", "stratum": "EXCLUDES", "suite_stratum": "real", "gold": "EXCLUDES"}
+{"id": "A096", "qid": "g01026", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "C", "alt": "C"}}
+{"id": "A097", "qid": "r04797", "type": "relation", "stratum": "EXCLUDES", "suite_stratum": "real", "gold": "EXCLUDES"}
+{"id": "A098", "qid": "r09436", "type": "relation", "stratum": "EQUIV", "suite_stratum": "real", "gold": "EQUIV"}
+{"id": "A099", "qid": "r02158", "type": "relation", "stratum": "NONE", "suite_stratum": "hard_distractor", "gold": "NONE"}
+{"id": "A100", "qid": "g01119", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A101", "qid": "b01292", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A102", "qid": "r03692", "type": "relation", "stratum": "EQUIV", "suite_stratum": "real", "gold": "EQUIV"}
+{"id": "A103", "qid": "g01039", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A104", "qid": "r09229", "type": "relation", "stratum": "NONE", "suite_stratum": "hard_distractor", "gold": "NONE"}
+{"id": "A105", "qid": "r02039", "type": "relation", "stratum": "NONE", "suite_stratum": "hard_distractor", "gold": "NONE"}
+{"id": "A106", "qid": "r08982", "type": "relation", "stratum": "NONE", "suite_stratum": "hard_distractor", "gold": "NONE"}
+{"id": "A107", "qid": "g01070", "type": "reading", "stratum": "reading", "gold": {"base": "A", "alt": "B"}}
+{"id": "A108", "qid": "b02176", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A109", "qid": "b00992", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A110", "qid": "g00947", "type": "group", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "kind": "at_least_k", "n": 6}
+{"id": "A111", "qid": "g01145", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "C", "alt": "C"}}
+{"id": "A112", "qid": "g01077", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A113", "qid": "g01004", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "C"}}
+{"id": "A114", "qid": "g00914", "type": "group", "stratum": "real", "gold": [["at_least_k", 1]], "kind": "at_least_k", "n": 3}
+{"id": "A115", "qid": "r08308", "type": "relation", "stratum": "NONE", "suite_stratum": "hard_distractor", "gold": "NONE"}
+{"id": "A116", "qid": "g01084", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "D", "alt": "D"}}
+{"id": "A117", "qid": "r08586", "type": "relation", "stratum": "IMPLIES", "suite_stratum": "real", "gold": "IMPLIES"}
+{"id": "A118", "qid": "b02687", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A119", "qid": "g01129", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "A", "alt": "A"}}
+{"id": "A120", "qid": "b01012", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}
+{"id": "A121", "qid": "b00970", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A122", "qid": "g00649", "type": "group", "stratum": "real", "gold": [["ordered_chain", null]], "kind": "ordered_chain", "n": 2}
+{"id": "A123", "qid": "b00336", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A124", "qid": "g01085", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "A"}}
+{"id": "A125", "qid": "g01009", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "C"}}
+{"id": "A126", "qid": "b00242", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A127", "qid": "g00416", "type": "group", "stratum": "real", "gold": [["exactly_one", null]], "kind": "exactly_one", "n": 3}
+{"id": "A128", "qid": "g01165", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "D"}}
+{"id": "A129", "qid": "b00704", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A130", "qid": "g01160", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "A"}}
+{"id": "A131", "qid": "g01096", "type": "reading", "stratum": "reading", "gold": {"base": "B", "alt": "D"}}
+{"id": "A132", "qid": "g01046", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "B"}}
+{"id": "A133", "qid": "b02237", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A134", "qid": "r00418", "type": "relation", "stratum": "IMPLIED_BY", "suite_stratum": "real", "gold": "IMPLIED_BY"}
+{"id": "A135", "qid": "g01012", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A136", "qid": "g00924", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 3}
+{"id": "A137", "qid": "r09310", "type": "relation", "stratum": "EXCLUDES", "suite_stratum": "real", "gold": "EXCLUDES"}
+{"id": "A138", "qid": "g01071", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A139", "qid": "g01015", "type": "reading", "stratum": "reading_decoy", "gold": {"base": "B", "alt": "B"}}
+{"id": "A140", "qid": "g00467", "type": "group", "stratum": "real", "gold": [["ordered_chain", null]], "kind": "ordered_chain", "n": 2}
+{"id": "A141", "qid": "b00025", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A142", "qid": "g01182", "type": "reading", "stratum": "reading", "gold": {"base": "D", "alt": "B"}}
+{"id": "A143", "qid": "g00646", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 3}
+{"id": "A144", "qid": "g01005", "type": "reading", "stratum": "reading", "gold": {"base": "D", "alt": "A"}}
+{"id": "A145", "qid": "g01081", "type": "reading", "stratum": "reading", "gold": {"base": "C", "alt": "B"}}
+{"id": "A146", "qid": "g00428", "type": "group", "stratum": "real", "gold": [["at_most_k", 2]], "kind": "at_most_k", "n": 4}
+{"id": "A147", "qid": "g01161", "type": "reading", "stratum": "reading", "gold": {"base": "A", "alt": "B"}}
+{"id": "A148", "qid": "b00993", "type": "binding", "stratum": "bound", "gold": "bound"}
+{"id": "A149", "qid": "g00152", "type": "group", "stratum": "decoy", "gold": [], "kind": "none", "n": 2}
+{"id": "A150", "qid": "b02350", "type": "binding", "stratum": "unresolved", "gold": "unresolved"}

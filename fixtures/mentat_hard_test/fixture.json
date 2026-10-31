@@ -1,0 +1,14 @@
+{
+  "controlled": true,
+  "generator": "mentat_bench.fixtures_hard",
+  "leagues": 18,
+  "markets": 1674,
+  "name": "mentat_hard_test",
+  "outcomes": 3348,
+  "paraphrase_share": 0.17,
+  "queries": 200,
+  "seed": 20261028,
+  "split": "test",
+  "third_share": 0.17,
+  "version": "3.1"
+}

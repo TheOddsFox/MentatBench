@@ -1,0 +1,7325 @@
+{
+  "leagues": [
+    {
+      "L": 6,
+      "fixed_share": 0.0,
+      "id": "dev-L01",
+      "name": "Barova",
+      "paraphrase_pairs": [
+        [
+          "81a05722e67d51a9",
+          "96ba055a646b3325"
+        ],
+        [
+          "2290742234565f68",
+          "b42d9abe827484b0"
+        ],
+        [
+          "ff6c149e8a95f51a",
+          "6e839232f9eaa7e3"
+        ],
+        [
+          "ff6c149e8a95f51a",
+          "228582257bcaf9c9"
+        ],
+        [
+          "6e839232f9eaa7e3",
+          "228582257bcaf9c9"
+        ],
+        [
+          "2d1a5dd6074692cf",
+          "033da2eb50b612b6"
+        ],
+        [
+          "2d1a5dd6074692cf",
+          "319b0c698ad1b641"
+        ],
+        [
+          "033da2eb50b612b6",
+          "319b0c698ad1b641"
+        ],
+        [
+          "03b4ebf6234f0a84",
+          "eab551d41afaa1d4"
+        ],
+        [
+          "32c27770a52885c9",
+          "00efde0db5f738e6"
+        ],
+        [
+          "6fa82ec83ae34c99",
+          "6df70e069ac98cf0"
+        ],
+        [
+          "6fa82ec83ae34c99",
+          "56b60193c36d746d"
+        ],
+        [
+          "6fa82ec83ae34c99",
+          "8d9bf34bfb315764"
+        ],
+        [
+          "6df70e069ac98cf0",
+          "56b60193c36d746d"
+        ],
+        [
+          "6df70e069ac98cf0",
+          "8d9bf34bfb315764"
+        ],
+        [
+          "56b60193c36d746d",
+          "8d9bf34bfb315764"
+        ],
+        [
+          "58f1003197221703",
+          "902526fc5cfdc50f"
+        ],
+        [
+          "014171658c5230b3",
+          "833f1ea875260c51"
+        ],
+        [
+          "6f314f20b46f4714",
+          "f975c86f25e20485"
+        ],
+        [
+          "76ff8f3288963f6b",
+          "e7e7606d2395ea10"
+        ],
+        [
+          "67c355d9e9dec392",
+          "a8e73eea8fbd27f0"
+        ],
+        [
+          "3885b13a02f38d11",
+          "ec030249494970c3"
+        ],
+        [
+          "16fef8669865469f",
+          "eefa6091d85cd813"
+        ],
+        [
+          "27d9a9516deb6f94",
+          "704cf70ed2b3930b"
+        ],
+        [
+          "6f1b624ff0ab9409",
+          "896e0191f4c70e4e"
+        ],
+        [
+          "6f1b624ff0ab9409",
+          "2835ef94f166a306"
+        ],
+        [
+          "6f1b624ff0ab9409",
+          "9d2e3c2b4fbd7923"
+        ],
+        [
+          "896e0191f4c70e4e",
+          "2835ef94f166a306"
+        ],
+        [
+          "896e0191f4c70e4e",
+          "9d2e3c2b4fbd7923"
+        ],
+        [
+          "2835ef94f166a306",
+          "9d2e3c2b4fbd7923"
+        ],
+        [
+          "923e4aa9e351c933",
+          "f8324c04dd645b71"
+        ],
+        [
+          "f08c433ffe16c7cd",
+          "d2d0c509a1e44474"
+        ],
+        [
+          "beae79f0e0065fd9",
+          "d71103b38a684e1e"
+        ],
+        [
+          "beae79f0e0065fd9",
+          "611c485e99192425"
+        ],
+        [
+          "d71103b38a684e1e",
+          "611c485e99192425"
+        ],
+        [
+          "822320c2e93faaa2",
+          "f37d224c8a26e3ae"
+        ],
+        [
+          "f564a2b273898026",
+          "5788a4721b629dbf"
+        ],
+        [
+          "108ddd13f72f1c2f",
+          "f9630fd6b25acdff"
+        ],
+        [
+          "108ddd13f72f1c2f",
+          "c07dd56965acd58f"
+        ],
+        [
+          "f9630fd6b25acdff",
+          "c07dd56965acd58f"
+        ],
+        [
+          "780ba4bf9e302da6",
+          "ed0ff76c59a035a0"
+        ],
+        [
+          "780ba4bf9e302da6",
+          "daa2f61f520963de"
+        ],
+        [
+          "780ba4bf9e302da6",
+          "c5cda26f806d8f8d"
+        ],
+        [
+          "ed0ff76c59a035a0",
+          "daa2f61f520963de"
+        ],
+        [
+          "ed0ff76c59a035a0",
+          "c5cda26f806d8f8d"
+        ],
+        [
+          "daa2f61f520963de",
+          "c5cda26f806d8f8d"
+        ],
+        [
+          "ddb2ad54a164fb15",
+          "4e79d99b47c3f22b"
+        ],
+        [
+          "ddb2ad54a164fb15",
+          "62117e0bec9dd6c8"
+        ],
+        [
+          "4e79d99b47c3f22b",
+          "62117e0bec9dd6c8"
+        ],
+        [
+          "cbd87e967b4c968d",
+          "049bd7f29de43e6e"
+        ],
+        [
+          "cbd87e967b4c968d",
+          "7a4f55e412a0eaac"
+        ],
+        [
+          "049bd7f29de43e6e",
+          "7a4f55e412a0eaac"
+        ],
+        [
+          "e5e01a5ba1a400ca",
+          "2e771c8d64050e3e"
+        ],
+        [
+          "e5e01a5ba1a400ca",
+          "8fd4ffd8808a5b89"
+        ],
+        [
+          "2e771c8d64050e3e",
+          "8fd4ffd8808a5b89"
+        ]
+      ],
+      "qualifiers": [
+        "Dormoor",
+        "Pelfield"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 1,
+            "t": 4
+          },
+          "atmost": {
+            "k": 5,
+            "t": 2
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Pelfield",
+              "Pelton"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Dormoor",
+              "Pelfield"
+            ],
+            [
+              "Pelfield",
+              "Marford"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 3,
+          "rule": 6,
+          "teams": [
+            "Dormoor",
+            "Marford"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L01-G1",
+            "dev-L01-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L01-G1": 2,
+            "dev-L01-G2": 1
+          },
+          "shared": [
+            "Calmoor",
+            "Dormoor"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L01-G1",
+            "dev-L01-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L01-G1": 2,
+            "dev-L01-G3": 1
+          },
+          "shared": [
+            "Pelfield",
+            "Calmoor"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L01-G2",
+            "dev-L01-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L01-G2": 1,
+            "dev-L01-G3": 1
+          },
+          "shared": [
+            "Marford",
+            "Calmoor"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "tophalf",
+              "market": "47985415a32522df",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cc9f217945177e22e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Dormoor"
+                },
+                "base": {
+                  "class": "c9f20e2c0b870af85",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Dormoor"
+                }
+              },
+              "t": null,
+              "team": "Dormoor"
+            },
+            {
+              "kind": "break",
+              "market": "3d6cc3998e5e3a6e",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cfe149152bebe2829",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Galport"
+                },
+                "base": {
+                  "class": "c74245960f38a414d",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Galport"
+                }
+              },
+              "t": 2,
+              "team": "Galport"
+            },
+            {
+              "kind": "break",
+              "market": "768f8d1c90c9f4b4",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c4449213cd0fdbb06",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Dormoor"
+                },
+                "base": {
+                  "class": "cc9f217945177e22e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Dormoor"
+                }
+              },
+              "t": 6,
+              "team": "Dormoor"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Pelfield",
+      "scores": {
+        "Calmoor": 2,
+        "Dormoor": 5,
+        "Galport": 1,
+        "Marford": 3,
+        "Pelfield": 4,
+        "Pelton": 0
+      },
+      "seeds": {
+        "dev-L01-G1": "Pelfield",
+        "dev-L01-G2": "Dormoor",
+        "dev-L01-G3": "Marford"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L01-G1",
+          "members": [
+            "Pelfield",
+            "Calmoor",
+            "Dormoor",
+            "Pelton"
+          ],
+          "named": false,
+          "theme": "Riverside",
+          "title": "the riverside sides"
+        },
+        {
+          "id": "dev-L01-G2",
+          "members": [
+            "Marford",
+            "Dormoor",
+            "Galport",
+            "Calmoor"
+          ],
+          "named": true,
+          "theme": "Coastal",
+          "title": "Group Coastal"
+        },
+        {
+          "id": "dev-L01-G3",
+          "members": [
+            "Calmoor",
+            "Marford",
+            "Pelfield"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        }
+      ],
+      "teams": [
+        "Galport",
+        "Marford",
+        "Pelton",
+        "Dormoor",
+        "Pelfield",
+        "Calmoor"
+      ],
+      "winner": "Dormoor"
+    },
+    {
+      "L": 6,
+      "fixed_share": 0.0,
+      "id": "dev-L02",
+      "name": "Torova",
+      "paraphrase_pairs": [
+        [
+          "0ef61ccb3ccd6529",
+          "d78acde4a20a362a"
+        ],
+        [
+          "0ef61ccb3ccd6529",
+          "81d083a8b5061202"
+        ],
+        [
+          "0ef61ccb3ccd6529",
+          "63a41cd2a3162d00"
+        ],
+        [
+          "d78acde4a20a362a",
+          "81d083a8b5061202"
+        ],
+        [
+          "d78acde4a20a362a",
+          "63a41cd2a3162d00"
+        ],
+        [
+          "81d083a8b5061202",
+          "63a41cd2a3162d00"
+        ],
+        [
+          "3208620c16fd6fc0",
+          "0745256ac7854461"
+        ],
+        [
+          "cfbe113416e3e272",
+          "f432d003571cda01"
+        ],
+        [
+          "9fa315e35ab9c7eb",
+          "c556823550ff9c71"
+        ],
+        [
+          "732bada00e8cf931",
+          "2f2f27e8decd0e21"
+        ],
+        [
+          "732bada00e8cf931",
+          "4c196eb2df7fc15e"
+        ],
+        [
+          "2f2f27e8decd0e21",
+          "4c196eb2df7fc15e"
+        ],
+        [
+          "2d710a8c1db033be",
+          "a26194f71e72c679"
+        ],
+        [
+          "dff8256e4884de1e",
+          "6450a2902c605e88"
+        ],
+        [
+          "dff8256e4884de1e",
+          "065e1fb91c38a2ae"
+        ],
+        [
+          "6450a2902c605e88",
+          "065e1fb91c38a2ae"
+        ],
+        [
+          "55684f9686ccf980",
+          "34449eaa7b9e6031"
+        ],
+        [
+          "78f7e443541de9ba",
+          "53ecc65d8eb0ef8c"
+        ],
+        [
+          "c10d580e00107927",
+          "42957284e09c9a07"
+        ],
+        [
+          "c10d580e00107927",
+          "7915736c900e4508"
+        ],
+        [
+          "42957284e09c9a07",
+          "7915736c900e4508"
+        ],
+        [
+          "042b7ef8f5934e1a",
+          "ced08f3e3b8aac59"
+        ],
+        [
+          "042b7ef8f5934e1a",
+          "983ccc0f3d3504c2"
+        ],
+        [
+          "ced08f3e3b8aac59",
+          "983ccc0f3d3504c2"
+        ],
+        [
+          "d54128006aac1e58",
+          "9cee1e99dd181f0c"
+        ],
+        [
+          "d54128006aac1e58",
+          "2766026a707c09bf"
+        ],
+        [
+          "9cee1e99dd181f0c",
+          "2766026a707c09bf"
+        ],
+        [
+          "479622e1bb3182c9",
+          "67e2b225cdc27107"
+        ],
+        [
+          "479622e1bb3182c9",
+          "f198fc87b835b21f"
+        ],
+        [
+          "67e2b225cdc27107",
+          "f198fc87b835b21f"
+        ],
+        [
+          "b745873af0138b0f",
+          "9cc2fc72fe2233d3"
+        ],
+        [
+          "b745873af0138b0f",
+          "6c63f4c3cec882a7"
+        ],
+        [
+          "9cc2fc72fe2233d3",
+          "6c63f4c3cec882a7"
+        ]
+      ],
+      "qualifiers": [
+        "Galholt",
+        "Galmere"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 3,
+            "t": 1
+          },
+          "atmost": {
+            "k": 3,
+            "t": 4
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "conditionals": [
+            [
+              "Galmere",
+              "Galholt"
+            ],
+            [
+              "Valham",
+              "Galmere"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L02-G1",
+            "dev-L02-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L02-G1": 1,
+            "dev-L02-G2": 2
+          },
+          "shared": [
+            "Valham",
+            "Galmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L02-G1",
+            "dev-L02-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L02-G1": 1,
+            "dev-L02-G3": 1
+          },
+          "shared": [
+            "Barfield",
+            "Galmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L02-G2",
+            "dev-L02-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L02-G2": 2,
+            "dev-L02-G3": 1
+          },
+          "shared": [
+            "Galmere",
+            "Galholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "015a4bd96f5c8cf5",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "ca4e4f08b51c20d1d",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Galholt"
+                },
+                "base": {
+                  "class": "c71b56cad5bf4127a",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Galholt"
+                }
+              },
+              "t": 6,
+              "team": "Galholt"
+            },
+            {
+              "kind": "break",
+              "market": "ec09c647a5106a1f",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c05130904fe1b9339",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Barfield"
+                },
+                "base": {
+                  "class": "cad77962ffec1a2d5",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Barfield"
+                }
+              },
+              "t": 3,
+              "team": "Barfield"
+            },
+            {
+              "kind": "tophalf",
+              "market": "edf00ef28cf6bff5",
+              "missing": "ambiguous_scope",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "c71b56cad5bf4127a",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Galholt"
+                },
+                "base": {
+                  "class": "c4f52b4b1f386b025",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Galholt"
+                }
+              },
+              "t": null,
+              "team": "Galholt"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Galholt",
+      "scores": {
+        "Barfield": 2,
+        "Galholt": 5,
+        "Galmere": 6,
+        "Valham": 0
+      },
+      "seeds": {
+        "dev-L02-G1": "Barfield",
+        "dev-L02-G2": "Galholt",
+        "dev-L02-G3": "Galmere"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L02-G1",
+          "members": [
+            "Valham",
+            "Barfield",
+            "Galmere"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        },
+        {
+          "id": "dev-L02-G2",
+          "members": [
+            "Galmere",
+            "Galholt",
+            "Valham"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        },
+        {
+          "id": "dev-L02-G3",
+          "members": [
+            "Galmere",
+            "Barfield",
+            "Galholt"
+          ],
+          "named": false,
+          "theme": "Coastal",
+          "title": "the coastal sides"
+        }
+      ],
+      "teams": [
+        "Barfield",
+        "Galholt",
+        "Valham",
+        "Galmere"
+      ],
+      "winner": "Galmere"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L03",
+      "name": "Lorova",
+      "paraphrase_pairs": [
+        [
+          "5f6bdbc42f860a3d",
+          "bcc994efcba067cf"
+        ],
+        [
+          "5f6bdbc42f860a3d",
+          "e6c5a2e1f203319a"
+        ],
+        [
+          "bcc994efcba067cf",
+          "e6c5a2e1f203319a"
+        ],
+        [
+          "bba74101fa20ac41",
+          "1f97efafb1647843"
+        ],
+        [
+          "8f788be211e76791",
+          "084798a95f156d2c"
+        ],
+        [
+          "624e5e17549e7703",
+          "401b9b92fb517ae0"
+        ],
+        [
+          "624e5e17549e7703",
+          "1760f310decef917"
+        ],
+        [
+          "401b9b92fb517ae0",
+          "1760f310decef917"
+        ],
+        [
+          "77afc65f5a6568ca",
+          "960b6f45c271889b"
+        ],
+        [
+          "7388c013336ccb60",
+          "6877c6e76e936676"
+        ],
+        [
+          "7388c013336ccb60",
+          "dc1266ce60670427"
+        ],
+        [
+          "7388c013336ccb60",
+          "6f80f3b3703e583f"
+        ],
+        [
+          "6877c6e76e936676",
+          "dc1266ce60670427"
+        ],
+        [
+          "6877c6e76e936676",
+          "6f80f3b3703e583f"
+        ],
+        [
+          "dc1266ce60670427",
+          "6f80f3b3703e583f"
+        ],
+        [
+          "0c53f2a5a02adb3a",
+          "4c7ff180e96df510"
+        ],
+        [
+          "0c53f2a5a02adb3a",
+          "8c70442aff6d4cc5"
+        ],
+        [
+          "4c7ff180e96df510",
+          "8c70442aff6d4cc5"
+        ],
+        [
+          "f820485b498936b2",
+          "50601a8e75ce67b6"
+        ],
+        [
+          "f820485b498936b2",
+          "733b228192d73e5c"
+        ],
+        [
+          "50601a8e75ce67b6",
+          "733b228192d73e5c"
+        ],
+        [
+          "3e7e94eded829944",
+          "73328e7d4977c343"
+        ],
+        [
+          "3e7e94eded829944",
+          "c0e88f0682cd0e53"
+        ],
+        [
+          "73328e7d4977c343",
+          "c0e88f0682cd0e53"
+        ],
+        [
+          "2faf5f123ef285a4",
+          "022c78726b58fee5"
+        ],
+        [
+          "2faf5f123ef285a4",
+          "61b114d32fb25f25"
+        ],
+        [
+          "022c78726b58fee5",
+          "61b114d32fb25f25"
+        ],
+        [
+          "51c2d1cc47a81761",
+          "8f5e20db679995d5"
+        ],
+        [
+          "51c2d1cc47a81761",
+          "b07c5e33898e99f8"
+        ],
+        [
+          "8f5e20db679995d5",
+          "b07c5e33898e99f8"
+        ],
+        [
+          "dd6cb69aaba2c3f7",
+          "f9f5ef9a40394b8e"
+        ],
+        [
+          "dd6cb69aaba2c3f7",
+          "adc6e95e43553aad"
+        ],
+        [
+          "f9f5ef9a40394b8e",
+          "adc6e95e43553aad"
+        ]
+      ],
+      "qualifiers": [
+        "Barholt",
+        "Salmoor",
+        "Valton"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 3,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "conditionals": [
+            [
+              "Barholt",
+              "Rosstead"
+            ],
+            [
+              "Salmoor",
+              "Barholt"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 3,
+          "rule": 6,
+          "teams": [
+            "Barholt",
+            "Dorstead"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L03-G1",
+            "dev-L03-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L03-G1": 1,
+            "dev-L03-G2": 1
+          },
+          "shared": [
+            "Torgate",
+            "Barholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L03-G1",
+            "dev-L03-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L03-G1": 1,
+            "dev-L03-G3": 2
+          },
+          "shared": [
+            "Torgate",
+            "Rosstead"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L03-G2",
+            "dev-L03-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L03-G2": 1,
+            "dev-L03-G3": 2
+          },
+          "shared": [
+            "Torgate"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "tophalf",
+              "market": "2db674f2d57d49b9",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "ccab4f5369cb8b3ba",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Valton"
+                },
+                "base": {
+                  "class": "ce66bae69066f432e",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Valton"
+                }
+              },
+              "t": null,
+              "team": "Valton"
+            },
+            {
+              "kind": "tophalf",
+              "market": "c04dea1c294b7ef3",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c9f5b91a3b7a06c39",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Barholt"
+                },
+                "base": {
+                  "class": "c96cb15fa66af8034",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Barholt"
+                }
+              },
+              "t": null,
+              "team": "Barholt"
+            },
+            {
+              "kind": "break",
+              "market": "70954fd163547466",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c1255a7c9641fe96b",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Dorstead"
+                },
+                "base": {
+                  "class": "c6dcceafee50c0931",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Dorstead"
+                }
+              },
+              "t": 3,
+              "team": "Dorstead"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Salmoor",
+      "scores": {
+        "Barholt": 3,
+        "Dorstead": 2,
+        "Rosstead": 1,
+        "Salmoor": 5,
+        "Torgate": 0,
+        "Valton": 4
+      },
+      "seeds": {
+        "dev-L03-G1": "Rosstead",
+        "dev-L03-G2": "Barholt",
+        "dev-L03-G3": "Valton"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L03-G1",
+          "members": [
+            "Torgate",
+            "Rosstead",
+            "Barholt"
+          ],
+          "named": true,
+          "theme": "Upland",
+          "title": "Group Upland"
+        },
+        {
+          "id": "dev-L03-G2",
+          "members": [
+            "Barholt",
+            "Dorstead",
+            "Torgate"
+          ],
+          "named": false,
+          "theme": "Northern",
+          "title": "the northern sides"
+        },
+        {
+          "id": "dev-L03-G3",
+          "members": [
+            "Rosstead",
+            "Valton",
+            "Torgate"
+          ],
+          "named": true,
+          "theme": "Coastal",
+          "title": "Group Coastal"
+        }
+      ],
+      "teams": [
+        "Barholt",
+        "Valton",
+        "Rosstead",
+        "Dorstead",
+        "Torgate",
+        "Salmoor"
+      ],
+      "winner": "Valton"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L04",
+      "name": "Salica",
+      "paraphrase_pairs": [
+        [
+          "2ec21e2bdaf9f024",
+          "1fee7c2433db6dd3"
+        ],
+        [
+          "2ec21e2bdaf9f024",
+          "49893439bfac6c7e"
+        ],
+        [
+          "1fee7c2433db6dd3",
+          "49893439bfac6c7e"
+        ],
+        [
+          "b02865122e31ae3d",
+          "6896ec9cee908ed0"
+        ],
+        [
+          "e899e4dd36189bba",
+          "3bc126d330221674"
+        ],
+        [
+          "e899e4dd36189bba",
+          "d476cffda7f1b973"
+        ],
+        [
+          "3bc126d330221674",
+          "d476cffda7f1b973"
+        ],
+        [
+          "b40a1ea25ab602f2",
+          "9fa095d551a6ce85"
+        ],
+        [
+          "019b3e30f7786b3f",
+          "6342a0ea2f44a2e4"
+        ],
+        [
+          "a829b38aec83804c",
+          "9dd6b8a64a115be6"
+        ],
+        [
+          "a829b38aec83804c",
+          "e847dd56b350e008"
+        ],
+        [
+          "9dd6b8a64a115be6",
+          "e847dd56b350e008"
+        ],
+        [
+          "f01949759d1bc139",
+          "a85a6fdb611a57a5"
+        ],
+        [
+          "f01949759d1bc139",
+          "4f147ab88fe0b2e6"
+        ],
+        [
+          "a85a6fdb611a57a5",
+          "4f147ab88fe0b2e6"
+        ],
+        [
+          "e700acfbaa925123",
+          "40d76e56f1a7a60a"
+        ],
+        [
+          "e700acfbaa925123",
+          "ca9d90fcfef21073"
+        ],
+        [
+          "40d76e56f1a7a60a",
+          "ca9d90fcfef21073"
+        ],
+        [
+          "e7da2a319f94ac8d",
+          "78e6effee4c0764b"
+        ],
+        [
+          "e7da2a319f94ac8d",
+          "cbed751654bd653f"
+        ],
+        [
+          "e7da2a319f94ac8d",
+          "42e277b47f9c77e8"
+        ],
+        [
+          "78e6effee4c0764b",
+          "cbed751654bd653f"
+        ],
+        [
+          "78e6effee4c0764b",
+          "42e277b47f9c77e8"
+        ],
+        [
+          "cbed751654bd653f",
+          "42e277b47f9c77e8"
+        ],
+        [
+          "fb2005b16a2367ca",
+          "f74baa7bc75a2f75"
+        ],
+        [
+          "a7838cb5c9f01c8a",
+          "6624d0b103dd98b7"
+        ],
+        [
+          "a7838cb5c9f01c8a",
+          "c2d7e6ef421553af"
+        ],
+        [
+          "6624d0b103dd98b7",
+          "c2d7e6ef421553af"
+        ],
+        [
+          "86a96bb048348a5d",
+          "28822b76269277fb"
+        ],
+        [
+          "86a96bb048348a5d",
+          "7797e3b3f77e3adf"
+        ],
+        [
+          "28822b76269277fb",
+          "7797e3b3f77e3adf"
+        ],
+        [
+          "3d17cd484a3b5a52",
+          "45d49929dd5db226"
+        ],
+        [
+          "3d17cd484a3b5a52",
+          "2b0c0b4f0961d1d2"
+        ],
+        [
+          "45d49929dd5db226",
+          "2b0c0b4f0961d1d2"
+        ]
+      ],
+      "qualifiers": [
+        "Barstead",
+        "Pelmoor",
+        "Salfield"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 3,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 1,
+            "t": 4
+          },
+          "atmost": {
+            "k": 4,
+            "t": 2
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Barstead",
+              "Calmere"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Barworth",
+              "Barstead"
+            ],
+            [
+              "Calmere",
+              "Barstead"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L04-G1",
+            "dev-L04-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L04-G1": 1,
+            "dev-L04-G2": 2
+          },
+          "shared": [
+            "Barstead",
+            "Barworth"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L04-G1",
+            "dev-L04-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L04-G1": 1,
+            "dev-L04-G3": 2
+          },
+          "shared": [
+            "Calmere",
+            "Barworth"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L04-G2",
+            "dev-L04-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L04-G2": 2,
+            "dev-L04-G3": 2
+          },
+          "shared": [
+            "Pelmoor",
+            "Barworth"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "03cb9c13b9f8c028",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "ce4e83700c7b759c1",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Barstead"
+                },
+                "base": {
+                  "class": "c15c6e6c64af686fc",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Barstead"
+                }
+              },
+              "t": 5,
+              "team": "Barstead"
+            },
+            {
+              "kind": "tophalf",
+              "market": "2c3dd327828c6623",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c1ee0a204b83f4235",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Pelmoor"
+                },
+                "base": {
+                  "class": "c5faa1d20e16c4c31",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Pelmoor"
+                }
+              },
+              "t": null,
+              "team": "Pelmoor"
+            },
+            {
+              "kind": "break",
+              "market": "bfe493c173e77144",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c9a3f30218c98a3d5",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Calmere"
+                },
+                "base": {
+                  "class": "cbb7a636f68795eae",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Calmere"
+                }
+              },
+              "t": 3,
+              "team": "Calmere"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Pelmoor",
+      "scores": {
+        "Barstead": 4,
+        "Barworth": 0,
+        "Calmere": 2,
+        "Pelmoor": 3,
+        "Salfield": 5
+      },
+      "seeds": {
+        "dev-L04-G1": "Barstead",
+        "dev-L04-G2": "Pelmoor",
+        "dev-L04-G3": "Calmere"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L04-G1",
+          "members": [
+            "Barstead",
+            "Salfield",
+            "Calmere",
+            "Barworth"
+          ],
+          "named": false,
+          "theme": "Coastal",
+          "title": "the coastal sides"
+        },
+        {
+          "id": "dev-L04-G2",
+          "members": [
+            "Pelmoor",
+            "Barworth",
+            "Barstead"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        },
+        {
+          "id": "dev-L04-G3",
+          "members": [
+            "Calmere",
+            "Barworth",
+            "Pelmoor"
+          ],
+          "named": false,
+          "theme": "Upland",
+          "title": "the upland sides"
+        }
+      ],
+      "teams": [
+        "Pelmoor",
+        "Calmere",
+        "Barstead",
+        "Barworth",
+        "Salfield"
+      ],
+      "winner": "Barstead"
+    },
+    {
+      "L": 6,
+      "fixed_share": 0.0,
+      "id": "dev-L05",
+      "name": "Dorica",
+      "paraphrase_pairs": [
+        [
+          "f4f26148fa8c96c6",
+          "9f9fe1e1c1f4888d"
+        ],
+        [
+          "39e087baeaa48182",
+          "507a9fd0b0b8689c"
+        ],
+        [
+          "39e087baeaa48182",
+          "c5feb38719c8c62f"
+        ],
+        [
+          "507a9fd0b0b8689c",
+          "c5feb38719c8c62f"
+        ],
+        [
+          "1b7473d640a9502b",
+          "ec7dc84e1c80ad94"
+        ],
+        [
+          "60aa1cf19bfc653c",
+          "78db114d1c66cd9c"
+        ],
+        [
+          "60aa1cf19bfc653c",
+          "82a3c2c35f040249"
+        ],
+        [
+          "78db114d1c66cd9c",
+          "82a3c2c35f040249"
+        ],
+        [
+          "3c6e2980860e9c06",
+          "f08fdc44f3b74d1e"
+        ],
+        [
+          "6a199b20db42d981",
+          "5c54f1d3e4a76ed1"
+        ],
+        [
+          "6a199b20db42d981",
+          "49d143f8a29af7c1"
+        ],
+        [
+          "6a199b20db42d981",
+          "fec0bbc6dd18fb78"
+        ],
+        [
+          "5c54f1d3e4a76ed1",
+          "49d143f8a29af7c1"
+        ],
+        [
+          "5c54f1d3e4a76ed1",
+          "fec0bbc6dd18fb78"
+        ],
+        [
+          "49d143f8a29af7c1",
+          "fec0bbc6dd18fb78"
+        ],
+        [
+          "fbf6dc8a85287b06",
+          "cc09ad5efe1ca111"
+        ],
+        [
+          "9604bf298d626aa9",
+          "8b991fc8cdee57a4"
+        ],
+        [
+          "0eef6f6e86150cbe",
+          "cba33472dbb8fb76"
+        ],
+        [
+          "0eef6f6e86150cbe",
+          "9a47a591e3512867"
+        ],
+        [
+          "0eef6f6e86150cbe",
+          "dc039b9b1062652b"
+        ],
+        [
+          "cba33472dbb8fb76",
+          "9a47a591e3512867"
+        ],
+        [
+          "cba33472dbb8fb76",
+          "dc039b9b1062652b"
+        ],
+        [
+          "9a47a591e3512867",
+          "dc039b9b1062652b"
+        ],
+        [
+          "ad0615cf9e2cb8ab",
+          "bd903c86d0e9947c"
+        ],
+        [
+          "58b425a0e2b657fc",
+          "53d42c93bfbd304e"
+        ],
+        [
+          "3b1f6eabbe9e83d2",
+          "05de8756aa4f008f"
+        ],
+        [
+          "c9029885bcafd667",
+          "9d179f113eafd074"
+        ],
+        [
+          "ad56d153237d373d",
+          "c147f7077bdca104"
+        ],
+        [
+          "604d9440f1c85d6c",
+          "76b145c1a6db2e92"
+        ],
+        [
+          "604d9440f1c85d6c",
+          "264282f07c8fda55"
+        ],
+        [
+          "76b145c1a6db2e92",
+          "264282f07c8fda55"
+        ],
+        [
+          "12504ee5789b28b0",
+          "dac0e0e6d9cc998d"
+        ],
+        [
+          "5a4f196f86edbe5a",
+          "8559d989a8d4a7b8"
+        ],
+        [
+          "ccbbcf0947275451",
+          "30bc1e58df2c4fd8"
+        ],
+        [
+          "ccbbcf0947275451",
+          "4f673e7d3802e9e0"
+        ],
+        [
+          "30bc1e58df2c4fd8",
+          "4f673e7d3802e9e0"
+        ],
+        [
+          "024a1cc8159ec7e5",
+          "e70675cbcc1c2ada"
+        ],
+        [
+          "024a1cc8159ec7e5",
+          "3e2d6c0e9a3cf35e"
+        ],
+        [
+          "e70675cbcc1c2ada",
+          "3e2d6c0e9a3cf35e"
+        ],
+        [
+          "4fdcc7b8df603525",
+          "3321474586ab8c5c"
+        ],
+        [
+          "4fdcc7b8df603525",
+          "ef5b34a722dd5a0a"
+        ],
+        [
+          "3321474586ab8c5c",
+          "ef5b34a722dd5a0a"
+        ]
+      ],
+      "qualifiers": [
+        "Dorton",
+        "Valfield"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "pairs": [
+            [
+              "Valfield",
+              "Salford"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Dorton",
+              "Valfield"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 1,
+          "rule": 6,
+          "teams": [
+            "Dorton",
+            "Calham"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L05-G1",
+            "dev-L05-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L05-G1": 1,
+            "dev-L05-G2": 1
+          },
+          "shared": [
+            "Salford",
+            "Rosford"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L05-G1",
+            "dev-L05-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L05-G1": 1,
+            "dev-L05-G3": 2
+          },
+          "shared": [
+            "Salford",
+            "Valfield"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L05-G2",
+            "dev-L05-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L05-G2": 1,
+            "dev-L05-G3": 2
+          },
+          "shared": [
+            "Salford",
+            "Dorton"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "afb226c0edb6b0d7",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c1c6af47dba505787",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Rosford"
+                },
+                "base": {
+                  "class": "c405fd06cfbdafea3",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Rosford"
+                }
+              },
+              "t": 4,
+              "team": "Rosford"
+            },
+            {
+              "kind": "tophalf",
+              "market": "8c6b905fb2a1a7e7",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c1bdaaa06d0cbe9af",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Rosford"
+                },
+                "base": {
+                  "class": "c6f401d6fdb0edae6",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Rosford"
+                }
+              },
+              "t": null,
+              "team": "Rosford"
+            },
+            {
+              "kind": "tophalf",
+              "market": "a74cbb2c4b44d011",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c00f513ef6db76459",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Calham"
+                },
+                "base": {
+                  "class": "c38114d1de093cec6",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Calham"
+                }
+              },
+              "t": null,
+              "team": "Calham"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Valfield",
+      "scores": {
+        "Calham": 2,
+        "Dorton": 5,
+        "Rosford": 3,
+        "Salford": 1,
+        "Valfield": 4
+      },
+      "seeds": {
+        "dev-L05-G1": "Valfield",
+        "dev-L05-G2": "Salford",
+        "dev-L05-G3": "Dorton"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L05-G1",
+          "members": [
+            "Salford",
+            "Valfield",
+            "Rosford"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        },
+        {
+          "id": "dev-L05-G2",
+          "members": [
+            "Salford",
+            "Calham",
+            "Dorton",
+            "Rosford"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        },
+        {
+          "id": "dev-L05-G3",
+          "members": [
+            "Valfield",
+            "Salford",
+            "Dorton"
+          ],
+          "named": true,
+          "theme": "Riverside",
+          "title": "Group Riverside"
+        }
+      ],
+      "teams": [
+        "Calham",
+        "Valfield",
+        "Salford",
+        "Dorton",
+        "Rosford"
+      ],
+      "winner": "Dorton"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L06",
+      "name": "Halova",
+      "paraphrase_pairs": [
+        [
+          "8384585dcb603de0",
+          "8afd621079fcc162"
+        ],
+        [
+          "7d8d54252d17bfe2",
+          "3213bd4c4b87ec4b"
+        ],
+        [
+          "7d8d54252d17bfe2",
+          "360fa5ff2ccafa23"
+        ],
+        [
+          "3213bd4c4b87ec4b",
+          "360fa5ff2ccafa23"
+        ],
+        [
+          "b85e26dc51a8425f",
+          "4d4e538a87542a28"
+        ],
+        [
+          "b85e26dc51a8425f",
+          "12840bd05d1e9584"
+        ],
+        [
+          "b85e26dc51a8425f",
+          "3ae3c5b160bf0f0f"
+        ],
+        [
+          "4d4e538a87542a28",
+          "12840bd05d1e9584"
+        ],
+        [
+          "4d4e538a87542a28",
+          "3ae3c5b160bf0f0f"
+        ],
+        [
+          "12840bd05d1e9584",
+          "3ae3c5b160bf0f0f"
+        ],
+        [
+          "05edb17575c2b532",
+          "091b5f958ade10e1"
+        ],
+        [
+          "0b2f5394182f9793",
+          "96c9831142b19105"
+        ],
+        [
+          "9c4a5e5f64dea993",
+          "37a9415a3732dc6e"
+        ],
+        [
+          "5fd0f7cdaddd0b7b",
+          "00976e2db56d31f5"
+        ],
+        [
+          "986245ca0c495283",
+          "a4c5c1595f8f384d"
+        ],
+        [
+          "e9f1fb9ece15cca4",
+          "46e53d76932ab4b3"
+        ],
+        [
+          "e9f1fb9ece15cca4",
+          "1e0a20180529c455"
+        ],
+        [
+          "46e53d76932ab4b3",
+          "1e0a20180529c455"
+        ],
+        [
+          "8dbfe07f27c78a18",
+          "faf4f027602efe02"
+        ],
+        [
+          "746d1e7c474cbbe8",
+          "0b11f4939a91eb90"
+        ],
+        [
+          "1a2e7ef0b9e38dda",
+          "c66003dd8b93f6c9"
+        ],
+        [
+          "e9d0cec46642406e",
+          "93c06e137f395401"
+        ],
+        [
+          "e9d0cec46642406e",
+          "ee76d5daa83e7d8f"
+        ],
+        [
+          "93c06e137f395401",
+          "ee76d5daa83e7d8f"
+        ],
+        [
+          "393417716855b405",
+          "054c3ff5c542ad6f"
+        ],
+        [
+          "393417716855b405",
+          "6e6618123959d231"
+        ],
+        [
+          "393417716855b405",
+          "bf3f7a0278f6f40d"
+        ],
+        [
+          "054c3ff5c542ad6f",
+          "6e6618123959d231"
+        ],
+        [
+          "054c3ff5c542ad6f",
+          "bf3f7a0278f6f40d"
+        ],
+        [
+          "6e6618123959d231",
+          "bf3f7a0278f6f40d"
+        ],
+        [
+          "8b43d37cb02e9c03",
+          "80e1a906cbfaa85c"
+        ],
+        [
+          "7b4b0de32b0708ab",
+          "ae761e31fe16667d"
+        ],
+        [
+          "7b4b0de32b0708ab",
+          "700ca040282e56d7"
+        ],
+        [
+          "ae761e31fe16667d",
+          "700ca040282e56d7"
+        ],
+        [
+          "6932823d967b49c6",
+          "1f0997035ea0b2c3"
+        ],
+        [
+          "6932823d967b49c6",
+          "c6b689cebf59b2a0"
+        ],
+        [
+          "1f0997035ea0b2c3",
+          "c6b689cebf59b2a0"
+        ],
+        [
+          "526e4e085ccf7067",
+          "2a49d455fb3f49d9"
+        ],
+        [
+          "526e4e085ccf7067",
+          "d65dc4d6d545fc77"
+        ],
+        [
+          "2a49d455fb3f49d9",
+          "d65dc4d6d545fc77"
+        ],
+        [
+          "2072c7eb4be7ebfc",
+          "e292cdf88b32a90c"
+        ],
+        [
+          "2072c7eb4be7ebfc",
+          "6ddaf57a51248f51"
+        ],
+        [
+          "e292cdf88b32a90c",
+          "6ddaf57a51248f51"
+        ],
+        [
+          "77ad0d760a649029",
+          "d66e08ec3e45c927"
+        ],
+        [
+          "77ad0d760a649029",
+          "473f3d6a3ec30d85"
+        ],
+        [
+          "d66e08ec3e45c927",
+          "473f3d6a3ec30d85"
+        ]
+      ],
+      "qualifiers": [
+        "Galgate",
+        "Halby"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 2,
+            "t": 3
+          },
+          "atmost": {
+            "k": 4,
+            "t": 3
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Halby",
+              "Kelmere"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Halby",
+              "Galgate"
+            ],
+            [
+              "Marfield",
+              "Halby"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 3,
+          "rule": 6,
+          "teams": [
+            "Pelholt",
+            "Kelmere"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L06-G1",
+            "dev-L06-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L06-G1": 2,
+            "dev-L06-G2": 1
+          },
+          "shared": [
+            "Halby"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L06-G1",
+            "dev-L06-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L06-G1": 2,
+            "dev-L06-G3": 2
+          },
+          "shared": [
+            "Halby",
+            "Marfield"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L06-G2",
+            "dev-L06-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L06-G2": 1,
+            "dev-L06-G3": 2
+          },
+          "shared": [
+            "Pelholt",
+            "Halby",
+            "Lormere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "tophalf",
+              "market": "8403988a298509d3",
+              "missing": "ambiguous_scope",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "cc6dcf05d62e7b880",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Galgate"
+                },
+                "base": {
+                  "class": "cc373cb67eb436c02",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Galgate"
+                }
+              },
+              "t": null,
+              "team": "Galgate"
+            },
+            {
+              "kind": "break",
+              "market": "e35645a5fb7281b8",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "c6823cfba82320618",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Galgate"
+                },
+                "base": {
+                  "class": "cc6dcf05d62e7b880",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Galgate"
+                }
+              },
+              "t": 5,
+              "team": "Galgate"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Galgate",
+      "scores": {
+        "Galgate": 4,
+        "Halby": 5,
+        "Kelmere": 0,
+        "Lormere": 2,
+        "Marfield": 3,
+        "Pelholt": 1
+      },
+      "seeds": {
+        "dev-L06-G1": "Halby",
+        "dev-L06-G2": "Pelholt",
+        "dev-L06-G3": "Lormere"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L06-G1",
+          "members": [
+            "Halby",
+            "Marfield",
+            "Galgate",
+            "Kelmere"
+          ],
+          "named": false,
+          "theme": "Riverside",
+          "title": "the riverside sides"
+        },
+        {
+          "id": "dev-L06-G2",
+          "members": [
+            "Pelholt",
+            "Halby",
+            "Lormere"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        },
+        {
+          "id": "dev-L06-G3",
+          "members": [
+            "Marfield",
+            "Halby",
+            "Lormere",
+            "Pelholt"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        }
+      ],
+      "teams": [
+        "Kelmere",
+        "Halby",
+        "Marfield",
+        "Galgate",
+        "Pelholt",
+        "Lormere"
+      ],
+      "winner": "Halby"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L07",
+      "name": "Norura",
+      "paraphrase_pairs": [
+        [
+          "4181576e01b40606",
+          "b7bebc4afd1c7a28"
+        ],
+        [
+          "a1bfa06d9046e24c",
+          "56a9c5598996a415"
+        ],
+        [
+          "731bc4b32570d22d",
+          "6c459a20efccb09d"
+        ],
+        [
+          "9135920d91a125e4",
+          "1ff4dae9b6bd303f"
+        ],
+        [
+          "9135920d91a125e4",
+          "41f6d35a9a427c97"
+        ],
+        [
+          "1ff4dae9b6bd303f",
+          "41f6d35a9a427c97"
+        ],
+        [
+          "c1e4d07e29a0b233",
+          "7ca90986f209dae7"
+        ],
+        [
+          "942028b72a778366",
+          "1e907ee2e9c102f1"
+        ],
+        [
+          "b40cec198840f933",
+          "14ca072735e8a0ae"
+        ],
+        [
+          "27e29faeccb05427",
+          "3f56e35201f60952"
+        ],
+        [
+          "8e0c4b006f44bc69",
+          "dcfae88d4a2c0909"
+        ],
+        [
+          "8e0c4b006f44bc69",
+          "58fd29bebe0c3ab7"
+        ],
+        [
+          "8e0c4b006f44bc69",
+          "9339c5116142be2b"
+        ],
+        [
+          "dcfae88d4a2c0909",
+          "58fd29bebe0c3ab7"
+        ],
+        [
+          "dcfae88d4a2c0909",
+          "9339c5116142be2b"
+        ],
+        [
+          "58fd29bebe0c3ab7",
+          "9339c5116142be2b"
+        ],
+        [
+          "93cf1c8fc59e3d96",
+          "6a099a1b050b44ce"
+        ],
+        [
+          "93cf1c8fc59e3d96",
+          "3f7cd2e27ccade02"
+        ],
+        [
+          "6a099a1b050b44ce",
+          "3f7cd2e27ccade02"
+        ],
+        [
+          "fd5cf1778515aeb6",
+          "c293a482da498b09"
+        ],
+        [
+          "fd5cf1778515aeb6",
+          "56f5ebb9cbee5282"
+        ],
+        [
+          "c293a482da498b09",
+          "56f5ebb9cbee5282"
+        ],
+        [
+          "51aa7180015f5865",
+          "5017204cabe2bc89"
+        ],
+        [
+          "51aa7180015f5865",
+          "9454e6c8751489ac"
+        ],
+        [
+          "5017204cabe2bc89",
+          "9454e6c8751489ac"
+        ],
+        [
+          "89735ca00186feb3",
+          "c8708d60eb5a9115"
+        ],
+        [
+          "89735ca00186feb3",
+          "bc964db26a7f7941"
+        ],
+        [
+          "c8708d60eb5a9115",
+          "bc964db26a7f7941"
+        ],
+        [
+          "d6bf220c39791999",
+          "d72557b8237b8c68"
+        ],
+        [
+          "d6bf220c39791999",
+          "5d54c8f6f38976cd"
+        ],
+        [
+          "d72557b8237b8c68",
+          "5d54c8f6f38976cd"
+        ]
+      ],
+      "qualifiers": [
+        "Kelgate",
+        "Norgate"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 2,
+            "t": 4
+          },
+          "atmost": {
+            "k": 2,
+            "t": 4
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Bardale",
+              "Pelworth"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Norgate",
+              "Kelgate"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L07-G1",
+            "dev-L07-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L07-G1": 1,
+            "dev-L07-G2": 1
+          },
+          "shared": [
+            "Kelgate",
+            "Bardale"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L07-G1",
+            "dev-L07-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L07-G1": 1,
+            "dev-L07-G3": 1
+          },
+          "shared": [
+            "Pelworth",
+            "Kelgate"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L07-G2",
+            "dev-L07-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L07-G2": 1,
+            "dev-L07-G3": 1
+          },
+          "shared": [
+            "Kelgate",
+            "Norgate"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "7730103ac5317381",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c776b4516b3ea241e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Bardale"
+                },
+                "base": {
+                  "class": "cadfbf0b7f38474b5",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Bardale"
+                }
+              },
+              "t": 4,
+              "team": "Bardale"
+            },
+            {
+              "kind": "tophalf",
+              "market": "e406e13f5045453f",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cbcb00018b29c33c2",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Norgate"
+                },
+                "base": {
+                  "class": "ca81bba08a7835fa6",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Norgate"
+                }
+              },
+              "t": null,
+              "team": "Norgate"
+            },
+            {
+              "kind": "break",
+              "market": "95fabed842612103",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c616eee84ad37d37e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Norgate"
+                },
+                "base": {
+                  "class": "cbcb00018b29c33c2",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Norgate"
+                }
+              },
+              "t": 5,
+              "team": "Norgate"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Kelgate",
+      "scores": {
+        "Bardale": 3,
+        "Calport": 2,
+        "Kelgate": 5,
+        "Norgate": 4,
+        "Pelworth": 1
+      },
+      "seeds": {
+        "dev-L07-G1": "Bardale",
+        "dev-L07-G2": "Norgate",
+        "dev-L07-G3": "Pelworth"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L07-G1",
+          "members": [
+            "Pelworth",
+            "Calport",
+            "Kelgate",
+            "Bardale"
+          ],
+          "named": true,
+          "theme": "Riverside",
+          "title": "Group Riverside"
+        },
+        {
+          "id": "dev-L07-G2",
+          "members": [
+            "Bardale",
+            "Kelgate",
+            "Norgate"
+          ],
+          "named": false,
+          "theme": "Founding",
+          "title": "the founding clubs"
+        },
+        {
+          "id": "dev-L07-G3",
+          "members": [
+            "Kelgate",
+            "Pelworth",
+            "Norgate"
+          ],
+          "named": true,
+          "theme": "Capital",
+          "title": "Group Capital"
+        }
+      ],
+      "teams": [
+        "Calport",
+        "Norgate",
+        "Pelworth",
+        "Bardale",
+        "Kelgate"
+      ],
+      "winner": "Norgate"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L08",
+      "name": "Lorene",
+      "paraphrase_pairs": [
+        [
+          "45bb137450e08366",
+          "332d03779156e948"
+        ],
+        [
+          "180d183d836d3524",
+          "d3eccec8be74ce72"
+        ],
+        [
+          "0199096612f1a2b3",
+          "74bd38dc3dfda7a2"
+        ],
+        [
+          "4a5ef5f06314d495",
+          "a75b775bb8ccb7ef"
+        ],
+        [
+          "daf6f64f5194582d",
+          "a7a38e3a36cf5b23"
+        ],
+        [
+          "daf6f64f5194582d",
+          "5d8427bafc829bc3"
+        ],
+        [
+          "daf6f64f5194582d",
+          "b52bd87a9e354235"
+        ],
+        [
+          "a7a38e3a36cf5b23",
+          "5d8427bafc829bc3"
+        ],
+        [
+          "a7a38e3a36cf5b23",
+          "b52bd87a9e354235"
+        ],
+        [
+          "5d8427bafc829bc3",
+          "b52bd87a9e354235"
+        ],
+        [
+          "8735ef423896d5a4",
+          "b44ec1c5349e6a36"
+        ],
+        [
+          "2f89d1ac30bb1ce4",
+          "a5d0bea7e1a8809a"
+        ],
+        [
+          "d812b4efc34927b4",
+          "7b229ac168295978"
+        ],
+        [
+          "81e2dbdb104a0b41",
+          "0e199855ada503dc"
+        ],
+        [
+          "625ab6920c9a3aa1",
+          "5169baba6692de7a"
+        ],
+        [
+          "2327442b1cc888b1",
+          "f727274368876710"
+        ],
+        [
+          "aa886ef34ad6cfcc",
+          "ea2226a9bd2cbe45"
+        ],
+        [
+          "aa886ef34ad6cfcc",
+          "b4fa7d553ab48128"
+        ],
+        [
+          "ea2226a9bd2cbe45",
+          "b4fa7d553ab48128"
+        ],
+        [
+          "3df9dd7f635f086d",
+          "863701ce41d8c0d6"
+        ],
+        [
+          "2ea3028d2e6f1c33",
+          "f8effaf16869b7c8"
+        ],
+        [
+          "2ea3028d2e6f1c33",
+          "a107c3eef4d96960"
+        ],
+        [
+          "f8effaf16869b7c8",
+          "a107c3eef4d96960"
+        ],
+        [
+          "2499c9f8f58f4fa7",
+          "9f71ede1032ed3fd"
+        ],
+        [
+          "2499c9f8f58f4fa7",
+          "111bdf5766147dad"
+        ],
+        [
+          "9f71ede1032ed3fd",
+          "111bdf5766147dad"
+        ]
+      ],
+      "qualifiers": [
+        "Barfield",
+        "Dorwick"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "pairs": [
+            [
+              "Barfield",
+              "Rosport"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Barfield",
+              "Dorwick"
+            ],
+            [
+              "Norgate",
+              "Valworth"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L08-G1",
+            "dev-L08-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L08-G1": 1,
+            "dev-L08-G2": 2
+          },
+          "shared": [
+            "Barfield",
+            "Valworth"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L08-G1",
+            "dev-L08-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L08-G1": 1,
+            "dev-L08-G3": 2
+          },
+          "shared": [
+            "Dorwick",
+            "Valworth"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L08-G2",
+            "dev-L08-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L08-G2": 2,
+            "dev-L08-G3": 2
+          },
+          "shared": [
+            "Valworth"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "tophalf",
+              "market": "fcf7e118f1856c4f",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c6a637da2c5c70d2f",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Dorwick"
+                },
+                "base": {
+                  "class": "cb7bd8b67f91b4d42",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Dorwick"
+                }
+              },
+              "t": null,
+              "team": "Dorwick"
+            },
+            {
+              "kind": "break",
+              "market": "4c36e52ff7d8968f",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "c28c7bcf08ea8c8d2",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Norgate"
+                },
+                "base": {
+                  "class": "c8385cb7b49e19674",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Norgate"
+                }
+              },
+              "t": 3,
+              "team": "Norgate"
+            },
+            {
+              "kind": "break",
+              "market": "ddbb799792722e14",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "ce5b3e5de97cec6c1",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Dorwick"
+                },
+                "base": {
+                  "class": "c6a637da2c5c70d2f",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Dorwick"
+                }
+              },
+              "t": 5,
+              "team": "Dorwick"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Dorwick",
+      "scores": {
+        "Barfield": 5,
+        "Dorwick": 4,
+        "Norgate": 2,
+        "Rosport": 0,
+        "Valworth": 3
+      },
+      "seeds": {
+        "dev-L08-G1": "Barfield",
+        "dev-L08-G2": "Valworth",
+        "dev-L08-G3": "Norgate"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L08-G1",
+          "members": [
+            "Barfield",
+            "Dorwick",
+            "Valworth"
+          ],
+          "named": false,
+          "theme": "Upland",
+          "title": "the upland sides"
+        },
+        {
+          "id": "dev-L08-G2",
+          "members": [
+            "Barfield",
+            "Valworth",
+            "Rosport"
+          ],
+          "named": true,
+          "theme": "Riverside",
+          "title": "Group Riverside"
+        },
+        {
+          "id": "dev-L08-G3",
+          "members": [
+            "Norgate",
+            "Dorwick",
+            "Valworth"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        }
+      ],
+      "teams": [
+        "Barfield",
+        "Dorwick",
+        "Valworth",
+        "Rosport",
+        "Norgate"
+      ],
+      "winner": "Barfield"
+    },
+    {
+      "L": 7,
+      "fixed_share": 0.0,
+      "id": "dev-L09",
+      "name": "Rosura",
+      "paraphrase_pairs": [
+        [
+          "4780734e0d64fb05",
+          "c51bfe975ccb1ee7"
+        ],
+        [
+          "c199f1af80685a20",
+          "2b31b2e09b6d1e53"
+        ],
+        [
+          "34eddcc492a11abc",
+          "071b24038eb7ef49"
+        ],
+        [
+          "34eddcc492a11abc",
+          "74fae1fdbb7664d7"
+        ],
+        [
+          "34eddcc492a11abc",
+          "cf6d8083e22c0ac7"
+        ],
+        [
+          "071b24038eb7ef49",
+          "74fae1fdbb7664d7"
+        ],
+        [
+          "071b24038eb7ef49",
+          "cf6d8083e22c0ac7"
+        ],
+        [
+          "74fae1fdbb7664d7",
+          "cf6d8083e22c0ac7"
+        ],
+        [
+          "52c8a6e4b6d2e168",
+          "6116fe1383400e26"
+        ],
+        [
+          "52c8a6e4b6d2e168",
+          "64170dc7eb080527"
+        ],
+        [
+          "52c8a6e4b6d2e168",
+          "a8e7740e351b97a9"
+        ],
+        [
+          "6116fe1383400e26",
+          "64170dc7eb080527"
+        ],
+        [
+          "6116fe1383400e26",
+          "a8e7740e351b97a9"
+        ],
+        [
+          "64170dc7eb080527",
+          "a8e7740e351b97a9"
+        ],
+        [
+          "a93a698a3f48bb33",
+          "7cab6c0c00d979ff"
+        ],
+        [
+          "a93a698a3f48bb33",
+          "29805312b788bce6"
+        ],
+        [
+          "7cab6c0c00d979ff",
+          "29805312b788bce6"
+        ],
+        [
+          "0a0492fba1025843",
+          "269034ddfdc71fe8"
+        ],
+        [
+          "0a0492fba1025843",
+          "4dc8c953e6ca4575"
+        ],
+        [
+          "0a0492fba1025843",
+          "dda5157e50f7156b"
+        ],
+        [
+          "269034ddfdc71fe8",
+          "4dc8c953e6ca4575"
+        ],
+        [
+          "269034ddfdc71fe8",
+          "dda5157e50f7156b"
+        ],
+        [
+          "4dc8c953e6ca4575",
+          "dda5157e50f7156b"
+        ],
+        [
+          "8c8df8559b096e0c",
+          "47c7ea5d65b64288"
+        ],
+        [
+          "8c8df8559b096e0c",
+          "6147692712806d08"
+        ],
+        [
+          "47c7ea5d65b64288",
+          "6147692712806d08"
+        ],
+        [
+          "53d61cd658393785",
+          "be274d0f30815ec4"
+        ],
+        [
+          "ee9d91dfb7e6dc6f",
+          "bc41d1dd18f55421"
+        ],
+        [
+          "4089368fcee314c5",
+          "b86fa92670514f8a"
+        ],
+        [
+          "4089368fcee314c5",
+          "f8f6ad25c9849bc6"
+        ],
+        [
+          "b86fa92670514f8a",
+          "f8f6ad25c9849bc6"
+        ],
+        [
+          "d195ccdbe57b6088",
+          "5bb83b4e5af53ce5"
+        ],
+        [
+          "d195ccdbe57b6088",
+          "8e74713dac1333ea"
+        ],
+        [
+          "5bb83b4e5af53ce5",
+          "8e74713dac1333ea"
+        ],
+        [
+          "85228835e38963f5",
+          "62bbd86e1d109134"
+        ],
+        [
+          "5077113b91df0b2d",
+          "a6074936ff33b20d"
+        ],
+        [
+          "5077113b91df0b2d",
+          "9effc8623682280e"
+        ],
+        [
+          "5077113b91df0b2d",
+          "8fd2f8e04b0aa4ed"
+        ],
+        [
+          "a6074936ff33b20d",
+          "9effc8623682280e"
+        ],
+        [
+          "a6074936ff33b20d",
+          "8fd2f8e04b0aa4ed"
+        ],
+        [
+          "9effc8623682280e",
+          "8fd2f8e04b0aa4ed"
+        ],
+        [
+          "985fbaed126dbbc8",
+          "035bd59885b9bae3"
+        ],
+        [
+          "985fbaed126dbbc8",
+          "5c9a69e9833c67e5"
+        ],
+        [
+          "985fbaed126dbbc8",
+          "130aa44e51fd6039"
+        ],
+        [
+          "035bd59885b9bae3",
+          "5c9a69e9833c67e5"
+        ],
+        [
+          "035bd59885b9bae3",
+          "130aa44e51fd6039"
+        ],
+        [
+          "5c9a69e9833c67e5",
+          "130aa44e51fd6039"
+        ],
+        [
+          "6e438a8898aa2b95",
+          "9e077c05e2476445"
+        ],
+        [
+          "6e438a8898aa2b95",
+          "3a7b81aa24ddb4e9"
+        ],
+        [
+          "9e077c05e2476445",
+          "3a7b81aa24ddb4e9"
+        ],
+        [
+          "c9fee7d9ee96be30",
+          "a2675cf329fd0d5b"
+        ],
+        [
+          "c9fee7d9ee96be30",
+          "bee8257c888c4e66"
+        ],
+        [
+          "a2675cf329fd0d5b",
+          "bee8257c888c4e66"
+        ],
+        [
+          "686133a0ffa67a96",
+          "7ee2458f4681ea1a"
+        ],
+        [
+          "f2c4607f74e41d65",
+          "3e8eff90997c4b87"
+        ],
+        [
+          "f2c4607f74e41d65",
+          "2e7d7e46e25fba98"
+        ],
+        [
+          "3e8eff90997c4b87",
+          "2e7d7e46e25fba98"
+        ],
+        [
+          "8696f8aa928474d6",
+          "f2aae875ce43ad97"
+        ],
+        [
+          "e252970172936563",
+          "468cc1ae4b917f60"
+        ],
+        [
+          "5dc4ccfb12b13453",
+          "95a55e2f89072297"
+        ],
+        [
+          "5dc4ccfb12b13453",
+          "9517223f4c24bac6"
+        ],
+        [
+          "95a55e2f89072297",
+          "9517223f4c24bac6"
+        ],
+        [
+          "08493239d2b551b9",
+          "9873e5b60ab7e15f"
+        ],
+        [
+          "08493239d2b551b9",
+          "dbe6b8480e1222d2"
+        ],
+        [
+          "9873e5b60ab7e15f",
+          "dbe6b8480e1222d2"
+        ]
+      ],
+      "qualifiers": [
+        "Kelholt",
+        "Valfield"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 2,
+            "t": 6
+          },
+          "atmost": {
+            "k": 4,
+            "t": 5
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Valfield",
+              "Barwick"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Valfield",
+              "Valby"
+            ],
+            [
+              "Valby",
+              "Kelholt"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L09-G1",
+            "dev-L09-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L09-G1": 2,
+            "dev-L09-G2": 1
+          },
+          "shared": [
+            "Kelholt",
+            "Valfield"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L09-G1",
+            "dev-L09-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L09-G1": 2,
+            "dev-L09-G3": 1
+          },
+          "shared": [
+            "Kelholt",
+            "Valby"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L09-G2",
+            "dev-L09-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L09-G2": 1,
+            "dev-L09-G3": 1
+          },
+          "shared": [
+            "Barwick",
+            "Kelholt",
+            "Rosmoor"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "tophalf",
+              "market": "68a13a052c7ebd5e",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c2d8514708b1ca78f",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Valby"
+                },
+                "base": {
+                  "class": "cce56826745e28f24",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Valby"
+                }
+              },
+              "t": null,
+              "team": "Valby"
+            },
+            {
+              "kind": "tophalf",
+              "market": "6f0cc8fa5b997256",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cc15eca30b4940236",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Rosmoor"
+                },
+                "base": {
+                  "class": "cfa08e7063e5da2a5",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Rosmoor"
+                }
+              },
+              "t": null,
+              "team": "Rosmoor"
+            },
+            {
+              "kind": "break",
+              "market": "872a221d45260b33",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "cc15eca30b4940236",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Rosmoor"
+                },
+                "base": {
+                  "class": "ce1a76d55fe492a46",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Rosmoor"
+                }
+              },
+              "t": 4,
+              "team": "Rosmoor"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Valfield",
+      "scores": {
+        "Barwick": 2,
+        "Kelholt": 6,
+        "Rosmoor": 3,
+        "Valby": 5,
+        "Valfield": 7
+      },
+      "seeds": {
+        "dev-L09-G1": "Kelholt",
+        "dev-L09-G2": "Valfield",
+        "dev-L09-G3": "Valby"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L09-G1",
+          "members": [
+            "Kelholt",
+            "Valby",
+            "Valfield"
+          ],
+          "named": true,
+          "theme": "Capital",
+          "title": "Group Capital"
+        },
+        {
+          "id": "dev-L09-G2",
+          "members": [
+            "Barwick",
+            "Valfield",
+            "Kelholt",
+            "Rosmoor"
+          ],
+          "named": false,
+          "theme": "Northern",
+          "title": "the northern sides"
+        },
+        {
+          "id": "dev-L09-G3",
+          "members": [
+            "Kelholt",
+            "Rosmoor",
+            "Valby",
+            "Barwick"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        }
+      ],
+      "teams": [
+        "Kelholt",
+        "Barwick",
+        "Valfield",
+        "Valby",
+        "Rosmoor"
+      ],
+      "winner": "Kelholt"
+    },
+    {
+      "L": 6,
+      "fixed_share": 0.0,
+      "id": "dev-L10",
+      "name": "Lorica",
+      "paraphrase_pairs": [
+        [
+          "5f8bd5af4d2e12c4",
+          "61e57d02f4856170"
+        ],
+        [
+          "41248f66ca950695",
+          "523cc118b2d511dd"
+        ],
+        [
+          "3f08d54f9d2e675b",
+          "94d120e91426556d"
+        ],
+        [
+          "6863de20421cafc2",
+          "786a6cc9ac22fae1"
+        ],
+        [
+          "6863de20421cafc2",
+          "ad6593db5e8d8acf"
+        ],
+        [
+          "786a6cc9ac22fae1",
+          "ad6593db5e8d8acf"
+        ],
+        [
+          "f29b747a875b5196",
+          "45bab0455baace40"
+        ],
+        [
+          "a6b25338bee3c60c",
+          "71c98cb1b6390d9f"
+        ],
+        [
+          "a6b25338bee3c60c",
+          "425809f692d35051"
+        ],
+        [
+          "71c98cb1b6390d9f",
+          "425809f692d35051"
+        ],
+        [
+          "a7f7c821afd817ba",
+          "a2430586f3fab8b8"
+        ],
+        [
+          "a7f7c821afd817ba",
+          "61fd7f31af8f7934"
+        ],
+        [
+          "a2430586f3fab8b8",
+          "61fd7f31af8f7934"
+        ],
+        [
+          "d983b5812f23ef52",
+          "e5191df07a340374"
+        ],
+        [
+          "ff94852357f09f58",
+          "2fabb157045e2690"
+        ],
+        [
+          "ff94852357f09f58",
+          "a87ee360cd2a5df2"
+        ],
+        [
+          "ff94852357f09f58",
+          "3484a7068b2042e7"
+        ],
+        [
+          "2fabb157045e2690",
+          "a87ee360cd2a5df2"
+        ],
+        [
+          "2fabb157045e2690",
+          "3484a7068b2042e7"
+        ],
+        [
+          "a87ee360cd2a5df2",
+          "3484a7068b2042e7"
+        ],
+        [
+          "dd2ac883c22acc9d",
+          "fc493dc27cfe0b18"
+        ],
+        [
+          "dd2ac883c22acc9d",
+          "1855296da8f3b3ef"
+        ],
+        [
+          "fc493dc27cfe0b18",
+          "1855296da8f3b3ef"
+        ],
+        [
+          "856c8b528a912eb1",
+          "032f6c16c518b6ef"
+        ],
+        [
+          "8f8a35f4ba0e5714",
+          "b355db951e7f154e"
+        ],
+        [
+          "5f47589e9d7c5d53",
+          "158212acbb71b7f8"
+        ],
+        [
+          "5f47589e9d7c5d53",
+          "fc4f2167326d5857"
+        ],
+        [
+          "158212acbb71b7f8",
+          "fc4f2167326d5857"
+        ],
+        [
+          "cb016c7c355eeb97",
+          "efcd006e03a1149a"
+        ],
+        [
+          "cb016c7c355eeb97",
+          "c49b39a4381abfce"
+        ],
+        [
+          "efcd006e03a1149a",
+          "c49b39a4381abfce"
+        ],
+        [
+          "8c5623286b90e048",
+          "35c4960d8aa4da75"
+        ],
+        [
+          "8c5623286b90e048",
+          "5bd9f4ab69f92e9f"
+        ],
+        [
+          "35c4960d8aa4da75",
+          "5bd9f4ab69f92e9f"
+        ],
+        [
+          "ced281cd531a6abf",
+          "613f829535724781"
+        ],
+        [
+          "ced281cd531a6abf",
+          "c50c59ac31430683"
+        ],
+        [
+          "613f829535724781",
+          "c50c59ac31430683"
+        ]
+      ],
+      "qualifiers": [
+        "Barholt",
+        "Caldale"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "pairs": [
+            [
+              "Barholt",
+              "Marholt"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Caldale",
+              "Barholt"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L10-G1",
+            "dev-L10-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L10-G1": 1,
+            "dev-L10-G2": 1
+          },
+          "shared": [
+            "Marholt",
+            "Barholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L10-G1",
+            "dev-L10-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L10-G1": 1,
+            "dev-L10-G3": 1
+          },
+          "shared": [
+            "Marholt",
+            "Dorby"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L10-G2",
+            "dev-L10-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L10-G2": 1,
+            "dev-L10-G3": 1
+          },
+          "shared": [
+            "Marholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "3165d6ba3a1e3207",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "c1ac93c2461c79e02",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Marholt"
+                },
+                "base": {
+                  "class": "c63f446c98ba4febf",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Marholt"
+                }
+              },
+              "t": 5,
+              "team": "Marholt"
+            },
+            {
+              "kind": "break",
+              "market": "c6d182472aa7b30e",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c0d1d9fb64c7b2677",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Barholt"
+                },
+                "base": {
+                  "class": "ce4d399a5f5e965b9",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Barholt"
+                }
+              },
+              "t": 6,
+              "team": "Barholt"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Barholt",
+      "scores": {
+        "Barholt": 5,
+        "Caldale": 6,
+        "Dorby": 1,
+        "Kelham": 0,
+        "Marholt": 4
+      },
+      "seeds": {
+        "dev-L10-G1": "Dorby",
+        "dev-L10-G2": "Marholt",
+        "dev-L10-G3": "Caldale"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L10-G1",
+          "members": [
+            "Marholt",
+            "Barholt",
+            "Dorby"
+          ],
+          "named": false,
+          "theme": "Founding",
+          "title": "the founding clubs"
+        },
+        {
+          "id": "dev-L10-G2",
+          "members": [
+            "Kelham",
+            "Barholt",
+            "Marholt"
+          ],
+          "named": true,
+          "theme": "Upland",
+          "title": "Group Upland"
+        },
+        {
+          "id": "dev-L10-G3",
+          "members": [
+            "Marholt",
+            "Caldale",
+            "Dorby"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        }
+      ],
+      "teams": [
+        "Caldale",
+        "Marholt",
+        "Barholt",
+        "Kelham",
+        "Dorby"
+      ],
+      "winner": "Caldale"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L11",
+      "name": "Calaria",
+      "paraphrase_pairs": [
+        [
+          "78cf2e51ba674894",
+          "468655ef9284e55b"
+        ],
+        [
+          "78cf2e51ba674894",
+          "e8e84b7317c49e7f"
+        ],
+        [
+          "468655ef9284e55b",
+          "e8e84b7317c49e7f"
+        ],
+        [
+          "a2023aafa304bc13",
+          "54452d0ca844db97"
+        ],
+        [
+          "a2023aafa304bc13",
+          "935f596bbb76bb0c"
+        ],
+        [
+          "a2023aafa304bc13",
+          "11c4d6781ab3ad57"
+        ],
+        [
+          "54452d0ca844db97",
+          "935f596bbb76bb0c"
+        ],
+        [
+          "54452d0ca844db97",
+          "11c4d6781ab3ad57"
+        ],
+        [
+          "935f596bbb76bb0c",
+          "11c4d6781ab3ad57"
+        ],
+        [
+          "0a168633b06053de",
+          "362e57987b3a8ce1"
+        ],
+        [
+          "0a168633b06053de",
+          "958ad9025af64e9d"
+        ],
+        [
+          "0a168633b06053de",
+          "5cdb02a815b4f4de"
+        ],
+        [
+          "362e57987b3a8ce1",
+          "958ad9025af64e9d"
+        ],
+        [
+          "362e57987b3a8ce1",
+          "5cdb02a815b4f4de"
+        ],
+        [
+          "958ad9025af64e9d",
+          "5cdb02a815b4f4de"
+        ],
+        [
+          "67f6349fcace3b75",
+          "a708a4746e32e862"
+        ],
+        [
+          "3d820635a4ec28e1",
+          "3a7f62557f85a743"
+        ],
+        [
+          "3d820635a4ec28e1",
+          "867cbccc9d39f4eb"
+        ],
+        [
+          "3d820635a4ec28e1",
+          "b28eb3a04f9cd171"
+        ],
+        [
+          "3a7f62557f85a743",
+          "867cbccc9d39f4eb"
+        ],
+        [
+          "3a7f62557f85a743",
+          "b28eb3a04f9cd171"
+        ],
+        [
+          "867cbccc9d39f4eb",
+          "b28eb3a04f9cd171"
+        ],
+        [
+          "d43d4e9695bfdba8",
+          "234c3edfffad76a8"
+        ],
+        [
+          "d43d4e9695bfdba8",
+          "b68958e9ebcf6bb2"
+        ],
+        [
+          "234c3edfffad76a8",
+          "b68958e9ebcf6bb2"
+        ],
+        [
+          "aedde54cf7cdedf1",
+          "b6332d07f87a23e1"
+        ],
+        [
+          "aedde54cf7cdedf1",
+          "1e89c6a9417508e9"
+        ],
+        [
+          "b6332d07f87a23e1",
+          "1e89c6a9417508e9"
+        ],
+        [
+          "30f103ca5e19a6a1",
+          "2d1c2ad2380b4ef8"
+        ],
+        [
+          "30f103ca5e19a6a1",
+          "24130465d3e1eb4d"
+        ],
+        [
+          "2d1c2ad2380b4ef8",
+          "24130465d3e1eb4d"
+        ],
+        [
+          "f7a1ac924e17f6b7",
+          "5edd69452f7b8473"
+        ],
+        [
+          "f7a1ac924e17f6b7",
+          "b5e4edd5337421a4"
+        ],
+        [
+          "5edd69452f7b8473",
+          "b5e4edd5337421a4"
+        ]
+      ],
+      "qualifiers": [
+        "Caldale",
+        "Dorton"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 2,
+            "t": 3
+          },
+          "atmost": {
+            "k": 4,
+            "t": 2
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Caldale",
+              "Fenwick"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Caldale",
+              "Dorton"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 4,
+          "rule": 6,
+          "teams": [
+            "Fenport",
+            "Fenwick"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L11-G1",
+            "dev-L11-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L11-G1": 2,
+            "dev-L11-G2": 1
+          },
+          "shared": [
+            "Caldale"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L11-G1",
+            "dev-L11-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L11-G1": 2,
+            "dev-L11-G3": 1
+          },
+          "shared": [
+            "Caldale",
+            "Fenport"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L11-G2",
+            "dev-L11-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L11-G2": 1,
+            "dev-L11-G3": 1
+          },
+          "shared": [
+            "Kelford",
+            "Dorton",
+            "Caldale"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "6da71cc74d1db783",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "c82369b18b6d28434",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Dorton"
+                },
+                "base": {
+                  "class": "cd8c56688959029aa",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Dorton"
+                }
+              },
+              "t": 5,
+              "team": "Dorton"
+            },
+            {
+              "kind": "break",
+              "market": "25424cc281185a8a",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cd4de166cf9d498aa",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Kelford"
+                },
+                "base": {
+                  "class": "cb44327c7a4f1b857",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Kelford"
+                }
+              },
+              "t": 4,
+              "team": "Kelford"
+            },
+            {
+              "kind": "tophalf",
+              "market": "302387b61e1326ef",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cd8c56688959029aa",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Dorton"
+                },
+                "base": {
+                  "class": "c534e9c203007de7d",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Dorton"
+                }
+              },
+              "t": null,
+              "team": "Dorton"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Caldale",
+      "scores": {
+        "Caldale": 5,
+        "Dorton": 4,
+        "Fenport": 2,
+        "Fenwick": 1,
+        "Kelford": 3
+      },
+      "seeds": {
+        "dev-L11-G1": "Caldale",
+        "dev-L11-G2": "Kelford",
+        "dev-L11-G3": "Dorton"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L11-G1",
+          "members": [
+            "Caldale",
+            "Fenwick",
+            "Fenport"
+          ],
+          "named": true,
+          "theme": "Riverside",
+          "title": "Group Riverside"
+        },
+        {
+          "id": "dev-L11-G2",
+          "members": [
+            "Kelford",
+            "Dorton",
+            "Caldale"
+          ],
+          "named": false,
+          "theme": "Coastal",
+          "title": "the coastal sides"
+        },
+        {
+          "id": "dev-L11-G3",
+          "members": [
+            "Caldale",
+            "Dorton",
+            "Kelford",
+            "Fenport"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        }
+      ],
+      "teams": [
+        "Caldale",
+        "Kelford",
+        "Fenwick",
+        "Fenport",
+        "Dorton"
+      ],
+      "winner": "Dorton"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L12",
+      "name": "Lorura",
+      "paraphrase_pairs": [
+        [
+          "0a545e22fd45d928",
+          "dc706b8f09d07ff4"
+        ],
+        [
+          "b181480ce3f302f4",
+          "a9307da4993044ae"
+        ],
+        [
+          "4fcbf6615d6a4f38",
+          "2350a276fc4efc46"
+        ],
+        [
+          "473cef158d031223",
+          "71779993a56ebec8"
+        ],
+        [
+          "cafb77afab873b42",
+          "32cc01763fddc334"
+        ],
+        [
+          "b5cd79898c9e0ef1",
+          "71d065b17219b780"
+        ],
+        [
+          "b5cd79898c9e0ef1",
+          "34f4ff752e5e5cdd"
+        ],
+        [
+          "b5cd79898c9e0ef1",
+          "ed1b199ae7dd86e1"
+        ],
+        [
+          "71d065b17219b780",
+          "34f4ff752e5e5cdd"
+        ],
+        [
+          "71d065b17219b780",
+          "ed1b199ae7dd86e1"
+        ],
+        [
+          "34f4ff752e5e5cdd",
+          "ed1b199ae7dd86e1"
+        ],
+        [
+          "93a52e930971e092",
+          "5bac6b5651571942"
+        ],
+        [
+          "6d4e9ed0c470c43e",
+          "d9fc4a152131b0a3"
+        ],
+        [
+          "6d4e9ed0c470c43e",
+          "53db5dbd24c5da5e"
+        ],
+        [
+          "d9fc4a152131b0a3",
+          "53db5dbd24c5da5e"
+        ],
+        [
+          "b7e9a60a1cf62f1a",
+          "b45287ea441239ef"
+        ],
+        [
+          "b7e9a60a1cf62f1a",
+          "897e95a3b7d8238e"
+        ],
+        [
+          "b45287ea441239ef",
+          "897e95a3b7d8238e"
+        ],
+        [
+          "7a8fc0ac2016920c",
+          "8d33cbcc9d299a2a"
+        ],
+        [
+          "6ebf5f2da6eb3755",
+          "9c27b68d0637bc14"
+        ],
+        [
+          "6ebf5f2da6eb3755",
+          "d6bbbeaf44e6d8b1"
+        ],
+        [
+          "9c27b68d0637bc14",
+          "d6bbbeaf44e6d8b1"
+        ],
+        [
+          "1394d0fce8b8036c",
+          "771d2c8102d4ece3"
+        ],
+        [
+          "6922c6dc70b232fe",
+          "0b416d3f1217aa62"
+        ],
+        [
+          "b7113473604bfb91",
+          "3be9af797becea5b"
+        ],
+        [
+          "b7113473604bfb91",
+          "8f6be41d1e5b0047"
+        ],
+        [
+          "3be9af797becea5b",
+          "8f6be41d1e5b0047"
+        ],
+        [
+          "6c7b9e6d3bba5bbd",
+          "6c0e99a51c727a14"
+        ],
+        [
+          "6c7b9e6d3bba5bbd",
+          "6dfa105ba8078dba"
+        ],
+        [
+          "6c7b9e6d3bba5bbd",
+          "7a0013c1eacb7ea2"
+        ],
+        [
+          "6c0e99a51c727a14",
+          "6dfa105ba8078dba"
+        ],
+        [
+          "6c0e99a51c727a14",
+          "7a0013c1eacb7ea2"
+        ],
+        [
+          "6dfa105ba8078dba",
+          "7a0013c1eacb7ea2"
+        ],
+        [
+          "cc133c8aa26632d2",
+          "3430da306e65f1e3"
+        ],
+        [
+          "3dbe82b9fa1e42ee",
+          "9a8d88f224f7a4c8"
+        ],
+        [
+          "3dbe82b9fa1e42ee",
+          "e9b50409015bfce1"
+        ],
+        [
+          "3dbe82b9fa1e42ee",
+          "216e0d9eb761ec33"
+        ],
+        [
+          "9a8d88f224f7a4c8",
+          "e9b50409015bfce1"
+        ],
+        [
+          "9a8d88f224f7a4c8",
+          "216e0d9eb761ec33"
+        ],
+        [
+          "e9b50409015bfce1",
+          "216e0d9eb761ec33"
+        ],
+        [
+          "8875fc3f37933442",
+          "57ab8818706e91e8"
+        ],
+        [
+          "9f2fd302520751a3",
+          "5365d5c8bb3cb4c2"
+        ],
+        [
+          "b578903529dc04fd",
+          "db605ada88672d76"
+        ],
+        [
+          "e6037aee9f455b6e",
+          "08643335b7c8030c"
+        ],
+        [
+          "e6037aee9f455b6e",
+          "86b3e32d8b8e451f"
+        ],
+        [
+          "08643335b7c8030c",
+          "86b3e32d8b8e451f"
+        ],
+        [
+          "e1e929414148ce93",
+          "c6ad321de7304e76"
+        ],
+        [
+          "e1e929414148ce93",
+          "383fa251548fac93"
+        ],
+        [
+          "c6ad321de7304e76",
+          "383fa251548fac93"
+        ],
+        [
+          "739e08957c97faa4",
+          "f3949dbe663d9ff1"
+        ],
+        [
+          "739e08957c97faa4",
+          "b090180c26b8173e"
+        ],
+        [
+          "f3949dbe663d9ff1",
+          "b090180c26b8173e"
+        ],
+        [
+          "6a4692ff88fe1cae",
+          "a54c56684de275b8"
+        ],
+        [
+          "6a4692ff88fe1cae",
+          "0b7ffeec20ce2940"
+        ],
+        [
+          "a54c56684de275b8",
+          "0b7ffeec20ce2940"
+        ]
+      ],
+      "qualifiers": [
+        "Mardale",
+        "Salholt"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 2,
+            "t": 3
+          },
+          "atmost": {
+            "k": 5,
+            "t": 2
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "conditionals": [
+            [
+              "Mardale",
+              "Salholt"
+            ],
+            [
+              "Pelham",
+              "Mardale"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 2,
+          "rule": 6,
+          "teams": [
+            "Mardale",
+            "Barby"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L12-G1",
+            "dev-L12-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L12-G1": 2,
+            "dev-L12-G2": 1
+          },
+          "shared": [
+            "Salholt",
+            "Mardale"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L12-G1",
+            "dev-L12-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L12-G1": 2,
+            "dev-L12-G3": 2
+          },
+          "shared": [
+            "Salholt",
+            "Barby"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L12-G2",
+            "dev-L12-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L12-G2": 1,
+            "dev-L12-G3": 2
+          },
+          "shared": [
+            "Barholt",
+            "Salholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "80afdf647af4ede1",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "c2d6caaeb7c538040",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Barholt"
+                },
+                "base": {
+                  "class": "c32c0c8ed8af26296",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Barholt"
+                }
+              },
+              "t": 2,
+              "team": "Barholt"
+            },
+            {
+              "kind": "break",
+              "market": "cd1e156144c51a18",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c198c5d0d563464b9",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Pelham"
+                },
+                "base": {
+                  "class": "c320179c5e2230333",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Pelham"
+                }
+              },
+              "t": 3,
+              "team": "Pelham"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Salholt",
+      "scores": {
+        "Barby": 3,
+        "Barholt": 1,
+        "Mardale": 5,
+        "Marfield": 0,
+        "Pelham": 2,
+        "Salholt": 4
+      },
+      "seeds": {
+        "dev-L12-G1": "Mardale",
+        "dev-L12-G2": "Pelham",
+        "dev-L12-G3": "Barby"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L12-G1",
+          "members": [
+            "Salholt",
+            "Barby",
+            "Mardale"
+          ],
+          "named": true,
+          "theme": "Upland",
+          "title": "Group Upland"
+        },
+        {
+          "id": "dev-L12-G2",
+          "members": [
+            "Barholt",
+            "Pelham",
+            "Mardale",
+            "Salholt"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        },
+        {
+          "id": "dev-L12-G3",
+          "members": [
+            "Barholt",
+            "Barby",
+            "Salholt"
+          ],
+          "named": true,
+          "theme": "Northern",
+          "title": "Group Northern"
+        }
+      ],
+      "teams": [
+        "Barholt",
+        "Marfield",
+        "Mardale",
+        "Salholt",
+        "Barby",
+        "Pelham"
+      ],
+      "winner": "Mardale"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L13",
+      "name": "Kelova",
+      "paraphrase_pairs": [
+        [
+          "53a28b1e6bfaa645",
+          "d616ee731bc08c9b"
+        ],
+        [
+          "d71a1f7519098a70",
+          "55d621622451544d"
+        ],
+        [
+          "f053bfdbd5f1e12f",
+          "cf3266431ae803c1"
+        ],
+        [
+          "f053bfdbd5f1e12f",
+          "8fcf975a04b9db52"
+        ],
+        [
+          "cf3266431ae803c1",
+          "8fcf975a04b9db52"
+        ],
+        [
+          "ea44d03e679af136",
+          "d393d139e6a66799"
+        ],
+        [
+          "35b8b97e84c7ebe5",
+          "f2ece620ba1bd4af"
+        ],
+        [
+          "418797814391e514",
+          "1b55168c3ea979bf"
+        ],
+        [
+          "ee8fd87e1026b9d5",
+          "351e27c5b3ac0008"
+        ],
+        [
+          "ee8fd87e1026b9d5",
+          "9967ef7d82753576"
+        ],
+        [
+          "351e27c5b3ac0008",
+          "9967ef7d82753576"
+        ],
+        [
+          "207527fabda95bf9",
+          "a0038bdade543be2"
+        ],
+        [
+          "d267d13cf63f627f",
+          "81cbfd05003b39ef"
+        ],
+        [
+          "d267d13cf63f627f",
+          "9855e5a5cb30004b"
+        ],
+        [
+          "d267d13cf63f627f",
+          "b1ee63d024d4ea85"
+        ],
+        [
+          "81cbfd05003b39ef",
+          "9855e5a5cb30004b"
+        ],
+        [
+          "81cbfd05003b39ef",
+          "b1ee63d024d4ea85"
+        ],
+        [
+          "9855e5a5cb30004b",
+          "b1ee63d024d4ea85"
+        ],
+        [
+          "634b01fac3a82b66",
+          "8c0dc1788b904445"
+        ],
+        [
+          "634b01fac3a82b66",
+          "6b5af405ac599982"
+        ],
+        [
+          "8c0dc1788b904445",
+          "6b5af405ac599982"
+        ],
+        [
+          "d6228cb8072abfbb",
+          "6bb9e553ad4aca3b"
+        ],
+        [
+          "515caf67f213972e",
+          "ed023140f25a3228"
+        ],
+        [
+          "515caf67f213972e",
+          "31056d3657d39a89"
+        ],
+        [
+          "ed023140f25a3228",
+          "31056d3657d39a89"
+        ],
+        [
+          "0406d6bfe3edc65c",
+          "dfbf06ee368aa8c4"
+        ],
+        [
+          "0406d6bfe3edc65c",
+          "e88aa45c3bf49377"
+        ],
+        [
+          "dfbf06ee368aa8c4",
+          "e88aa45c3bf49377"
+        ],
+        [
+          "bc3806dc9c55e483",
+          "6f287e66acc8a295"
+        ],
+        [
+          "4d9d881d4e3eec8d",
+          "198e34097e79c26e"
+        ],
+        [
+          "4d9d881d4e3eec8d",
+          "6d116d612ea833a0"
+        ],
+        [
+          "198e34097e79c26e",
+          "6d116d612ea833a0"
+        ],
+        [
+          "f4e59f195097ebaf",
+          "7c14b56a709871ab"
+        ],
+        [
+          "f4e59f195097ebaf",
+          "9df49550d4acff1b"
+        ],
+        [
+          "7c14b56a709871ab",
+          "9df49550d4acff1b"
+        ],
+        [
+          "a3280f96f0de71a1",
+          "844621952ef5ba92"
+        ],
+        [
+          "a3280f96f0de71a1",
+          "227ab9daccd5a00e"
+        ],
+        [
+          "844621952ef5ba92",
+          "227ab9daccd5a00e"
+        ],
+        [
+          "add2ad716cafdb58",
+          "e84c6a565b64f884"
+        ],
+        [
+          "add2ad716cafdb58",
+          "1cc90a22fe15cd73"
+        ],
+        [
+          "e84c6a565b64f884",
+          "1cc90a22fe15cd73"
+        ],
+        [
+          "1771c30fdef9d6c0",
+          "93a6e955a53aa870"
+        ],
+        [
+          "1771c30fdef9d6c0",
+          "f79408cc076e11d5"
+        ],
+        [
+          "93a6e955a53aa870",
+          "f79408cc076e11d5"
+        ],
+        [
+          "fa5bd1e4c5727ce9",
+          "87a24cb0397728c7"
+        ],
+        [
+          "fa5bd1e4c5727ce9",
+          "185dbe5562747cf0"
+        ],
+        [
+          "87a24cb0397728c7",
+          "185dbe5562747cf0"
+        ]
+      ],
+      "qualifiers": [
+        "Barfield",
+        "Salford"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "pairs": [
+            [
+              "Peldale",
+              "Barstead"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Halmoor",
+              "Barstead"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 3,
+          "rule": 6,
+          "teams": [
+            "Peldale",
+            "Barstead"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L13-G1",
+            "dev-L13-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L13-G1": 2,
+            "dev-L13-G2": 1
+          },
+          "shared": [
+            "Peldale"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L13-G1",
+            "dev-L13-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L13-G1": 2,
+            "dev-L13-G3": 2
+          },
+          "shared": [
+            "Peldale",
+            "Pelby"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L13-G2",
+            "dev-L13-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L13-G2": 1,
+            "dev-L13-G3": 2
+          },
+          "shared": [
+            "Barfield",
+            "Salford",
+            "Peldale"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "5c1b44f859970d18",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c4f7544c629a8469a",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Salford"
+                },
+                "base": {
+                  "class": "cc2924f0041dfdc54",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Salford"
+                }
+              },
+              "t": 5,
+              "team": "Salford"
+            },
+            {
+              "kind": "tophalf",
+              "market": "cc62e92b3fa21c55",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c8623d2a4314f1833",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Peldale"
+                },
+                "base": {
+                  "class": "c85e726a992ab5906",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Peldale"
+                }
+              },
+              "t": null,
+              "team": "Peldale"
+            },
+            {
+              "kind": "tophalf",
+              "market": "c2f17846d7ea2643",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c88814438add1d1b7",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Halmoor"
+                },
+                "base": {
+                  "class": "c5b051ad8ee4d7e18",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Halmoor"
+                }
+              },
+              "t": null,
+              "team": "Halmoor"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Salford",
+      "scores": {
+        "Barfield": 5,
+        "Barstead": 0,
+        "Halmoor": 2,
+        "Pelby": 3,
+        "Peldale": 1,
+        "Salford": 4
+      },
+      "seeds": {
+        "dev-L13-G1": "Pelby",
+        "dev-L13-G2": "Peldale",
+        "dev-L13-G3": "Barfield"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L13-G1",
+          "members": [
+            "Peldale",
+            "Barstead",
+            "Pelby",
+            "Halmoor"
+          ],
+          "named": true,
+          "theme": "Upland",
+          "title": "Group Upland"
+        },
+        {
+          "id": "dev-L13-G2",
+          "members": [
+            "Barfield",
+            "Salford",
+            "Peldale"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        },
+        {
+          "id": "dev-L13-G3",
+          "members": [
+            "Barfield",
+            "Pelby",
+            "Peldale",
+            "Salford"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        }
+      ],
+      "teams": [
+        "Salford",
+        "Halmoor",
+        "Pelby",
+        "Barfield",
+        "Barstead",
+        "Peldale"
+      ],
+      "winner": "Barfield"
+    },
+    {
+      "L": 6,
+      "fixed_share": 0.0,
+      "id": "dev-L14",
+      "name": "Torura",
+      "paraphrase_pairs": [
+        [
+          "e2706f63106217ff",
+          "3c58be41cb92b015"
+        ],
+        [
+          "7413bf7f59320aa1",
+          "2f0fefb202bc64a2"
+        ],
+        [
+          "7413bf7f59320aa1",
+          "4cba52eda649c889"
+        ],
+        [
+          "2f0fefb202bc64a2",
+          "4cba52eda649c889"
+        ],
+        [
+          "e3a2c36fa21fd802",
+          "8031cae50d85c71d"
+        ],
+        [
+          "918cb04a257f01a8",
+          "6041f58bb1e89546"
+        ],
+        [
+          "918cb04a257f01a8",
+          "54400b392d1fdbda"
+        ],
+        [
+          "6041f58bb1e89546",
+          "54400b392d1fdbda"
+        ],
+        [
+          "281752c548b7ed4e",
+          "9f528c7df0233043"
+        ],
+        [
+          "7de809b27ba69767",
+          "7e8024836de41a00"
+        ],
+        [
+          "906afb6373af98b5",
+          "ecbb054b61b7f01e"
+        ],
+        [
+          "906afb6373af98b5",
+          "334d147dbf12c4aa"
+        ],
+        [
+          "ecbb054b61b7f01e",
+          "334d147dbf12c4aa"
+        ],
+        [
+          "4231046e63cc1023",
+          "a48215942a5fa851"
+        ],
+        [
+          "9518885744c05f9a",
+          "30b62f5e05eb1d18"
+        ],
+        [
+          "6a0eabfdbadb7da5",
+          "909063787a594762"
+        ],
+        [
+          "53080b855eb899e6",
+          "179524605ee09128"
+        ],
+        [
+          "b1046ab18b6234a5",
+          "444e0c3437e0c96f"
+        ],
+        [
+          "fbdf8a3991a49020",
+          "2e43716ba22656d6"
+        ],
+        [
+          "ab7a12d23b9d9a43",
+          "1e9e521a94ae335c"
+        ],
+        [
+          "ab7a12d23b9d9a43",
+          "5290f1827dae25c6"
+        ],
+        [
+          "1e9e521a94ae335c",
+          "5290f1827dae25c6"
+        ],
+        [
+          "a500a6b878a2948f",
+          "28c6a544198e85e5"
+        ],
+        [
+          "a500a6b878a2948f",
+          "e3ba567e63946843"
+        ],
+        [
+          "28c6a544198e85e5",
+          "e3ba567e63946843"
+        ],
+        [
+          "ef13393cb5d71eef",
+          "3a7452c340149e25"
+        ],
+        [
+          "ad751d5ccad6c6d9",
+          "645d7e6d523aa7f4"
+        ],
+        [
+          "df308df7f54ff478",
+          "446a7efdf414c04f"
+        ],
+        [
+          "96de63199a67a186",
+          "17748e2d31924b6c"
+        ],
+        [
+          "96de63199a67a186",
+          "5a2ae8f9f79c7965"
+        ],
+        [
+          "17748e2d31924b6c",
+          "5a2ae8f9f79c7965"
+        ],
+        [
+          "05e08b4ea3b4914f",
+          "eb13bb2a685586b5"
+        ],
+        [
+          "05e08b4ea3b4914f",
+          "03e3eca256cfac58"
+        ],
+        [
+          "eb13bb2a685586b5",
+          "03e3eca256cfac58"
+        ],
+        [
+          "07a876461a6503b3",
+          "20ee54e747fe6831"
+        ],
+        [
+          "07a876461a6503b3",
+          "921f0b1834714b62"
+        ],
+        [
+          "20ee54e747fe6831",
+          "921f0b1834714b62"
+        ],
+        [
+          "fa2e669a16e3c8ca",
+          "05df58ccf1baa5e6"
+        ],
+        [
+          "fa2e669a16e3c8ca",
+          "020eee235338e1f6"
+        ],
+        [
+          "05df58ccf1baa5e6",
+          "020eee235338e1f6"
+        ],
+        [
+          "a6618c7f2484d230",
+          "a21b8a384bf25552"
+        ],
+        [
+          "a6618c7f2484d230",
+          "c5db459c5d377e83"
+        ],
+        [
+          "a21b8a384bf25552",
+          "c5db459c5d377e83"
+        ],
+        [
+          "4c53f683e9c9e104",
+          "c0e24d58558048b3"
+        ],
+        [
+          "4c53f683e9c9e104",
+          "480fef4489b9d91c"
+        ],
+        [
+          "c0e24d58558048b3",
+          "480fef4489b9d91c"
+        ]
+      ],
+      "qualifiers": [
+        "Salport",
+        "Valmoor"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 1,
+            "t": 6
+          },
+          "atmost": {
+            "k": 4,
+            "t": 4
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Valford",
+              "Marworth"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Valmoor",
+              "Salport"
+            ],
+            [
+              "Marworth",
+              "Valmoor"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 2,
+          "rule": 6,
+          "teams": [
+            "Valmoor",
+            "Valmere"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L14-G1",
+            "dev-L14-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L14-G1": 1,
+            "dev-L14-G2": 2
+          },
+          "shared": [
+            "Valmoor",
+            "Valmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L14-G1",
+            "dev-L14-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L14-G1": 1,
+            "dev-L14-G3": 1
+          },
+          "shared": [
+            "Valmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L14-G2",
+            "dev-L14-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L14-G2": 2,
+            "dev-L14-G3": 1
+          },
+          "shared": [
+            "Marworth",
+            "Valmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "af265f0a2bc52299",
+              "missing": "no_date",
+              "negated": true,
+              "readings": {
+                "alt": {
+                  "class": "ce149406ed664615a",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Marworth"
+                },
+                "base": {
+                  "class": "ceddd3901cdf4ef34",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Marworth"
+                }
+              },
+              "t": 3,
+              "team": "Marworth"
+            },
+            {
+              "kind": "tophalf",
+              "market": "1c87af2a679e71f5",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c097038688c3d9b44",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Valmere"
+                },
+                "base": {
+                  "class": "cfd54b28f0ec14961",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Valmere"
+                }
+              },
+              "t": null,
+              "team": "Valmere"
+            },
+            {
+              "kind": "break",
+              "market": "77bdf862f80a2a31",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c17a3258efe8859b8",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Salport"
+                },
+                "base": {
+                  "class": "cf761f7ee4c6e4601",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Salport"
+                }
+              },
+              "t": 6,
+              "team": "Salport"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Salport",
+      "scores": {
+        "Marworth": 2,
+        "Salport": 5,
+        "Valford": 3,
+        "Valmere": 4,
+        "Valmoor": 6
+      },
+      "seeds": {
+        "dev-L14-G1": "Valmere",
+        "dev-L14-G2": "Valmoor",
+        "dev-L14-G3": "Marworth"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L14-G1",
+          "members": [
+            "Valmoor",
+            "Valmere",
+            "Salport"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        },
+        {
+          "id": "dev-L14-G2",
+          "members": [
+            "Valmoor",
+            "Marworth",
+            "Valmere"
+          ],
+          "named": false,
+          "theme": "Upland",
+          "title": "the upland sides"
+        },
+        {
+          "id": "dev-L14-G3",
+          "members": [
+            "Valmere",
+            "Marworth",
+            "Valford"
+          ],
+          "named": true,
+          "theme": "Riverside",
+          "title": "Group Riverside"
+        }
+      ],
+      "teams": [
+        "Valmere",
+        "Salport",
+        "Valford",
+        "Marworth",
+        "Valmoor"
+      ],
+      "winner": "Valmoor"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L15",
+      "name": "Rosaria",
+      "paraphrase_pairs": [
+        [
+          "ed8035cb6ea3887a",
+          "b4bf68d5dfd1e0c6"
+        ],
+        [
+          "ed8035cb6ea3887a",
+          "14cdf61713c2b9f8"
+        ],
+        [
+          "b4bf68d5dfd1e0c6",
+          "14cdf61713c2b9f8"
+        ],
+        [
+          "65eadf09000bc064",
+          "ab2f934717d0934d"
+        ],
+        [
+          "65eadf09000bc064",
+          "6b71172b11bae01a"
+        ],
+        [
+          "65eadf09000bc064",
+          "b0616066e42203a7"
+        ],
+        [
+          "ab2f934717d0934d",
+          "6b71172b11bae01a"
+        ],
+        [
+          "ab2f934717d0934d",
+          "b0616066e42203a7"
+        ],
+        [
+          "6b71172b11bae01a",
+          "b0616066e42203a7"
+        ],
+        [
+          "5084d75ab5efa10a",
+          "e57ff21c074da06f"
+        ],
+        [
+          "143ad60a8d9568cc",
+          "745e6fe2b1f8c473"
+        ],
+        [
+          "143ad60a8d9568cc",
+          "3c03367b15abcfb6"
+        ],
+        [
+          "745e6fe2b1f8c473",
+          "3c03367b15abcfb6"
+        ],
+        [
+          "c7574a2007695966",
+          "4f3814c527151d0a"
+        ],
+        [
+          "3f08f931f5ee7446",
+          "ecac55800702d6fc"
+        ],
+        [
+          "b7364dd4ae220c46",
+          "f34da39417eeae24"
+        ],
+        [
+          "b7364dd4ae220c46",
+          "9f1af3416b7f98de"
+        ],
+        [
+          "f34da39417eeae24",
+          "9f1af3416b7f98de"
+        ],
+        [
+          "38950afb5f1fe20d",
+          "4fafa4d1c865a621"
+        ],
+        [
+          "38950afb5f1fe20d",
+          "62a70d1ff880ee11"
+        ],
+        [
+          "4fafa4d1c865a621",
+          "62a70d1ff880ee11"
+        ],
+        [
+          "2a671a3e8a389c38",
+          "1d7271d0d39305e9"
+        ],
+        [
+          "2a671a3e8a389c38",
+          "9622a856ace2fc81"
+        ],
+        [
+          "1d7271d0d39305e9",
+          "9622a856ace2fc81"
+        ],
+        [
+          "057b8c1b7e0d1af6",
+          "3431edff093cd5cc"
+        ],
+        [
+          "057b8c1b7e0d1af6",
+          "6d274f7a4286c993"
+        ],
+        [
+          "3431edff093cd5cc",
+          "6d274f7a4286c993"
+        ],
+        [
+          "9fd7a1764dcc5c12",
+          "cd499c20ff1d5a6e"
+        ],
+        [
+          "9fd7a1764dcc5c12",
+          "3a780746ab7ab046"
+        ],
+        [
+          "cd499c20ff1d5a6e",
+          "3a780746ab7ab046"
+        ]
+      ],
+      "qualifiers": [
+        "Mardale",
+        "Torstead"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "pairs": [
+            [
+              "Mardale",
+              "Halport"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Torstead",
+              "Mardale"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L15-G1",
+            "dev-L15-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L15-G1": 1,
+            "dev-L15-G2": 2
+          },
+          "shared": [
+            "Halport",
+            "Valfield"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L15-G1",
+            "dev-L15-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L15-G1": 1,
+            "dev-L15-G3": 2
+          },
+          "shared": [
+            "Valfield",
+            "Galwick"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L15-G2",
+            "dev-L15-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L15-G2": 2,
+            "dev-L15-G3": 2
+          },
+          "shared": [
+            "Mardale",
+            "Valfield"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "4e9bb1ae46bc1f29",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c67e158529ea9021c",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Galwick"
+                },
+                "base": {
+                  "class": "c02099b6f3cac486e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Galwick"
+                }
+              },
+              "t": 3,
+              "team": "Galwick"
+            },
+            {
+              "kind": "break",
+              "market": "3baf7a7d38e8009b",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c9297913d6a37e5e8",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Halport"
+                },
+                "base": {
+                  "class": "c3aac4f0a75a3564f",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Halport"
+                }
+              },
+              "t": 2,
+              "team": "Halport"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Mardale",
+      "scores": {
+        "Galwick": 2,
+        "Halport": 1,
+        "Mardale": 5,
+        "Torstead": 4,
+        "Valfield": 3
+      },
+      "seeds": {
+        "dev-L15-G1": "Torstead",
+        "dev-L15-G2": "Mardale",
+        "dev-L15-G3": "Galwick"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L15-G1",
+          "members": [
+            "Halport",
+            "Valfield",
+            "Torstead",
+            "Galwick"
+          ],
+          "named": true,
+          "theme": "Coastal",
+          "title": "Group Coastal"
+        },
+        {
+          "id": "dev-L15-G2",
+          "members": [
+            "Mardale",
+            "Halport",
+            "Valfield"
+          ],
+          "named": false,
+          "theme": "Upland",
+          "title": "the upland sides"
+        },
+        {
+          "id": "dev-L15-G3",
+          "members": [
+            "Galwick",
+            "Valfield",
+            "Mardale"
+          ],
+          "named": true,
+          "theme": "Riverside",
+          "title": "Group Riverside"
+        }
+      ],
+      "teams": [
+        "Torstead",
+        "Valfield",
+        "Galwick",
+        "Mardale",
+        "Halport"
+      ],
+      "winner": "Torstead"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L16",
+      "name": "Galaria",
+      "paraphrase_pairs": [
+        [
+          "527de40b8c2b1651",
+          "69d3f88c75ce3f2b"
+        ],
+        [
+          "527de40b8c2b1651",
+          "58e1f2c4cebf10ec"
+        ],
+        [
+          "69d3f88c75ce3f2b",
+          "58e1f2c4cebf10ec"
+        ],
+        [
+          "d5639e3d8ff0b128",
+          "54822ab90c63f4ec"
+        ],
+        [
+          "4cd7d3a7f2d55947",
+          "20c6bac9f9f53156"
+        ],
+        [
+          "4cd7d3a7f2d55947",
+          "958cd9a91e7cf61f"
+        ],
+        [
+          "20c6bac9f9f53156",
+          "958cd9a91e7cf61f"
+        ],
+        [
+          "04a99085c77e4cb0",
+          "b2cac628ffef1714"
+        ],
+        [
+          "a300d56011e074d7",
+          "f210e8b8d5cdd865"
+        ],
+        [
+          "8d17d41493199077",
+          "5d1ff8fccb6babe0"
+        ],
+        [
+          "f083f6ba4174eb6d",
+          "6d5b29a590fa0cbf"
+        ],
+        [
+          "f083f6ba4174eb6d",
+          "ba866b3300b3b96d"
+        ],
+        [
+          "6d5b29a590fa0cbf",
+          "ba866b3300b3b96d"
+        ],
+        [
+          "be7f94c14e831279",
+          "e80136292b5ee0bf"
+        ],
+        [
+          "be7f94c14e831279",
+          "66c04cfd016d47b9"
+        ],
+        [
+          "e80136292b5ee0bf",
+          "66c04cfd016d47b9"
+        ],
+        [
+          "3811eab9993a7a31",
+          "46f745b26ca4751a"
+        ],
+        [
+          "0a1b8f1285616872",
+          "608d57bf807a4954"
+        ],
+        [
+          "0a1b8f1285616872",
+          "2c65031519f94d39"
+        ],
+        [
+          "608d57bf807a4954",
+          "2c65031519f94d39"
+        ],
+        [
+          "3edf0eb6db516f3c",
+          "380234969b36ba2f"
+        ],
+        [
+          "3edf0eb6db516f3c",
+          "7ba74cba8fceaaef"
+        ],
+        [
+          "380234969b36ba2f",
+          "7ba74cba8fceaaef"
+        ],
+        [
+          "3e7f04b47bf6092e",
+          "7243837067485767"
+        ],
+        [
+          "510a056c750dce75",
+          "43f864cebab62e4a"
+        ],
+        [
+          "1102dd2a2774aeb3",
+          "8a126c2124a10eb2"
+        ],
+        [
+          "1102dd2a2774aeb3",
+          "a5853c06946153aa"
+        ],
+        [
+          "8a126c2124a10eb2",
+          "a5853c06946153aa"
+        ],
+        [
+          "7b87262c3ad256b9",
+          "8db0997b4639fb28"
+        ],
+        [
+          "7b87262c3ad256b9",
+          "b89afa4e47e846f3"
+        ],
+        [
+          "8db0997b4639fb28",
+          "b89afa4e47e846f3"
+        ],
+        [
+          "bb5515cf5c07a0e5",
+          "f8bd9f7937a22ecf"
+        ],
+        [
+          "bb5515cf5c07a0e5",
+          "e1b396c0019c21f7"
+        ],
+        [
+          "f8bd9f7937a22ecf",
+          "e1b396c0019c21f7"
+        ],
+        [
+          "fbe1ba512beebda8",
+          "c9d0d1a57d70a6e9"
+        ],
+        [
+          "fbe1ba512beebda8",
+          "8d37dd7566678512"
+        ],
+        [
+          "c9d0d1a57d70a6e9",
+          "8d37dd7566678512"
+        ],
+        [
+          "c7b59b039e899937",
+          "0abcec7b98410fed"
+        ],
+        [
+          "c7b59b039e899937",
+          "36175eda1e3abdc7"
+        ],
+        [
+          "0abcec7b98410fed",
+          "36175eda1e3abdc7"
+        ],
+        [
+          "653cb945da92906e",
+          "229054ed4bae0da5"
+        ],
+        [
+          "653cb945da92906e",
+          "4a1b49f41139c648"
+        ],
+        [
+          "229054ed4bae0da5",
+          "4a1b49f41139c648"
+        ]
+      ],
+      "qualifiers": [
+        "Barholt",
+        "Valby"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 1,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 1,
+            "t": 4
+          },
+          "atmost": {
+            "k": 2,
+            "t": 5
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Valby",
+              "Dorholt"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Barholt",
+              "Valby"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "a": 2,
+          "rule": 6,
+          "teams": [
+            "Barholt",
+            "Galgate"
+          ],
+          "type": "chain"
+        },
+        {
+          "groups": [
+            "dev-L16-G1",
+            "dev-L16-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L16-G1": 1,
+            "dev-L16-G2": 1
+          },
+          "shared": [
+            "Rosholt",
+            "Dorholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L16-G1",
+            "dev-L16-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L16-G1": 1,
+            "dev-L16-G3": 1
+          },
+          "shared": [
+            "Rosholt",
+            "Barholt"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L16-G2",
+            "dev-L16-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L16-G2": 1,
+            "dev-L16-G3": 1
+          },
+          "shared": [
+            "Rosholt",
+            "Valby",
+            "Galgate"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "tophalf",
+              "market": "01b1f098fc96c80b",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "ca9b7f11f988286dc",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Galgate"
+                },
+                "base": {
+                  "class": "cb7035a8a0bbf0a4e",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Galgate"
+                }
+              },
+              "t": null,
+              "team": "Galgate"
+            },
+            {
+              "kind": "break",
+              "market": "ad25cbaaa3ce6ded",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "cbf9d357debd88e85",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 1,
+                  "team": "Dorholt"
+                },
+                "base": {
+                  "class": "c0fe66b2b923fa434",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Dorholt"
+                }
+              },
+              "t": 2,
+              "team": "Dorholt"
+            },
+            {
+              "kind": "break",
+              "market": "edbf04926f195c49",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "ca9b7f11f988286dc",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 2,
+                  "team": "Galgate"
+                },
+                "base": {
+                  "class": "c1cd05e8d72f0343e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Galgate"
+                }
+              },
+              "t": 3,
+              "team": "Galgate"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Valby",
+      "scores": {
+        "Barholt": 3,
+        "Dorholt": 1,
+        "Galgate": 2,
+        "Rosholt": 0,
+        "Valby": 5
+      },
+      "seeds": {
+        "dev-L16-G1": "Dorholt",
+        "dev-L16-G2": "Valby",
+        "dev-L16-G3": "Barholt"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L16-G1",
+          "members": [
+            "Rosholt",
+            "Barholt",
+            "Dorholt"
+          ],
+          "named": true,
+          "theme": "Capital",
+          "title": "Group Capital"
+        },
+        {
+          "id": "dev-L16-G2",
+          "members": [
+            "Rosholt",
+            "Valby",
+            "Galgate",
+            "Dorholt"
+          ],
+          "named": false,
+          "theme": "Northern",
+          "title": "the northern sides"
+        },
+        {
+          "id": "dev-L16-G3",
+          "members": [
+            "Rosholt",
+            "Valby",
+            "Galgate",
+            "Barholt"
+          ],
+          "named": true,
+          "theme": "Founding",
+          "title": "Group Founding"
+        }
+      ],
+      "teams": [
+        "Valby",
+        "Rosholt",
+        "Barholt",
+        "Dorholt",
+        "Galgate"
+      ],
+      "winner": "Barholt"
+    },
+    {
+      "L": 6,
+      "fixed_share": 0.0,
+      "id": "dev-L17",
+      "name": "Valica",
+      "paraphrase_pairs": [
+        [
+          "c9e5a3d6c3eeef8c",
+          "d92397e43b925ef2"
+        ],
+        [
+          "c9e5a3d6c3eeef8c",
+          "bdfd213e332d94ee"
+        ],
+        [
+          "d92397e43b925ef2",
+          "bdfd213e332d94ee"
+        ],
+        [
+          "ac28c24be5d70fbf",
+          "67328d7bbee6e002"
+        ],
+        [
+          "8abdd1de8ba1eff1",
+          "acca06721c8723ae"
+        ],
+        [
+          "f60837e06e0d0134",
+          "1c2f81b2cebf5a55"
+        ],
+        [
+          "f60837e06e0d0134",
+          "d7e11fc4d65f14f1"
+        ],
+        [
+          "1c2f81b2cebf5a55",
+          "d7e11fc4d65f14f1"
+        ],
+        [
+          "7300dc2134e17428",
+          "c9ce61b1c4b2f6da"
+        ],
+        [
+          "7300dc2134e17428",
+          "34dfeca233a16127"
+        ],
+        [
+          "c9ce61b1c4b2f6da",
+          "34dfeca233a16127"
+        ],
+        [
+          "818994ed5b72676c",
+          "1381f6c310237f54"
+        ],
+        [
+          "818994ed5b72676c",
+          "e012fb38d2e0a166"
+        ],
+        [
+          "1381f6c310237f54",
+          "e012fb38d2e0a166"
+        ],
+        [
+          "4b4558d9ec0f6744",
+          "cf51c340dfff85ab"
+        ],
+        [
+          "e194889ae0392e58",
+          "c9c1bf161ca5753a"
+        ],
+        [
+          "e194889ae0392e58",
+          "bf04874876c9465e"
+        ],
+        [
+          "e194889ae0392e58",
+          "e8a8bc721179d856"
+        ],
+        [
+          "c9c1bf161ca5753a",
+          "bf04874876c9465e"
+        ],
+        [
+          "c9c1bf161ca5753a",
+          "e8a8bc721179d856"
+        ],
+        [
+          "bf04874876c9465e",
+          "e8a8bc721179d856"
+        ],
+        [
+          "4e3cceb5ff122820",
+          "fa77e6ef573a5f27"
+        ],
+        [
+          "4378727f3bb161c6",
+          "2c2a14b13e3d7fa6"
+        ],
+        [
+          "4378727f3bb161c6",
+          "b91601953a390f95"
+        ],
+        [
+          "2c2a14b13e3d7fa6",
+          "b91601953a390f95"
+        ],
+        [
+          "6127ac5ab6aee3f1",
+          "3c4cef5aab3b0064"
+        ],
+        [
+          "6127ac5ab6aee3f1",
+          "2795b5574793af3e"
+        ],
+        [
+          "6127ac5ab6aee3f1",
+          "437e6bee16175ef7"
+        ],
+        [
+          "3c4cef5aab3b0064",
+          "2795b5574793af3e"
+        ],
+        [
+          "3c4cef5aab3b0064",
+          "437e6bee16175ef7"
+        ],
+        [
+          "2795b5574793af3e",
+          "437e6bee16175ef7"
+        ],
+        [
+          "e464059bd4be02b2",
+          "c5a0448dfc7c607b"
+        ],
+        [
+          "d749a57a6a0ba68a",
+          "d5eaaf6a95072dcc"
+        ],
+        [
+          "62941468208e0c74",
+          "4d85257cd962b77b"
+        ],
+        [
+          "fbc36d91ee14e8fc",
+          "b3a7c6ce6e0afcc1"
+        ],
+        [
+          "62cdb039f4eca8da",
+          "bf6b4b301b4221d7"
+        ],
+        [
+          "62cdb039f4eca8da",
+          "aef9aef2a30a84c9"
+        ],
+        [
+          "bf6b4b301b4221d7",
+          "aef9aef2a30a84c9"
+        ],
+        [
+          "c2eabb340a0627e8",
+          "83a7f4a7a2ed411b"
+        ],
+        [
+          "32725893164b8fd6",
+          "be43774a75c1f6f3"
+        ],
+        [
+          "32725893164b8fd6",
+          "647f982408365a7a"
+        ],
+        [
+          "32725893164b8fd6",
+          "52810f5b50268111"
+        ],
+        [
+          "be43774a75c1f6f3",
+          "647f982408365a7a"
+        ],
+        [
+          "be43774a75c1f6f3",
+          "52810f5b50268111"
+        ],
+        [
+          "647f982408365a7a",
+          "52810f5b50268111"
+        ],
+        [
+          "24e8c19ce181641d",
+          "d75d13eae1c98e04"
+        ],
+        [
+          "49762f0a5438b983",
+          "b79f7dea878514ea"
+        ],
+        [
+          "49762f0a5438b983",
+          "68fd344744f3c27c"
+        ],
+        [
+          "b79f7dea878514ea",
+          "68fd344744f3c27c"
+        ],
+        [
+          "665ddeb4ff922dfa",
+          "f4bde582549c2a86"
+        ],
+        [
+          "665ddeb4ff922dfa",
+          "c15de5eca0d01758"
+        ],
+        [
+          "f4bde582549c2a86",
+          "c15de5eca0d01758"
+        ],
+        [
+          "c5f935cfa7f7878e",
+          "748e5384cd0d67ac"
+        ],
+        [
+          "c5f935cfa7f7878e",
+          "a9ef9a183508c47f"
+        ],
+        [
+          "748e5384cd0d67ac",
+          "a9ef9a183508c47f"
+        ],
+        [
+          "0a4c33679155a314",
+          "384e860f8eb7428a"
+        ],
+        [
+          "0a4c33679155a314",
+          "743ae2ffed124118"
+        ],
+        [
+          "384e860f8eb7428a",
+          "743ae2ffed124118"
+        ],
+        [
+          "9c54a20c3d942288",
+          "68594cd460bf148b"
+        ],
+        [
+          "9c54a20c3d942288",
+          "7a47f0506fe8e773"
+        ],
+        [
+          "68594cd460bf148b",
+          "7a47f0506fe8e773"
+        ],
+        [
+          "0213601b2409b4bd",
+          "49db10bf1589811f"
+        ],
+        [
+          "0213601b2409b4bd",
+          "a4fad62efcd1f14a"
+        ],
+        [
+          "49db10bf1589811f",
+          "a4fad62efcd1f14a"
+        ]
+      ],
+      "qualifiers": [
+        "Galstead",
+        "Halford"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 1,
+            "t": 4
+          },
+          "atmost": {
+            "k": 4,
+            "t": 2
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Galstead",
+              "Halford"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Halford",
+              "Galstead"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L17-G1",
+            "dev-L17-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L17-G1": 2,
+            "dev-L17-G2": 1
+          },
+          "shared": [
+            "Kelfield",
+            "Lorport"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L17-G1",
+            "dev-L17-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L17-G1": 2,
+            "dev-L17-G3": 1
+          },
+          "shared": [
+            "Lorport"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L17-G2",
+            "dev-L17-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L17-G2": 1,
+            "dev-L17-G3": 1
+          },
+          "shared": [
+            "Lorport"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "5ed9dfed7b80b017",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c84ccd90f41f6ef74",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Halford"
+                },
+                "base": {
+                  "class": "c3cd6c4dfe57fa97b",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Halford"
+                }
+              },
+              "t": 5,
+              "team": "Halford"
+            },
+            {
+              "kind": "break",
+              "market": "dbc24480774e1da0",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "ce03e290b0c812823",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Galstead"
+                },
+                "base": {
+                  "class": "cecb37309be01a532",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 6,
+                  "team": "Galstead"
+                }
+              },
+              "t": 6,
+              "team": "Galstead"
+            },
+            {
+              "kind": "tophalf",
+              "market": "0f610b621fc15d1b",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c3cd6c4dfe57fa97b",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Halford"
+                },
+                "base": {
+                  "class": "c883393c6a6e6ee0f",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Halford"
+                }
+              },
+              "t": null,
+              "team": "Halford"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Galstead",
+      "scores": {
+        "Dorham": 3,
+        "Galstead": 5,
+        "Halford": 4,
+        "Kelfield": 0,
+        "Lorport": 1,
+        "Marwick": 2
+      },
+      "seeds": {
+        "dev-L17-G1": "Marwick",
+        "dev-L17-G2": "Lorport",
+        "dev-L17-G3": "Dorham"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L17-G1",
+          "members": [
+            "Kelfield",
+            "Marwick",
+            "Lorport"
+          ],
+          "named": false,
+          "theme": "Coastal",
+          "title": "the coastal sides"
+        },
+        {
+          "id": "dev-L17-G2",
+          "members": [
+            "Lorport",
+            "Kelfield",
+            "Galstead"
+          ],
+          "named": true,
+          "theme": "Northern",
+          "title": "Group Northern"
+        },
+        {
+          "id": "dev-L17-G3",
+          "members": [
+            "Dorham",
+            "Halford",
+            "Lorport"
+          ],
+          "named": false,
+          "theme": "Upland",
+          "title": "the upland sides"
+        }
+      ],
+      "teams": [
+        "Dorham",
+        "Kelfield",
+        "Halford",
+        "Marwick",
+        "Lorport",
+        "Galstead"
+      ],
+      "winner": "Halford"
+    },
+    {
+      "L": 5,
+      "fixed_share": 0.0,
+      "id": "dev-L18",
+      "name": "Doraria",
+      "paraphrase_pairs": [
+        [
+          "7e4c882cc768304f",
+          "d2f5cf6e90b9c9dd"
+        ],
+        [
+          "a883e46b6ce38774",
+          "2457ed71b7316910"
+        ],
+        [
+          "a883e46b6ce38774",
+          "121bd686dbae80a1"
+        ],
+        [
+          "2457ed71b7316910",
+          "121bd686dbae80a1"
+        ],
+        [
+          "b1d23b77b408ec52",
+          "db1b722b805ed0d2"
+        ],
+        [
+          "6e352a2baa4a7434",
+          "67989926dbaa6363"
+        ],
+        [
+          "6e352a2baa4a7434",
+          "c79695bd2361e5bf"
+        ],
+        [
+          "6e352a2baa4a7434",
+          "4b5c5324557e077a"
+        ],
+        [
+          "67989926dbaa6363",
+          "c79695bd2361e5bf"
+        ],
+        [
+          "67989926dbaa6363",
+          "4b5c5324557e077a"
+        ],
+        [
+          "c79695bd2361e5bf",
+          "4b5c5324557e077a"
+        ],
+        [
+          "4f7d8a361e4c8352",
+          "117c84ff5ffc215b"
+        ],
+        [
+          "3c90f47d44c8730c",
+          "3d839fd82b574401"
+        ],
+        [
+          "4624833ec756f0a6",
+          "ff7e42e85d49a02f"
+        ],
+        [
+          "b17b102f6e70c37a",
+          "97bd4ad6b8bb2b5c"
+        ],
+        [
+          "b17b102f6e70c37a",
+          "5c9886b4336b3c88"
+        ],
+        [
+          "97bd4ad6b8bb2b5c",
+          "5c9886b4336b3c88"
+        ],
+        [
+          "7fd52105585a1812",
+          "5d61470877d76b15"
+        ],
+        [
+          "7fd52105585a1812",
+          "efb09303ee9ab5f3"
+        ],
+        [
+          "7fd52105585a1812",
+          "24798753d4257a05"
+        ],
+        [
+          "5d61470877d76b15",
+          "efb09303ee9ab5f3"
+        ],
+        [
+          "5d61470877d76b15",
+          "24798753d4257a05"
+        ],
+        [
+          "efb09303ee9ab5f3",
+          "24798753d4257a05"
+        ],
+        [
+          "a87cebfcc79cfce6",
+          "11e113b3eaf3b09b"
+        ],
+        [
+          "e730f054fb922d79",
+          "905aff911baf75fd"
+        ],
+        [
+          "c7d0393da1ba2322",
+          "7a65eff9e72ff786"
+        ],
+        [
+          "494de5fe525241e6",
+          "08f2dee1f3ecbc6c"
+        ],
+        [
+          "cbc85092254fc794",
+          "b5bed0a20584dc8e"
+        ],
+        [
+          "cbc85092254fc794",
+          "f53742de72565c5c"
+        ],
+        [
+          "cbc85092254fc794",
+          "52326deba1a762fd"
+        ],
+        [
+          "b5bed0a20584dc8e",
+          "f53742de72565c5c"
+        ],
+        [
+          "b5bed0a20584dc8e",
+          "52326deba1a762fd"
+        ],
+        [
+          "f53742de72565c5c",
+          "52326deba1a762fd"
+        ],
+        [
+          "25edf50b20334fe7",
+          "21cff88d680a986e"
+        ],
+        [
+          "25edf50b20334fe7",
+          "1f864d5f168b42de"
+        ],
+        [
+          "21cff88d680a986e",
+          "1f864d5f168b42de"
+        ],
+        [
+          "fd1ea175edb38c34",
+          "f00bf8220e5bb1a7"
+        ],
+        [
+          "fd1ea175edb38c34",
+          "db0e38f1396374ab"
+        ],
+        [
+          "f00bf8220e5bb1a7",
+          "db0e38f1396374ab"
+        ],
+        [
+          "3e3dd5b70bf340b8",
+          "73f858fb56048aa8"
+        ],
+        [
+          "3e3dd5b70bf340b8",
+          "770abf89fca26ebf"
+        ],
+        [
+          "73f858fb56048aa8",
+          "770abf89fca26ebf"
+        ],
+        [
+          "0daaddf4fb15f0b0",
+          "106ae22b70b914e1"
+        ],
+        [
+          "0daaddf4fb15f0b0",
+          "09c31cad85411cf8"
+        ],
+        [
+          "106ae22b70b914e1",
+          "09c31cad85411cf8"
+        ],
+        [
+          "6d781030654fb1fd",
+          "189d834cc353a738"
+        ],
+        [
+          "6d781030654fb1fd",
+          "9aee6754a4f4d915"
+        ],
+        [
+          "189d834cc353a738",
+          "9aee6754a4f4d915"
+        ],
+        [
+          "7a8ee3533ab43d05",
+          "4e3d0f953df4a1f9"
+        ],
+        [
+          "7a8ee3533ab43d05",
+          "0f7fc226038acefc"
+        ],
+        [
+          "4e3d0f953df4a1f9",
+          "0f7fc226038acefc"
+        ]
+      ],
+      "qualifiers": [
+        "Kelfield",
+        "Lordale"
+      ],
+      "rules": [
+        {
+          "rule": 1,
+          "type": "ladder"
+        },
+        {
+          "k": 2,
+          "min_points": 2,
+          "rule": 2,
+          "type": "qualify"
+        },
+        {
+          "atleast": {
+            "k": 1,
+            "t": 5
+          },
+          "atmost": {
+            "k": 5,
+            "t": 2
+          },
+          "rule": 3,
+          "type": "count"
+        },
+        {
+          "pairs": [
+            [
+              "Pelton",
+              "Valfield"
+            ]
+          ],
+          "rule": 4,
+          "type": "outscores"
+        },
+        {
+          "conditionals": [
+            [
+              "Valfield",
+              "Kelfield"
+            ]
+          ],
+          "rule": 5,
+          "type": "placement"
+        },
+        {
+          "groups": [
+            "dev-L18-G1",
+            "dev-L18-G2"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L18-G1": 1,
+            "dev-L18-G2": 1
+          },
+          "shared": [
+            "Salstead",
+            "Barmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L18-G1",
+            "dev-L18-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L18-G1": 1,
+            "dev-L18-G3": 1
+          },
+          "shared": [
+            "Salstead",
+            "Barmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "groups": [
+            "dev-L18-G2",
+            "dev-L18-G3"
+          ],
+          "rule": 7,
+          "seed_min_points": {
+            "dev-L18-G2": 1,
+            "dev-L18-G3": 1
+          },
+          "shared": [
+            "Salstead",
+            "Barmere"
+          ],
+          "type": "overlap"
+        },
+        {
+          "props": [
+            {
+              "kind": "break",
+              "market": "97d69ad4acff4765",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c690f762bbbb68eaa",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Salstead"
+                },
+                "base": {
+                  "class": "c6b0b91c63016008e",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Salstead"
+                }
+              },
+              "t": 4,
+              "team": "Salstead"
+            },
+            {
+              "kind": "tophalf",
+              "market": "fe516ae12364a01b",
+              "missing": "ambiguous_scope",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c690f762bbbb68eaa",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 3,
+                  "team": "Salstead"
+                },
+                "base": {
+                  "class": "cd1180afc20e9b033",
+                  "kind": "qual",
+                  "subgroup": null,
+                  "t": null,
+                  "team": "Salstead"
+                }
+              },
+              "t": null,
+              "team": "Salstead"
+            },
+            {
+              "kind": "break",
+              "market": "c58d943238a7c138",
+              "missing": "no_date",
+              "negated": false,
+              "readings": {
+                "alt": {
+                  "class": "c92c26cf034f9c8ae",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 4,
+                  "team": "Kelfield"
+                },
+                "base": {
+                  "class": "c5bfd7d705a40c85b",
+                  "kind": "thr",
+                  "subgroup": null,
+                  "t": 5,
+                  "team": "Kelfield"
+                }
+              },
+              "t": 5,
+              "team": "Kelfield"
+            }
+          ],
+          "rule": 8,
+          "type": "ambiguous"
+        }
+      ],
+      "runner_up": "Kelfield",
+      "scores": {
+        "Barmere": 0,
+        "Kelfield": 4,
+        "Lordale": 5,
+        "Pelton": 2,
+        "Salstead": 3,
+        "Valfield": 1
+      },
+      "seeds": {
+        "dev-L18-G1": "Pelton",
+        "dev-L18-G2": "Valfield",
+        "dev-L18-G3": "Salstead"
+      },
+      "subgroups": [
+        {
+          "id": "dev-L18-G1",
+          "members": [
+            "Pelton",
+            "Salstead",
+            "Barmere"
+          ],
+          "named": true,
+          "theme": "Coastal",
+          "title": "Group Coastal"
+        },
+        {
+          "id": "dev-L18-G2",
+          "members": [
+            "Salstead",
+            "Valfield",
+            "Barmere"
+          ],
+          "named": false,
+          "theme": "Capital",
+          "title": "the capital sides"
+        },
+        {
+          "id": "dev-L18-G3",
+          "members": [
+            "Barmere",
+            "Lordale",
+            "Salstead"
+          ],
+          "named": true,
+          "theme": "Northern",
+          "title": "Group Northern"
+        }
+      ],
+      "teams": [
+        "Kelfield",
+        "Lordale",
+        "Valfield",
+        "Pelton",
+        "Salstead",
+        "Barmere"
+      ],
+      "winner": "Lordale"
+    }
+  ],
+  "name": "mentat_hard_dev",
+  "seed": 20261027,
+  "split": "dev",
+  "version": "3.1"
+}

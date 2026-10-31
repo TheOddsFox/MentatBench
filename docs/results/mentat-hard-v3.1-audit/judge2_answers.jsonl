@@ -1,0 +1,210 @@
+{"id": "A001", "answer": {"base": "B", "alt": "C"}}
+{"id": "A002", "answer": {"base": "C", "alt": "A"}}
+{"id": "A003", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A004", "answer": {"base": "B", "alt": "B"}}
+{"id": "A005", "answer": {"relation": "EQUIV"}}
+{"id": "A006", "answer": {"relation": "NONE"}}
+{"id": "A007", "answer": {"kind": "none", "lower": 0, "upper": 3, "chain": []}}
+{"id": "A008", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A009", "answer": {"base": "D", "alt": "C"}}
+{"id": "A010", "answer": {"base": "A", "alt": "A"}}
+{"id": "A011", "answer": {"base": "C", "alt": "C"}}
+{"id": "A012", "answer": {"relation": "IMPLIES"}}
+{"id": "A013", "answer": {"relation": "NONE"}}
+{"id": "A014", "answer": {"kind": "at_least_k", "lower": 2, "upper": 4, "chain": []}}
+{"id": "A015", "answer": {"base": "B", "alt": "C"}}
+{"id": "A016", "answer": {"base": "B", "alt": "D"}}
+{"id": "A017", "answer": {"relation": "IMPLIES"}}
+{"id": "A018", "answer": {"status": "bound"}}
+{"id": "A019", "answer": {"base": "B", "alt": "C"}}
+{"id": "A020", "answer": {"status": "bound"}}
+{"id": "A021", "answer": {"kind": "at_most_k", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A022", "answer": {"relation": "NONE"}}
+{"id": "A023", "answer": {"relation": "EQUIV"}}
+{"id": "A024", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A025", "answer": {"status": "bound"}}
+{"id": "A026", "answer": {"base": "D", "alt": "B"}}
+{"id": "A027", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A028", "answer": {"base": "D", "alt": "C"}}
+{"id": "A029", "answer": {"relation": "EXCLUDES"}}
+{"id": "A030", "answer": {"relation": "EQUIV"}}
+{"id": "A031", "answer": {"relation": "IMPLIES"}}
+{"id": "A032", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A033", "answer": {"status": "unresolved"}}
+{"id": "A034", "answer": {"relation": "IMPLIES"}}
+{"id": "A035", "answer": {"relation": "EXCLUDES"}}
+{"id": "A036", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A037", "answer": {"base": "A", "alt": "A"}}
+{"id": "A038", "answer": {"relation": "IMPLIES"}}
+{"id": "A039", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A040", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A041", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A042", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A043", "answer": {"base": "C", "alt": "C"}}
+{"id": "A044", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A045", "answer": {"relation": "IMPLIES"}}
+{"id": "A046", "answer": {"base": "C", "alt": "C"}}
+{"id": "A047", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A048", "answer": {"status": "bound"}}
+{"id": "A049", "answer": {"status": "unresolved"}}
+{"id": "A050", "answer": {"relation": "NONE"}}
+{"id": "A051", "answer": {"base": "A", "alt": "D"}}
+{"id": "A052", "answer": {"base": "C", "alt": "B"}}
+{"id": "A053", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A054", "answer": {"status": "bound"}}
+{"id": "A055", "answer": {"status": "unresolved"}}
+{"id": "A056", "answer": {"relation": "NONE"}}
+{"id": "A057", "answer": {"base": "A", "alt": "A"}}
+{"id": "A058", "answer": {"base": "D", "alt": "D"}}
+{"id": "A059", "answer": {"base": "C", "alt": "C"}}
+{"id": "A060", "answer": {"base": "C", "alt": "C"}}
+{"id": "A061", "answer": {"base": "B", "alt": "B"}}
+{"id": "A062", "answer": {"status": "unresolved"}}
+{"id": "A063", "answer": {"base": "B", "alt": "B"}}
+{"id": "A064", "answer": {"relation": "EXCLUDES"}}
+{"id": "A065", "answer": {"relation": "NONE"}}
+{"id": "A066", "answer": {"status": "unresolved"}}
+{"id": "A067", "answer": {"status": "unresolved"}}
+{"id": "A068", "answer": {"relation": "EQUIV"}}
+{"id": "A069", "answer": {"relation": "EXCLUDES"}}
+{"id": "A070", "answer": {"status": "bound"}}
+{"id": "A071", "answer": {"kind": "at_most_k", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A072", "answer": {"relation": "IMPLIES"}}
+{"id": "A073", "answer": {"relation": "IMPLIES"}}
+{"id": "A074", "answer": {"relation": "IMPLIES"}}
+{"id": "A075", "answer": {"relation": "EXCLUDES"}}
+{"id": "A076", "answer": {"status": "unresolved"}}
+{"id": "A077", "answer": {"relation": "NONE"}}
+{"id": "A078", "answer": {"base": "C", "alt": "B"}}
+{"id": "A079", "answer": {"relation": "EQUIV"}}
+{"id": "A080", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A081", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A082", "answer": {"base": "D", "alt": "B"}}
+{"id": "A083", "answer": {"relation": "EXCLUDES"}}
+{"id": "A084", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A085", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A086", "answer": {"base": "A", "alt": "A"}}
+{"id": "A087", "answer": {"relation": "EQUIV"}}
+{"id": "A088", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A089", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "A090", "answer": {"base": "D", "alt": "D"}}
+{"id": "A091", "answer": {"status": "bound"}}
+{"id": "A092", "answer": {"relation": "NONE"}}
+{"id": "A093", "answer": {"base": "C", "alt": "D"}}
+{"id": "A094", "answer": {"kind": "at_most_k", "lower": 0, "upper": 3, "chain": []}}
+{"id": "A095", "answer": {"relation": "IMPLIES"}}
+{"id": "A096", "answer": {"relation": "EXCLUDES"}}
+{"id": "A097", "answer": {"base": "A", "alt": "D"}}
+{"id": "A098", "answer": {"base": "A", "alt": "A"}}
+{"id": "A099", "answer": {"status": "unresolved"}}
+{"id": "A100", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A101", "answer": {"base": "C", "alt": "A"}}
+{"id": "A102", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A103", "answer": {"status": "unresolved"}}
+{"id": "A104", "answer": {"relation": "EXCLUDES"}}
+{"id": "A105", "answer": {"relation": "IMPLIES"}}
+{"id": "A106", "answer": {"base": "A", "alt": "D"}}
+{"id": "A107", "answer": {"relation": "EXCLUDES"}}
+{"id": "A108", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A109", "answer": {"status": "bound"}}
+{"id": "A110", "answer": {"relation": "EXCLUDES"}}
+{"id": "A111", "answer": {"relation": "EXCLUDES"}}
+{"id": "A112", "answer": {"base": "C", "alt": "C"}}
+{"id": "A113", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 2, "chain": [1, 2]}}
+{"id": "A114", "answer": {"base": "D", "alt": "A"}}
+{"id": "A115", "answer": {"relation": "IMPLIES"}}
+{"id": "A116", "answer": {"relation": "EXCLUDES"}}
+{"id": "A117", "answer": {"relation": "EQUIV"}}
+{"id": "A118", "answer": {"relation": "EXCLUDES"}}
+{"id": "A119", "answer": {"relation": "EQUIV"}}
+{"id": "A120", "answer": {"relation": "IMPLIES"}}
+{"id": "A121", "answer": {"relation": "EXCLUDES"}}
+{"id": "A122", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 3, "chain": [2, 3, 1]}}
+{"id": "A123", "answer": {"base": "A", "alt": "A"}}
+{"id": "A124", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A125", "answer": {"relation": "NONE"}}
+{"id": "A126", "answer": {"relation": "EQUIV"}}
+{"id": "A127", "answer": {"relation": "IMPLIES"}}
+{"id": "A128", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A129", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A130", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A131", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A132", "answer": {"base": "D", "alt": "D"}}
+{"id": "A133", "answer": {"kind": "at_least_k", "lower": 1, "upper": 3, "chain": []}}
+{"id": "A134", "answer": {"status": "unresolved"}}
+{"id": "A135", "answer": {"base": "C", "alt": "D"}}
+{"id": "A136", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A137", "answer": {"base": "D", "alt": "C"}}
+{"id": "A138", "answer": {"relation": "EQUIV"}}
+{"id": "A139", "answer": {"base": "B", "alt": "B"}}
+{"id": "A140", "answer": {"base": "D", "alt": "B"}}
+{"id": "A141", "answer": {"relation": "IMPLIES"}}
+{"id": "A142", "answer": {"status": "unresolved"}}
+{"id": "A143", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A144", "answer": {"relation": "EXCLUDES"}}
+{"id": "A145", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A146", "answer": {"relation": "EXCLUDES"}}
+{"id": "A147", "answer": {"relation": "NONE"}}
+{"id": "A148", "answer": {"base": "B", "alt": "B"}}
+{"id": "A149", "answer": {"relation": "IMPLIES"}}
+{"id": "A150", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A151", "answer": {"relation": "EXCLUDES"}}
+{"id": "A152", "answer": {"status": "unresolved"}}
+{"id": "A153", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A154", "answer": {"base": "C", "alt": "C"}}
+{"id": "A155", "answer": {"status": "unresolved"}}
+{"id": "A156", "answer": {"relation": "IMPLIES"}}
+{"id": "A157", "answer": {"base": "A", "alt": "A"}}
+{"id": "A158", "answer": {"base": "B", "alt": "B"}}
+{"id": "A159", "answer": {"relation": "EXCLUDES"}}
+{"id": "A160", "answer": {"relation": "EXCLUDES"}}
+{"id": "A161", "answer": {"relation": "EXCLUDES"}}
+{"id": "A162", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A163", "answer": {"base": "B", "alt": "C"}}
+{"id": "A164", "answer": {"status": "bound"}}
+{"id": "A165", "answer": {"relation": "IMPLIES"}}
+{"id": "A166", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A167", "answer": {"relation": "IMPLIES"}}
+{"id": "A168", "answer": {"base": "C", "alt": "B"}}
+{"id": "A169", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A170", "answer": {"status": "bound"}}
+{"id": "A171", "answer": {"relation": "IMPLIES"}}
+{"id": "A172", "answer": {"status": "bound"}}
+{"id": "A173", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A174", "answer": {"status": "bound"}}
+{"id": "A175", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A176", "answer": {"base": "B", "alt": "B"}}
+{"id": "A177", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "A178", "answer": {"base": "D", "alt": "B"}}
+{"id": "A179", "answer": {"relation": "EXCLUDES"}}
+{"id": "A180", "answer": {"status": "unresolved"}}
+{"id": "A181", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A182", "answer": {"relation": "NONE"}}
+{"id": "A183", "answer": {"base": "A", "alt": "C"}}
+{"id": "A184", "answer": {"status": "bound"}}
+{"id": "A185", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A186", "answer": {"base": "A", "alt": "A"}}
+{"id": "A187", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A188", "answer": {"base": "B", "alt": "D"}}
+{"id": "A189", "answer": {"base": "D", "alt": "D"}}
+{"id": "A190", "answer": {"base": "C", "alt": "D"}}
+{"id": "A191", "answer": {"base": "C", "alt": "C"}}
+{"id": "A192", "answer": {"base": "C", "alt": "A"}}
+{"id": "A193", "answer": {"base": "C", "alt": "B"}}
+{"id": "A194", "answer": {"relation": "EQUIV"}}
+{"id": "A195", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "A196", "answer": {"base": "A", "alt": "A"}}
+{"id": "A197", "answer": {"status": "unresolved"}}
+{"id": "A198", "answer": {"base": "D", "alt": "D"}}
+{"id": "A199", "answer": {"base": "B", "alt": "B"}}
+{"id": "A200", "answer": {"relation": "EQUIV"}}
+{"id": "A201", "answer": {"status": "bound"}}
+{"id": "A202", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "A203", "answer": {"relation": "IMPLIES"}}
+{"id": "A204", "answer": {"relation": "IMPLIES"}}
+{"id": "A205", "answer": {"relation": "NONE"}}
+{"id": "A206", "answer": {"status": "bound"}}
+{"id": "A207", "answer": {"base": "D", "alt": "C"}}
+{"id": "A208", "answer": {"kind": "none", "lower": 0, "upper": 4, "chain": []}}
+{"id": "A209", "answer": {"base": "C", "alt": "D"}}
+{"id": "A210", "answer": {"relation": "EXCLUDES"}}
