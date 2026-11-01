@@ -947,8 +947,7 @@ def build(args) -> dict:
     lb = build_leaderboard(main, ci, private, prereg, ollama, gates, fixture_files, counts, fixture_doc, lb_ids)
     rows = {cid: rows_of(blob) for cid, blob in preds.items()}
     apply_notes(lb, main, prereg, rows, counts, docs)
-    out = {f"{VERSION}/leaderboard.json": dump_json(lb), f"{VERSION}/leaderboard.csv": csv_bytes(lb),
-           "index.json": dump_json(index_doc())}
+    out = {f"{VERSION}/leaderboard.json": dump_json(lb), f"{VERSION}/leaderboard.csv": csv_bytes(lb)}
     for cid, blob in preds.items():
         out[f"{VERSION}/predictions/{cid}.jsonl.gz"] = blob
     for cid, doc in docs.items():

@@ -1,0 +1,70 @@
+{
+ "allocation": {
+  "control": {
+   "decide_group|at_least_k:1+at_most_k:2|real": 0,
+   "decide_group|at_least_k:1+at_most_k:4|real": 0,
+   "decide_group|at_least_k:1+at_most_k:5|real": 0,
+   "decide_group|at_least_k:1|real": 0,
+   "decide_group|at_least_k:2+at_most_k:2|real": 0,
+   "decide_group|at_least_k:2+at_most_k:4|real": 0,
+   "decide_group|at_least_k:4|real": 0,
+   "decide_group|at_most_k:2|real": 0,
+   "decide_group|at_most_k:3|real": 0,
+   "decide_group|at_most_k:4|real": 0,
+   "decide_group|at_most_one|real": 2,
+   "decide_group|exactly_one|real": 1,
+   "decide_group|none|decoy": 2,
+   "decide_group|ordered_chain|real": 0,
+   "decide_relation|EQUIV|real": 6,
+   "decide_relation|EXCLUDES|real": 6,
+   "decide_relation|EXCLUDES|trivial": 4,
+   "decide_relation|IMPLIED_BY|real": 9,
+   "decide_relation|IMPLIES|real": 9,
+   "decide_relation|NONE|hard_distractor": 11
+  },
+  "inverted": {
+   "decide_group|at_least_k:1+at_most_k:3|real": 0,
+   "decide_group|at_least_k:1+at_most_k:4|real": 0,
+   "decide_group|at_least_k:1|real": 0,
+   "decide_group|at_least_k:2+at_most_k:2|real": 0,
+   "decide_group|at_most_one|real": 4,
+   "decide_group|exactly_one|real": 4,
+   "decide_group|none|decoy": 7,
+   "decide_group|ordered_chain|real": 0,
+   "decide_relation|EQUIV|real": 13,
+   "decide_relation|EXCLUDES|real": 16,
+   "decide_relation|EXCLUDES|trivial": 9,
+   "decide_relation|IMPLIED_BY|real": 17,
+   "decide_relation|IMPLIES|real": 27,
+   "decide_relation|NONE|hard_distractor": 30
+  }
+ },
+ "child": {
+  "module": "python/mentat_bench/children/systemone_child.py",
+  "option_seed": null,
+  "prompt_sha256": "d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44"
+ },
+ "fixture": {
+  "content_hash": "7b408459538d7420e808d5d81e71916c57aee78f459a6b8c0905e48e43c8e6ab",
+  "name": "mentat_hard_test",
+  "path": "fixtures/mentat_hard_test",
+  "seed": 20261028,
+  "split": "test",
+  "version": "3.1"
+ },
+ "flagged": {
+  "path": "docs/audits/v0.1.1-item-audit/flagged.jsonl",
+  "rows": 2962,
+  "sha256": "e77d8869d400b5f09203355441c928c12620c42ddd8e47a1578f6808ece5eef1"
+ },
+ "population": {
+  "all_wrong": 423,
+  "control": 4038,
+  "flagged": 2962,
+  "group": 1000,
+  "inverted": 2539,
+  "items": 7000,
+  "relation": 6000
+ },
+ "sample_seed": "item-audit-v0.1.1"
+}

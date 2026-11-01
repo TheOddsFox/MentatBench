@@ -1,0 +1,5442 @@
+{
+ "by_group": {
+  "all_wrong": {
+   "hard_valid": 314,
+   "n": 423,
+   "suspect_label": 12,
+   "unclear": 97
+  },
+  "control": {
+   "hard_valid": 48,
+   "n": 50,
+   "suspect_label": 0,
+   "unclear": 2
+  },
+  "inverted": {
+   "hard_valid": 113,
+   "n": 127,
+   "suspect_label": 1,
+   "unclear": 13
+  }
+ },
+ "controls": {
+  "false_alarm_rate": 0.0,
+  "hard_valid": 48,
+  "n": 50,
+  "suspect_label": 0,
+  "unclear": 2
+ },
+ "counts": {
+  "hard_valid": 427,
+  "suspect_label": 13,
+  "unclear": 110
+ },
+ "items": [
+  {
+   "gold": "at_least_k:1+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:5",
+   "judge2": "at_least_k:1+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00010",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "exactly_one",
+   "group": "control",
+   "judge1": "exactly_one",
+   "judge2": "exactly_one",
+   "op": "decide_group",
+   "qid": "g00011",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00017",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:7",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:2+at_most_k:7",
+   "op": "decide_group",
+   "qid": "g00021",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00023",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00025",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:7",
+   "group": "all_wrong",
+   "judge1": "at_most_k:7",
+   "judge2": "at_most_k:7",
+   "op": "decide_group",
+   "qid": "g00031",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2",
+   "judge2": "at_least_k:2",
+   "op": "decide_group",
+   "qid": "g00033",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00037",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_most_k:5",
+   "judge2": "at_least_k:1+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00039",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00043",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00047",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:3",
+   "judge2": "at_least_k:1+at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00050",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00054",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00066",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00069",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00072",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00073",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00075",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00085",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00091",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00092",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00093",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:3",
+   "judge2": "at_least_k:2+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00101",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00107",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:3",
+   "judge2": "at_least_k:3",
+   "op": "decide_group",
+   "qid": "g00108",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00112",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00115",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00122",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00123",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00125",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00126",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:7",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:7",
+   "judge2": "at_least_k:1+at_most_k:7",
+   "op": "decide_group",
+   "qid": "g00130",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00137",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00139",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00141",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_most_k:4",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00144",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00146",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "exactly_one",
+   "group": "inverted",
+   "judge1": "exactly_one",
+   "judge2": "exactly_one",
+   "op": "decide_group",
+   "qid": "g00159",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00161",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00163",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "control",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00170",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00174",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00175",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00189",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00193",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00198",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:2",
+   "judge2": "at_least_k:1+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00205",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00211",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_least_k:1+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00215",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:2",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:2",
+   "op": "decide_group",
+   "qid": "g00223",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00226",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00229",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00231",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:3",
+   "judge2": "at_least_k:3",
+   "op": "decide_group",
+   "qid": "g00232",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00234",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "ordered_chain+at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00237",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00241",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_most_k:5",
+   "judge2": "at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00242",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00244",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00247",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00252",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "exactly_one",
+   "group": "inverted",
+   "judge1": "exactly_one",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00253",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00258",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00259",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00274",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:4",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00276",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:4",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00282",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00293",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00295",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2+at_most_k:2",
+   "judge2": "at_least_k:2+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00301",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_most_k:5",
+   "judge2": "at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00309",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:4",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00310",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "control",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00312",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00316",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00324",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00325",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00329",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00332",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00347",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00351",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00356",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00358",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:2",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00359",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00361",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00363",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00366",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00368",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00370",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00371",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00377",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00380",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00386",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00388",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00396",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00397",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00400",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "exactly_one",
+   "group": "inverted",
+   "judge1": "exactly_one",
+   "judge2": "exactly_one",
+   "op": "decide_group",
+   "qid": "g00403",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00409",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00410",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:5",
+   "judge2": "at_least_k:1+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00414",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:3+at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:3+at_most_k:3",
+   "judge2": "at_least_k:3+at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00415",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00419",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "none",
+   "group": "control",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00422",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00427",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00429",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00433",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00435",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2",
+   "judge2": "at_least_k:2",
+   "op": "decide_group",
+   "qid": "g00451",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2",
+   "judge2": "at_least_k:2",
+   "op": "decide_group",
+   "qid": "g00453",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00462",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00464",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00466",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00471",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00475",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00476",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00485",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00488",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00490",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00491",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00492",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:3+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_least_k:3+at_most_k:5",
+   "judge2": "at_least_k:3+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00498",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00501",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_most_k:4",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00503",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00504",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:3",
+   "judge2": "at_least_k:3",
+   "op": "decide_group",
+   "qid": "g00506",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00507",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00515",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00529",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00533",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:3",
+   "judge2": "at_least_k:1+at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00539",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00540",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "inverted",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00550",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00551",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00555",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2+at_most_k:2",
+   "judge2": "at_least_k:2+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00560",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_least_k:4",
+   "judge2": "at_least_k:1+at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00567",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00572",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:6",
+   "group": "all_wrong",
+   "judge1": "at_most_k:6",
+   "judge2": "at_most_k:6",
+   "op": "decide_group",
+   "qid": "g00582",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00590",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00596",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00601",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00604",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00606",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00609",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "all_wrong",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00614",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00617",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00619",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00626",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00632",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00633",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00638",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00643",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:6",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2+at_most_k:6",
+   "judge2": "at_least_k:2+at_most_k:6",
+   "op": "decide_group",
+   "qid": "g00644",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_most_k:4",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00645",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00651",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00654",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00656",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:5",
+   "judge2": "at_least_k:2+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00657",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00661",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:7",
+   "group": "all_wrong",
+   "judge1": "at_most_k:7",
+   "judge2": "at_most_k:7",
+   "op": "decide_group",
+   "qid": "g00662",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:3+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_least_k:3+at_most_k:5",
+   "judge2": "at_least_k:3+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00665",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00674",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00677",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00683",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "ordered_chain+at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00686",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00688",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_most_k:4",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00690",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00695",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00704",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:6",
+   "group": "all_wrong",
+   "judge1": "at_most_k:6",
+   "judge2": "at_most_k:7",
+   "op": "decide_group",
+   "qid": "g00705",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00708",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain+at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00711",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:2",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00713",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00716",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00717",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00719",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00722",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00734",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_most_k:4",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00735",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2+at_most_k:2",
+   "judge2": "at_least_k:2+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00745",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00751",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00753",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00754",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00760",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:4+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:4+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00766",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "exactly_one",
+   "group": "inverted",
+   "judge1": "at_most_one",
+   "judge2": "exactly_one",
+   "op": "decide_group",
+   "qid": "g00774",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00775",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00776",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00777",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:4+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_least_k:4+at_most_k:5",
+   "judge2": "at_least_k:4+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00780",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00782",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00785",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00789",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00790",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00793",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00794",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00803",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00810",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:4",
+   "group": "all_wrong",
+   "judge1": "at_least_k:4",
+   "judge2": "at_least_k:4",
+   "op": "decide_group",
+   "qid": "g00816",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00818",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "inverted",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00824",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00825",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:7",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1+at_most_k:7",
+   "judge2": "at_least_k:1+at_most_k:7",
+   "op": "decide_group",
+   "qid": "g00837",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00838",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00841",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00845",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_most_k:5",
+   "judge2": "at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00851",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00854",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00855",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "inverted",
+   "judge1": "ordered_chain",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00859",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00861",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00870",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00872",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2+at_most_k:5",
+   "judge2": "at_least_k:2+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00879",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00880",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00888",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:4",
+   "group": "all_wrong",
+   "judge1": "at_most_k:4",
+   "judge2": "at_most_k:4",
+   "op": "decide_group",
+   "qid": "g00891",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00893",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00894",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "at_most_one",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00896",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00899",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00900",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00903",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00913",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00920",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00926",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "all_wrong",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00927",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00935",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00936",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "none",
+   "group": "inverted",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00937",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "none",
+   "group": "control",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g00941",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_one",
+   "group": "inverted",
+   "judge1": "at_most_one",
+   "judge2": "at_most_one",
+   "op": "decide_group",
+   "qid": "g00946",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00947",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00948",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1",
+   "group": "all_wrong",
+   "judge1": "at_least_k:1",
+   "judge2": "at_least_k:1",
+   "op": "decide_group",
+   "qid": "g00950",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:1+at_most_k:5",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "at_least_k:1+at_most_k:5",
+   "op": "decide_group",
+   "qid": "g00951",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00966",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00969",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2",
+   "judge2": "at_least_k:2",
+   "op": "decide_group",
+   "qid": "g00978",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:4",
+   "group": "all_wrong",
+   "judge1": "at_least_k:4",
+   "judge2": "at_least_k:4",
+   "op": "decide_group",
+   "qid": "g00983",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_least_k:2+at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_least_k:2+at_most_k:2",
+   "judge2": "at_least_k:2+at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00985",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "at_most_k:2",
+   "judge2": "at_most_k:2",
+   "op": "decide_group",
+   "qid": "g00986",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:3",
+   "group": "all_wrong",
+   "judge1": "at_most_k:3",
+   "judge2": "at_most_k:3",
+   "op": "decide_group",
+   "qid": "g00990",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00996",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "ordered_chain",
+   "group": "all_wrong",
+   "judge1": "ordered_chain",
+   "judge2": "ordered_chain",
+   "op": "decide_group",
+   "qid": "g00999",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "at_most_k:2",
+   "group": "all_wrong",
+   "judge1": "none",
+   "judge2": "none",
+   "op": "decide_group",
+   "qid": "g01000",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00010",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00017",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00022",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00035",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00040",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00052",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r00094",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r00096",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00102",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r00106",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00112",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00121",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00124",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00128",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00149",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "control",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r00153",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00162",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00166",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00176",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00182",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r00213",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00215",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r00269",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r00277",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00286",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00294",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00296",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00342",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00347",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00361",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00398",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00400",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00402",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00449",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00490",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00495",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00501",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00516",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r00534",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00538",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r00602",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00659",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00672",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00673",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00687",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r00737",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00746",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00759",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r00786",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r00805",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00814",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r00836",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r00856",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r00883",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r00912",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00974",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r00995",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01002",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01010",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01037",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01039",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01054",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01072",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01073",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01074",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r01079",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01102",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01108",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r01141",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r01150",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01152",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r01159",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01176",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01194",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01224",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01227",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01236",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01241",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01247",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01256",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01257",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01285",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01332",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01349",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01354",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01358",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01367",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01378",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01395",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01411",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r01417",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01426",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01434",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01445",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01461",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01502",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01593",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01626",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01629",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01632",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r01669",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01681",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01734",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r01761",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r01777",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01794",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01820",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r01887",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01904",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01912",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01916",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01929",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r01932",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01983",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r01998",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r01999",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02002",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02016",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02025",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02030",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02032",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02044",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02045",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02064",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02082",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02105",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02116",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02125",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02126",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02144",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02145",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02152",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02176",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02181",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02187",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02198",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02210",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r02251",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r02302",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02316",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02323",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02341",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02350",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02363",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02366",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02381",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02416",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02441",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02446",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02456",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02465",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02488",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02500",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02525",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02533",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02540",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02561",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02597",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02603",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02607",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02613",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "control",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r02614",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02620",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02622",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02629",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02644",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02693",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02725",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "control",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r02729",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02733",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02745",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02748",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02762",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02779",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r02797",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02806",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02835",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02870",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r02875",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02885",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r02895",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02957",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r02982",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r03073",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03086",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03101",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r03111",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03116",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03146",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03160",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03194",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03198",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03201",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03202",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r03232",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03253",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03283",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03307",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03309",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03335",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03353",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03356",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r03384",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03432",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03482",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r03515",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03531",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03546",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03597",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r03602",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "control",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r03628",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03637",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03649",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03654",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03667",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03691",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03705",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03729",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r03739",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03740",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03743",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r03753",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r03765",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03771",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r03789",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03799",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03814",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03818",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03828",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r03884",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03916",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r03928",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03936",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03937",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03950",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r03956",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03958",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r03977",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "control",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r03990",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r03998",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04052",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r04082",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04163",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04185",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04234",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04242",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04243",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04244",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r04252",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04271",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04276",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04289",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04326",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04332",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r04341",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04348",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04361",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04365",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04369",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04382",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04439",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04452",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04456",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04459",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04464",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "control",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r04485",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04486",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04511",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04558",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04574",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04577",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04596",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04666",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04674",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04693",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04753",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r04767",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04769",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04805",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04811",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04839",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04850",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r04859",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r04861",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04906",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04928",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r04933",
+   "verdict": "suspect_label"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r04934",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04940",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r04942",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r04961",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05006",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05019",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05037",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r05039",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05055",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05071",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05080",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05175",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r05183",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05188",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05192",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05199",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05221",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r05223",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05226",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05237",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05238",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05276",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05304",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05314",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05319",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05333",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05342",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r05381",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EXCLUDES",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r05404",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05425",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05432",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05436",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05448",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05455",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05474",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05477",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05509",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05536",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05565",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05587",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05632",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05634",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05642",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05656",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r05661",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05669",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05672",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r05687",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "all_wrong",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05724",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05736",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05739",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EXCLUDES",
+   "group": "control",
+   "judge1": "EXCLUDES",
+   "judge2": "EXCLUDES",
+   "op": "decide_relation",
+   "qid": "r05776",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "inverted",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05794",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05857",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05866",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "NONE",
+   "group": "control",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05872",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "control",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05878",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05929",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "NONE",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05932",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05941",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "all_wrong",
+   "judge1": "EXCLUDES",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r05947",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "NONE",
+   "group": "inverted",
+   "judge1": "NONE",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05960",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIES",
+   "group": "inverted",
+   "judge1": "IMPLIES",
+   "judge2": "IMPLIES",
+   "op": "decide_relation",
+   "qid": "r05969",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "all_wrong",
+   "judge1": "IMPLIED_BY",
+   "judge2": "NONE",
+   "op": "decide_relation",
+   "qid": "r05974",
+   "verdict": "unclear"
+  },
+  {
+   "gold": "IMPLIED_BY",
+   "group": "control",
+   "judge1": "IMPLIED_BY",
+   "judge2": "IMPLIED_BY",
+   "op": "decide_relation",
+   "qid": "r05991",
+   "verdict": "hard_valid"
+  },
+  {
+   "gold": "EQUIV",
+   "group": "inverted",
+   "judge1": "EQUIV",
+   "judge2": "EQUIV",
+   "op": "decide_relation",
+   "qid": "r06000",
+   "verdict": "hard_valid"
+  }
+ ],
+ "n_flagged": 2962,
+ "n_judged": 550,
+ "n_judged_total": 600,
+ "sample_rule": "PREREG.md: all 423 all_wrong items; 127 inverted (not all_wrong) items, stratified by op x gold class x stratum; 50 unflagged controls, stratified the same way over the unflagged items",
+ "sampled": true,
+ "schema": "mentat-bench-item-verdicts/1"
+}

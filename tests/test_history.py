@@ -29,8 +29,9 @@ PATH_KEYED = {"fixture_manifests", "profiles", "fixtures"}
 # An old path that the tree reuses for a new current file (docs/ir.md): the frozen bytes moved to the
 # RENAMES target, and the old path now holds the rewritten document. Its bytes must differ from the frozen sha.
 REUSED_OLD_PATHS = {"docs/ir.md"}
-# Frozen directories, and the files in them that stay editable (the index of the history and the record's readme).
-FROZEN_DIRS = ("docs/history", "docs/audits", "release/v0.1.0/record")
+# Frozen directories, and the files in them that stay editable (the index of the history and the record's readme). Of the
+# audits, only the two v0.1.0 audits are frozen; docs/audits/v0.1.1-item-audit/ is written by the v0.1.1 release.
+FROZEN_DIRS = ("docs/history", "docs/audits/test-set-groups", "docs/audits/test-set-relations", "release/v0.1.0/record")
 UNFROZEN = {"docs/history/README.md", "docs/history/RENAMES.json", "release/v0.1.0/record/README.md"}
 
 
