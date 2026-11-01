@@ -2,6 +2,7 @@
 overtaken), and every number the prose quotes is derived here from the committed analysis, leaderboard, verdicts and runs.json, then
 looked for in the documents. A change to the data or to the prose fails a test until both agree."""
 
+import importlib.util
 import json
 import sys
 from pathlib import Path
@@ -20,6 +21,12 @@ STALE = [
     "Only gaps to the reference are paired",  # the v0.1.0 leaderboard note, replaced in v0.1.1
     "likely a shared group-kind convention",  # an untested hypothesis, not a finding
     "controls were flagged",                  # the controls are not flagged
+    "Of those answers, 83 are in a logically unsatisfiable set on their own",  # a minimal set of at most three answers (v0.1.1)
+    "The paired test is computed only against D3 27B",   # the v0.1.1 analysis pairs all 15 models (105 pairs)
+    "Only paired gaps to D3 27B are tested",
+    "exact 95% confidence interval 0% to",    # the interval is two-sided, to one decimal (v0.1.1)
+    "an untested hypothesis, a shared misreading",  # replaced by the robustness sentences (exploratory.json)
+    "9 of the 13 are group items with gold at_most_k where both answered none",
 ]
 NUMBER_WORDS = {3: "three", 6: "six", 7: "seven", 9: "nine"}  # the prose spells these out
 
@@ -32,6 +39,7 @@ def _facts():
     analysis = _json(ROOT / "results" / "v0.1.1" / "analysis.json")
     lb = _json(ROOT / "results" / "v0.1.0" / "leaderboard.json")
     verdicts = _json(ROOT / "docs" / "audits" / "v0.1.1-item-audit" / "verdicts.json")
+    expl = _json(ROOT / "docs" / "audits" / "v0.1.1-item-audit" / "exploratory.json")
     entries = {e["id"]: e for e in lb["models"] + lb["baselines"]}
     models = [e for e in lb["models"] if e["kind"] == "system_one_model"]
     d3 = "d3_27b-q8_0"
@@ -48,7 +56,7 @@ def _facts():
     ref = analysis["binding_detection"]["runs"][d3]
     summary = analysis["robustness"]["summary"]
     return {
-        "analysis": analysis, "lb": lb, "verdicts": verdicts, "entries": entries,
+        "analysis": analysis, "lb": lb, "verdicts": verdicts, "expl": expl, "entries": entries,
         "rel_next": rel_next, "grp_next": grp_next, "head_pairs": head_pairs,
         "drops": drops, "zeros": zeros, "odd": odd, "cons": cons, "depth": depth, "named": named,
         "ref": ref, "summary": summary, "d3": d3,
@@ -63,7 +71,14 @@ def _phrases(f):
     by_group = f["verdicts"]["by_group"]
     n_resolved = sum(p["resolved"] for p in f["head_pairs"])
     seven = sum(1 for x in f["drops"] if x <= -0.05)
-    ub = f"{100 * RA.upper_bound_zero_of(vf['n_controls']):.0f}"
+    ub = f"{100 * RA.upper_bound_zero_of(vf['n_controls']):.1f}"
+    ub1 = f"{100 * RA.upper_bound_zero_one_sided_of(vf['n_controls']):.1f}"
+    expl = f["expl"]
+    akn = expl["b_suspect_labels"]["atmost_k_none"]
+    slice_s = int(next(iter(akn["slices"])))
+    agree = next(r for r in expl["a_gold_agreement_by_slice"]["slices"] if r["slice"] == slice_s)["judge1_gold_agree"]
+    remaining = expl["d_exploratory_bound_reading"]["remaining_suspects"]
+    discarded = expl["c_sensitivity_discarded_first_answers"]["flagged"]["suspect_label"]
     cons = f["cons"]
     share = 100 * cons["share"]
     lo, hi = (100 * x for x in cons["ci95"])
@@ -84,19 +99,23 @@ def _phrases(f):
          f"{f['odd']['metrics']['q_n_strict']['point']:.1f})", ("README.md", "results/README.md", "results/SUMMARY.md")),
         (f"Local conflicts: {cons['conflicting']:,} of D3 27B's {cons['claim_bearing']:,} claim-bearing answers ({pct})",
          ("README.md", "results/README.md", "results/SUMMARY.md")),
-        (f"Of those answers, {cons['conflicting_unsat']} are in a logically unsatisfiable set",
+        (f"{cons['conflicting_unsat']} of them belong to a minimal logically unsatisfiable set of at most "
+         f"{NUMBER_WORDS[f['analysis']['consistency']['max_witness']]} answers",
          ("README.md", "results/README.md", "results/SUMMARY.md")),
         (f"Of the {f['named']:,} named relations, {f['depth']['0']['n'] + f['depth']['1']['n'] + f['depth']['2']['n']:,} are depth 0 to 2, "
          f"{f['depth']['3']['n']} are depth 3, and only {NUMBER_WORDS[f['depth']['4+']['n']]} are depth 4 or more, all in one league (test-L10)",
          ("README.md", "results/README.md", "results/SUMMARY.md")),
-        (f"{vf['n_suspect']} of {vf['n_flagged_judged']} flagged items are suspect labels",
-         ("README.md", "results/README.md", "results/SUMMARY.md")),
-        (f"{vf['n_atmost_none']} of the {vf['n_suspect']} are group items with gold at_most_k where both answered none",
-         ("README.md", "results/README.md", "results/SUMMARY.md")),
+        (f"Pre-registered result: {vf['n_suspect']} of {vf['n_flagged_judged']} judged flagged items are suspect labels. "
+         f"This result is fragile: {akn['n']} of the {vf['n_suspect']} are group items from one judge slice, where one judge gave the "
+         "gold bounds under the kind label `none`, and one judge instance in that slice agreed with gold on only "
+         f"{agree} of 100 items; with the discarded first answers for that slice the count is {discarded}. Under an exploratory "
+         f"bound-based reading, {len(remaining)} candidates remain ({', '.join(remaining)}). None is a confirmed label error; no "
+         "score changes.", ("README.md", "results/README.md", "results/SUMMARY.md")),
         (f"{by_group['all_wrong']['n']} all-wrong items, {by_group['inverted']['n']} sampled weak-over-strong items and "
          f"{by_group['control']['n']} unflagged controls",
          ("README.md", "results/README.md", "results/SUMMARY.md")),
-        (f"0 of {vf['n_controls']} controls were labelled suspect (exact 95% confidence interval 0% to {ub}%; only {vf['controls_groups']} controls are groups)",
+        (f"0 of {vf['n_controls']} controls were labelled suspect (exact two-sided 95% interval 0% to {ub}%; one-sided upper bound "
+         f"{ub1}%; only {vf['controls_groups']} controls are groups)",
          ("README.md", "results/README.md", "results/SUMMARY.md")) if vf["controls_suspect"] == 0 else ("never", ()),
         (f"covers {f['summary']['presentation']['n_models']} models (one seed, 20261101)",
          ("README.md", "results/README.md", "results/SUMMARY.md")),
@@ -153,6 +172,17 @@ def test_labels_for_baselines_and_the_ceiling_in_the_analysis_tables():
     assert "| heuristic (baseline) |" in section and "| embedding (baseline) |" in section
     # the system_one models carry no label
     assert "| d3_27b-q8_0 |" in section and "d3_27b-q8_0 (baseline)" not in section
+
+
+def test_exploratory_json_is_reproduced_by_the_script():
+    """exploratory.py reads only the judging files and rebuilds exploratory.json byte for byte (the file's checks run here)."""
+    audit = ROOT / "docs" / "audits" / "v0.1.1-item-audit"
+    spec = importlib.util.spec_from_file_location("item_audit_exploratory", audit / "exploratory.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    doc = mod.build()
+    assert doc["d_exploratory_bound_reading"]["remaining_suspects"] == ["g00453", "g00551", "r03602", "r04933"]
+    assert mod.dumps(doc).encode("utf-8") == (audit / "exploratory.json").read_bytes()
 
 
 def test_repeats_disclosure_and_shuffle_count_match_runs_json():

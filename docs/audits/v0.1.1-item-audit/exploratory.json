@@ -1,0 +1,490 @@
+{
+ "a_gold_agreement_by_slice": {
+  "discarded_judge1_slice3": {
+   "gold_agree": 97,
+   "n": 100
+  },
+  "slices": [
+   {
+    "ids": "A001-A100",
+    "judge1_gold_agree": 80,
+    "judge2_gold_agree": 96,
+    "n": 100,
+    "slice": 1
+   },
+   {
+    "ids": "A101-A200",
+    "judge1_gold_agree": 96,
+    "judge2_gold_agree": 95,
+    "n": 100,
+    "slice": 2
+   },
+   {
+    "ids": "A201-A300",
+    "judge1_gold_agree": 24,
+    "judge2_gold_agree": 87,
+    "n": 100,
+    "slice": 3
+   },
+   {
+    "ids": "A301-A400",
+    "judge1_gold_agree": 99,
+    "judge2_gold_agree": 100,
+    "n": 100,
+    "slice": 4
+   },
+   {
+    "ids": "A401-A500",
+    "judge1_gold_agree": 99,
+    "judge2_gold_agree": 100,
+    "n": 100,
+    "slice": 5
+   },
+   {
+    "ids": "A501-A600",
+    "judge1_gold_agree": 96,
+    "judge2_gold_agree": 85,
+    "n": 100,
+    "slice": 6
+   }
+  ]
+ },
+ "b_suspect_labels": {
+  "atmost_k_none": {
+   "judge1_gives_gold_bounds_with_kind_none": 1,
+   "judge2_gives_gold_bounds_with_kind_none": 9,
+   "n": 9,
+   "qids": [
+    "g00037",
+    "g00047",
+    "g00189",
+    "g00211",
+    "g00347",
+    "g00507",
+    "g00596",
+    "g00861",
+    "g01000"
+   ],
+   "slices": {
+    "3": 9
+   }
+  },
+  "counts": {
+   "hard_valid": 427,
+   "suspect_label": 13,
+   "unclear": 110
+  },
+  "group_suspects": 11,
+  "suspects": [
+   {
+    "gold": "at_most_k:3",
+    "group": "all_wrong",
+    "id": "A231",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 4
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 3
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 4,
+    "op": "decide_group",
+    "qid": "g00037",
+    "slice": 3
+   },
+   {
+    "gold": "at_most_k:4",
+    "group": "all_wrong",
+    "id": "A287",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 5
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 4
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 5,
+    "op": "decide_group",
+    "qid": "g00047",
+    "slice": 3
+   },
+   {
+    "gold": "at_most_k:2",
+    "group": "all_wrong",
+    "id": "A221",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 3
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 2
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 3,
+    "op": "decide_group",
+    "qid": "g00189",
+    "slice": 3
+   },
+   {
+    "gold": "at_most_k:4",
+    "group": "all_wrong",
+    "id": "A208",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 5
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 4
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 5,
+    "op": "decide_group",
+    "qid": "g00211",
+    "slice": 3
+   },
+   {
+    "gold": "at_most_k:2",
+    "group": "all_wrong",
+    "id": "A291",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 3
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 2
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 3,
+    "op": "decide_group",
+    "qid": "g00347",
+    "slice": 3
+   },
+   {
+    "gold": "at_least_k:1",
+    "group": "all_wrong",
+    "id": "A519",
+    "judge1": {
+     "answer": {
+      "kind": "at_least_k",
+      "lower": 2,
+      "upper": 4
+     },
+     "class": "at_least_k:2"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "at_least_k",
+      "lower": 2,
+      "upper": 4
+     },
+     "class": "at_least_k:2"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [],
+    "n": 4,
+    "op": "decide_group",
+    "qid": "g00453",
+    "slice": 6
+   },
+   {
+    "gold": "at_most_k:4",
+    "group": "all_wrong",
+    "id": "A289",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 6
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 4
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 6,
+    "op": "decide_group",
+    "qid": "g00507",
+    "slice": 3
+   },
+   {
+    "gold": "ordered_chain",
+    "group": "all_wrong",
+    "id": "A556",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 2
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 2
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge1",
+     "judge2"
+    ],
+    "n": 2,
+    "op": "decide_group",
+    "qid": "g00551",
+    "slice": 6
+   },
+   {
+    "gold": "at_most_k:3",
+    "group": "all_wrong",
+    "id": "A266",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 3
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 3
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge1",
+     "judge2"
+    ],
+    "n": 5,
+    "op": "decide_group",
+    "qid": "g00596",
+    "slice": 3
+   },
+   {
+    "gold": "at_most_k:5",
+    "group": "all_wrong",
+    "id": "A270",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 6
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 5
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 6,
+    "op": "decide_group",
+    "qid": "g00861",
+    "slice": 3
+   },
+   {
+    "gold": "at_most_k:2",
+    "group": "all_wrong",
+    "id": "A232",
+    "judge1": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 3
+     },
+     "class": "none"
+    },
+    "judge2": {
+     "answer": {
+      "kind": "none",
+      "lower": 0,
+      "upper": 2
+     },
+     "class": "none"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [
+     "judge2"
+    ],
+    "n": 5,
+    "op": "decide_group",
+    "qid": "g01000",
+    "slice": 3
+   },
+   {
+    "gold": "EQUIV",
+    "group": "inverted",
+    "id": "A578",
+    "judge1": {
+     "answer": {
+      "relation": "EXCLUDES"
+     },
+     "class": "EXCLUDES"
+    },
+    "judge2": {
+     "answer": {
+      "relation": "EXCLUDES"
+     },
+     "class": "EXCLUDES"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [],
+    "n": null,
+    "op": "decide_relation",
+    "qid": "r03602",
+    "slice": 6
+   },
+   {
+    "gold": "IMPLIED_BY",
+    "group": "all_wrong",
+    "id": "A563",
+    "judge1": {
+     "answer": {
+      "relation": "EXCLUDES"
+     },
+     "class": "EXCLUDES"
+    },
+    "judge2": {
+     "answer": {
+      "relation": "EXCLUDES"
+     },
+     "class": "EXCLUDES"
+    },
+    "judges_giving_gold_bounds_with_kind_none": [],
+    "n": null,
+    "op": "decide_relation",
+    "qid": "r04933",
+    "slice": 6
+   }
+  ]
+ },
+ "c_sensitivity_discarded_first_answers": {
+  "controls": {
+   "hard_valid": 49,
+   "suspect_label": 0,
+   "unclear": 1
+  },
+  "flagged": {
+   "hard_valid": 488,
+   "suspect_label": 5,
+   "unclear": 57
+  },
+  "suspects": [
+   "g00211",
+   "g00453",
+   "g00551",
+   "r03602",
+   "r04933"
+  ]
+ },
+ "d_exploratory_bound_reading": {
+  "controls": {
+   "hard_valid": 48,
+   "suspect_label": 0,
+   "unclear": 2
+  },
+  "flagged": {
+   "hard_valid": 439,
+   "suspect_label": 4,
+   "unclear": 107
+  },
+  "remaining_suspects": [
+   "g00453",
+   "g00551",
+   "r03602",
+   "r04933"
+  ],
+  "resolved_suspects": [
+   "g00037",
+   "g00047",
+   "g00189",
+   "g00211",
+   "g00347",
+   "g00507",
+   "g00596",
+   "g00861",
+   "g01000"
+  ]
+ },
+ "inputs": {
+  "deviations/judge1_slice3_delegated_answers.jsonl": "bc3a08015eb0e6de7f64d831f2c54864a81df152b470c0cf7a4bfecb043b4ab2",
+  "judge1_answers.jsonl": "4879224a86291bed41e5d134890f57ceb0bd2d95536d2ed9c7e6d076629b6a09",
+  "judge2_answers.jsonl": "2e8d5ab80afc605acc72d568ecb7f2a5091f7e0c75c7a7d5ffe2d6e999af8a85",
+  "key.jsonl": "399d671263769beaaac97c958007961f5ea0686b627fb0fa79fdf9a1f8007870",
+  "verdicts.json": "bc3d1d632087bda509b107fc7c642732063604f4abb10a5bf20aff800ca7c6f5"
+ },
+ "schema": "mentat-bench-item-exploratory/1",
+ "status": "exploratory: not pre-registered; verdicts.json is unchanged and remains the pre-registered result"
+}

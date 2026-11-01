@@ -14,7 +14,7 @@ _spec = importlib.util.spec_from_file_location("build_bundle_v011_logs", ROOT / 
 BB = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(BB)
 
-# shortcut: the real folders are named only by the MB_PRIVATE_RUNS environment variable, so no local path is committed
+# the private run folders, if this machine has them: MB_PRIVATE_RUNS (unset: the real-folder test is skipped)
 REAL_RUNS = Path(os.environ["MB_PRIVATE_RUNS"]) if os.environ.get("MB_PRIVATE_RUNS") else None
 
 # 20261101-cuda-shuffle/progress.log, lines 1-10 and 14-20 (the first attempt failed with rc=127 for d3:9b, kev and d3:4b; the second
@@ -144,7 +144,7 @@ def test_the_attempt_and_summary_lines_name_no_model(tmp_path):
     assert BB.last_rc(log, "attempt", None) is None  # the word after '==' is 'attempt', so no model key matches
 
 
-@pytest.mark.skipif(REAL_RUNS is None or not REAL_RUNS.is_dir(), reason="the private run folders are not on this machine")
+@pytest.mark.skipif(REAL_RUNS is None or not REAL_RUNS.is_dir(), reason="MB_PRIVATE_RUNS is not set to the private run folders")
 def test_the_real_shuffle_folder_has_fifteen_complete_runs():
     """The 15 shuffle runs are all complete with exit code 0 in the real folder (read only)."""
     prereg = BB.jload(ROOT / "release" / "v0.1.0" / "record" / "prereg.json")

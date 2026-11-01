@@ -1,8 +1,8 @@
-# Mentat-Hard results, v0.1.0
+# Mentat-Hard results, v0.1.1 (analysis of the v0.1.0 measurements)
 
 This folder holds the results of the development round 3 test matrix (test set revision 3.1, released as v0.1.0 on 2026-10-31): 15 System One
 models, their baselines (the rules child, lexical, embedding, empty, oracle, gold_view as the ceiling, and the hf pipeline baseline), and a replication on the sealed private split. It is the entry point for the
-website and for anyone who wants the numbers in machine-readable form. The tables below are checked cell by cell against [v0.1.0/leaderboard.json](v0.1.0/leaderboard.json) by `tests/test_results_bundle.py`. That JSON is built by the bundle builder from the committed results documents and the run directories. The figures in the prose were checked by hand against the same JSON. Nothing here is a new measurement.
+website and for anyone who wants the numbers in machine-readable form. The tables below are checked cell by cell against [v0.1.0/leaderboard.json](v0.1.0/leaderboard.json) by `tests/test_results_bundle.py`. That JSON is built by the bundle builder from the committed results documents and the run directories. The figures in the prose were checked by hand against the same JSON. Nothing here is a new measurement. This is the v0.1.1 analysis release: it analyses the v0.1.0 measurements and changes no score.
 
 Start here:
 
@@ -49,7 +49,7 @@ Three tiers. Each claim is backed by the tables in this file: the leaderboard, t
 **Not established**
 
 - General decision-making ability. The benchmark measures typed decisions from one generator, not decision-making in general.
-- Building reliable, consistent knowledge bases. Strict Q_N is 0 for 14 of the 15 models (tev1_0.8b-q8_0 is the exception, at 17.0), D3 27B included. Local conflicts: 1,505 of D3 27B's 5,172 claim-bearing answers (29.1%; 95% interval 23.5% to 34.3%) belong to a minimal conflict of at most three answers under either predicate (logical UNSAT, or a forced suite outcome), and its answer set contains a detected contradiction. Of those answers, 83 are in a logically unsatisfiable set on their own.
+- Building reliable, consistent knowledge bases. Strict Q_N is 0 for 14 of the 15 models (tev1_0.8b-q8_0 is the exception, at 17.0), D3 27B included. Local conflicts: 1,505 of D3 27B's 5,172 claim-bearing answers (29.1%; 95% interval 23.5% to 34.3%) belong to a minimal conflict of at most three answers under either predicate (logical UNSAT, or a forced suite outcome), and its answer set contains a detected contradiction. 83 of them belong to a minimal logically unsatisfiable set of at most three answers.
 
 ### What this benchmark does not measure
 
@@ -60,7 +60,7 @@ Three tiers. Each claim is backed by the tables in this file: the leaderboard, t
 - Test gold is public. Models built or tuned on it would carry a contamination risk that these scores do not measure.
 - One shuffle seed, one machine and one backend for the repeats (plus the Vulkan diagnostic). The build costs come from one machine.
 - Prompt wording varies only through the held-out phrasing families. No other prompt variants were run.
-- Judges. The answerability audits and the item audit use model judges (two Haiku 5.5 judge sets), not people. The item audit judged all 423 all-wrong items, 127 sampled weak-over-strong items and 50 unflagged controls: 13 of 550 flagged items are suspect labels (both judge sets agree on a non-gold answer). 9 of the 13 are group items with gold at_most_k where both answered none: an untested hypothesis, a shared misreading of the group-kind taxonomy or gold errors. 0 of 50 controls were labelled suspect (exact 95% confidence interval 0% to 7%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
+- Judges. The answerability audits and the item audit use model judges (two Haiku 5.5 judge sets), not people. The item audit judged all 423 all-wrong items, 127 sampled weak-over-strong items and 50 unflagged controls. Pre-registered result: 13 of 550 judged flagged items are suspect labels. This result is fragile: 9 of the 13 are group items from one judge slice, where one judge gave the gold bounds under the kind label `none`, and one judge instance in that slice agreed with gold on only 24 of 100 items; with the discarded first answers for that slice the count is 5. Under an exploratory bound-based reading, 4 candidates remain (g00453, g00551, r03602, r04933). None is a confirmed label error; no score changes. 0 of 50 controls were labelled suspect (exact two-sided 95% interval 0% to 7.1%; one-sided upper bound 5.8%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
 - Consistency. The check is sound but incomplete, and it ignores paraphrase identities between markets, so its counts are lower bounds.
 - Private replication. The private split is owner-run, and only its aggregates are published.
 - External reproduction. There is none yet.
@@ -132,7 +132,7 @@ and the file each row came from, is [v0.1.0/leaderboard.json](v0.1.0/leaderboard
 
 ## Which differences are resolved
 
-The statements below follow the round 3 results document. Intervals are the league bootstrap; gaps are paired against D3 27B.
+The statements below are the round 3 record's own (the round 3 results document, v0.1.0). Intervals are the league bootstrap; the gaps in that record are paired against D3 27B. The v0.1.1 analysis section below pairs all 105 model pairs with Holm correction.
 
 - **D3 27B is above every other model and every non-ceiling baseline.** All 14 other models, and the hf baseline, have gap intervals
   that exclude 0. The smallest gap is to D3 9B, 0.244 [0.221, 0.266]. The rules, embedding, lexical and hf baselines are also below
@@ -142,7 +142,7 @@ The statements below follow the round 3 results document. Intervals are the leag
   is not resolved: Nimble-v3 9B is at 0.126 [0.106, 0.147], and its interval overlaps Kev 9B's.
 - **Nine models have headline intervals entirely above the rules interval** (rules: 0.121 to 0.153): D3 27B, D3 9B, Pplx Decider 27B,
   Kev 9B, D3 4B, Clef 27B, Nimble-v3 9B, Nimble 9B and Clef-Flash 9B. TEV1 4B (0.126 to 0.163) overlaps the rules interval. These
-  comparisons are unpaired. The paired test is computed only against D3 27B.
+  comparisons are unpaired. The v0.1.1 analysis pairs the 15 models with each other (105 pairs, Holm-adjusted); it does not pair them with the baselines.
 - **The middle of the table is not ordered by these intervals.** The intervals of D3 9B, Pplx Decider 27B, Kev 9B and D3 4B all overlap
   one another, and Clef 27B overlaps D3 4B, Kev 9B, Nimble-v3 9B and Nimble 9B. The results JSON lists 27 overlapping pairs of headline
   intervals (`headline_interval_overlaps` in [leaderboard.json](v0.1.0/leaderboard.json)). Overlap is not evidence of a tie.
@@ -654,7 +654,7 @@ decide_group halves: strong d3_27b-q8_0, kev_9b-bf16, nimble-v3_9b-q8_0, clef-fl
 
 Null rate: under 1000 random 7-vs-7 splits of the 15 models (seed 20261101), the share of items flagged weak-over-strong (inverted) is mean 0.2284 (95th percentile 0.3210), against an observed 0.4107 over the same 7000 items.
 
-Judging: the item audit used model judges (2 Haiku 5.5 judge sets), not people. 550 of 2962 flagged items were judged (PREREG.md: all 423 all_wrong items; 127 inverted (not all_wrong) items, stratified by op x gold class x stratum; 50 unflagged controls, stratified the same way over the unflagged items): suspect label 13, hard but valid 427, unclear 110. Of the 13 suspect labels, 9 are group items with gold at_most_k where both judges answered none: an untested hypothesis, a shared misreading of the group-kind taxonomy or gold errors. 0 of 50 controls were labelled suspect (exact 95% confidence interval 0% to 7%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors.
+Judging: the item audit used model judges (2 Haiku 5.5 judge sets), not people. 550 of 2962 flagged items were judged (PREREG.md: all 423 all_wrong items; 127 inverted (not all_wrong) items, stratified by op x gold class x stratum; 50 unflagged controls, stratified the same way over the unflagged items): suspect label 13, hard but valid 427, unclear 110. Pre-registered result: 13 of 550 judged flagged items are suspect labels. This result is fragile: 9 of the 13 are group items from one judge slice, where one judge gave the gold bounds under the kind label `none`, and one judge instance in that slice agreed with gold on only 24 of 100 items; with the discarded first answers for that slice the count is 5. Under an exploratory bound-based reading, 4 candidates remain (g00453, g00551, r03602, r04933). None is a confirmed label error; no score changes. 0 of 50 controls were labelled suspect (exact two-sided 95% interval 0% to 7.1%; one-sided upper bound 5.8%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
 
 #### Robustness: option order, run to run and backend
 
@@ -1055,7 +1055,7 @@ These are the limits disclosed in the results documents, plus the release record
    and league sampling only.
 5. **Post-hoc changes, all decided on dev before any test run:** revision 3.1 (harder relations), the relation plus group headline, and child version 7
    (the audit fix). Each is an owner decision recorded in its pull request.
-6. **Judges are models.** The answerability audits use two Haiku 5.5 judges, not people. Both audits pass every part (bar 0.8). The revision 3.1 audit passed only in round 2: round 1 (child version 6) failed on reading decoys because the alt-reading instruction was ambiguous, and child version 7 fixed it before re-auditing the same items:
+6. **Judges are models.** The answerability audits use two Haiku 5.5 judges, not people. The item audit's result is fragile (see the item audit in the analysis section): 9 of its 13 suspect labels come from one judge slice, and 4 remain under an exploratory bound-based reading. Both audits pass every part (bar 0.8). The revision 3.1 audit passed only in round 2: round 1 (child version 6) failed on reading decoys because the alt-reading instruction was ambiguous, and child version 7 fixed it before re-auditing the same items:
    [round 3 audit](../docs/audits/test-set-groups/) and [revision 3.1 audit](../docs/audits/test-set-relations/).
 7. **Gate 7 (leakage) is MET only at the pinned commit `defed6a`**, on a clean tree. At any later commit it reads UNKNOWN, because the tool does
    not run the test there.
@@ -1067,8 +1067,9 @@ These are the limits disclosed in the results documents, plus the release record
 13. **Bindings get no card.** Binding MCC is 0.000 for D3 27B, Pplx Decider 27B and D3 4B, as pre-registered.
 14. **Held-out share is 38.9%** of relations on test (2,332 of 6,000), above the ~30% target.
 15. **Intervals.** With 18 clusters, the bootstrap intervals somewhat under-cover. The reference was chosen on dev, and that choice is not corrected for in the paired gaps.
-16. **Only paired gaps to D3 27B are tested.** Overlapping intervals among the other models are not ordered by a paired test. Seen relation MCC and depth
-    accuracy are points without intervals.
+16. **Paired tests cover the 15 models, not the baselines.** The v0.1.1 analysis tests all 105 pairs of the 15 models in each family, with Holm
+    correction: 89 of 105 headline pairs, 97 of 105 relation pairs and 65 of 105 group pairs are resolved. Unresolved pairs are not ordered. In the
+    v0.1.0 leaderboard, seen relation MCC and depth accuracy are points without intervals.
 17. **Some models name few or no relations.** The hf pipeline names almost none. Its build flags differ from the pre-registered command: it has no
     relation floor and no batch size, uses `--local-timeout 1800.0` and `--hello-timeout 3600.0`, and finished after the first league_ci run.
     It was added to the bootstrap run, and every other run's value is unchanged.
@@ -1210,6 +1211,7 @@ first. Each entry has `version`, `date`, `results_date`, `status` (`latest` or `
 - `provenance`: the code commit (`code_commit`), the release commit, the release manifest path and hash, `fixture` (name, version, registry version,
   content hash, leagues, markets, outcomes, queries, `item_counts`, and `files` with each file's `bytes` and `sha256`), `private_split`, `child`,
   `ci` (method, file, layout, `B`, `seed`, `leagues`, `level`, `reference`), the document paths, and `ollama_version`.
+  The `code_commit` values are commits of the private development repository.
 - `ranking`: the 15 model ids in rank order. `depth_buckets` and `depth_n`: the depth buckets and their sizes.
 - `models[]`: the 15 System One models, in rank order. `baselines[]`: `heuristic`, `lexical`, `embedding`, `empty`, `gold_view`, `oracle`, `hf`.
 - `resolved_comparisons[]` and `resolved_comparisons_note`: every paired gap to the reference, one row per run and statistic, with

@@ -49,6 +49,7 @@ ANALYSIS = ROOT / "results" / "v0.1.1" / "analysis.json"
 REPEATS = ROOT / "results" / "v0.1.1" / "repeats"
 AUDIT = ROOT / "docs" / "audits" / "v0.1.1-item-audit"
 VERDICTS = AUDIT / "verdicts.json"
+EXPLORATORY = AUDIT / "exploratory.json"  # the robustness checks of the item audit (exploratory.py); read for the prose only
 FLAGGED = AUDIT / "flagged.jsonl"
 START, END = "<!-- analysis:start -->", "<!-- analysis:end -->"
 B = 20000
@@ -971,6 +972,11 @@ def upper_bound_zero_of(n: int, alpha: float = 0.05) -> float:
     return 1 - (alpha / 2) ** (1 / n)
 
 
+def upper_bound_zero_one_sided_of(n: int, alpha: float = 0.05) -> float:
+    """The one-sided 95% upper bound for a rate when 0 of n are positive: 1 - alpha ** (1 / n) (5.8% for n = 50)."""
+    return 1 - alpha ** (1 / n)
+
+
 def _binding_lines(doc: dict) -> list[str]:
     runs = doc["binding_detection"]["runs"]
     lines = ["#### Binding detection", "",
@@ -1039,20 +1045,51 @@ def _robustness_lines(doc: dict, names: dict) -> list[str]:
     return lines + ["", disclosure, ""] + [f"- {text}" for key, text in doc["repeats"].items() if key.startswith("note_")] + [""]
 
 
+def _fragility_text(expl: dict, facts: dict) -> str:
+    """The exploratory robustness sentences of the item-audit prose, from exploratory.json. Each claim the sentences make is checked
+    against the file's own numbers first, so a changed file stops the script instead of changing the prose silently."""
+    b, a, c, d = (expl["b_suspect_labels"], expl["a_gold_agreement_by_slice"], expl["c_sensitivity_discarded_first_answers"],
+                  expl["d_exploratory_bound_reading"])
+    akn = b["atmost_k_none"]
+    check(b["counts"]["suspect_label"] == facts["n_suspect"] and sum(b["counts"].values()) == facts["n_flagged_judged"],
+          "exploratory.json's counts are not the verdicts' counts")
+    check(len(akn["slices"]) == 1 and sum(akn["slices"].values()) == akn["n"] and akn["n"] >= 1,
+          "the at_most_k suspects are not all in one judge slice")
+    s = int(next(iter(akn["slices"])))
+    check(akn["judge2_gives_gold_bounds_with_kind_none"] == akn["n"], "the at_most_k suspects: judge 2 does not give the gold bounds")
+    row = next(r for r in a["slices"] if r["slice"] == s)
+    check(row["judge1_gold_agree"] < row["judge2_gold_agree"], "the judge slice of the suspects is not the weaker judge instance")
+    remaining = d["remaining_suspects"]
+    check(set(remaining) <= {x["qid"] for x in b["suspects"]} and len(remaining) == d["flagged"]["suspect_label"],
+          "the remaining suspects are not suspects of the pre-registered result")
+    return (f"This result is fragile: {akn['n']} of the {facts['n_suspect']} are group items from one judge slice, where one judge gave "
+            "the gold bounds under the kind label `none`, and one judge instance in that slice agreed with gold on only "
+            f"{row['judge1_gold_agree']} of 100 items; with the discarded first answers for that slice the count is "
+            f"{c['flagged']['suspect_label']}. Under an exploratory bound-based reading, {len(remaining)} candidates remain "
+            f"({', '.join(remaining)}).")
+
+
 def _judging_text(doc: dict, judged: dict) -> str:
-    """The judging paragraph, from the verdicts file (the counts the prose quotes). The controls are reported apart."""
-    facts = verdict_facts(json.loads((ROOT / judged["path"]).read_text(encoding="utf-8")))
+    """The judging paragraph, from the verdicts file (the counts the prose quotes) and exploratory.json (the robustness sentences).
+    The controls are reported apart."""
+    verdicts = (ROOT / judged["path"]).read_bytes()
+    facts = verdict_facts(json.loads(verdicts.decode("utf-8")))
+    expl = json.loads(EXPLORATORY.read_text(encoding="utf-8"))
+    check(expl["inputs"]["verdicts.json"] == _sha(verdicts), "exploratory.json was made from another verdicts.json")
     if facts["controls_suspect"] == 0:
-        controls = (f"0 of {facts['n_controls']} controls were labelled suspect (exact 95% confidence interval 0% to "
-                    f"{100 * upper_bound_zero_of(facts['n_controls']):.0f}%; only {facts['controls_groups']} controls are groups)")
+        n = facts["n_controls"]
+        controls = (f"0 of {n} controls were labelled suspect (exact two-sided 95% interval 0% to "
+                    f"{100 * upper_bound_zero_of(n):.1f}%; one-sided upper bound {100 * upper_bound_zero_one_sided_of(n):.1f}%; "
+                    f"only {facts['controls_groups']} controls are groups)")
     else:
         controls = f"{facts['controls_suspect']} of {facts['n_controls']} controls were labelled suspect"
     return (f"the item audit used model judges ({JUDGES['count']} {JUDGES['model']} judge sets), not people. {judged['n_judged']} of "
             f"{judged['n_flagged']} flagged items were judged ({judged['sample_rule']}): suspect label "
             f"{judged['counts']['suspect_label']}, hard but valid {judged['counts']['hard_valid']}, "
-            f"unclear {judged['counts']['unclear']}. Of the {facts['n_suspect']} suspect labels, {facts['n_atmost_none']} are group "
-            "items with gold at_most_k where both judges answered none: an untested hypothesis, a shared misreading of the group-kind "
-            f"taxonomy or gold errors. {controls}. Flags and suspect labels are candidates for review, not confirmed label errors.")
+            f"unclear {judged['counts']['unclear']}. Pre-registered result: {facts['n_suspect']} of {judged['n_judged']} judged flagged "
+            f"items are suspect labels. {_fragility_text(expl, facts)} None is a confirmed label error; no score changes. {controls}. "
+            "Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, "
+            "and they remain in the scores.")
 
 
 def _cost_lines(doc: dict) -> list[str]:

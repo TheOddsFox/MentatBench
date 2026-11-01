@@ -1,4 +1,4 @@
-# MentatBench v0.1.0
+# MentatBench v0.1.1 (analysis release)
 
 MentatBench evaluates whether a model can turn a corpus of propositions into a logically faithful representation and answer new global questions from it. This checkout contains the benchmark software, the Mentat-Hard fixtures, and a public results bundle.
 
@@ -7,6 +7,8 @@ MentatBench evaluates whether a model can turn a corpus of propositions into a l
 The published panel is the **Mentat-Hard test set, revision 3.1**. Its headline is the mean of relation MCC and group MCC; Q_N is an end-to-end diagnostic, not the model ranking. See the [results overview](results/README.md), [leaderboard JSON](results/v0.1.0/leaderboard.json), and [leaderboard CSV](results/v0.1.0/leaderboard.csv).
 
 The `v0.1.0` label identifies this public software and results bundle, exported from a private development repository whose commits are not published. The measurements were run on the Mentat-Hard test set, revision 3.1 (development round 3); this publication relabels those results and is not a new measurement.
+
+The `v0.1.1` label identifies the analysis release. It analyses the same `v0.1.0` measurements and changes no score; the analysis is in [results/README.md](results/README.md).
 
 ### What the results support
 
@@ -25,7 +27,7 @@ Three tiers. Each claim is backed by the results in [results/README.md](results/
 **Not established**
 
 - General decision-making ability. The benchmark measures typed decisions from one generator, not decision-making in general.
-- Building reliable, consistent knowledge bases. Strict Q_N is 0 for 14 of the 15 models (tev1_0.8b-q8_0 is the exception, at 17.0), D3 27B included. Local conflicts: 1,505 of D3 27B's 5,172 claim-bearing answers (29.1%; 95% interval 23.5% to 34.3%) belong to a minimal conflict of at most three answers under either predicate (logical UNSAT, or a forced suite outcome), and its answer set contains a detected contradiction. Of those answers, 83 are in a logically unsatisfiable set on their own.
+- Building reliable, consistent knowledge bases. Strict Q_N is 0 for 14 of the 15 models (tev1_0.8b-q8_0 is the exception, at 17.0), D3 27B included. Local conflicts: 1,505 of D3 27B's 5,172 claim-bearing answers (29.1%; 95% interval 23.5% to 34.3%) belong to a minimal conflict of at most three answers under either predicate (logical UNSAT, or a forced suite outcome), and its answer set contains a detected contradiction. 83 of them belong to a minimal logically unsatisfiable set of at most three answers.
 
 ### What this benchmark does not measure
 
@@ -36,7 +38,7 @@ Three tiers. Each claim is backed by the results in [results/README.md](results/
 - Test gold is public. Models built or tuned on it would carry a contamination risk that these scores do not measure.
 - One shuffle seed, one machine and one backend for the repeats (plus the Vulkan diagnostic). The build costs come from one machine.
 - Prompt wording varies only through the held-out phrasing families. No other prompt variants were run.
-- Judges. The answerability audits and the item audit use model judges (two Haiku 5.5 judge sets), not people. The item audit judged all 423 all-wrong items, 127 sampled weak-over-strong items and 50 unflagged controls: 13 of 550 flagged items are suspect labels (both judge sets agree on a non-gold answer). 9 of the 13 are group items with gold at_most_k where both answered none: an untested hypothesis, a shared misreading of the group-kind taxonomy or gold errors. 0 of 50 controls were labelled suspect (exact 95% confidence interval 0% to 7%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
+- Judges. The answerability audits and the item audit use model judges (two Haiku 5.5 judge sets), not people. The item audit judged all 423 all-wrong items, 127 sampled weak-over-strong items and 50 unflagged controls. Pre-registered result: 13 of 550 judged flagged items are suspect labels. This result is fragile: 9 of the 13 are group items from one judge slice, where one judge gave the gold bounds under the kind label `none`, and one judge instance in that slice agreed with gold on only 24 of 100 items; with the discarded first answers for that slice the count is 5. Under an exploratory bound-based reading, 4 candidates remain (g00453, g00551, r03602, r04933). None is a confirmed label error; no score changes. 0 of 50 controls were labelled suspect (exact two-sided 95% interval 0% to 7.1%; one-sided upper bound 5.8%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
 - Consistency. The check is sound but incomplete, and it ignores paraphrase identities between markets, so its counts are lower bounds.
 - Private replication. The private split is owner-run, and only its aggregates are published.
 - External reproduction. There is none yet.

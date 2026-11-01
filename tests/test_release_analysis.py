@@ -1138,7 +1138,8 @@ def test_verdict_facts_count_the_prose_numbers():
     facts = RA.verdict_facts({"items": items})
     assert facts == {"n_flagged_judged": 3, "n_suspect": 2, "n_atmost_none": 1, "n_controls": 1, "controls_suspect": 0,
                      "controls_groups": 0, "both_agree_nongold": 2}
-    assert RA.upper_bound_zero_of(50) == pytest.approx(0.0711, abs=1e-4)  # the exact two-sided 95% upper limit: about 7%
+    assert RA.upper_bound_zero_of(50) == pytest.approx(0.0711, abs=1e-4)  # the exact two-sided 95% upper limit: 7.1%
+    assert RA.upper_bound_zero_one_sided_of(50) == pytest.approx(0.0582, abs=1e-4)  # the one-sided 95% upper bound: 5.8%
 
 
 def test_contract_consistency_main_union_and_by_size_identity(doc):
