@@ -1,14 +1,14 @@
 # Record of v0.1.0: frozen files
 
-The files in this folder govern the published v0.1.0 results. They were moved here from their original paths with `git mv`
-and are byte-identical to those originals, so their sha256 values still match the pins in the files themselves. Do not edit
-them. The mapping from every old path to its new one is [docs/history/RENAMES.json](../../../docs/history/RENAMES.json), and
-the history of the rounds is in [docs/history/README.md](../../../docs/history/README.md).
+The five files in this folder that govern the published v0.1.0 results (`prereg.md`, `prereg.json`, `release_manifest.json`,
+`check_gates.md` and `attestations.json`) are byte-identical to their originals, so their sha256 values still match the pins in
+the files themselves. The originals and their sha256 values are in [docs/history/RENAMES.json](../../../docs/history/RENAMES.json).
+Do not edit them. This README is new. The history of the rounds is in [docs/history/README.md](../../../docs/history/README.md).
 
 | File | What it is | Original path |
 |---|---|---|
 | `prereg.md`, `prereg.json` | The round-3 pre-registration, frozen on 2026-10-30 before any test run. It fixes the matrix, the headline rule, the reference, the relation floors and the interval method. It governs the v0.1.0 results. | `docs/results/mentat-hard-v3-prereg-20261030.md`, `.json` |
-| `release_manifest.json` | The release manifest, built at commit `defed6a`. It pins the spec, `docs/ir.md`, the engine, the profiles, the fixture files and manifests, the run cards, the baseline table, the attestations and the registry. | `release/release_manifest_v0.3.json` |
+| `release_manifest.json` | The release manifest, built at commit `defed6a` (a commit of the private development repository, not published here). It pins the spec, `docs/ir.md`, the engine, the profiles, the fixture files and manifests, the run cards, the baseline table, the attestations and the registry. | `release/release_manifest_v0.3.json` |
 | `check_gates.md` | The release gate output of that manifest. | `release/check_gates_v0.3.md` |
 | `attestations.json` | The owner's attestations for gates 6, 8 and 11. | `release/v0.3/attestations.json` |
 

@@ -219,12 +219,12 @@ directories are also committed under `fixtures/`.
   The committed directories are its build (`python -m mentat_bench.fixtures_hard build --split S --out fixtures/mentat_hard_S`),
   and `regenerate` reproduces both byte for byte.
 - **v2** (generator `"2"`, registered 2026-10-29) is `superseded` by v3. Its entry, hashes and manifest
-  (`fixtures/manifests/mentat_hard_{dev,test}_v2.json`) stay; its committed bytes are in git history (commit `928df14`, the
-  registration). Content hashes: dev `09da49370c1f3830c39bcd0e9f47193766b2446c22a03190b144a26b7fccad55`, test
+  (`fixtures/manifests/mentat_hard_{dev,test}_v2.json`) stay; its committed bytes are in git history (commit `928df14`, a commit of the
+  private development repository, not published here; the registration). Content hashes: dev `09da49370c1f3830c39bcd0e9f47193766b2446c22a03190b144a26b7fccad55`, test
   `1f4613bec957dd4de9b261b48241dbeeb3faf127a1a7686a6cf938b9a6aefc2e`.
 - **v1** (generator `"1"`, registered 2026-10-27) is `superseded` by v2. Its entry, hashes and manifest
   (`fixtures/manifests/mentat_hard_{dev,test}_v1.json`) stay; its committed bytes are in git history.
-- **Limit: v1 regenerates only at commit `7749647`** (a commit of the private development repository, not published here), where the generator is still v1. The whitelist names a module, not a commit,
+- **Limit: v1 regenerates only at commit `7749647`**, where the generator is still v1. The whitelist names a module, not a commit,
   and `GENERATOR_PARAMS` is tied to the module, which is now v3. At HEAD `regenerate` refuses v1 (the output differs from its
   manifest), and the refusal is the behaviour, not a bug to work around. To reproduce v1, extract that commit
   from the private development repository and run `regenerate` there: dev gives `7d23bcbd...`, test

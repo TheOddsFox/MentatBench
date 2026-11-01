@@ -173,8 +173,8 @@ All three 27B cells finished inside the 5,400 s build deadline (Clef 27B at 76.9
   0 constants and no audit failures.
 - **Size:** 3,228 outcomes, 10,406 candidates, 200 queries.
 - **Registry note:** each private cell's fixture stamp carries an error note. The lookup found no registered fixture version with
-  this content hash, so the stamp keeps only the content hash, which matches the sealed commitment. The public test cells carry no
-  fixture stamp, so the note does not appear in them.
+  this content hash, so the stamp keeps only the content hash, which matches the sealed commitment. The public test cells carry the
+  fixture stamp (name, status, version and content hash) but not the registry note text.
 
 ## Limits
 

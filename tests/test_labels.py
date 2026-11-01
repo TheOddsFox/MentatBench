@@ -6,6 +6,7 @@ not ignore, so a new file is checked before it is committed. A second test check
 2026-11-01 run-directory rename removed; the one remaining match is the builder's former-name literal, allowed below."""
 
 import fnmatch
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -18,7 +19,7 @@ RUN_LABEL = re.compile(r"(?i)\bv31\b|-v31-")  # the run-directory label that the
 # Frozen or hash-pinned trees, and the fixture manifests and golden files that are compared byte for byte.
 EXEMPT_PREFIXES = ("docs/history/", "release/v0.1.0/record/", "docs/audits/", "fixtures/manifests/", "tests/golden/")
 EXEMPT_PATHS = {"fixtures/VERSIONS.json", THIS_FILE}
-# Files this public tree omits: the catalogue tooling, the native and scoped toy fixtures, the release module, the exact-scale
+# Files the public tree omits: the catalogue tooling, the native and scoped toy fixtures, the release module, the exact-scale
 # results, and the tests of those modules (every tests/ file that imports one of them). An entry belongs here only while the
 # public tree lacks that file.
 PRIVATE_ONLY = (
@@ -40,10 +41,27 @@ ALLOWED_LITERALS = {
 BINARY_SUFFIXES = {".gz", ".parquet", ".png", ".jpg", ".jpeg", ".pdf", ".zip", ".duckdb", ".pyc", ".whl", ".sqlite", ".ico"}
 
 
+SKIP_DIRS = {".git", "target", "node_modules", "runs", "data", "__pycache__"}
+
+
+def walked_files() -> list[str]:
+    """Every file under the root, for a tree with no git work tree (a source download): the same tree, minus build,
+    run, data and cache directories."""
+    found = []
+    for dirpath, dirnames, filenames in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        found += [(Path(dirpath) / name).relative_to(ROOT).as_posix() for name in filenames]
+    return sorted(found)
+
+
 def candidate_files() -> list[str]:
-    """Tracked files and untracked files that git does not ignore (git's own view of the repo's files)."""
-    out = subprocess.run(["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=ROOT,
-                         capture_output=True, check=True).stdout
+    """Tracked files and untracked files that git does not ignore (git's own view of the repo's files). Without a git work
+    tree, every file under the root (walked_files)."""
+    try:
+        out = subprocess.run(["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=ROOT,
+                             capture_output=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return walked_files()
     return sorted({p for p in out.decode("utf-8").split("\0") if p})
 
 
