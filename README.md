@@ -88,6 +88,8 @@ MB_RUN_SLOW=1 MB_REQUIRE_ENGINE=1 MB_ENGINE="$PWD/target/release/mb-engine" \
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m pytest -q
 ```
 
+CI on pull requests runs only the Rust tests and the fast suite (no `MB_RUN_SLOW`); run the complete suite above locally before a release.
+
 Real-model checks are opt-in and require cached weights. Optional checks that need model libraries or SciPy skip when those extras are unavailable; the offline flags prevent model downloads.
 
 ## License
