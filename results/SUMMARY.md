@@ -1,6 +1,6 @@
 # Mentat-Hard results bundle v0.1.0 summary
 
-This public bundle reports the Mentat-Hard v3 measurements from release v0.3 (test fixture version 3.1).
+This public bundle reports the development round 3 measurements on the Mentat-Hard test set, revision 3.1, released as v0.1.0.
 
 **What it measures:** how accurately System One decision models (small typed-decision LLMs, run locally through an Ollama `/v1/systemone` endpoint) make the typed decisions a logical map is built from. There is no generated reasoning: each question has a fixed menu of typed answers, one question per request, and the model returns a probability for each option.
 
@@ -21,7 +21,7 @@ What makes it hard:
 - **Inference depth.** Each relation carries an inference depth, 0 to 4+: the number of rule steps a reader must chain to derive it from the card. The depth is a gold-side tag the model never sees. Depth 0 holds EQUIV pairs, same-market pairs and score-ladder steps.
 - **Close NONE pairs.** NONE is 25% of the relations. Two thirds of the NONE pairs are same-league pairs that share a team, a threshold, a draw group or a rule constraint; the other third is matched to the word overlap of the real links.
 - **Held-out wording.** 2,332 of 6,000 relations (38.9%) have at least one proposition worded in one of ten phrasing families (21–30) that appear only in the test split, never in dev.
-- **Answerability audit.** The audit checked that the gold answers can be derived from the prompt text. It used two model judges (Haiku 5.5, not people) on a 30-item sample per part. The v3.1 audit's first round failed on reading decoys because an instruction was ambiguous. Child v7 fixed the instruction, and round 2 passed all eight parts for both judges.
+- **Answerability audit.** The audit checked that the gold answers can be derived from the prompt text. It used two model judges (Haiku 5.5, not people) on a 30-item sample per part. The revision 3.1 audit's first round failed on reading decoys because an instruction was ambiguous. Child version 7 fixed the instruction, and round 2 passed all eight parts for both judges.
 
 ## Scoring
 
@@ -88,10 +88,10 @@ Other findings:
 
 - **Hardware:** two NVIDIA RTX A6000 GPUs, one Ollama server per GPU (Ollama 0.40.11). All runs are local, at zero API cost.
 - **Run time:** on test, the three 27B models' builds took 74.4 to 78.7 minutes, against an 80-minute target and a 5,400 s build deadline. The slowest 27B cell on the private split took 76.9 minutes.
-- **Release gates (v0.3):**
+- **Release gates (v0.1.0):**
   - MET: gates 1, 2, 7, 9 and 10. Gate 7 is MET at the pinned commit only.
   - MET by owner attestation: gates 6, 8 and 11.
   - Not applicable: gates 3 and 4.
   - Removed: gate 5.
 
-  See [../release/check_gates_v0.3.md](../release/check_gates_v0.3.md).
+  See [../release/v0.1.0/record/check_gates.md](../release/v0.1.0/record/check_gates.md).

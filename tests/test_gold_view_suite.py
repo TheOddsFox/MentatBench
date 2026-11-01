@@ -35,7 +35,7 @@ def test_every_labelled_relation_and_group_is_answered_with_its_label(suite) -> 
             decision, _ = adapter.decide_relation({"id": cand["a"]}, {"id": cand["b"]})
             assert decision == {"relation": label["label"], "conf": 10.0}
             relations += 1
-        elif cand["op"] == "decide_group" and cand.get("source") != "reading":  # reading rows: test_mentat_hard_v2 and the acceptance test (test_mentat_hard_v3_gold_view)
+        elif cand["op"] == "decide_group" and cand.get("source") != "reading":  # reading rows: test_group_terms and the acceptance test (test_hard_gold_view)
             decisions, _ = adapter.decide_group({"members": [{"id": m} for m in cand["members"]]})
             terms = label.get("terms", [] if label["label"] == "none" else [[label["label"], label["k"]]])  # one decision per term
             assert len(decisions) == len(terms), cand["qid"]

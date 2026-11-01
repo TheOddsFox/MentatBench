@@ -55,7 +55,7 @@
   ],
   "items": 118146,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test-baselines/empty/submission",
+  "out_dir": "runs/20261030-test-baselines/empty/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -97,10 +97,10 @@
   ],
   "contradiction_rate": 0.0,
   "evaluate": {
-   "answers": "runs/20261030-v31-test-baselines/empty/answers.jsonl",
+   "answers": "runs/20261030-test-baselines/empty/answers.jsonl",
    "certificate_cap": null,
    "digest": "b53658bdbf6510f1a2efd3f78770288ca68843895df6afe2d1fa4865d74f2cd0",
-   "verdicts": "runs/20261030-v31-test-baselines/empty/verdicts.jsonl"
+   "verdicts": "runs/20261030-test-baselines/empty/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -206,7 +206,7 @@
  "id": "empty",
  "kind": "baseline",
  "predictions": null,
- "run_dir": "runs/20261030-v31-test-baselines/empty",
+ "run_dir": "runs/20261030-test-baselines/empty",
  "score": {
   "N_active": null,
   "Q_N": 16.876854856996133,

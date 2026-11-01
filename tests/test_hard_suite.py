@@ -359,7 +359,7 @@ def test_mix_and_held_out(built):
     short = summary["relations"]["shortfall"]  # trivial and EQUIV are absolute counts (owner decision 2026-10-30)
     assert sum(r["stratum"] == "trivial" for r in rel) == hs.TRIVIAL_N - short.get("trivial", 0)
     assert sum(r["label"] == "EQUIV" for r in rel) == hs.EQUIV_N - short.get("EQUIV", 0)
-    # NONE is NONE_SHARE of the budget (v3.1), HARD_NONE_SHARE of it rule-vocabulary pairs, the rest profile-matched
+    # NONE is NONE_SHARE of the budget (revision 3.1), HARD_NONE_SHARE of it rule-vocabulary pairs, the rest profile-matched
     none = summary["relations"]["none"]
     n_none = round(hs.NONE_SHARE * BUILT_RELATIONS)
     assert sum(r["stratum"] == "hard_distractor" for r in rel) == n_none - short.get("NONE_hard", 0) - short.get("NONE", 0)
@@ -424,7 +424,7 @@ def test_reading_stats_match_the_build_report(built):
 
 
 def test_depth_is_the_fewest_constraint_steps(small):
-    """Depth on the hand-made league (v3.1): a ladder step is a constraint edge (depth 1); two ladder steps are free (0);
+    """Depth on the hand-made league (revision 3.1): a ladder step is a constraint edge (depth 1); two ladder steps are free (0);
     an implication through one outscores edge and one edge is 2; a paraphrase is 0; a placement or an exclusion of one
     constraint is 1; NONE has no depth and no chain."""
     fx, _, one, _ = small

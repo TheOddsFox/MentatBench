@@ -1,4 +1,4 @@
-"""Mentat-Hard v3 acceptance (stream 6, docs/mentat_hard.md section 5): on the committed dev and test fixtures (registry
+"""Development round 3 acceptance (stream 6, docs/mentat_hard.md section 5): on the committed dev and test fixtures (registry
 version 3, fixture version 3.1), gold_view with the curated suite (--candidates) and the oracle both score Q_N 100 on the exam.
 Every verdict is ok or family_not_certified, and the curated decision suite scores MCC 1.0 on its headline (the mean of the
 relation and group MCCs), its secondary (binding) and its reading diagnostic. The v2 acceptance test is in git history at 928df14.

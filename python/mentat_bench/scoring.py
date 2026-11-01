@@ -1,4 +1,4 @@
-"""Per-family utilities (mentat-bench-v0.1.md section 8) and the Q_N aggregate.
+"""Per-family utilities (docs/history/specs/spec-2026-10-18.md section 8) and the Q_N aggregate.
 
 Gold inputs are reference answers produced by `mb-engine eval` on the gold directory. Verdicts are
 `mb-engine check` results keyed by qid (cert_valid).

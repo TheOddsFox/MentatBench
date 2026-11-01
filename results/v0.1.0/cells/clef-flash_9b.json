@@ -61,7 +61,7 @@
   ],
   "items": 10532,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test/clef-flash_9b/submission",
+  "out_dir": "runs/20261030-test/clef-flash_9b/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -118,10 +118,10 @@
   "contradiction_rate": 0.001333,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test/clef-flash_9b/answers.jsonl",
+   "answers": "runs/20261030-test/clef-flash_9b/answers.jsonl",
    "certificate_cap": null,
    "digest": "71684ca5b61c21bfb9f490b989fbf2453052be9d72d4453dbe77b068b173e128",
-   "verdicts": "runs/20261030-v31-test/clef-flash_9b/verdicts.jsonl"
+   "verdicts": "runs/20261030-test/clef-flash_9b/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -264,8 +264,8 @@
  },
  "id": "clef-flash_9b",
  "kind": "system_one_model",
- "predictions": "results/v0.3/predictions/clef-flash_9b.jsonl.gz",
- "run_dir": "runs/20261030-v31-test/clef-flash_9b",
+ "predictions": "results/v0.1.0/predictions/clef-flash_9b.jsonl.gz",
+ "run_dir": "runs/20261030-test/clef-flash_9b",
  "score": {
   "N_active": null,
   "Q_N": 16.399568921293454,

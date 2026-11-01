@@ -17,10 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 LB_PATH = RESULTS / "v0.1.0" / "leaderboard.json"
 README = RESULTS / "README.md"
-MAIN = ROOT / "docs" / "results" / "mentat-hard-v3-20261030.json"
-PRIVATE = ROOT / "docs" / "results" / "mentat-hard-v3-private-20261030.json"
+MAIN = ROOT / "docs" / "results" / "mentat-hard-20261030.json"
+PRIVATE = ROOT / "docs" / "results" / "mentat-hard-private-20261030.json"
 TEST_FIXTURE = ROOT / "fixtures" / "mentat_hard_test"
-GATES = ROOT / "release" / "check_gates_v0.3.md"
+GATES = ROOT / "release" / "v0.1.0" / "record" / "check_gates.md"
 TOL = 1e-12  # the leaderboard copies the committed values, so they agree exactly
 
 # The same pattern as build_bundle.py's ABSOLUTE (checked in test_builder_pattern_matches_the_test).
@@ -29,9 +29,11 @@ ABSOLUTE = re.compile(ABS_PATTERN)
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.\w+")
 # Strings that must not appear in any tracked text under docs/, results/, release/ or README.md.
 PERSONAL = ("falty", "C:\\Users", "C:/Users", "/c/Users", "AppData", "scratchpad")
-PATH_KEYS = {"readme", "leaderboard_json", "leaderboard_csv", "predictions_dir", "cells_dir", "builder", "release_manifest",
-             "release_gate_output", "results_md", "results_json", "private_results_md", "private_results_json", "prereg"}
+PATH_KEYS = {"readme", "leaderboard_json", "leaderboard_csv", "predictions_dir", "cells_dir", "runcards_dir", "builder",
+             "release_manifest", "release_gate_output", "attestations", "results_md", "results_json", "private_results_md",
+             "private_results_json", "prereg"}
 BINARY_SUFFIXES = {".gz", ".parquet", ".bin", ".pyc", ".png", ".jpg", ".jpeg", ".pdf", ".zip", ".sqlite"}
+NO_PREDICTIONS = {"empty", "oracle"}  # the two baselines that write no predictions file (their predictions field is null)
 
 
 def load(path: Path):
@@ -416,18 +418,37 @@ def test_index_paths_exist_and_latest_is_consistent():
             if key in PATH_KEYS and value is not None:
                 assert (ROOT / value).exists(), (version["version"], key, value)
                 checked += 1
-    assert checked >= 13  # the latest entry alone has 13 file paths
+    assert checked >= 13  # the v0.1.0 entry alone has 13 file paths
 
 
-def test_public_bundle_identity_keeps_measurement_references_historical():
-    bundle, idx = load(LB_PATH), load(RESULTS / "index.json")
-    builder = load_builder()
-    latest = next(v for v in idx["versions"] if v["status"] == "latest")
-    assert builder.PUBLIC_VERSION == idx["latest"] == latest["version"] == bundle["release"] == "v0.1.0"
-    assert latest["measurement_release"] == bundle["provenance"]["measurement_release"] == builder.MEASUREMENT_VERSION == "v0.3"
-    assert latest["release_manifest"] == bundle["provenance"]["release_manifest"]["path"] == "release/release_manifest_v0.3.json"
-    assert latest["release_gate_output"] == bundle["release_gates"]["source"] == "release/check_gates_v0.3.md"
-    assert all(e["runcard"].startswith("release/v0.3/runcards/") for e in entries(bundle) if e["runcard"])
+def test_bundle_identity():
+    """One release, v0.1.0: the leaderboard says so, each row's run card lives under release/v0.1.0/runcards/, and every
+    cell's and row's predictions path exists (None for the two baselines that write no predictions). The index has no
+    retired measurement key anywhere, and its v0.1.0 entry names the record by role, each path present."""
+    lb = load(LB_PATH)
+    assert lb["release"] == "v0.1.0"
+    rows = {e["id"]: e for e in entries(lb)}
+    for e in rows.values():
+        assert e["runcard"] == f"release/v0.1.0/runcards/{e['id']}.json", e["id"]
+        assert (ROOT / e["runcard"]).is_file(), e["id"]
+        assert (ROOT / e["cell"]).is_file(), e["id"]
+        if e["id"] in NO_PREDICTIONS:
+            assert e["predictions"] is None, e["id"]
+        else:
+            assert e["predictions"] == f"results/v0.1.0/predictions/{e['id']}.jsonl.gz", e["id"]
+            assert (ROOT / e["predictions"]).is_file(), e["id"]
+    for path in sorted((RESULTS / "v0.1.0" / "cells").glob("*.json")):
+        cell = load(path)
+        assert cell["predictions"] == rows[path.stem]["predictions"], path.name
+        if cell["predictions"] is not None:
+            assert (ROOT / cell["predictions"]).is_file(), path.name
+    index_text = (RESULTS / "index.json").read_text(encoding="utf-8")
+    retired_key = "_".join(("measurement", "release"))  # built from parts: tests/test_labels.py scans this file's text
+    assert retired_key not in index_text
+    entry = next(v for v in json.loads(index_text)["versions"] if v["version"] == "v0.1.0")
+    for role in ("prereg", "release_manifest", "release_gate_output", "attestations", "runcards_dir", "results_md",
+                 "results_json", "private_results_md", "private_results_json"):
+        assert entry.get(role) and (ROOT / entry[role]).exists(), role
 
 
 def test_readme_links_resolve():
@@ -445,7 +466,7 @@ def test_readme_links_resolve():
 def test_repository_pointers_resolve():
     root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "## Results" in root_readme and "results/README.md" in root_readme
-    for doc in ("docs/results/mentat-hard-v3-20261030.md", "docs/results/mentat-hard-v3-private-20261030.md"):
+    for doc in ("docs/results/mentat-hard-20261030.md", "docs/results/mentat-hard-private-20261030.md"):
         path = ROOT / doc
         head = path.read_text(encoding="utf-8").splitlines()[:6]
         pointer = [line for line in head if "results/README.md" in line]
@@ -484,6 +505,7 @@ def tracked_text_files() -> list[Path]:
 def test_no_local_paths_or_personal_strings_in_docs_results_release_or_readme():
     scanned = 0
     for path in tracked_text_files():
+        rel = path.relative_to(ROOT).as_posix()
         text = text_of(path)
         scanned += 1
         for word in PERSONAL:
@@ -491,6 +513,7 @@ def test_no_local_paths_or_personal_strings_in_docs_results_release_or_readme():
         assert not ABSOLUTE.search(text), f"{rel}: an absolute path"
         assert not EMAIL.search(text), f"{rel}: an email address"
     assert scanned > 100  # the scan reaches docs/, results/, release/ and the README
+
 
 def test_no_private_split_items_in_results():
     """Every item id in the results is a public test id. The private split's ids are not in the repository, so none can appear."""

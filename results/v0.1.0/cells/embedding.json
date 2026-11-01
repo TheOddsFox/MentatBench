@@ -55,7 +55,7 @@
   ],
   "items": 9348,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test-baselines/embedding/submission",
+  "out_dir": "runs/20261030-test-baselines/embedding/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -106,10 +106,10 @@
   "contradiction_rate": 0.0,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test-baselines/embedding/answers.jsonl",
+   "answers": "runs/20261030-test-baselines/embedding/answers.jsonl",
    "certificate_cap": null,
    "digest": "8c35eeb96a3e1f498c36ca6972a00e3ecc2985e17fb81ef6aa7fefeb6751ef14",
-   "verdicts": "runs/20261030-v31-test-baselines/embedding/verdicts.jsonl"
+   "verdicts": "runs/20261030-test-baselines/embedding/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -222,8 +222,8 @@
  "child_stats": null,
  "id": "embedding",
  "kind": "baseline",
- "predictions": "results/v0.3/predictions/embedding.jsonl.gz",
- "run_dir": "runs/20261030-v31-test-baselines/embedding",
+ "predictions": "results/v0.1.0/predictions/embedding.jsonl.gz",
+ "run_dir": "runs/20261030-test-baselines/embedding",
  "score": {
   "N_active": null,
   "Q_N": 31.375991978694053,

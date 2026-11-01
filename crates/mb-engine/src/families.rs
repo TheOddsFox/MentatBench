@@ -1,4 +1,4 @@
-//! Query families (docs/ir.md "Queries" and "Answers"; mentat-bench-v0.1 section 6).
+//! Query families (docs/ir.md "Queries" and "Answers"; SPEC.md section 6).
 //!
 //! Interpretation semantics: an interpretation is checked alone via its activation assumptions.
 //! Closure keeps only interpretations consistent with the hypothesis, then merges labels across

@@ -27,7 +27,7 @@ Strata: bindings `real`; relations `trivial` (same market), `hard_distractor` (N
 (no terms) or `real`; reading questions `reading` (the proposition u of an unresolved outcome) or `reading_decoy`.
 held_out: any outcome of the question has a test-only family (gold/meta.jsonl).
 
-Selection (spec s3, v3.1 mix): relations are, in order, every unscoped generator implies edge (as a class-literal
+Selection (spec s3, revision 3.1 mix): relations are, in order, every unscoped generator implies edge (as a class-literal
 outcome pair, oriented by the seeded rng) and every two-argument atmost-1 (EXCLUDES); then 500 trivial and 800 EQUIV;
 then the derived IMPLIES, IMPLIED_BY and EXCLUDES links, deepest inference depth tier first (Depths: 4+, 3, 2; 1 and 0
 only when the supply runs out; counting-only entailments are never drawn); then NONE (25% of the budget), two thirds of
@@ -73,7 +73,7 @@ from . import engine, ir
 from .adapters.base import group_terms
 from .children.systemone_child import MAX_K as CHILD_MAX_K
 
-# Relations (owner decisions 2026-10-30; v3.1). The trivial and EQUIV counts are absolute (their values at the v2 budget of
+# Relations (owner decisions 2026-10-30; test set revision 3.1). The trivial and EQUIV counts are absolute (their values at the v2 budget of
 # 10,000). NONE is NONE_SHARE of the budget (25%: 1,500 of 6,000); HARD_NONE_SHARE of those are rule-vocabulary pairs, the
 # rest profile-matched as in v3. The derived links fill the rest, deepest tier first (DEPTH_TIERS).
 TRIVIAL_N = 500  # same-market Yes/No pairs
@@ -507,7 +507,7 @@ def _tier(d: int | str | None) -> str | None:
 
 
 def build_relations(fx: Fixture, eng: _Engine, live: list[str], n: int, rng: random.Random) -> tuple[list, dict]:
-    """n relation rows (v3.1), in this order: every generator edge; TRIVIAL_N trivial and EQUIV_N EQUIV pairs (absolute
+    """n relation rows (revision 3.1), in this order: every generator edge; TRIVIAL_N trivial and EQUIV_N EQUIV pairs (absolute
     counts); the derived links, deepest tier first (DEPTH_TIERS: 4+, 3, 2, and 1 or 0 only when the supply runs out), each
     tier water-filled over IMPLIES, IMPLIED_BY and EXCLUDES; then NONE, NONE_SHARE of n, of which HARD_NONE_SHARE are
     same-league pairs sharing rule vocabulary and the rest profile-matched (the word overlap of every drawn positive,

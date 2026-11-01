@@ -1,4 +1,4 @@
-"""Native open-discovery adjudication tooling (mentat-bench-v0.1.md sections 4, 7, 8; python/mentat_bench/adjudication.py)."""
+"""Native open-discovery adjudication tooling (docs/history/specs/spec-2026-10-18.md sections 4, 7, 8; python/mentat_bench/adjudication.py)."""
 
 from __future__ import annotations
 

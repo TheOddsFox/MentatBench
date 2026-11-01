@@ -1,7 +1,7 @@
-"""Recomputes the Mentat-Hard v3 test results (docs/results/mentat-hard-v3-20261030.json) from the run directories.
+"""Recomputes the Mentat-Hard test results (docs/results/mentat-hard-20261030.json) from the run directories.
 
 usage, from the repo root:
-  python docs/results/mentat-hard-v3-results/build_results.py [--runs DIR] [--baselines DIR] [--hf DIR] [--fixture DIR]
+  python docs/results/mentat-hard-results/build_results.py [--runs DIR] [--baselines DIR] [--hf DIR] [--fixture DIR]
          [--prereg JSON] [--ci JSON] [--out JSON]
 
 MEASUREMENT ONLY (reads <fixture>/gold; product code never does). Each run's submission.build/decisions.jsonl is scored
@@ -26,12 +26,12 @@ from mentat_bench import corrections, decision_scoring, ir  # noqa: E402
 TOL = 1e-9  # the recomputed decision score against the run's own score_decisions.json
 CI_TOL = 1e-5  # league_ci rounds its values to 6 decimals
 DATE = "2026-10-30"
-RUN_PREFIX = "20261030-v31-test"
+RUN_PREFIX = "20261030-test"
 REFERENCE = "d3_27b-q8_0"
 LAYOUT = "relation-group-headline/1"
 CODE_COMMIT = "0bff47f"
 DEPTH_BUCKETS = ("0", "1", "2", "3", "4+", "NONE")
-BASELINES = ("heuristic", "gold_view", "lexical", "embedding", "empty", "oracle")  # runs/20261030-v31-test-baselines
+BASELINES = ("heuristic", "gold_view", "lexical", "embedding", "empty", "oracle")  # runs/20261030-test-baselines
 RULES = "heuristic"  # the prereg's "rules" baseline
 FAMILY = ("d3:2b-q8_0", "d3:4b-q8_0", "d3:9b-q8_0", "d3:27b-q8_0")
 
@@ -240,9 +240,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--baselines", type=Path, default=ROOT / "runs" / f"{RUN_PREFIX}-baselines")
     ap.add_argument("--hf", type=Path, default=ROOT / "runs" / f"{RUN_PREFIX}-hf" / "hf")
     ap.add_argument("--fixture", type=Path, default=ROOT / "fixtures" / "mentat_hard_test")
-    ap.add_argument("--prereg", type=Path, default=ROOT / "docs" / "results" / "mentat-hard-v3-prereg-20261030.json")
-    ap.add_argument("--ci", type=Path, default=ROOT / "docs" / "results" / "mentat-hard-v3-20261030-ci.json")
-    ap.add_argument("--out", type=Path, default=ROOT / "docs" / "results" / "mentat-hard-v3-20261030.json")
+    ap.add_argument("--prereg", type=Path, default=ROOT / "release" / "v0.1.0" / "record" / "prereg.json")
+    ap.add_argument("--ci", type=Path, default=ROOT / "docs" / "results" / "mentat-hard-20261030-ci.json")
+    ap.add_argument("--out", type=Path, default=ROOT / "docs" / "results" / "mentat-hard-20261030.json")
     a = ap.parse_args(argv)
     try:
         return build(a)
@@ -320,7 +320,7 @@ def finish(a, fixture, fixture_doc, fixture_hash, version, prereg, ci, depths, m
             "code_commit": CODE_COMMIT,
             "fixture": {"name": fixture_doc["name"], "version": fixture_doc["version"], "content_hash": fixture_hash},
             "child": {"id": "systemone-choice", "child_version": "7", "prompt_sha256": next(iter(prompts))},
-            "prereg": "docs/results/mentat-hard-v3-prereg-20261030.json",
+            "prereg": "release/v0.1.0/record/prereg.json",
             "ci_file": a.ci.name,
             "ci_layout": LAYOUT,
             "B": ci["B"],
@@ -328,7 +328,7 @@ def finish(a, fixture, fixture_doc, fixture_hash, version, prereg, ci, depths, m
             "reference": REFERENCE,
             "headline": "relation_group_mcc: the mean of relation and group MCC, on raw (unfloored) decisions",
             "runs": f"runs/{RUN_PREFIX} (not committed)",
-            "script": "docs/results/mentat-hard-v3-results/build_results.py",
+            "script": "docs/results/mentat-hard-results/build_results.py",
         },
         "models": models,
         "ranking": ranking,

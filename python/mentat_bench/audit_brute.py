@@ -3,7 +3,7 @@
 The checker reads only a fixture's gold submission (gold/theory.json, gold/bindings.jsonl), queries.jsonl and
 gold/answers.jsonl. It imports neither the Rust engine nor the generators (fixtures_gen / fixtures_native), and it
 implements the docs/ir.md semantics from scratch. It does not establish that the formalisation is faithful to the
-language (mentat-bench-v0.1.md s7); it establishes that the gold answers follow from the gold theory.
+language (docs/history/specs/spec-2026-10-18.md s7); it establishes that the gold answers follow from the gold theory.
 
 Method
   1. Connected components: union-find over outcome IDs, linked by constraints (after alias expansion) and by
@@ -1196,7 +1196,7 @@ def audit_fixture(fixture: Path, budget: int = CONFLICT_BUDGET, query_seconds: f
     return report
 
 
-# ---------------------------------------------------------------- inference depth of relation labels (Mentat-Hard v3.1)
+# ---------------------------------------------------------------- inference depth of relation labels (Mentat-Hard test set, revision 3.1)
 
 DEPTH_COUNT = "count"  # an entailment that no chain of constraints reaches
 

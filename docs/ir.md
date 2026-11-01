@@ -1,6 +1,6 @@
-# Mentat Bench v0.1 — wire formats (contract between Rust engine and Python harness)
+# Mentat Bench — wire formats (contract between Rust engine and Python harness)
 
-Normative semantics: `mentat-bench-v0.2.md`. This file fixes the JSON shapes and engine/CLI behaviour.
+Normative semantics: `SPEC.md` (the specification of 2026-10-27). This file fixes the JSON shapes and engine/CLI behaviour.
 All files are UTF-8 JSON / JSON-lines (a leading BOM is tolerated on every input the engine reads). Python never does logical inference; the Rust `mb-engine` CLI does.
 
 ## IDs

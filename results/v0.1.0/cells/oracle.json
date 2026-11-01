@@ -56,7 +56,7 @@
   ],
   "items": 3348,
   "mode": "full_replay",
-  "out_dir": "runs/20261030-v31-test-baselines/oracle/submission",
+  "out_dir": "runs/20261030-test-baselines/oracle/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -97,10 +97,10 @@
   ],
   "contradiction_rate": 0.0,
   "evaluate": {
-   "answers": "runs/20261030-v31-test-baselines/oracle/answers.jsonl",
+   "answers": "runs/20261030-test-baselines/oracle/answers.jsonl",
    "certificate_cap": null,
    "digest": "3f77640ef93e2d8b4270ba2fa2de9809bbe76b8960ca4bbeb7cc89b2a03ab33a",
-   "verdicts": "runs/20261030-v31-test-baselines/oracle/verdicts.jsonl"
+   "verdicts": "runs/20261030-test-baselines/oracle/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -206,7 +206,7 @@
  "id": "oracle",
  "kind": "ceiling",
  "predictions": null,
- "run_dir": "runs/20261030-v31-test-baselines/oracle",
+ "run_dir": "runs/20261030-test-baselines/oracle",
  "score": {
   "N_active": null,
   "Q_N": 100.0,

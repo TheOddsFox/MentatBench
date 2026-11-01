@@ -211,7 +211,7 @@ python -m mentat_bench.corrections regenerate <name> --version <v> --out <new di
 
 **Mentat-Hard (generated, with committed directories).** `mentat_hard_dev` and `mentat_hard_test` are generated versions whose
 directories are also committed under `fixtures/`.
-- **v3** (registry version `"3"`, generator fixture version `"3.1"`, registered 2026-10-30) is active for each split: `register --generator
+- **v3** (registry version `"3"`, fixture.json label `"3.1"`, the Mentat-Hard test set, revision 3.1; registered 2026-10-30) is active for each split: `register --generator
   mentat_bench.fixtures_hard --seed 20261027 --param split=dev --name mentat_hard_dev --version 3 --reason "<why>"` (test: `--seed 20261028
   --param split=test`). Content hashes: dev `218003c63135ace753a1b2449ee002dc2813c7e99bed8c0956fd5a52187c3964`, test
   `7b408459538d7420e808d5d81e71916c57aee78f459a6b8c0905e48e43c8e6ab`. The registry version (3) and the fixture.json version (3.1) differ
@@ -231,8 +231,8 @@ directories are also committed under `fixtures/`.
   `0907b4f8...`.
 - **v2 regenerates at commit `5e65729`** (the generator with `VERSION = "2"`). Checked for dev: that commit's
   `python/` tree, built with `python -m mentat_bench.fixtures_hard build --split dev`, gives content hash
-  `09da4937...`, the registered v2 hash. The test split was not checked at that commit. At HEAD (v3.1) `regenerate`
-  refuses v2, as it refuses v1: the generator now writes v3.1 bytes.
+  `09da4937...`, the registered v2 hash. The test split was not checked at that commit. At HEAD (revision 3.1) `regenerate`
+  refuses v2, as it refuses v1: the generator now writes revision 3.1 bytes.
 
 **Retired versions (exact-scale).** The exact-scale fixtures were registered this way (owner decision D3). Their generators
 (`fixtures_exact`, `fixtures_d4`) were removed on 2026-10-27 by owner decision, with the rest of the exact-scale track

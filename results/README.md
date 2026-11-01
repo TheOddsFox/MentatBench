@@ -1,6 +1,6 @@
-# Mentat-Hard results bundle v0.1.0
+# Mentat-Hard results, v0.1.0
 
-This folder holds public results bundle v0.1.0 for the Mentat-Hard v3 test matrix (fixture version 3.1, from measurement release v0.3, published 2026-10-31): 15 System One
+This folder holds the results of the development round 3 test matrix (test set revision 3.1, released as v0.1.0 on 2026-10-31): 15 System One
 models, their baselines (the rules child, lexical, embedding, empty, oracle, gold_view as the ceiling, and the hf pipeline baseline), and a replication on the sealed private split. It is the entry point for the
 website and for anyone who wants the numbers in machine-readable form. The tables below are checked cell by cell against [v0.1.0/leaderboard.json](v0.1.0/leaderboard.json) by `tests/test_results_bundle.py`. That JSON is built by the bundle builder from the committed results documents and the run directories. The figures in the prose were checked by hand against the same JSON. Nothing here is a new measurement.
 
@@ -8,12 +8,12 @@ Start here:
 
 - One-page summary: [SUMMARY.md](SUMMARY.md)
 - How the benchmark was built, and why each design changed: [docs/how-the-benchmark-was-built.md](../docs/how-the-benchmark-was-built.md)
-- Human-readable test results: [docs/results/mentat-hard-v3-20261030.md](../docs/results/mentat-hard-v3-20261030.md)
-- Private-split results (aggregates only): [docs/results/mentat-hard-v3-private-20261030.md](../docs/results/mentat-hard-v3-private-20261030.md)
+- Human-readable test results: [docs/results/mentat-hard-20261030.md](../docs/results/mentat-hard-20261030.md)
+- Private-split results (aggregates only): [docs/results/mentat-hard-private-20261030.md](../docs/results/mentat-hard-private-20261030.md)
 - Leaderboard, JSON: [v0.1.0/leaderboard.json](v0.1.0/leaderboard.json). Flat table: [v0.1.0/leaderboard.csv](v0.1.0/leaderboard.csv)
 - Per-item test predictions: [v0.1.0/predictions/](v0.1.0/predictions/). Per-cell summaries: [v0.1.0/cells/](v0.1.0/cells/)
-- Release gates: [release/check_gates_v0.3.md](../release/check_gates_v0.3.md). Release manifest: [release/release_manifest_v0.3.json](../release/release_manifest_v0.3.json)
-- Versions, latest first: [index.json](index.json). History: [v2](#history) and [v1](#history)
+- Release gates: [release/v0.1.0/record/check_gates.md](../release/v0.1.0/record/check_gates.md). Release manifest: [release/v0.1.0/record/release_manifest.json](../release/v0.1.0/record/release_manifest.json)
+- Versions, latest first: [index.json](index.json). History: [round 2](#history) and [round 1](#history)
 
 ## Summary
 
@@ -55,7 +55,7 @@ The reference for the scoring details is [docs/mentat_hard.md](../docs/mentat_ha
 
 ## Leaderboard
 
-Test split (`mentat_hard_test`, fixture 3.1). Intervals are 95% percentile intervals of the league bootstrap (B = 2000, seed 0,
+Test split (`mentat_hard_test`, test set revision 3.1). Intervals are 95% percentile intervals of the league bootstrap (B = 2000, seed 0,
 18 leagues). Rank is by the headline point estimate among the 15 models. **Ranks are not statistically resolved**: adjacent ranks
 often have overlapping intervals. Gap to D3 27B is the reference minus the run, paired within each bootstrap draw. A gap whose
 interval excludes 0 is resolved. Italic rows are baselines, not System One models. Params and quant come from the Ollama tag; a
@@ -96,7 +96,7 @@ and the file each row came from, is [v0.1.0/leaderboard.json](v0.1.0/leaderboard
 
 ## Which differences are resolved
 
-The statements below follow the v3 results document. Intervals are the league bootstrap; gaps are paired against D3 27B.
+The statements below follow the round 3 results document. Intervals are the league bootstrap; gaps are paired against D3 27B.
 
 - **D3 27B is above every other model and every non-ceiling baseline.** All 14 other models, and the hf baseline, have gap intervals
   that exclude 0. The smallest gap is to D3 9B, 0.244 [0.221, 0.266]. The rules, embedding, lexical and hf baselines are also below
@@ -127,10 +127,10 @@ The statements below follow the v3 results document. Intervals are the league bo
 
 ## Private-split replication
 
-The private split (`mentat_hard_private`, fixture 3.1, sealed) has 3,228 binding outcomes, 6,000 relation questions and 1,178 group
+The private split (`mentat_hard_private`, test set revision 3.1, sealed) has 3,228 binding outcomes, 6,000 relation questions and 1,178 group
 questions (1,000 group and 178 reading questions). It is built by the same generator as the public test, from a seed that is not
 recorded anywhere in the repository. The split and its run directories are not published. Only the aggregates in
-[docs/results/mentat-hard-v3-private-20261030.json](../docs/results/mentat-hard-v3-private-20261030.json) and its CI file are, and this
+[docs/results/mentat-hard-private-20261030.json](../docs/results/mentat-hard-private-20261030.json) and its CI file are, and this
 folder reuses only those aggregates. The private results include the same 15 models and the rules baseline, and the gold_view ceiling.
 Lexical, embedding and hf were not run on the private split.
 
@@ -361,14 +361,14 @@ models is unchanged except for one adjacent pair: D1 3B moves above D3 2B on tes
 
 ### Fixture
 
-- **Test:** `mentat_hard_test`, fixture version 3.1 (registry version 3), content hash
+- **Test:** `mentat_hard_test`, test set revision 3.1 (registry version 3), content hash
   `7b408459538d7420e808d5d81e71916c57aee78f459a6b8c0905e48e43c8e6ab`. It has 18 leagues, 1,674 markets, 3,348 outcomes, and 200 queries.
   Its questions: 6,000 relations (1,500 NONE; 2,332 held-out), 1,184 group questions (1,000 non-reading and 184 reading), and 3,348 bindings.
   Each model cell has 10,716 scored items, since a reading question is two items. Lexical and embedding answer only the relations and bindings
   (9,348 decisions), so their 1,000 group questions are unanswered.
-- **Private:** `mentat_hard_private`, fixture version 3.1, sealed, content hash
+- **Private:** `mentat_hard_private`, test set revision 3.1, sealed, content hash
   `1253bb5dfee2c02a34ded7e659a0158dc8996be9660d7be0ee14ffba19077263`. 3,228 outcomes, 10,406 candidates, 200 queries. Aggregates only.
-- **Dev:** `mentat_hard_dev`, fixture version 3.1, content hash `218003c63135ace753a1b2449ee002dc2813c7e99bed8c0956fd5a52187c3964`. It sets the
+- **Dev:** `mentat_hard_dev`, test set revision 3.1, content hash `218003c63135ace753a1b2449ee002dc2813c7e99bed8c0956fd5a52187c3964`. It sets the
   relation floors, the headline choice and the reference.
 - Test files and their hashes (the same per-file SHA-256 values are pinned by the release manifest, and the builder checks them):
 
@@ -394,7 +394,7 @@ models is unchanged except for one adjacent pair: D1 3B moves above D3 2B on tes
 
 - **Rule cards** are in the relation, group and reading states, and not in the binding state (pre-registered). A card is a plain-English
   statement of the league's rules, rendered from the rule list (`corpus.jsonl` field `context`).
-- **Child:** `systemone-choice` v7, `prompt_sha256` `d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44`. One question per
+- **Child:** `systemone-choice` version 7, `prompt_sha256` `d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44`. One question per
   request. The child records card-driven abstentions in its stats.
 - **Servers:** Ollama 0.40.11, two servers, one per NVIDIA RTX A6000, CUDA only, with `OLLAMA_NUM_PARALLEL=2` and `MB_S1_PARALLEL=2`.
 - **Build flags:** `--top-k 24`, `--batch-size 128`, a build deadline of 5,400 s, and the per-model relation floor from dev. The cells also set
@@ -402,7 +402,7 @@ models is unchanged except for one adjacent pair: D1 3B moves above D3 2B on tes
   item errors, no 500 retries and no refused instructions (child stats).
 - **Code:** the test cells ran at commit `0bff47f`, a clean tree. The pre-registration names `9ad5f2c`. The two commits differ only by the two
   pre-registration files.
-- **Models:** 15. Seven are new in v3: D3 2B and 4B, D1 3B, D1-Omni 600M, Nimble-v3 9B, and TEV1 0.8B and 4B. Skipped: `d1:2b` and
+- **Models:** 15. Seven are new in round 3: D3 2B and 4B, D1 3B, D1-Omni 600M, Nimble-v3 9B, and TEV1 0.8B and 4B. Skipped: `d1:2b` and
   `d1-omni:2b`, because they need a newer Ollama (an owner decision), and `strands-decider:2b`, which runs only on MLX.
 - **Baselines:** the pre-registered rules baseline (`heuristic`, the heuristic child), `lexical` and `embedding` (CPU), `empty` (no answers,
   Q_N only), `gold_view` (perfect curated answers, the ceiling), `oracle` (Q_N only, 100), and the hf pipeline (Qwen2.5-1.5B-Instruct, release
@@ -433,7 +433,7 @@ this same code, and the builder rescores them to check the run's own score file.
 ### Pre-registration
 
 The matrix, the headline rule and the reference were pre-registered in
-[docs/results/mentat-hard-v3-prereg-20261030.md](../docs/results/mentat-hard-v3-prereg-20261030.md) before any test run. The post-hoc
+[release/v0.1.0/record/prereg.md](../release/v0.1.0/record/prereg.md) before any test run. The post-hoc
 changes were all decided on dev before the test runs (see [Limits](#limits-and-disclosures)).
 
 ## Limits and disclosures
@@ -451,10 +451,10 @@ These are the limits disclosed in the results documents, plus the release record
    rule card, so the card change is not an explanation.
 4. **One run per model on test.** The dev repeat of D3 9B (`runs/20261030-v31c7-dev` and `runs/20261030-v31c7-dev-rep`, on the other GPU) gave byte-identical decisions and scores, but there is no test repeat. The intervals cover item
    and league sampling only.
-5. **Post-hoc changes, all decided on dev before any test run:** v3.1 (harder relations), the relation plus group headline, and child v7
+5. **Post-hoc changes, all decided on dev before any test run:** revision 3.1 (harder relations), the relation plus group headline, and child version 7
    (the audit fix). Each is an owner decision recorded in its pull request.
-6. **Judges are models.** The answerability audits use two Haiku 5.5 judges, not people. Both audits pass every part (bar 0.8). The v3.1 audit passed only in round 2: round 1 (child v6) failed on reading decoys because the alt-reading instruction was ambiguous, and child v7 fixed it before re-auditing the same items:
-   [v3 audit](../docs/results/mentat-hard-v3-audit/) and [v3.1 audit](../docs/results/mentat-hard-v3.1-audit/).
+6. **Judges are models.** The answerability audits use two Haiku 5.5 judges, not people. Both audits pass every part (bar 0.8). The revision 3.1 audit passed only in round 2: round 1 (child version 6) failed on reading decoys because the alt-reading instruction was ambiguous, and child version 7 fixed it before re-auditing the same items:
+   [round 3 audit](../docs/audits/test-set-groups/) and [revision 3.1 audit](../docs/audits/test-set-relations/).
 7. **Gate 7 (leakage) is MET only at the pinned commit `defed6a`**, on a clean tree. At any later commit it reads UNKNOWN, because the tool does
    not run the test there.
 8. **Nimble-v3 9B is licensed CC-BY-NC-4.0**, which is non-commercial, as recorded in `children/ollama_models.json`.
@@ -474,20 +474,20 @@ These are the limits disclosed in the results documents, plus the release record
 19. **Strict Q_N is 0 for every repaired build.** TEV1 0.8B is the one exception (see Q_N).
 20. **Private split.** Only aggregates are published. The seed is not recorded. The sealed directory is not in the repository. Gate 2 (the complete
     oracle panel) is MET for the directory the owner gave `check-gates`, on the owner's machine.
-21. **Engine provenance.** `target/release/mb-engine.exe` (sha256 `2df1bdfb...`) is a copy of the binary the v3 runs used. It is not a rebuild
-    at the pinned commit, and the sha was not reproduced by a rebuild. The engine source is the one the v2 and v3 runs used.
+21. **Engine provenance.** `target/release/mb-engine.exe` (sha256 `2df1bdfb...`) is a copy of the binary the round 3 runs used. It is not a rebuild
+    at the pinned commit, and the sha was not reproduced by a rebuild. The engine source is the one the round 2 and round 3 runs used.
 22. **Local children are not sandboxed.** Every run card is a local adapter at 0 USD, and the price schedule is `none`.
 23. **Depth accuracy is descriptive.** The buckets differ in class mix, and the 4+ bucket has six rows.
 
 ## Release gate status
 
-Release v0.3 is built at `defed6a` on a clean tree. The gate output is [release/check_gates_v0.3.md](../release/check_gates_v0.3.md). The
+Release v0.1.0 is built at `defed6a` on a clean tree. The gate output is [release/v0.1.0/record/check_gates.md](../release/v0.1.0/record/check_gates.md). The
 numbering follows [docs/remaining-work.md](../docs/remaining-work.md) section 2.3. Gates 1, 2, 7, 9 and 10 are MET. Gates 6, 8 and 11 are MET
-by owner attestation in [release/v0.3/attestations.json](../release/v0.3/attestations.json). Gates 3 and 4 are NOT APPLICABLE, and gate 5 is
+by owner attestation in [release/v0.1.0/record/attestations.json](../release/v0.1.0/record/attestations.json). Gates 3 and 4 are NOT APPLICABLE, and gate 5 is
 REMOVED. The tool does not check certificate rules and strata (gate 6), that corrections are applied (gate 11), or blinding in practice
 (gate 8).
 
-| Gate | Name | Status (v0.3) |
+| Gate | Name | Status (v0.1.0) |
 |---|---|---|
 | 1 | Immutable corpus manifests, evidence policy, schemas, IR semantics, resource profiles | MET |
 | 2 | Complete exact-panel oracle (every corpus record bound or unresolved; an answer for every query) | MET |
@@ -532,43 +532,43 @@ Baselines take 0.7 to 17.5 seconds each (embedding is the slowest).
 ## Pinned provenance
 
 - Code commit `0bff47f` (the cells); release commit `defed6a` (the pinned release commit).
-- Fixture `mentat_hard_test` v3.1 (content hash above); private split `mentat_hard_private` (hash above).
-- Child `systemone-choice` v7, `prompt_sha256` `d6d5ed56…`.
+- Fixture `mentat_hard_test` revision 3.1 (content hash above); private split `mentat_hard_private` (hash above).
+- Child `systemone-choice` version 7, `prompt_sha256` `d6d5ed56…`.
 - Model pins: Ollama digests, sizes and licenses are in [children/ollama_models.json](../python/mentat_bench/children/ollama_models.json)
   and in each entry of [leaderboard.json](v0.1.0/leaderboard.json). The digests match the pre-registration.
 - hf pin: `Qwen/Qwen2.5-1.5B-Instruct`, revision `989aa7980e4cf806f80c7fef2b1adb7bc71aa306` (in [children/models.json](../python/mentat_bench/children/models.json)).
-- Run cards: [release/v0.3/runcards/](../release/v0.3/runcards/) (22 cards). Baseline table: [release/v0.3/baselines.json](../release/v0.3/baselines.json).
+- Run cards: [release/v0.1.0/runcards/](../release/v0.1.0/runcards/) (22 cards). Baseline table: [release/v0.1.0/baselines.json](../release/v0.1.0/baselines.json).
 
 ## History
 
-Each earlier record is kept as it was published. Its headline differs from this one, so its numbers are not comparable with v0.3.
+Each earlier record is kept as it was published. Its headline differs from this one, so its numbers are not comparable with v0.1.0.
 
 | Record | Date | Headline (as published) | Status | Documents |
 |---|---|---|---|---|
-| Mentat-Hard v3, release v0.3 | 2026-10-30 (results), 2026-10-31 (release) | relation + group MCC mean. D3 27B 0.519 [0.497, 0.541] | **current** | [test](../docs/results/mentat-hard-v3-20261030.md), [private](../docs/results/mentat-hard-v3-private-20261030.md), [prereg](../docs/results/mentat-hard-v3-prereg-20261030.md) |
-| Mentat-Hard v2, release v0.2 | 2026-10-29 | relation MCC, from 2026-10-29 (the headline changed post-hoc). D3 27B 0.704 [0.682, 0.728]; Clef 27B 0.462 [0.440, 0.486]; rules 0.278 [0.263, 0.292] | superseded by v3 (header of the v2 results document) | [results](../docs/results/mentat-hard-v2-20261029.md), [json](../docs/results/mentat-hard-v2-20261029.json), [ci](../docs/results/mentat-hard-v2-20261029-ci.json) |
-| Mentat-Hard v1 | 2026-10-28 | three-part MCC mean (relations, groups, bindings). D3 27B 0.248 | superseded by v2 (`docs/remaining-work.md` section 2.1) | [results](../docs/results/mentat-hard-20261028.md), [json](../docs/results/mentat-hard-20261028.json) |
+| development round 3, release v0.1.0 | 2026-10-30 (results), 2026-10-31 (release) | relation + group MCC mean. D3 27B 0.519 [0.497, 0.541] | **current** | [test](../docs/results/mentat-hard-20261030.md), [private](../docs/results/mentat-hard-private-20261030.md), [prereg](../release/v0.1.0/record/prereg.md) |
+| development round 2 | 2026-10-29 | relation MCC, from 2026-10-29 (the headline changed post-hoc). D3 27B 0.704 [0.682, 0.728]; Clef 27B 0.462 [0.440, 0.486]; rules 0.278 [0.263, 0.292] | superseded by round 3 (header of the round 2 results document) | [results](../docs/history/round-2/report.md), [json](../docs/history/round-2/results.json), [ci](../docs/history/round-2/ci.json) |
+| development round 1 | 2026-10-28 | three-part MCC mean (relations, groups, bindings). D3 27B 0.248 | superseded by round 2 (`docs/remaining-work.md` section 2.1) | [results](../docs/history/round-1/report.md), [json](../docs/history/round-1/results.json) |
 
-The v2 validity audit, which led to the headline change, is
-[docs/results/mentat-hard-v2-validity-audit-20261029.md](../docs/results/mentat-hard-v2-validity-audit-20261029.md).
+The round 2 validity audit, which led to the headline change, is
+[docs/history/round-2/headline-change-disclosure.md](../docs/history/round-2/headline-change-disclosure.md).
 
 ## How to reproduce
 
-The runs are not in git. They are the run directories of the v3 matrix (`runs/20261030-v31-test`, `runs/20261030-v31-test-baselines` and
-`runs/20261030-v31-test-hf/hf`). Replace the placeholders below with the paths to those directories. Commands run from the repository root.
+The runs are not in git. They are the run directories of the round 3 matrix (`runs/20261030-test`, `runs/20261030-test-baselines` and
+`runs/20261030-test-hf/hf`). Replace the placeholders below with the paths to those directories. Commands run from the repository root.
 
 ```bash
-# 1. The public v3 results, recomputed from the runs (writes to a scratch file, then compare with the committed JSON)
-python docs/results/mentat-hard-v3-results/build_results.py --runs <runs/20261030-v31-test> \
-    --baselines <runs/20261030-v31-test-baselines> --hf <runs/20261030-v31-test-hf/hf> --out <scratch>/mentat-hard-v3-20261030.json
+# 1. The public round 3 results, recomputed from the runs (writes to a scratch file, then compare with the committed JSON)
+python docs/results/mentat-hard-results/build_results.py --runs <runs/20261030-test> \
+    --baselines <runs/20261030-test-baselines> --hf <runs/20261030-test-hf/hf> --out <scratch>/mentat-hard-20261030.json
 
-# 2. The league bootstrap, byte for byte (see docs/results/mentat-hard-v3-20261030.md, Provenance, for the full run list)
+# 2. The league bootstrap, byte for byte (see docs/results/mentat-hard-20261030.md, Provenance, for the full run list)
 PYTHONPATH=python python tools/eval/league_ci.py --fixture fixtures/mentat_hard_test --runs <each run directory> \
-    --reference <runs/20261030-v31-test/d3_27b-q8_0> --B 2000 --seed 0 --out <scratch>/ci.json
+    --reference <runs/20261030-test/d3_27b-q8_0> --B 2000 --seed 0 --out <scratch>/ci.json
 
 # 3. This results bundle, from the runs and the committed JSON; it exits 1 if anything disagrees
-python results/v0.1.0/build_bundle.py --runs <runs/20261030-v31-test> \
-    --baselines <runs/20261030-v31-test-baselines> --hf <runs/20261030-v31-test-hf/hf> --out <scratch>/results
+python results/v0.1.0/build_bundle.py --runs <runs/20261030-test> \
+    --baselines <runs/20261030-test-baselines> --hf <runs/20261030-test-hf/hf> --out <scratch>/results
 
 # 4. The bundle's fast tests, which need no runs
 python -m pytest tests/test_results_bundle.py
@@ -584,7 +584,7 @@ Every file in this folder, with its format.
 |---|---|---|
 | `README.md` | This page: the entry point. | Markdown |
 | `index.json` | The versions, the latest one, and the paths of each version's files. | JSON, see [Schemas](#schemas) |
-| `v0.1.0/leaderboard.json` | The public v0.1.0 leaderboard for the website: metadata, provenance, models, baselines, comparisons, gates. | JSON, see [Schemas](#schemas) |
+| `v0.1.0/leaderboard.json` | The v0.1.0 leaderboard for the website: metadata, provenance, models, baselines, comparisons, gates. | JSON, see [Schemas](#schemas) |
 | `v0.1.0/leaderboard.csv` | One row per entry (15 models, then 7 baselines), the main columns. Generated from the JSON. | CSV, see [Schemas](#schemas) |
 | `v0.1.0/predictions/<id>.jsonl.gz` | Per-item test predictions for the 20 cells with scored decisions (15 models, `heuristic`, `lexical`, `embedding`, `gold_view`, `hf`). Gzip, deterministic. | JSON Lines, see [Schemas](#schemas) |
 | `v0.1.0/cells/<id>.json` | The per-cell summary for all 22 cells: score, score_decisions, build summary, child stats, cell build record and wall time. | JSON, see [Schemas](#schemas) |
@@ -596,8 +596,8 @@ The test that guards this folder is [tests/test_results_bundle.py](../tests/test
 
 **`index.json`** (`schema_version` `mentat-bench-results-index/1`). `latest` is the newest version. `versions[]` lists the versions, newest
 first. Each entry has `version`, `date`, `results_date`, `status` (`latest` or `superseded`), `benchmark`, `fixture`, `fixture_version`,
-optional `measurement_release`, `headline`, `superseded_by`, and the paths of its files: `readme`, `leaderboard_json`, `leaderboard_csv`, `predictions_dir`, `cells_dir`,
-`builder`, `results_md`, `results_json`, and the private and prereg documents where they exist. Paths are repository-relative. Older versions have `null` for `readme`, `leaderboard_json`, `leaderboard_csv`, `predictions_dir`, `cells_dir` and `builder`, because this bundle does not cover them. Their `results_md` and `results_json` point to the committed documents.
+`headline`, `superseded_by`, and the paths of its files: `readme`, `leaderboard_json`, `leaderboard_csv`, `predictions_dir`, `cells_dir`,
+`builder`, `results_md`, `results_json`, and the private and prereg documents where they exist. Paths are repository-relative. Older versions have `null` for `readme`, `leaderboard_json`, `leaderboard_csv`, `predictions_dir`, `cells_dir` and `builder`, because this bundle does not cover them. Their `results_md` and `results_json` point to the committed documents. The two development rounds (`round-2`, `round-1`) also have `kind` = `development_round`; the latest release has no `kind`.
 
 **`v0.1.0/leaderboard.json`** (`schema` `mentat-bench-leaderboard/1`). Sorted keys. Top level:
 
@@ -605,7 +605,7 @@ optional `measurement_release`, `headline`, `superseded_by`, and the paths of it
 - `benchmark`: the name, what it measures, the split, the headline definition and decision date, the secondary score, the diagnostics, and the
   reference model's id.
 - `glossary`: the meaning of each metric name used below, and of `ci95` and `rank`. `units` gives the unit of each quantity (MCC from -1 to 1, Q_N from 0 to 100, minutes, seconds, bytes).
-- `provenance`: `measurement_release` (the v0.3 release whose runs are reported), the code commit (`code_commit`), the release commit, the release manifest path and hash, `fixture` (name, version, registry version,
+- `provenance`: the code commit (`code_commit`), the release commit, the release manifest path and hash, `fixture` (name, version, registry version,
   content hash, leagues, markets, outcomes, queries, `item_counts`, and `files` with each file's `bytes` and `sha256`), `private_split`, `child`,
   `ci` (method, file, layout, `B`, `seed`, `leagues`, `level`, `reference`), the document paths, and `ollama_version`.
 - `ranking`: the 15 model ids in rank order. `depth_buckets` and `depth_n`: the depth buckets and their sizes.
@@ -664,10 +664,10 @@ are recomputed from the rounded probabilities, so they agree to within 1e-4 (Bri
 **`v0.1.0/cells/<id>.json`**: `id`, `kind`, `run_dir`, `score` (the cell's `score.json`), `score_decisions` (its `score_decisions.json`; `null` for
 empty and oracle), `build_summary`, `child_stats` (model cells only), `cell` (the cell's `cell.json`: adapter, build flags, fixture stamp,
 engine and repo facts, step timings), `wall` (`build_wall_s`, `build_wall_min`, `step_build_s`), and `predictions` (the source measurement path, or `null`).
-These cell summaries are byte-identical to the original v0.3 measurement bundle; use the leaderboard or index for public v0.1.0 artifact paths.
+These cell summaries are byte-identical to the original round 3 measurement bundle; use the leaderboard or index for public v0.1.0 artifact paths.
 
 The JSON files are UTF-8, with one-space indentation and sorted keys. The builder writes them byte-identically on rerun.
 
 ## Changelog
 
-- 2026-10-31: public v0.1.0 results bundle added (this folder). The v3 measurements, private aggregates and release v0.3 record are unchanged.
+- 2026-10-31: v0.1.0 results bundle (this folder). `v0.1.0/` is the bundle that was there before the relabel (its earlier path is in `docs/history/RENAMES.json`), relabelled and regenerated, not a new addition; the numbers are unchanged. The round-3 results report (`docs/results/mentat-hard-20261030.md`) was relabelled and its JSON regenerated, and the private document's title was edited. The release record (`release/v0.1.0/record/`) is byte-identical to its originals (sha256 in `docs/history/RENAMES.json`).
