@@ -1,4 +1,4 @@
-"""Mentat-Hard v2, stream 2: group_terms and terms_class (adapters/base.py); scoring of group labels with terms and of reading
+"""Development round 2, stream 2: group_terms and terms_class (adapters/base.py); scoring of group labels with terms and of reading
 questions (decision_scoring.py); gold_view's answers to them (adapters/mock.py); a gold_view round trip that scores MCC 1.0 on
 every component; and the v1 behaviour that must not change. The contract is docs/mentat_hard_contracts.md."""
 

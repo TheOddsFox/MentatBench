@@ -211,7 +211,7 @@ python -m mentat_bench.corrections regenerate <name> --version <v> --out <new di
 
 **Mentat-Hard (generated, with committed directories).** `mentat_hard_dev` and `mentat_hard_test` are generated versions whose
 directories are also committed under `fixtures/`.
-- **v3** (registry version `"3"`, generator fixture version `"3.1"`, registered 2026-10-30) is active for each split: `register --generator
+- **v3** (registry version `"3"`, fixture.json label `"3.1"`, the Mentat-Hard test set, revision 3.1; registered 2026-10-30) is active for each split: `register --generator
   mentat_bench.fixtures_hard --seed 20261027 --param split=dev --name mentat_hard_dev --version 3 --reason "<why>"` (test: `--seed 20261028
   --param split=test`). Content hashes: dev `218003c63135ace753a1b2449ee002dc2813c7e99bed8c0956fd5a52187c3964`, test
   `7b408459538d7420e808d5d81e71916c57aee78f459a6b8c0905e48e43c8e6ab`. The registry version (3) and the fixture.json version (3.1) differ
@@ -219,34 +219,19 @@ directories are also committed under `fixtures/`.
   The committed directories are its build (`python -m mentat_bench.fixtures_hard build --split S --out fixtures/mentat_hard_S`),
   and `regenerate` reproduces both byte for byte.
 - **v2** (generator `"2"`, registered 2026-10-29) is `superseded` by v3. Its entry, hashes and manifest
-  (`fixtures/manifests/mentat_hard_{dev,test}_v2.json`) stay; its committed bytes are in git history (commit `928df14`, the
-  registration). Content hashes: dev `09da49370c1f3830c39bcd0e9f47193766b2446c22a03190b144a26b7fccad55`, test
+  (`fixtures/manifests/mentat_hard_{dev,test}_v2.json`) stay; its committed bytes are in git history (commit `928df14`, a commit of the
+  private development repository, not published here; the registration). Content hashes: dev `09da49370c1f3830c39bcd0e9f47193766b2446c22a03190b144a26b7fccad55`, test
   `1f4613bec957dd4de9b261b48241dbeeb3faf127a1a7686a6cf938b9a6aefc2e`.
 - **v1** (generator `"1"`, registered 2026-10-27) is `superseded` by v2. Its entry, hashes and manifest
   (`fixtures/manifests/mentat_hard_{dev,test}_v1.json`) stay; its committed bytes are in git history.
 - **Limit: v1 regenerates only at commit `7749647`**, where the generator is still v1. The whitelist names a module, not a commit,
   and `GENERATOR_PARAMS` is tied to the module, which is now v3. At HEAD `regenerate` refuses v1 (the output differs from its
   manifest), and the refusal is the behaviour, not a bug to work around. To reproduce v1, extract that commit
-  (`git archive 7749647 python fixtures | tar -x -C <new dir>`) and run `regenerate` there: dev gives `7d23bcbd...`, test
+  from the private development repository and run `regenerate` there: dev gives `7d23bcbd...`, test
   `0907b4f8...`.
 - **v2 regenerates at commit `5e65729`** (the generator with `VERSION = "2"`). Checked for dev: that commit's
   `python/` tree, built with `python -m mentat_bench.fixtures_hard build --split dev`, gives content hash
-  `09da4937...`, the registered v2 hash. The test split was not checked at that commit. At HEAD (v3.1) `regenerate`
-  refuses v2, as it refuses v1: the generator now writes v3.1 bytes.
+  `09da4937...`, the registered v2 hash. The test split was not checked at that commit. At HEAD (revision 3.1) `regenerate`
+  refuses v2, as it refuses v1: the generator now writes revision 3.1 bytes.
 
-**Retired versions (exact-scale).** The exact-scale fixtures were registered this way (owner decision D3). Their generators
-(`fixtures_exact`, `fixtures_d4`) were removed on 2026-10-27 by owner decision, with the rest of the exact-scale track
-(docs/exact_scale.md). The five versions are `retired`: each entry got a change-log entry ("generator removed 2026-10-27, owner
-decision; not regenerable at this commit"). Their content hashes, file hashes and manifests are unchanged, and are kept as
-records. `regenerate` refuses them ("is retired: its generator ... was removed"), `rehash` refuses them, and `register`
-refuses a committed version under their names.
-
-| Version | Content hash (sha256) | Files | Bytes |
-|---|---|---|---|
-| `exact_p1_s24` v1 (p1, 24 seasons, 10,368 classes) | `89cbdc172cafb94206ac2f2495261e21624c747f59a9efb298f266498eda5d96` | 8 | 17,993,153 |
-| `exact_p2_s22` v1 (p2, 22 seasons, 10,184 classes, the 10k tier) | `3a82e59b60aa23a562a2497082a59fc3fc74a4b742fc2697a96ce26caa2fefcb` | 10 | 18,714,878 |
-| `exact_p2_s210` v1 (p2, 210 seasons, 100,518 classes, the 100k tier) | `35437e92a26c2a871d0783f2a3b1f18e655882d41b141db61a0c6efae503138b` | 10 | 184,389,579 |
-| `exact_p2_s2096` v1 (p2, 2,096 seasons, 1,000,383 classes, the 1M tier) | `6a4d2cd28d05ac00b47496e4588c285106f9402454371e4fd011268600547e0d` | 10 | 1,835,404,454 |
-| `exact_d4` v1 (the D4 proxy, seed 20261018) | `493884b6b1f38ee15a540e3871b79880d1165a201f742b66686d7854324f39b9` | 11 | 5,836,766 |
-
-The byte counts are those of the regenerated directories, measured before the removal.
+**Retired versions (exact-scale).** The exact-scale fixtures were registered this way (owner decision D3). Their generators (`fixtures_exact`, `fixtures_d4`) were removed on 2026-10-27 by owner decision, with the rest of the exact-scale track ([docs/exact_scale.md](exact_scale.md)). Their registry entries are not part of this public checkout. In the full repository the five versions are `retired`: `regenerate` refuses them, and `register` refuses a committed version under their names.

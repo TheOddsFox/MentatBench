@@ -1,6 +1,6 @@
 # Native open-discovery adjudication protocol
 
-Normative basis: `mentat-bench-v0.2.md` sections 4, 7 and 8. Implementation: `python/mentat_bench/adjudication.py`
+Normative basis: `SPEC.md` sections 4, 7 and 8. Implementation: `python/mentat_bench/adjudication.py`
 (`python -m mentat_bench.adjudication frame|sample|export|import|estimate`).
 
 Native open-discovery audits check the claims a submitted theory makes beyond the queries. Human annotators judge a

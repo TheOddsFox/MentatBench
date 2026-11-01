@@ -1,4 +1,4 @@
-"""Native open-discovery adjudication (mentat-bench-v0.1.md sections 4, 7 and 8).
+"""Native open-discovery adjudication (docs/history/specs/spec-2026-10-18.md sections 4, 7 and 8).
 
 Subcommands (python -m mentat_bench.adjudication):
   frame     submission dir -> normalized assertion registry (frame.jsonl, frame_summary.json)

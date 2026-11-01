@@ -218,8 +218,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-baselines/heuristic",
-   "runcard": "release/v0.3/runcards/heuristic.json",
+   "run_dir": "runs/20261030-test-baselines/heuristic",
+   "runcard": "release/v0.1.0/runcards/heuristic.json",
    "runtime": {
     "build_wall_min": 0.0,
     "build_wall_s": 1.155,
@@ -406,8 +406,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-baselines/lexical",
-   "runcard": "release/v0.3/runcards/lexical.json",
+   "run_dir": "runs/20261030-test-baselines/lexical",
+   "runcard": "release/v0.1.0/runcards/lexical.json",
    "runtime": {
     "build_wall_min": 0.0,
     "build_wall_s": 0.844,
@@ -594,8 +594,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-baselines/embedding",
-   "runcard": "release/v0.3/runcards/embedding.json",
+   "run_dir": "runs/20261030-test-baselines/embedding",
+   "runcard": "release/v0.1.0/runcards/embedding.json",
    "runtime": {
     "build_wall_min": 0.3,
     "build_wall_s": 17.461,
@@ -659,8 +659,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-baselines/empty",
-   "runcard": "release/v0.3/runcards/empty.json",
+   "run_dir": "runs/20261030-test-baselines/empty",
+   "runcard": "release/v0.1.0/runcards/empty.json",
    "runtime": {
     "build_wall_min": 0.2,
     "build_wall_s": 9.145,
@@ -884,8 +884,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-baselines/gold_view",
-   "runcard": "release/v0.3/runcards/gold_view.json",
+   "run_dir": "runs/20261030-test-baselines/gold_view",
+   "runcard": "release/v0.1.0/runcards/gold_view.json",
    "runtime": {
     "build_wall_min": 0.0,
     "build_wall_s": 1.063,
@@ -949,8 +949,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-baselines/oracle",
-   "runcard": "release/v0.3/runcards/oracle.json",
+   "run_dir": "runs/20261030-test-baselines/oracle",
+   "runcard": "release/v0.1.0/runcards/oracle.json",
    "runtime": {
     "build_wall_min": 0.0,
     "build_wall_s": 0.7,
@@ -1152,8 +1152,8 @@
     "groups_dropped_pct": 22.8,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test-hf/hf",
-   "runcard": "release/v0.3/runcards/hf.json",
+   "run_dir": "runs/20261030-test-hf/hf",
+   "runcard": "release/v0.1.0/runcards/hf.json",
    "runtime": {
     "build_wall_min": 1.5,
     "build_wall_s": 88.852,
@@ -1179,7 +1179,7 @@
   "name": "Mentat-Hard",
   "reference": "d3_27b-q8_0",
   "secondary": "binding_mcc",
-  "split": "mentat_hard_test (public, fixture version 3.1)"
+  "split": "mentat_hard_test (public, Mentat-Hard test set, revision 3.1)"
  },
  "d3_size_curve": [
   {
@@ -1581,8 +1581,8 @@
     "groups_dropped_pct": 5.18,
     "relations_dropped": 52
    },
-   "run_dir": "runs/20261030-v31-test/d3_27b-q8_0",
-   "runcard": "release/v0.3/runcards/d3_27b-q8_0.json",
+   "run_dir": "runs/20261030-test/d3_27b-q8_0",
+   "runcard": "release/v0.1.0/runcards/d3_27b-q8_0.json",
    "runtime": {
     "build_wall_min": 74.6,
     "build_wall_s": 4478.242,
@@ -1832,8 +1832,8 @@
     "groups_dropped_pct": 10.67,
     "relations_dropped": 30
    },
-   "run_dir": "runs/20261030-v31-test/d3_9b-q8_0",
-   "runcard": "release/v0.3/runcards/d3_9b-q8_0.json",
+   "run_dir": "runs/20261030-test/d3_9b-q8_0",
+   "runcard": "release/v0.1.0/runcards/d3_9b-q8_0.json",
    "runtime": {
     "build_wall_min": 21.9,
     "build_wall_s": 1316.325,
@@ -2081,8 +2081,8 @@
     "groups_dropped_pct": 20.61,
     "relations_dropped": 79
    },
-   "run_dir": "runs/20261030-v31-test/pplx-decider_27b",
-   "runcard": "release/v0.3/runcards/pplx-decider_27b.json",
+   "run_dir": "runs/20261030-test/pplx-decider_27b",
+   "runcard": "release/v0.1.0/runcards/pplx-decider_27b.json",
    "runtime": {
     "build_wall_min": 74.4,
     "build_wall_s": 4465.341,
@@ -2328,8 +2328,8 @@
     "groups_dropped_pct": 6.19,
     "relations_dropped": 9
    },
-   "run_dir": "runs/20261030-v31-test/kev_9b-bf16",
-   "runcard": "release/v0.3/runcards/kev_9b-bf16.json",
+   "run_dir": "runs/20261030-test/kev_9b-bf16",
+   "runcard": "release/v0.1.0/runcards/kev_9b-bf16.json",
    "runtime": {
     "build_wall_min": 34.9,
     "build_wall_s": 2094.826,
@@ -2577,8 +2577,8 @@
     "groups_dropped_pct": 7.46,
     "relations_dropped": 30
    },
-   "run_dir": "runs/20261030-v31-test/d3_4b-q8_0",
-   "runcard": "release/v0.3/runcards/d3_4b-q8_0.json",
+   "run_dir": "runs/20261030-test/d3_4b-q8_0",
+   "runcard": "release/v0.1.0/runcards/d3_4b-q8_0.json",
    "runtime": {
     "build_wall_min": 15.4,
     "build_wall_s": 923.156,
@@ -2825,8 +2825,8 @@
     "groups_dropped_pct": 14.89,
     "relations_dropped": 74
    },
-   "run_dir": "runs/20261030-v31-test/clef_27b-q8_0",
-   "runcard": "release/v0.3/runcards/clef_27b-q8_0.json",
+   "run_dir": "runs/20261030-test/clef_27b-q8_0",
+   "runcard": "release/v0.1.0/runcards/clef_27b-q8_0.json",
    "runtime": {
     "build_wall_min": 78.7,
     "build_wall_s": 4721.484,
@@ -3074,8 +3074,8 @@
     "groups_dropped_pct": 15.79,
     "relations_dropped": 2
    },
-   "run_dir": "runs/20261030-v31-test/nimble-v3_9b-q8_0",
-   "runcard": "release/v0.3/runcards/nimble-v3_9b-q8_0.json",
+   "run_dir": "runs/20261030-test/nimble-v3_9b-q8_0",
+   "runcard": "release/v0.1.0/runcards/nimble-v3_9b-q8_0.json",
    "runtime": {
     "build_wall_min": 28.3,
     "build_wall_s": 1698.605,
@@ -3321,8 +3321,8 @@
     "groups_dropped_pct": 19.61,
     "relations_dropped": 9
    },
-   "run_dir": "runs/20261030-v31-test/nimble_9b-bf16",
-   "runcard": "release/v0.3/runcards/nimble_9b-bf16.json",
+   "run_dir": "runs/20261030-test/nimble_9b-bf16",
+   "runcard": "release/v0.1.0/runcards/nimble_9b-bf16.json",
    "runtime": {
     "build_wall_min": 27.7,
     "build_wall_s": 1659.672,
@@ -3568,8 +3568,8 @@
     "groups_dropped_pct": 10.72,
     "relations_dropped": 8
    },
-   "run_dir": "runs/20261030-v31-test/clef-flash_9b",
-   "runcard": "release/v0.3/runcards/clef-flash_9b.json",
+   "run_dir": "runs/20261030-test/clef-flash_9b",
+   "runcard": "release/v0.1.0/runcards/clef-flash_9b.json",
    "runtime": {
     "build_wall_min": 26.4,
     "build_wall_s": 1582.738,
@@ -3815,8 +3815,8 @@
     "groups_dropped_pct": 3.92,
     "relations_dropped": 2
    },
-   "run_dir": "runs/20261030-v31-test/tev1_4b-q8_0",
-   "runcard": "release/v0.3/runcards/tev1_4b-q8_0.json",
+   "run_dir": "runs/20261030-test/tev1_4b-q8_0",
+   "runcard": "release/v0.1.0/runcards/tev1_4b-q8_0.json",
    "runtime": {
     "build_wall_min": 17.2,
     "build_wall_s": 1033.288,
@@ -4062,8 +4062,8 @@
     "groups_dropped_pct": 11.95,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test/d1_3b-q8_0",
-   "runcard": "release/v0.3/runcards/d1_3b-q8_0.json",
+   "run_dir": "runs/20261030-test/d1_3b-q8_0",
+   "runcard": "release/v0.1.0/runcards/d1_3b-q8_0.json",
    "runtime": {
     "build_wall_min": 8.5,
     "build_wall_s": 510.627,
@@ -4309,8 +4309,8 @@
     "groups_dropped_pct": 0.84,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test/d3_2b-q8_0",
-   "runcard": "release/v0.3/runcards/d3_2b-q8_0.json",
+   "run_dir": "runs/20261030-test/d3_2b-q8_0",
+   "runcard": "release/v0.1.0/runcards/d3_2b-q8_0.json",
    "runtime": {
     "build_wall_min": 6.9,
     "build_wall_s": 415.654,
@@ -4561,8 +4561,8 @@
     "groups_dropped_pct": 0.0,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test/tev1_0.8b-q8_0",
-   "runcard": "release/v0.3/runcards/tev1_0.8b-q8_0.json",
+   "run_dir": "runs/20261030-test/tev1_0.8b-q8_0",
+   "runcard": "release/v0.1.0/runcards/tev1_0.8b-q8_0.json",
    "runtime": {
     "build_wall_min": 6.6,
     "build_wall_s": 393.027,
@@ -4812,8 +4812,8 @@
     "groups_dropped_pct": 18.82,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test/d1-omni_600m-q8_0",
-   "runcard": "release/v0.3/runcards/d1-omni_600m-q8_0.json",
+   "run_dir": "runs/20261030-test/d1-omni_600m-q8_0",
+   "runcard": "release/v0.1.0/runcards/d1-omni_600m-q8_0.json",
    "runtime": {
     "build_wall_min": 4.7,
     "build_wall_s": 281.982,
@@ -5065,8 +5065,8 @@
     "groups_dropped_pct": 6.41,
     "relations_dropped": 0
    },
-   "run_dir": "runs/20261030-v31-test/laya_latest",
-   "runcard": "release/v0.3/runcards/laya_latest.json",
+   "run_dir": "runs/20261030-test/laya_latest",
+   "runcard": "release/v0.1.0/runcards/laya_latest.json",
    "runtime": {
     "build_wall_min": 2.4,
     "build_wall_s": 145.344,
@@ -5115,12 +5115,12 @@
   },
   "ci": {
    "B": 2000,
-   "file": "docs/results/mentat-hard-v3-20261030-ci.json",
+   "file": "docs/results/mentat-hard-20261030-ci.json",
    "layout": "relation-group-headline/1",
    "leagues": 18,
    "level": 0.95,
    "method": "league bootstrap: B draws of the 18 leagues with replacement (random.Random('league_ci:0')), the same draws for every run; 95% percentile intervals (numpy, linear); paired gaps, reference minus run",
-   "private_file": "docs/results/mentat-hard-v3-private-20261030-ci.json",
+   "private_file": "docs/results/mentat-hard-private-20261030-ci.json",
    "reference": "d3_27b-q8_0",
    "reference_chosen_on": "dev",
    "seed": 0
@@ -5209,11 +5209,10 @@
    "registry_version": "3",
    "version": "3.1"
   },
-  "measurement_release": "v0.3",
   "ollama_version": "0.40.11",
-  "prereg": "docs/results/mentat-hard-v3-prereg-20261030.json",
-  "private_results_json": "docs/results/mentat-hard-v3-private-20261030.json",
-  "private_results_md": "docs/results/mentat-hard-v3-private-20261030.md",
+  "prereg": "release/v0.1.0/record/prereg.json",
+  "private_results_json": "docs/results/mentat-hard-private-20261030.json",
+  "private_results_md": "docs/results/mentat-hard-private-20261030.md",
   "private_split": {
    "candidates": 10406,
    "content_hash": "1253bb5dfee2c02a34ded7e659a0158dc8996be9660d7be0ee14ffba19077263",
@@ -5232,14 +5231,14 @@
    "sealed": true
   },
   "release_manifest": {
-   "path": "release/release_manifest_v0.3.json",
+   "path": "release/v0.1.0/record/release_manifest.json",
    "sha256": "1883a569215867621c97f56061ce979a6fdec4b625d80c81f7c72ce97a3ba5ff"
   },
   "release_pinned_commit": "defed6a44cd6abd908f0ea3e1c517f0877735eb0",
-  "results_builder": "docs/results/mentat-hard-v3-results/build_results.py",
-  "results_json": "docs/results/mentat-hard-v3-20261030.json",
-  "results_md": "docs/results/mentat-hard-v3-20261030.md",
-  "runs": "runs/20261030-v31-test, runs/20261030-v31-test-baselines, runs/20261030-v31-test-hf (not committed)"
+  "results_builder": "docs/results/mentat-hard-results/build_results.py",
+  "results_json": "docs/results/mentat-hard-20261030.json",
+  "results_md": "docs/results/mentat-hard-20261030.md",
+  "runs": "runs/20261030-test, runs/20261030-test-baselines, runs/20261030-test-hf (not committed)"
  },
  "ranking": [
   "d3_27b-q8_0",
@@ -5262,12 +5261,13 @@
  "release_gates": {
   "built_at_commit": "defed6a44cd6abd908f0ea3e1c517f0877735eb0",
   "gate_7_scope": "MET at the pinned commit only; UNKNOWN at any later commit (docs/remaining-work.md section 2.3)",
+  "recorded_at": "defed6a, 2026-10-31",
   "rows": [
    {
     "evidence": "release_manifest.json",
     "gate": 1,
     "name": "Immutable corpus manifests, evidence policy, schemas, IR semantics, resource profiles",
-    "note": "verifies; pins the spec, docs/ir.md, the engine, profiles, fixture files and fixture manifests, data, run cards, baselines, attestations and the repo state; the evidence policy and the schemas are not pinned; sealed ['mentat_hard_private'] pinned by content hash only; declared scope mentat-hard",
+    "note": "verifies; pins the spec, docs/history/specs/ir-2026-10-28.md, the engine, profiles, fixture files and fixture manifests, data, run cards, baselines, attestations and the repo state; the evidence policy and the schemas are not pinned; sealed ['mentat_hard_private'] pinned by content hash only; declared scope mentat-hard",
     "status": "MET"
    },
    {
@@ -5295,11 +5295,11 @@
     "evidence": "docs/exact_scale.md",
     "gate": 5,
     "name": "At least 1M reference-distinct, actively tested semantic units before using the Exact 1M label",
-    "note": "removed by owner decision 2026-10-27: the exact-scale code is gone and the Exact 1M label is not claimed (spec v0.2)",
+    "note": "removed by owner decision 2026-10-27: the exact-scale code is gone and the Exact 1M label is not claimed (spec revision of 2026-10-27)",
     "status": "REMOVED"
    },
    {
-    "evidence": "fixtures/mentat_hard_dev/gold/verdicts.jsonl, fixtures/mentat_hard_test/gold/verdicts.jsonl; attestation release/v0.3/attestations.json",
+    "evidence": "fixtures/mentat_hard_dev/gold/verdicts.jsonl, fixtures/mentat_hard_test/gold/verdicts.jsonl; attestation release/v0.1.0/record/attestations.json",
     "gate": 6,
     "name": "Reference validation of every hidden query and certificate rule (with global-difficulty strata)",
     "note": "every query has a verdict; certificate rules and strata are not checked here; attested by TheOddsFox (repository owner) on 2026-10-31 (statement and evidence in the attestation file)",
@@ -5313,7 +5313,7 @@
     "status": "MET"
    },
    {
-    "evidence": "python/mentat_bench/adjudication.py; attestation release/v0.3/attestations.json",
+    "evidence": "python/mentat_bench/adjudication.py; attestation release/v0.1.0/record/attestations.json",
     "gate": 8,
     "name": "Blinded annotation and adjudication policy",
     "note": "blinded tooling present; blinding in practice is not checked; attested by TheOddsFox (repository owner) on 2026-10-31 (statement and evidence in the attestation file)",
@@ -5327,21 +5327,21 @@
     "status": "MET"
    },
    {
-    "evidence": "release/v0.3/baselines.json and the run cards of its cells",
+    "evidence": "release/v0.1.0/baselines.json and the run cards of its cells",
     "gate": 10,
     "name": "Passing baseline runs",
     "note": "all required baselines and the fixed pipeline pass; the manifest verifies",
     "status": "MET"
    },
    {
-    "evidence": "docs/corrections.md; attestation release/v0.3/attestations.json",
+    "evidence": "docs/corrections.md; attestation release/v0.1.0/record/attestations.json",
     "gate": 11,
     "name": "Public correction process that versions faulty fixtures",
     "note": "document present; that corrections are applied is not checked here; attested by TheOddsFox (repository owner) on 2026-10-31 (statement and evidence in the attestation file)",
     "status": "MET (attested)"
    }
   ],
-  "source": "release/check_gates_v0.3.md"
+  "source": "release/v0.1.0/record/check_gates.md"
  },
  "resolved_comparisons": [
   {

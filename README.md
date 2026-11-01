@@ -4,13 +4,13 @@ MentatBench evaluates whether a model can turn a corpus of propositions into a l
 
 ## Results
 
-The published panel is **Mentat-Hard v3.1**. Its headline is the mean of relation MCC and group MCC; Q_N is an end-to-end diagnostic, not the model ranking. See the [results overview](results/README.md), [leaderboard JSON](results/v0.1.0/leaderboard.json), and [leaderboard CSV](results/v0.1.0/leaderboard.csv).
+The published panel is the **Mentat-Hard test set, revision 3.1**. Its headline is the mean of relation MCC and group MCC; Q_N is an end-to-end diagnostic, not the model ranking. See the [results overview](results/README.md), [leaderboard JSON](results/v0.1.0/leaderboard.json), and [leaderboard CSV](results/v0.1.0/leaderboard.csv).
 
-The `v0.1.0` label identifies this public software and results bundle. The source was exported from private main commit `eef88ebe6711faab29c74e65c65426b54d9e7132`. The measurements were run earlier as internal release v0.3, on fixture 3.1; the test cells used commit `0bff47f`. This publication relabels those results and is not a new measurement.
+The `v0.1.0` label identifies this public software and results bundle, exported from a private development repository whose commits are not published. The measurements were run on the Mentat-Hard test set, revision 3.1 (development round 3); this publication relabels those results and is not a new measurement.
 
 ## Build from source
 
-Use Python 3.11 or newer (CI uses Python 3.12) and Rust. CI targets Linux; a macOS smoke check passed. Windows has not been validated.
+Use Python 3.11 or newer (CI uses Python 3.12) and Rust. CI targets Linux; a macOS smoke check was run by the maintainer (it is not part of CI). Windows has not been validated.
 
 ```bash
 python3 -m venv .venv

@@ -33,6 +33,6 @@ The report summarizes the supplied `runcell` directories. It does not combine qu
 
 ## Historical release evidence
 
-The manifests, run cards, and gate reports for internal releases v0.2 and v0.3 remain unchanged under [`release/`](../release/). They are measurement records. The v0.3 evidence concerns Mentat-Hard fixture 3.1 and the results now published in the [v0.1.0 bundle](../results/README.md). The public software and bundle version is separate from the original internal release label.
+The manifests, run cards, and gate reports for development round 2 are kept unchanged under [`docs/history/round-2/`](history/round-2/), and those for v0.1.0 under [`release/v0.1.0/record/`](../release/v0.1.0/record/). They are measurement records. The v0.1.0 record concerns the Mentat-Hard test set, revision 3.1, and the results now published in the [v0.1.0 bundle](../results/README.md).
 
-Those manifests pin inputs that are not present here: the original private source snapshot, a Windows `mb-engine.exe`, the external Parquet catalogue, and a sealed private fixture. The internal release runner was omitted from this source checkout. Consequently this checkout has no active `release build`, `release verify`, or `release check-gates` command, and the archived gate reports are not verification of the current public source tree.
+Those manifests pin inputs that are not present here: the original private source snapshot, a Windows `mb-engine.exe`, the external Parquet catalogue, and a sealed private fixture. The release runner was omitted from this source checkout. Consequently this checkout has no active `release build`, `release verify`, or `release check-gates` command, and the archived gate reports are not verification of the current public source tree.

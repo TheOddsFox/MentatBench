@@ -1,25 +1,25 @@
-# Mentat-Hard v3 test results, 2026-10-30
+# development round 3 test results, 2026-10-30
 
 > Results bundle (website entry point, leaderboard JSON and CSV, per-item predictions): [results/README.md](../../results/README.md).
 
-This document reports the pre-registered v3 test matrix (`mentat-hard-v3-prereg-20261030.md`, frozen before any test run).
-Each of the 15 models was run once on `mentat_hard_test` (fixture version 3.1), with the CPU baselines and the hf pipeline
-baseline. The numbers are in `mentat-hard-v3-20261030.json` (built by `mentat-hard-v3-results/build_results.py`) and the
-intervals are in `mentat-hard-v3-20261030-ci.json` (league bootstrap, `tools/eval/league_ci.py`). The run directories are in
-`runs/20261030-v31-test/`, `runs/20261030-v31-test-baselines/` and `runs/20261030-v31-test-hf/` (not committed).
+This document reports the pre-registered round 3 test matrix (`prereg.md`, frozen before any test run).
+Each of the 15 models was run once on `mentat_hard_test` (test set revision 3.1), with the CPU baselines and the hf pipeline
+baseline. The numbers are in `mentat-hard-20261030.json` (built by `mentat-hard-results/build_results.py`) and the
+intervals are in `mentat-hard-20261030-ci.json` (league bootstrap, `tools/eval/league_ci.py`). The run directories are in
+`runs/20261030-test/`, `runs/20261030-test-baselines/` and `runs/20261030-test-hf/` (not committed).
 
 Scores follow the pre-registration. Anything not pre-registered is labelled post-hoc. No score was changed after the test
 runs. The overlap statements below are descriptive, not tests.
 
 ## Setup
-- **Code:** the test cells record commit 0bff47f, a clean tree. The prereg names 9ad5f2c. 0bff47f adds only the two prereg files (`docs/results/mentat-hard-v3-prereg-20261030.{md,json}`) on top of it, with no code change (`git diff --stat 9ad5f2c 0bff47f`).
-- **Child:** `systemone-choice` v7, `prompt_sha256` d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44.
+- **Code:** the test cells record commit 0bff47f (a commit of the private development repository, not published here), a clean tree. The prereg names 9ad5f2c. 0bff47f adds only the two prereg files (`docs/results/prereg.{md,json}`) on top of it, with no code change (`git diff --stat 9ad5f2c 0bff47f`).
+- **Child:** `systemone-choice` version 7, `prompt_sha256` d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44.
   One question per request, rule cards in the relation, group and reading states.
-- **Fixture:** `mentat_hard_test` v3.1, content hash 7b408459…. 6,000 relation questions (1,500 NONE), 1,184 group questions
+- **Fixture:** `mentat_hard_test` revision 3.1, content hash 7b408459…. 6,000 relation questions (1,500 NONE), 1,184 group questions
   (184 of them reading questions, two readings each), 3,348 binding questions. 10,532 decisions per model cell, heuristic, gold_view and hf, all scored. Lexical and embedding have 9,348 decisions (6,000 relation and 3,348 binding, no group decisions, so their 1,000 group questions are unanswered).
 - **Run conditions:** per-model relation floors from dev, `--top-k 24`, `--batch-size 128`, build deadline 5,400 s. Every cell
   has the same build flags apart from the relation floor. They also set `--local-timeout 600.0` and `--hello-timeout 900.0`,
-  which the pre-registered command does not list (the v2 runs did the same). Every cell completed with no item errors, no
+  which the pre-registered command does not list (the round 2 runs did the same). Every cell completed with no item errors, no
   500 retries and no refused instructions (child stats; child stats exist only for the 15 model cells).
 - **Headline:** the mean of relation MCC and group MCC on raw (unfloored) decisions, decided on dev. Binding MCC is secondary.
   Reading MCC, held-out relation MCC and Q_N are diagnostics.
@@ -57,7 +57,7 @@ score. Dev is the pre-registered dev headline, shown as stored in the prereg JSO
 | *gold_view* (perfect curated answers; ceiling) | *1.000 [1.000, 1.000]* | *1.000 [1.000, 1.000]* | *1.000 [1.000, 1.000]* | *1.000 [1.000, 1.000]* | *−0.481 [−0.503, −0.459]* | — |
 | *hf pipeline (Qwen2.5-1.5B-Instruct)* | *0.008 [−0.002, 0.018]* | *0.030 [0.018, 0.043]* | *−0.015 [−0.027, −0.002]* | *−0.018 [−0.021, −0.014]* | *0.511 [0.485, 0.537]* | — |
 
-- The rules, lexical, embedding and gold_view rows are the CPU baselines from `runs/20261030-v31-test-baselines`, run in the
+- The rules, lexical, embedding and gold_view rows are the CPU baselines from `runs/20261030-test-baselines`, run in the
   same league bootstrap. Their paired gaps are against D3 27B. The rules child is the pre-registered "rules" baseline.
 - The hf row is the pre-registered hf pipeline baseline (release gate 10). Its cell finished after the first league_ci run, so
   it was added to the bootstrap run; the other runs' values are unchanged. Its build flags differ from the pre-registered
@@ -257,7 +257,7 @@ Each build repairs its base theory. The build reports the groups and relations i
 
 ## Speed (build wall time per cell)
 
-Build wall time = `build_summary.json` `wall_seconds`, as in the v2 table. The cell's `step_seconds.build` is also in the JSON.
+Build wall time = `build_summary.json` `wall_seconds`, as in the round 2 table. The cell's `step_seconds.build` is also in the JSON.
 
 | Run | Build wall time |
 |---|---|
@@ -328,8 +328,8 @@ These are the limits disclosed in the pre-registration, carried over unchanged:
 - **Held-out share on test** is 38.9% of relations (2,332 of 6,000), above the ~30% target.
 - **Small context.** Laya's context is 512 tokens. See the new finding below.
 - **Bindings.** Bindings get no card. Binding MCC is 0.000 for D3 27B, Pplx and D3 4B, as pre-registered.
-- **Post-hoc changes, all decided on dev before any test run:** v3.1 (harder relations), the relation + group headline and
-  child v7 (the audit fix). Each is an owner decision recorded in its PR.
+- **Post-hoc changes, all decided on dev before any test run:** revision 3.1 (harder relations), the relation + group headline and
+  child version 7 (the audit fix). Each is an owner decision recorded in its PR.
 - **Judges are models.** The answerability audits use two Haiku 5.5 judges, not people.
 - **Intervals.** With 18 clusters, the bootstrap intervals somewhat under-cover. Choosing the reference on dev is not
   corrected for in the paired gaps.
@@ -360,17 +360,17 @@ New limits found in these results:
 
 ## Provenance
 
-- Code commit 0bff47f (the prereg names 9ad5f2c; 0bff47f adds only the two prereg files, with no code change). Test cells: `runs/20261030-v31-test/` (15 models, one run each). Baselines:
-  `runs/20261030-v31-test-baselines/`. hf: `runs/20261030-v31-test-hf/hf/` (complete; included in the league_ci run).
-- Fixture `mentat_hard_test` v3.1, content hash 7b408459538d7420e808d5d81e71916c57aee78f459a6b8c0905e48e43c8e6ab.
-- Child `systemone-choice` v7, prompt sha256 d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44.
-- Intervals: `mentat-hard-v3-20261030-ci.json` (league_ci, `relation-group-headline/1`, B = 2000, seed 0, reference
+- Code commit 0bff47f (the prereg names 9ad5f2c; 0bff47f adds only the two prereg files, with no code change). Test cells: `runs/20261030-test/` (15 models, one run each). Baselines:
+  `runs/20261030-test-baselines/`. hf: `runs/20261030-test-hf/hf/` (complete; included in the league_ci run).
+- Fixture `mentat_hard_test` revision 3.1, content hash 7b408459538d7420e808d5d81e71916c57aee78f459a6b8c0905e48e43c8e6ab.
+- Child `systemone-choice` version 7, prompt sha256 d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44.
+- Intervals: `mentat-hard-20261030-ci.json` (league_ci, `relation-group-headline/1`, B = 2000, seed 0, reference
   `d3_27b-q8_0`, runs: the 15 model cells plus `heuristic`, `gold_view`, `lexical`, `embedding` and `hf`, 20 in all).
   Rerunning the command below reproduces it byte for byte (`<runs>` is the `runs/` folder of the checkout that holds the run directories; `<scratch>` is any temporary folder):
 
   ```
-  PYTHONPATH=python python tools/eval/league_ci.py --fixture fixtures/mentat_hard_test --runs <runs>/20261030-v31-test/clef-flash_9b <runs>/20261030-v31-test/clef_27b-q8_0 <runs>/20261030-v31-test/d1-omni_600m-q8_0 <runs>/20261030-v31-test/d1_3b-q8_0 <runs>/20261030-v31-test/d3_27b-q8_0 <runs>/20261030-v31-test/d3_2b-q8_0 <runs>/20261030-v31-test/d3_4b-q8_0 <runs>/20261030-v31-test/d3_9b-q8_0 <runs>/20261030-v31-test/kev_9b-bf16 <runs>/20261030-v31-test/laya_latest <runs>/20261030-v31-test/nimble-v3_9b-q8_0 <runs>/20261030-v31-test/nimble_9b-bf16 <runs>/20261030-v31-test/pplx-decider_27b <runs>/20261030-v31-test/tev1_0.8b-q8_0 <runs>/20261030-v31-test/tev1_4b-q8_0 <runs>/20261030-v31-test-baselines/heuristic <runs>/20261030-v31-test-baselines/gold_view <runs>/20261030-v31-test-baselines/lexical <runs>/20261030-v31-test-baselines/embedding <runs>/20261030-v31-test-hf/hf --reference <runs>/20261030-v31-test/d3_27b-q8_0 --B 2000 --seed 0 --out docs/results/mentat-hard-v3-20261030-ci.json --md <scratch>/results/regen-ci-hf.md
+  PYTHONPATH=python python tools/eval/league_ci.py --fixture fixtures/mentat_hard_test --runs <runs>/20261030-test/clef-flash_9b <runs>/20261030-test/clef_27b-q8_0 <runs>/20261030-test/d1-omni_600m-q8_0 <runs>/20261030-test/d1_3b-q8_0 <runs>/20261030-test/d3_27b-q8_0 <runs>/20261030-test/d3_2b-q8_0 <runs>/20261030-test/d3_4b-q8_0 <runs>/20261030-test/d3_9b-q8_0 <runs>/20261030-test/kev_9b-bf16 <runs>/20261030-test/laya_latest <runs>/20261030-test/nimble-v3_9b-q8_0 <runs>/20261030-test/nimble_9b-bf16 <runs>/20261030-test/pplx-decider_27b <runs>/20261030-test/tev1_0.8b-q8_0 <runs>/20261030-test/tev1_4b-q8_0 <runs>/20261030-test-baselines/heuristic <runs>/20261030-test-baselines/gold_view <runs>/20261030-test-baselines/lexical <runs>/20261030-test-baselines/embedding <runs>/20261030-test-hf/hf --reference <runs>/20261030-test/d3_27b-q8_0 --B 2000 --seed 0 --out docs/results/mentat-hard-20261030-ci.json --md <scratch>/results/regen-ci-hf.md
   ```
-- Recompute: `python docs/results/mentat-hard-v3-results/build_results.py` from the repo root. It checks every decision score
+- Recompute: `python docs/results/mentat-hard-results/build_results.py` from the repo root. It checks every decision score
   against `score_decisions.json`, every interval point against the CI file, the model digest and floor against the
-  pre-registration, and the fixture and child hashes. It writes `mentat-hard-v3-20261030.json`.
+  pre-registration, and the fixture and child hashes. It writes `mentat-hard-20261030.json`.

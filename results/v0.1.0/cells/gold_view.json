@@ -61,7 +61,7 @@
   ],
   "items": 10532,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test-baselines/gold_view/submission",
+  "out_dir": "runs/20261030-test-baselines/gold_view/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -110,10 +110,10 @@
   "contradiction_rate": 0.0,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test-baselines/gold_view/answers.jsonl",
+   "answers": "runs/20261030-test-baselines/gold_view/answers.jsonl",
    "certificate_cap": null,
    "digest": "29c3d8c49669579b03a8d8ea1f3d56db17de9750d2604279b6af9bc360fec232",
-   "verdicts": "runs/20261030-v31-test-baselines/gold_view/verdicts.jsonl"
+   "verdicts": "runs/20261030-test-baselines/gold_view/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -220,8 +220,8 @@
  "child_stats": null,
  "id": "gold_view",
  "kind": "ceiling",
- "predictions": "results/v0.3/predictions/gold_view.jsonl.gz",
- "run_dir": "runs/20261030-v31-test-baselines/gold_view",
+ "predictions": "results/v0.1.0/predictions/gold_view.jsonl.gz",
+ "run_dir": "runs/20261030-test-baselines/gold_view",
  "score": {
   "N_active": null,
   "Q_N": 100.0,

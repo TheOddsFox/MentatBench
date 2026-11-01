@@ -1,4 +1,4 @@
-//! Semantic checks on a loaded submission (docs/ir.md, mentat-bench-v0.1 section 5 and 8).
+//! Semantic checks on a loaded submission (docs/ir.md, SPEC.md sections 5 and 8).
 
 use crate::ir::{expr_depth_cap, Expr, Profile, Status, Submission};
 use serde::Serialize;

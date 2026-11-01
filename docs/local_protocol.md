@@ -5,7 +5,7 @@ a child process and exchanges one JSON object per line over its stdin and stdout
 speaks this protocol. Two versions exist:
 
 - **Version 1** (default, `--local-protocol 1`): `decide_binding` and `decide_relation`. No handshake is sent, so
-  version-1 children are unaffected by version 2.
+  version-1 children are unaffected by round 2.
 - **Version 2** (opt-in, `--local-protocol 2`): adds the `hello` handshake, the `decide_group` operation and, when the
   child advertises it, the `batch` envelope. Group decisions are made only when the handshake succeeds; batches are
   made only when the handshake advertises `batch`.
@@ -111,9 +111,9 @@ ran, otherwise one of `flag`, `full_replay`, `adapter_no_groups`, `hello_timeout
 precedence).
 
 Groups are enabled only when the response has `protocol` equal to 2 and `ops` is an object that has `decide_group`.
-An error response keeps the child alive at version 1 with groups off. Any other failure of the handshake (a malformed
+An error response keeps the child alive at round 1 with groups off. Any other failure of the handshake (a malformed
 answer, `ops` that is not an object, a missing `decide_group`, a wrong protocol number) kills the child and falls back
-to version 1: the next request starts a fresh child. The build then makes no group decisions and runs the pairwise
+to round 1: the next request starts a fresh child. The build then makes no group decisions and runs the pairwise
 phase as before. `build --no-groups` also turns groups off.
 
 Batching is enabled when `ops` also has `batch` (an object, `max_calls` optional). Each op's `max_batch` (optional,
@@ -484,7 +484,7 @@ Each version-2 child should answer the handshake and at least one `decide_group`
   pairs a system chooses to ask); its results say so. `runcell --candidates FILE` passes the flag and, after the score
   step, runs `python -m mentat_bench.decision_scoring` on the decision log against `gold/suite_labels.jsonl` (with
   `--candidates`, and `--fixture` the fixture directory, required: its fixture.json version picks the headline, the relation
-  MCC for versions 1 and 2 and the relation and group mean for version 3 and later) into `score_decisions.json` (cell.json `decision_scoring`: `ok`, `failed`, or `not_importable` when the module is absent;
+  MCC for versions 1 and 2 and the relation and group mean for round 3 and later) into `score_decisions.json` (cell.json `decision_scoring`: `ok`, `failed`, or `not_importable` when the module is absent;
   the cell is incomplete unless it is `ok`). The Mentat-Hard profile is `profiles/mentat-hard-v1.json` (toy-local-v0
   with `build_deadline_s` 5400, 1.5 h).
 - **Raw decision log.** Every build (with or without `--candidates`) writes `<out>.build/decisions.jsonl`: one line per
@@ -513,10 +513,10 @@ the server makes the probabilities and the child reads them back.
 The decisions are the same typed questions as `hf_child` (bindings, relations, groups), not identical prompts: the child's
 prompts are zero-shot (no few-shot turns), uncalibrated (no content-free prior) and use the server's own probabilities.
 Relation menus are shuffled per pair with the `crc32-shuffle-v1` order of `hf_child`'s `relation_order`, applied to the five
-options of version 3 (EQUIV, IMPLIES, IMPLIED_BY, EXCLUDES, NONE; `hf_child` has four, without EQUIV), so no option sits at
+options of round 3 (EQUIV, IMPLIES, IMPLIED_BY, EXCLUDES, NONE; `hf_child` has four, without EQUIV), so no option sits at
 the same place for every pair. The crc32 seed is `"{a_id}\x1f{b_id}"`. An exact tie between relations goes to the one the
 pair's menu lists first. EQUIV is described as "A and B mean the same: each holds exactly when the other does".
-`conf` is not comparable with version 2: EQUIV joins the named relations, so the best named margin changes. Relation
+`conf` is not comparable with round 2: EQUIV joins the named relations, so the best named margin changes. Relation
 floors are recalibrated for each child version, not carried over. Every criteria value is a non-empty string (the order stage's options are "outcome X").
 
 - Rule cards (version 6; version 7 rewords `alt_rules`). An outcome may carry its league's rule card (`context`; absent when the row has none). The state of
@@ -528,7 +528,7 @@ floors are recalibrated for each child version, not carried over. Every criteria
   means the same as U? If U's wording fixes one meaning (it uses no term with two readings, or it says which reading it means),
   give the option for that meaning. Answer none if no option does."; version 6 said only "If U uses no term with two readings,
   both readings are its plain meaning", which left a glossed U such as "by the break, counted on final points" open to
-  reading (2), as the v3.1 answerability audit found),
+  reading (2), as the revision 3.1 answerability audit found),
   under the names `base` and `alt`. A request for outcomes with no card keeps its version-5 bytes. A card is stripped of
   surrounding whitespace, and a blank card is no card. The layout (`League rules:`, the blank line after the cards, and the
   blank line between two cards) is `PROMPTS["text"]` in the child, so `prompt_sha256` covers it. `conform` probes `base_rules`
@@ -560,8 +560,8 @@ floors are recalibrated for each child version, not carried over. Every criteria
   leaves open: `lower` (the fewest that must hold) after at_most_one, at_most_k and ordered_chain, `upper` (the most that can
   hold, or `no limit`) after at_least_k and ordered_chain. The bounds are the canonical terms of `adapters.base.group_terms`, with the kind's own term emitted first. An ordered_chain on a set where `chain_members` drops a member (both sides of a binary market) asks no chain or bound questions and gets no decision. A reading row (`source` "reading": the proposition, then its
   options: four in Mentat-Hard, at most 26) gets two requests, `base` and `alt`, each a pick among the options or `none`. Results come back in item order,
-  and the answers do not depend on the parallelism. `describe()` reports version 7: the `alt_rules` wording above (version 6: rule cards in the states; version 5: group bounds and reading rows; version 4: the binding `status` and `missing` questions ask about the meaning of the proposition, not whether the event happens; version 3 asked whether the question was fully specified). Version 3 added EQUIV to the relation menu, and the answers carry `probs` (version 2
-  changed the decisions of version 1: one question per request).
+  and the answers do not depend on the parallelism. `describe()` reports version 7: the `alt_rules` wording above (version 6: rule cards in the states; version 5: group bounds and reading rows; version 4: the binding `status` and `missing` questions ask about the meaning of the proposition, not whether the event happens; round 3 asked whether the question was fully specified). Version 3 added EQUIV to the relation menu, and the answers carry `probs` (round 2
+  changed the decisions of round 1: one question per request).
 - Refusals and abstentions. A refusal (HTTP 400 or 413) is for the one question of its request. It is an abstention when the
   cause is the input length: a 413, or a 400 whose text says "longer than the context length" or "exceeds the available context
   size" (in any letter case; the child's one matcher, `is_over_context_text`, is used by the abstention and by `conform`).

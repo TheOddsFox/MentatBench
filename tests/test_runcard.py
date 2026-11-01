@@ -86,7 +86,7 @@ V3_HEADLINE = {"metric": "relation_group_mcc", "relation_group_mcc": 0.6, "parts
                "secondary": {"binding_mcc": 0.3}, "diagnostics": {"reading_mcc": None}}
 SCORE_KEYS = {"Q_N_repaired", "Q_N_strict", "base_repaired", "families", "exact_query_success", "false_entailment",
               "false_refutation", "weighted_Q_N", "anchor_Q_N", "active_Q_N", "decision_rel_mcc", "decision_bind_mcc",
-              "decision_grp_mcc", "decision_read_mcc"}  # the keys of the pinned v0.2 run cards
+              "decision_grp_mcc", "decision_read_mcc"}  # the keys of the pinned round-2 run cards
 
 
 def _decisions(run, headline):

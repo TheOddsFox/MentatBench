@@ -53,7 +53,7 @@ The headline is chosen by the major fixture version (fixture.json "version", fix
 no "version" (the toy fixtures) gets the legacy headline, as versions 1 and 2 do:
 - versions 1 and 2 (owner decision 2026-10-29): the relation MCC alone. `headline` = {"metric": "relation_mcc", "relation_mcc": x,
   "secondary": {"binding_mcc": y}, "diagnostics": {"group_mcc": g, "reading_mcc": r}}. The group MCC is a diagnostic there
-  because the v2 groups were invalid (docs/results/mentat-hard-v2-validity-audit-20261029.md).
+  because the v2 groups were invalid (docs/history/round-2/headline-change-disclosure.md).
 - version 3 and later (owner decision 2026-10-30): the mean of the relation and group MCCs. `headline` = {"metric":
   "relation_group_mcc", "relation_group_mcc": (x + g) / 2, "parts": {"relation_mcc": x, "group_mcc": g}, "secondary":
   {"binding_mcc": y}, "diagnostics": {"reading_mcc": r}}. The mean is null when either part is null (its op has no items).

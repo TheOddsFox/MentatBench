@@ -1,17 +1,17 @@
-"""Builds public results bundle v0.1.0 for Mentat-Hard v3 measurements: results/v0.1.0/ (leaderboard, predictions, cells) and results/index.json.
+"""Builds the v0.1.0 results bundle of the Mentat-Hard test set: results/v0.1.0/ (leaderboard, predictions, cells) and results/index.json.
 
 usage, from the repo root:
   python results/v0.1.0/build_bundle.py --runs DIR --baselines DIR --hf DIR [--fixture DIR] [--out DIR]
-    --runs       runs/20261030-v31-test           (the 15 model cells)
-    --baselines  runs/20261030-v31-test-baselines (heuristic, lexical, embedding, empty, gold_view, oracle)
-    --hf         runs/20261030-v31-test-hf/hf     (the hf pipeline cell)
+    --runs       runs/20261030-test           (the 15 model cells)
+    --baselines  runs/20261030-test-baselines (heuristic, lexical, embedding, empty, gold_view, oracle)
+    --hf         runs/20261030-test-hf/hf     (the hf pipeline cell)
 
-MEASUREMENT ONLY, like docs/results/mentat-hard-v3-results/build_results.py, which this script imports and runs first. Every
+MEASUREMENT ONLY, like docs/results/mentat-hard-results/build_results.py, which this script imports and runs first. Every
 number comes from the run directories (through build_results, which uses the decision scorer), from decision_scoring (the labels
 and scores of the predictions), or from the committed JSONs. The test gold is read from fixtures/mentat_hard_test, which is public.
-The private split is never read: its numbers come only from docs/results/mentat-hard-v3-private-20261030{,-ci}.json.
+The private split is never read: its numbers come only from docs/results/mentat-hard-private-20261030{,-ci}.json.
 
-It never writes to the run directories. It writes only under --out (default results/): the regenerated v3 results are built in
+It never writes to the run directories. It writes only under --out (default results/): the regenerated results are built in
 a temporary directory that is removed afterwards. Every check runs before anything is written; any failed check prints the reason
 and exits 1 with nothing written. The output is deterministic (byte-identical on rerun).
 """
@@ -36,22 +36,24 @@ sys.path.insert(0, str(ROOT / "python"))
 from mentat_bench import corrections, decision_scoring, ir  # noqa: E402
 from mentat_bench.adapters.base import READINGS  # noqa: E402
 
-RUN_PREFIX = "20261030-v31-test"
+RUN_PREFIX = "20261030-test"
+RUN_DIR_FORMER = "runs/20261030-v31-test"  # the run directories before the 2026-11-01 rename (raw cell files)
 RESULTS_DIR = ROOT / "docs" / "results"
-MAIN = RESULTS_DIR / "mentat-hard-v3-20261030.json"
-CI = RESULTS_DIR / "mentat-hard-v3-20261030-ci.json"
-PRIVATE = RESULTS_DIR / "mentat-hard-v3-private-20261030.json"
-PRIVATE_CI = RESULTS_DIR / "mentat-hard-v3-private-20261030-ci.json"
-PREREG = RESULTS_DIR / "mentat-hard-v3-prereg-20261030.json"
-BUILD_RESULTS = RESULTS_DIR / "mentat-hard-v3-results" / "build_results.py"
-MANIFEST = ROOT / "release" / "release_manifest_v0.3.json"
-GATES = ROOT / "release" / "check_gates_v0.3.md"
+MAIN = RESULTS_DIR / "mentat-hard-20261030.json"
+CI = RESULTS_DIR / "mentat-hard-20261030-ci.json"
+PRIVATE = RESULTS_DIR / "mentat-hard-private-20261030.json"
+PRIVATE_CI = RESULTS_DIR / "mentat-hard-private-20261030-ci.json"
+RECORD = ROOT / "release" / "v0.1.0" / "record"
+PREREG = RECORD / "prereg.json"
+BUILD_RESULTS = RESULTS_DIR / "mentat-hard-results" / "build_results.py"
+MANIFEST = RECORD / "release_manifest.json"
+GATES = RECORD / "check_gates.md"
+RENAMES = ROOT / "docs" / "history" / "RENAMES.json"
 OLLAMA = ROOT / "python" / "mentat_bench" / "children" / "ollama_models.json"
 HF_MODELS = ROOT / "python" / "mentat_bench" / "children" / "models.json"
 TEST_FIXTURE = ROOT / "fixtures" / "mentat_hard_test"
 
-PUBLIC_VERSION = "v0.1.0"
-MEASUREMENT_VERSION = "v0.3"
+VERSION = "v0.1.0"
 RELEASE_DATE = "2026-10-31"
 SCHEMA = "mentat-bench-leaderboard/1"
 INDEX_SCHEMA = "mentat-bench-results-index/1"
@@ -100,7 +102,7 @@ def close(a, b, tol: float) -> bool:
 
 
 def load_build_results():
-    """docs/results/mentat-hard-v3-results/build_results.py, imported unchanged (its hyphenated folder is not a package)."""
+    """docs/results/mentat-hard-results/build_results.py, imported unchanged (its hyphenated folder is not a package)."""
     spec = importlib.util.spec_from_file_location("build_results", BUILD_RESULTS)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -115,7 +117,7 @@ def model_ids() -> dict[str, str]:
 # ---------------------------------------------------------------- measurement checks
 
 def regenerate_main(br, args, fixture: Path) -> None:
-    """Rebuilds the v3 results from the runs. They must equal the committed JSON (build_results.same, floats within 1e-9)."""
+    """Rebuilds the results from the runs. They must equal the committed JSON (build_results.same, floats within 1e-9)."""
     with tempfile.TemporaryDirectory() as tmp:
         ns = argparse.Namespace(runs=args.runs, baselines=args.baselines, hf=args.hf, fixture=fixture, prereg=PREREG, ci=CI,
                                 out=Path(tmp) / "main.json")
@@ -123,7 +125,7 @@ def regenerate_main(br, args, fixture: Path) -> None:
             code = br.build(ns)
         check(code == 0, "build_results did not finish")
         regenerated = json.loads((Path(tmp) / "main.json").read_text(encoding="utf-8"))
-    check(br.same(regenerated, jload(MAIN)), "the regenerated v3 results differ from docs/results/mentat-hard-v3-20261030.json")
+    check(br.same(regenerated, jload(MAIN)), "the regenerated results differ from docs/results/mentat-hard-20261030.json")
 
 
 def check_private(main: dict) -> dict:
@@ -192,11 +194,14 @@ def fixture_counts(fixture: Path) -> dict:
 # ---------------------------------------------------------------- cells and predictions
 
 def scrub_str(s: str) -> str:
-    """A repo-relative form of a local path: the runs/ tail of a main-checkout path, else the file name; backslashes as slashes."""
+    """A repo-relative form of a local path: the runs/ tail of a main-checkout path, else the file name; backslashes as slashes.
+    The run directories were renamed on 2026-11-01: a path a run recorded under the former name is given the new one."""
     t = s.replace("\\", "/")
     if re.match(r"^[A-Za-z]:/", t) or t.startswith("/"):
-        return "runs/" + t.split("/runs/", 1)[1] if "/runs/" in t else t.rsplit("/", 1)[-1]
-    return t if "\\" in s and " " not in s else s
+        out = "runs/" + t.split("/runs/", 1)[1] if "/runs/" in t else t.rsplit("/", 1)[-1]
+        return out.replace(RUN_DIR_FORMER, f"runs/{RUN_PREFIX}")
+    s = s.replace(RUN_DIR_FORMER, f"runs/{RUN_PREFIX}")
+    return s.replace("\\", "/") if "\\" in s and " " not in s else s
 
 
 def scrub(value):
@@ -323,7 +328,7 @@ def build_cells(args, br, fixture: Path, version: int, depths: dict, cands: dict
                 n_abst = sum(r["abstained"] for r in rows if r["op"] == "decide_relation")
                 check(n_abst == stats["ops"]["decide_relation"]["abstained_overlength"],
                       f"{cid}: {n_abst} relation abstentions in the predictions, child stats differ")
-            predictions = f"results/{MEASUREMENT_VERSION}/predictions/{cid}.jsonl.gz"
+            predictions = f"results/{VERSION}/predictions/{cid}.jsonl.gz"
             preds[cid] = blob
         docs[cid] = cell_doc(cid, cdir, kind, predictions)
         if cid in models:
@@ -399,9 +404,9 @@ def model_entry(name: str, tag: str, main_row: dict, rank: int, ollama: dict, pr
 def finish_entry(name: str, main_row: dict, entry: dict, private: dict, ids: dict) -> dict:
     entry.update({"display_name": DISPLAY[name], "kind": entry.get("kind", KIND.get(name)),
                   "run_dir": run_dir(name),
-                  "cell": f"results/{PUBLIC_VERSION}/cells/{name}.json",
-                  "predictions": f"results/{PUBLIC_VERSION}/predictions/{name}.jsonl.gz" if name in ids["predictions"] else None,
-                  "runcard": f"release/{MEASUREMENT_VERSION}/runcards/{name}.json" if name in ids["runcards"] else None,
+                  "cell": f"results/{VERSION}/cells/{name}.json",
+                  "predictions": f"results/{VERSION}/predictions/{name}.jsonl.gz" if name in ids["predictions"] else None,
+                  "runcard": f"release/{VERSION}/runcards/{name}.json" if name in ids["runcards"] else None,
                   "metrics": entry_metrics(main_row),
                   "gap_to_reference": gap_block(main_row.get("gap_to_reference")),
                   "depth_accuracy": main_row.get("depth"), "coverage": main_row.get("coverage"),
@@ -490,14 +495,14 @@ def build_leaderboard(main: dict, ci: dict, private: dict, prereg: dict, ollama:
                      "item_counts": counts, "files": fixture_files}
     return {
         "schema": SCHEMA,
-        "release": PUBLIC_VERSION,
+        "release": VERSION,
         "date": RELEASE_DATE,
         "results_date": main["provenance"]["date"],
         "benchmark": {
             "name": "Mentat-Hard",
             "measures": "How accurately a System One model (one pass of typed decisions: relations between propositions, groups "
                         "of members, bindings, readings) understands the logical relationships in league rule worlds.",
-            "split": "mentat_hard_test (public, fixture version 3.1)",
+            "split": "mentat_hard_test (public, Mentat-Hard test set, revision 3.1)",
             "headline": {"metric": "relation_group_mcc", "definition": "mean of the relation MCC and the group MCC, on raw "
                          "(unfloored) decisions", "decided_on": "dev (owner decision 2026-10-30)"},
             "secondary": "binding_mcc",
@@ -524,12 +529,11 @@ def build_leaderboard(main: dict, ci: dict, private: dict, prereg: dict, ollama:
                   "dev_headline": "headline units, -1 to 1", "ci95": "[lower, upper] in the metric's units",
                   "rank": "1 is the highest headline point among the models"},
         "provenance": {
-            "measurement_release": MEASUREMENT_VERSION,
             "code_commit": main["provenance"]["code_commit"],
             "code_commit_note": "the commit the test cells ran at (clean tree); the prereg names 9ad5f2c, which adds only the "
                                 "prereg files",
             "release_pinned_commit": jload(MANIFEST)["repo"]["commit"],
-            "release_manifest": {"path": "release/release_manifest_v0.3.json",
+            "release_manifest": {"path": f"release/{VERSION}/record/release_manifest.json",
                                  "sha256": json_sha(MANIFEST)},
             "fixture": fixture_block,
             "private_split": {"name": private["split"]["name"], "content_hash": private["split"]["content_hash"],
@@ -540,16 +544,16 @@ def build_leaderboard(main: dict, ci: dict, private: dict, prereg: dict, ollama:
                       "prompt_sha256": main["provenance"]["child"]["prompt_sha256"]},
             "ci": {"method": "league bootstrap: B draws of the 18 leagues with replacement (random.Random('league_ci:0')), the "
                              "same draws for every run; 95% percentile intervals (numpy, linear); paired gaps, reference minus run",
-                   "file": "docs/results/mentat-hard-v3-20261030-ci.json", "layout": main["provenance"]["ci_layout"],
+                   "file": "docs/results/mentat-hard-20261030-ci.json", "layout": main["provenance"]["ci_layout"],
                    "B": ci["B"], "seed": ci["seed"], "leagues": ci["leagues"], "level": 0.95, "reference": ci["reference"],
-                   "reference_chosen_on": "dev", "private_file": "docs/results/mentat-hard-v3-private-20261030-ci.json"},
-            "prereg": "docs/results/mentat-hard-v3-prereg-20261030.json",
-            "results_md": "docs/results/mentat-hard-v3-20261030.md",
-            "results_json": "docs/results/mentat-hard-v3-20261030.json",
-            "private_results_md": "docs/results/mentat-hard-v3-private-20261030.md",
-            "private_results_json": "docs/results/mentat-hard-v3-private-20261030.json",
-            "results_builder": "docs/results/mentat-hard-v3-results/build_results.py",
-            "bundle_builder": f"results/{PUBLIC_VERSION}/build_bundle.py",
+                   "reference_chosen_on": "dev", "private_file": "docs/results/mentat-hard-private-20261030-ci.json"},
+            "prereg": "release/v0.1.0/record/prereg.json",
+            "results_md": "docs/results/mentat-hard-20261030.md",
+            "results_json": "docs/results/mentat-hard-20261030.json",
+            "private_results_md": "docs/results/mentat-hard-private-20261030.md",
+            "private_results_json": "docs/results/mentat-hard-private-20261030.json",
+            "results_builder": "docs/results/mentat-hard-results/build_results.py",
+            "bundle_builder": f"results/{VERSION}/build_bundle.py",
             "runs": f"runs/{RUN_PREFIX}, runs/{RUN_PREFIX}-baselines, runs/{RUN_PREFIX}-hf (not committed)",
             "ollama_version": next(iter(ollama.values()))["ollama_version"],
         },
@@ -573,7 +577,8 @@ def build_leaderboard(main: dict, ci: dict, private: dict, prereg: dict, ollama:
                            "order_flips_among_disjoint_in_both": order["order_flips_among_disjoint_in_both"],
                            "max_abs_headline_change": {"value": private_moves[worst], "run": worst},
                            "runs_compared": sorted(private_moves)},
-        "release_gates": {"source": "release/check_gates_v0.3.md", "built_at_commit": jload(MANIFEST)["repo"]["commit"],
+        "release_gates": {"source": f"release/{VERSION}/record/check_gates.md", "built_at_commit": jload(MANIFEST)["repo"]["commit"],
+                          "recorded_at": "defed6a, 2026-10-31",
                           "gate_7_scope": "MET at the pinned commit only; UNKNOWN at any later commit (docs/remaining-work.md section 2.3)",
                           "rows": gates},
     }
@@ -592,13 +597,29 @@ def json_sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def renames() -> dict[str, str]:
+    """old path -> new path of every file moved out of the earlier layout (docs/history/RENAMES.json)."""
+    doc = jload(RENAMES)
+    check(doc["schema"] == "mentat-bench-renames/1", "docs/history/RENAMES.json has another schema")
+    return {old: entry["path"] for old, entry in doc["renames"].items()}
+
+
+def relabel(text: str, moved: dict[str, str]) -> str:
+    """A frozen gate text with its old paths replaced by the new ones (longest first) and the one phrase fixed."""
+    for old in sorted(moved, key=len, reverse=True):
+        text = text.replace(old, moved[old])
+    return text.replace("spec v0.2", "spec revision of 2026-10-27")
+
+
 def gate_rows() -> list[dict]:
-    rows = []
+    """The gate table of the frozen check_gates.md, with its paths mapped to the moved files. The file itself is not changed."""
+    moved, rows = renames(), []
     for line in GATES.read_text(encoding="utf-8").splitlines():
         if not line.startswith("|") or set(line) <= {"|", "-", " "} or line.startswith("| gate"):
             continue
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        rows.append({"gate": len(rows) + 1, "name": cells[0], "status": cells[1], "evidence": cells[2], "note": cells[3]})
+        rows.append({"gate": len(rows) + 1, "name": cells[0], "status": cells[1], "evidence": relabel(cells[2], moved),
+                     "note": relabel(cells[3], moved)})
     check(len(rows) == 11, f"{len(rows)} gate rows, expected 11")
     for row in rows:
         check(row["status"] == GATE_STATUS[row["gate"]],
@@ -866,34 +887,33 @@ def csv_bytes(lb: dict) -> bytes:
 
 
 def index_doc() -> dict:
+    """results/index.json: the latest release (v0.1.0, with the roles its readers need) and the two development rounds."""
+    record = f"release/{VERSION}/record"
     return {
         "schema_version": INDEX_SCHEMA,
-        "latest": PUBLIC_VERSION,
+        "latest": VERSION,
         "versions": [
-            {"version": PUBLIC_VERSION, "measurement_release": MEASUREMENT_VERSION,
-             "date": RELEASE_DATE, "results_date": "2026-10-30", "status": "latest",
-             "benchmark": "Mentat-Hard", "fixture": "mentat_hard_test", "fixture_version": "3.1",
-             "private_split": "mentat_hard_private", "headline": "relation_group_mcc",
-             "readme": "results/README.md", "leaderboard_json": f"results/{PUBLIC_VERSION}/leaderboard.json",
-             "leaderboard_csv": f"results/{PUBLIC_VERSION}/leaderboard.csv", "predictions_dir": f"results/{PUBLIC_VERSION}/predictions",
-             "cells_dir": f"results/{PUBLIC_VERSION}/cells", "builder": f"results/{PUBLIC_VERSION}/build_bundle.py",
-             "release_manifest": "release/release_manifest_v0.3.json", "release_gate_output": "release/check_gates_v0.3.md",
-             "results_md": "docs/results/mentat-hard-v3-20261030.md", "results_json": "docs/results/mentat-hard-v3-20261030.json",
-             "private_results_md": "docs/results/mentat-hard-v3-private-20261030.md",
-             "private_results_json": "docs/results/mentat-hard-v3-private-20261030.json",
-             "prereg": "docs/results/mentat-hard-v3-prereg-20261030.md", "superseded_by": None},
-            {"version": "mentat-hard-v2", "release": "v0.2", "date": "2026-10-29", "results_date": "2026-10-29",
-             "status": "superseded", "benchmark": "Mentat-Hard", "fixture": "mentat_hard_test", "fixture_version": "2",
-             "private_split": None, "headline": "relation_mcc (headline changed post-hoc 2026-10-29)",
-             "readme": None, "leaderboard_json": None, "leaderboard_csv": None,
-             "results_md": "docs/results/mentat-hard-v2-20261029.md", "results_json": "docs/results/mentat-hard-v2-20261029.json",
-             "superseded_by": PUBLIC_VERSION},
-            {"version": "mentat-hard-v1", "release": None, "date": "2026-10-28", "results_date": "2026-10-28",
-             "status": "superseded", "benchmark": "Mentat-Hard", "fixture": "mentat_hard_test", "fixture_version": "1",
-             "private_split": None, "headline": "four-part MCC mean (the v1 headline)",
-             "readme": None, "leaderboard_json": None, "leaderboard_csv": None,
-             "results_md": "docs/results/mentat-hard-20261028.md", "results_json": "docs/results/mentat-hard-20261028.json",
-             "superseded_by": "mentat-hard-v2"},
+            {"version": VERSION, "status": "latest", "superseded_by": None, "benchmark": "Mentat-Hard",
+             "fixture": "mentat_hard_test", "fixture_version": "3.1", "headline": "relation_group_mcc",
+             "date": RELEASE_DATE, "results_date": "2026-10-30", "builder": f"results/{VERSION}/build_bundle.py",
+             "leaderboard_json": f"results/{VERSION}/leaderboard.json", "leaderboard_csv": f"results/{VERSION}/leaderboard.csv",
+             "cells_dir": f"results/{VERSION}/cells", "predictions_dir": f"results/{VERSION}/predictions",
+             "runcards_dir": f"release/{VERSION}/runcards", "readme": "results/README.md",
+             "results_md": "docs/results/mentat-hard-20261030.md", "results_json": "docs/results/mentat-hard-20261030.json",
+             "private_split": "mentat_hard_private", "private_results_md": "docs/results/mentat-hard-private-20261030.md",
+             "private_results_json": "docs/results/mentat-hard-private-20261030.json",
+             "prereg": f"{record}/prereg.md", "release_manifest": f"{record}/release_manifest.json",
+             "release_gate_output": f"{record}/check_gates.md", "attestations": f"{record}/attestations.json"},
+            {"version": "round-2", "kind": "development_round", "status": "superseded", "superseded_by": VERSION,
+             "benchmark": "Mentat-Hard", "fixture": "mentat_hard_test", "fixture_version": "2",
+             "headline": "relation_mcc (headline changed post-hoc 2026-10-29)", "date": "2026-10-29", "results_date": "2026-10-29",
+             "private_split": None, "readme": None, "leaderboard_json": None, "leaderboard_csv": None,
+             "results_md": "docs/history/round-2/report.md", "results_json": "docs/history/round-2/results.json"},
+            {"version": "round-1", "kind": "development_round", "status": "superseded", "superseded_by": "round-2",
+             "benchmark": "Mentat-Hard", "fixture": "mentat_hard_test", "fixture_version": "1",
+             "headline": "four-part MCC mean (the v1 headline)", "date": "2026-10-28", "results_date": "2026-10-28",
+             "private_split": None, "readme": None, "leaderboard_json": None, "leaderboard_csv": None,
+             "results_md": "docs/history/round-1/report.md", "results_json": "docs/history/round-1/results.json"},
         ],
     }
 
@@ -923,16 +943,16 @@ def build(args) -> dict:
     docs, preds = build_cells(args, br, fixture, version, depths, cands)
     gates = gate_rows()
     fixture_doc = jload(fixture / "fixture.json")
-    lb_ids = {"predictions": set(preds), "runcards": {p.stem for p in (ROOT / "release" / MEASUREMENT_VERSION / "runcards").glob("*.json")}}
+    lb_ids = {"predictions": set(preds), "runcards": {p.stem for p in (ROOT / "release" / VERSION / "runcards").glob("*.json")}}
     lb = build_leaderboard(main, ci, private, prereg, ollama, gates, fixture_files, counts, fixture_doc, lb_ids)
     rows = {cid: rows_of(blob) for cid, blob in preds.items()}
     apply_notes(lb, main, prereg, rows, counts, docs)
-    out = {f"{PUBLIC_VERSION}/leaderboard.json": dump_json(lb), f"{PUBLIC_VERSION}/leaderboard.csv": csv_bytes(lb),
+    out = {f"{VERSION}/leaderboard.json": dump_json(lb), f"{VERSION}/leaderboard.csv": csv_bytes(lb),
            "index.json": dump_json(index_doc())}
     for cid, blob in preds.items():
-        out[f"{PUBLIC_VERSION}/predictions/{cid}.jsonl.gz"] = blob
+        out[f"{VERSION}/predictions/{cid}.jsonl.gz"] = blob
     for cid, doc in docs.items():
-        out[f"{PUBLIC_VERSION}/cells/{cid}.json"] = dump_json(doc)
+        out[f"{VERSION}/cells/{cid}.json"] = dump_json(doc)
     for path, data in out.items():
         text = gzip.decompress(data).decode("utf-8") if path.endswith(".gz") else data.decode("utf-8")
         check(not ABSOLUTE.search(text), f"{path}: an absolute or personal path")
@@ -952,7 +972,7 @@ def write(out_dir: Path, files: dict[str, bytes]) -> None:
         path = out_dir / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
-    for sub, suffix in ((f"{PUBLIC_VERSION}/predictions", ".jsonl.gz"), (f"{PUBLIC_VERSION}/cells", ".json")):
+    for sub, suffix in ((f"{VERSION}/predictions", ".jsonl.gz"), (f"{VERSION}/cells", ".json")):
         folder = out_dir / sub
         if folder.is_dir():
             for stale in folder.glob(f"*{suffix}"):

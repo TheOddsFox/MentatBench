@@ -61,7 +61,7 @@
   ],
   "items": 10532,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test/d1_3b-q8_0/submission",
+  "out_dir": "runs/20261030-test/d1_3b-q8_0/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -118,10 +118,10 @@
   "contradiction_rate": 0.0,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test/d1_3b-q8_0/answers.jsonl",
+   "answers": "runs/20261030-test/d1_3b-q8_0/answers.jsonl",
    "certificate_cap": null,
    "digest": "a57d9c7c8f88e3d44fca9618e414fd9328d83a4690e578eaafd093278298e5eb",
-   "verdicts": "runs/20261030-v31-test/d1_3b-q8_0/verdicts.jsonl"
+   "verdicts": "runs/20261030-test/d1_3b-q8_0/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -264,8 +264,8 @@
  },
  "id": "d1_3b-q8_0",
  "kind": "system_one_model",
- "predictions": "results/v0.3/predictions/d1_3b-q8_0.jsonl.gz",
- "run_dir": "runs/20261030-v31-test/d1_3b-q8_0",
+ "predictions": "results/v0.1.0/predictions/d1_3b-q8_0.jsonl.gz",
+ "run_dir": "runs/20261030-test/d1_3b-q8_0",
  "score": {
   "N_active": null,
   "Q_N": 15.595876332505037,

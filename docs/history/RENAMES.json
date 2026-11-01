@@ -1,0 +1,603 @@
+{
+  "schema": "mentat-bench-renames/1",
+  "date": "2026-11-01",
+  "renames": {
+    "docs/ir.md": {
+      "path": "docs/history/specs/ir-2026-10-28.md",
+      "sha256": "0dd44dd83b3c8cc22f9018c3699abd7a59226a8fc071b8d035b0e34822a9c9ae"
+    },
+    "docs/results/mentat-hard-20261028-ci.json": {
+      "path": "docs/history/round-1/ci.json",
+      "sha256": "2273fcd831ab7ed568ecb064ae2035fbcf6dc51ed6470045a9e359cf93857aba"
+    },
+    "docs/results/mentat-hard-20261028.json": {
+      "path": "docs/history/round-1/results.json",
+      "sha256": "f357e20b6870a4cbbd87c42dafdddbe841ab8641e5738b15647e3978bdb6c330"
+    },
+    "docs/results/mentat-hard-20261028.md": {
+      "path": "docs/history/round-1/report.md",
+      "sha256": "541e67d62dfb55306e135a7c474d347481225d1812ef543db76e136deba6cfcc"
+    },
+    "docs/results/mentat-hard-prereg-20261028.json": {
+      "path": "docs/history/round-1/prereg.json",
+      "sha256": "5dfdcf6fb5cf9f09428e595abbe5fa0f5c35939f31f5c6ecf45ecec6be21aa23"
+    },
+    "docs/results/mentat-hard-prereg-20261028.md": {
+      "path": "docs/history/round-1/prereg.md",
+      "sha256": "7d3abac3f8127069813e01f64a2d60d6e0cdb9a6085c9ca0ff8bec5e9bbaea17"
+    },
+    "docs/results/mentat-hard-v2-20261029-ci.json": {
+      "path": "docs/history/round-2/ci.json",
+      "sha256": "6210b8d704f2ecc61e1139c8aed135c829335a0274c55466ee414cb06080b027"
+    },
+    "docs/results/mentat-hard-v2-20261029.json": {
+      "path": "docs/history/round-2/results.json",
+      "sha256": "bd52ba636664fd1ce48a87155f1090858b6d55021c7a387cdb0f71943240791e"
+    },
+    "docs/results/mentat-hard-v2-20261029.md": {
+      "path": "docs/history/round-2/report.md",
+      "sha256": "92159710638f4ef96d50dcfdee661a1d400fb294aff2442cc35219d863861b1c"
+    },
+    "docs/results/mentat-hard-v2-audit/build_sample.py": {
+      "path": "docs/history/round-2-answerability-audit/build_sample.py",
+      "sha256": "bb18d79070808eb95b94c98bc0b4fa57cd9a72dc8676174729bf644bba333506"
+    },
+    "docs/results/mentat-hard-v2-audit/judge1_answers.jsonl": {
+      "path": "docs/history/round-2-answerability-audit/judge1_answers.jsonl",
+      "sha256": "dfe2ba616bc43564695f529b140604bce5c4eed37f9813aabed9ca85a57eb02a"
+    },
+    "docs/results/mentat-hard-v2-audit/judge2_answers.jsonl": {
+      "path": "docs/history/round-2-answerability-audit/judge2_answers.jsonl",
+      "sha256": "48fda838cb5bad82f15fe4635d3c72630d6d16e3ab82e755cf5d79660c40d701"
+    },
+    "docs/results/mentat-hard-v2-audit/key.jsonl": {
+      "path": "docs/history/round-2-answerability-audit/key.jsonl",
+      "sha256": "88a0d7ebcdd3cbd0e369e9e9e71d06c86ec7c100afaf5398c94fb95305cce7e6"
+    },
+    "docs/results/mentat-hard-v2-audit/notes.md": {
+      "path": "docs/history/round-2-answerability-audit/notes.md",
+      "sha256": "44a63412a36befa4ae414992492d79ed0bcd67c713f72cba6b2731c1ffc33d8b"
+    },
+    "docs/results/mentat-hard-v2-audit/sample.jsonl": {
+      "path": "docs/history/round-2-answerability-audit/sample.jsonl",
+      "sha256": "f962b1f717248ff70570316121ac1b779961193a356d0ffea5e9af980998d7c6"
+    },
+    "docs/results/mentat-hard-v2-audit/score.py": {
+      "path": "docs/history/round-2-answerability-audit/score.py",
+      "sha256": "483b58ee9aeeaf4ea84902e709eea674f7caa8a7200e076c67f49535fb2d0aaa"
+    },
+    "docs/results/mentat-hard-v2-audit/verify.py": {
+      "path": "docs/history/round-2-answerability-audit/verify.py",
+      "sha256": "5e697961b58f3d5a073e8da93368b58a409d41e83eb8d3b90730c9f896d56947"
+    },
+    "docs/results/mentat-hard-v2-prereg-20261029.json": {
+      "path": "docs/history/round-2/prereg.json",
+      "sha256": "ee72bb0dcd5fbb33c77306c7855abeec728d322816663b37d7bd3f4ef3263187"
+    },
+    "docs/results/mentat-hard-v2-prereg-20261029.md": {
+      "path": "docs/history/round-2/prereg.md",
+      "sha256": "38f7ab803dd8409ac9693d4af54a8e0c5379e2a80f9b5dd9442312757a64b8e1"
+    },
+    "docs/results/mentat-hard-v2-private-20261029-ci.json": {
+      "path": "docs/history/round-2/private-ci.json",
+      "sha256": "cf94b834045f17710e5d37eb113dedbb14978738e3bfa438125822ab37dc1926"
+    },
+    "docs/results/mentat-hard-v2-private-20261029.md": {
+      "path": "docs/history/round-2/private.md",
+      "sha256": "b31e2ad554f1444ec3a007f284aa122d6516ffc27588d5cc1de2b0d4f0329aab"
+    },
+    "docs/results/mentat-hard-v2-validity-audit-20261029.md": {
+      "path": "docs/history/round-2/headline-change-disclosure.md",
+      "sha256": "b6c5612d4fdcae4fcf3cd65de5e40a7958af68e8499cb811a62f433c3249fa21"
+    },
+    "docs/results/mentat-hard-v3-20261030-ci.json": {
+      "path": "docs/results/mentat-hard-20261030-ci.json",
+      "sha256": "f93ecdf0faa63bf51cf59d822b060d899861316898d7e5eba1050d89647d16d1"
+    },
+    "docs/results/mentat-hard-v3-20261030.json": {
+      "path": "docs/results/mentat-hard-20261030.json"
+    },
+    "docs/results/mentat-hard-v3-20261030.md": {
+      "path": "docs/results/mentat-hard-20261030.md"
+    },
+    "docs/results/mentat-hard-v3-audit/JUDGE.md": {
+      "path": "docs/audits/test-set-groups/JUDGE.md",
+      "sha256": "300d610f09d94929f61fcd213aa67edb8b46bc6c5b4cc57c4b5aabb260fd748e"
+    },
+    "docs/results/mentat-hard-v3-audit/build_sample.py": {
+      "path": "docs/audits/test-set-groups/build_sample.py",
+      "sha256": "03e4d4eacc49a88bb609142fbe8d0ac65c7d4f523d005ee47d8c8a7b9d011176"
+    },
+    "docs/results/mentat-hard-v3-audit/judge1_answers.jsonl": {
+      "path": "docs/audits/test-set-groups/judge1_answers.jsonl",
+      "sha256": "38ca2ac7caec6321c13a780c051b2549ee16cbca9d64c6ee2f3d566e480df0a4"
+    },
+    "docs/results/mentat-hard-v3-audit/judge2_answers.jsonl": {
+      "path": "docs/audits/test-set-groups/judge2_answers.jsonl",
+      "sha256": "2d78ed9e543d3e26bf9a4520c52797233605ae3db15de14947c338c92d507d9e"
+    },
+    "docs/results/mentat-hard-v3-audit/key.jsonl": {
+      "path": "docs/audits/test-set-groups/key.jsonl",
+      "sha256": "9e81e57921a91f3fa51c2e5bf760c03a381a8c0492a791919857fe9518d33fab"
+    },
+    "docs/results/mentat-hard-v3-audit/notes.md": {
+      "path": "docs/audits/test-set-groups/notes.md",
+      "sha256": "7bda91e147cc57bf1886f6b9713ecf778d0bcdbe14b75603cff4c722757ddd2c"
+    },
+    "docs/results/mentat-hard-v3-audit/sample.jsonl": {
+      "path": "docs/audits/test-set-groups/sample.jsonl",
+      "sha256": "a6a7c0fff3a50b0b8bed2a5d79e8a35f45d992a9675a3c17a396c50035da2fc6"
+    },
+    "docs/results/mentat-hard-v3-audit/score.py": {
+      "path": "docs/audits/test-set-groups/score.py",
+      "sha256": "5737e94682a7059d8dbef21c79c7b10e28078b28100db85d9cd6fb4cf28da75d"
+    },
+    "docs/results/mentat-hard-v3-audit/score_output.txt": {
+      "path": "docs/audits/test-set-groups/score_output.txt",
+      "sha256": "74f0f08a48a12968b8a5a8f5aea9f0987d070b2cb577ba2117d8ccedc7cc3fad"
+    },
+    "docs/results/mentat-hard-v3-audit/sources.json": {
+      "path": "docs/audits/test-set-groups/sources.json",
+      "sha256": "804cd9a8518f40d59c6e5b9c43a1c0eade2d1653d8c6736d7b5326a6571fa177"
+    },
+    "docs/results/mentat-hard-v3-audit/summary.json": {
+      "path": "docs/audits/test-set-groups/summary.json",
+      "sha256": "5e90abb10ab72a2f454a28c27f7bfeb5096121fc8e7fa18ef6272c1213f6484c"
+    },
+    "docs/results/mentat-hard-v3-audit/verify.py": {
+      "path": "docs/audits/test-set-groups/verify.py",
+      "sha256": "85ec0dd613a15199edc28354f7659bb3889f06cade428eda2b3f4c7245e693eb"
+    },
+    "docs/results/mentat-hard-v3-prereg-20261030.json": {
+      "path": "release/v0.1.0/record/prereg.json",
+      "sha256": "90fa2f07c30fe564fe75e3861344fd0338278000a493e4712228eebd658c81a5"
+    },
+    "docs/results/mentat-hard-v3-prereg-20261030.md": {
+      "path": "release/v0.1.0/record/prereg.md",
+      "sha256": "1edfad18fa0aca3e4ab3dcf6b31915f5c916d9ab1791912de924de7b8ca08566"
+    },
+    "docs/results/mentat-hard-v3-private-20261030-ci.json": {
+      "path": "docs/results/mentat-hard-private-20261030-ci.json",
+      "sha256": "4fbc5c9ce839a7444a673b40c97f5ff50ac9aa30c0dc965d8ce50c28841888bc"
+    },
+    "docs/results/mentat-hard-v3-private-20261030.json": {
+      "path": "docs/results/mentat-hard-private-20261030.json"
+    },
+    "docs/results/mentat-hard-v3-private-20261030.md": {
+      "path": "docs/results/mentat-hard-private-20261030.md"
+    },
+    "docs/results/mentat-hard-v3-results/build_results.py": {
+      "path": "docs/results/mentat-hard-results/build_results.py"
+    },
+    "docs/results/mentat-hard-v3.1-audit/JUDGE.md": {
+      "path": "docs/audits/test-set-relations/JUDGE.md",
+      "sha256": "300d610f09d94929f61fcd213aa67edb8b46bc6c5b4cc57c4b5aabb260fd748e"
+    },
+    "docs/results/mentat-hard-v3.1-audit/build_sample.py": {
+      "path": "docs/audits/test-set-relations/build_sample.py",
+      "sha256": "f7a14880a53855070cdc9498e5cf2458c576f7e5d8b542ec9e970440f31bfafa"
+    },
+    "docs/results/mentat-hard-v3.1-audit/judge1_answers.jsonl": {
+      "path": "docs/audits/test-set-relations/judge1_answers.jsonl",
+      "sha256": "46fcb18b5c043a96bef97d9f9db2911fcb116b8ad235b9295fdd627811d59457"
+    },
+    "docs/results/mentat-hard-v3.1-audit/judge2_answers.jsonl": {
+      "path": "docs/audits/test-set-relations/judge2_answers.jsonl",
+      "sha256": "77d329efed7f38375a67c9ee0f93bf9772d824ec6e4185cbd550f4c1b84c22e0"
+    },
+    "docs/results/mentat-hard-v3.1-audit/key.jsonl": {
+      "path": "docs/audits/test-set-relations/key.jsonl",
+      "sha256": "aecc9033bd3f87ed0468dc153623b9e38285c75b7571f5150bf20fa9a4ef0f83"
+    },
+    "docs/results/mentat-hard-v3.1-audit/notes.md": {
+      "path": "docs/audits/test-set-relations/notes.md",
+      "sha256": "5b5f858368b666d8c2e978e3d69112e149f25b159c70bc622bb87f2a7a517bf8"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/judge1_answers.jsonl": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/judge1_answers.jsonl",
+      "sha256": "3b9aed5c1d2d924d7f1a0ef6637ce08db36616d57e8aa1984a8844b8cbba24d6"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/judge2_answers.jsonl": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/judge2_answers.jsonl",
+      "sha256": "d13585ac49ab041ef9bf886b90ca31493e8a3ec629123994c2dce02f95ed37ea"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/key.jsonl": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/key.jsonl",
+      "sha256": "aecc9033bd3f87ed0468dc153623b9e38285c75b7571f5150bf20fa9a4ef0f83"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/notes.md": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/notes.md",
+      "sha256": "f54b32fa597cef828aceb2b4c6965bccb60a006ff0733cebecbe3ed1dbd5a042"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/sample.jsonl": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/sample.jsonl",
+      "sha256": "23ead70e60f514bc6b3158c54331268c744717a138acba458532bfcc85c6a7b4"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/score_output.txt": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/score_output.txt",
+      "sha256": "b3c3e92a7c4c7900afa412c9bb3c03aa8ddd5029061f57ce80d1dbf28f6d90b3"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/sources.json": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/sources.json",
+      "sha256": "81e807ea0732efeb6125a96a6e889e547d81839c0214cff24eaac7dc665f46df"
+    },
+    "docs/results/mentat-hard-v3.1-audit/round1-child-v6/summary.json": {
+      "path": "docs/audits/test-set-relations/round1-child-v6/summary.json",
+      "sha256": "ced33d9d49c4bc831df7029c15bb6b2dea1aba9a280f5daca667e7faf605a0fd"
+    },
+    "docs/results/mentat-hard-v3.1-audit/sample.jsonl": {
+      "path": "docs/audits/test-set-relations/sample.jsonl",
+      "sha256": "519840cd5e63f886208b438643a1b8c2431839ab95066031009a1fb9b208cd75"
+    },
+    "docs/results/mentat-hard-v3.1-audit/score.py": {
+      "path": "docs/audits/test-set-relations/score.py",
+      "sha256": "0d889766692f9a911e7ad6ca152027cedb261099af02a2b220016890bf063da6"
+    },
+    "docs/results/mentat-hard-v3.1-audit/score_output.txt": {
+      "path": "docs/audits/test-set-relations/score_output.txt",
+      "sha256": "a02d275fd5a1e63d650b09e9a99184b546477d9fe9241bdded26e0e06d769ad5"
+    },
+    "docs/results/mentat-hard-v3.1-audit/sources.json": {
+      "path": "docs/audits/test-set-relations/sources.json",
+      "sha256": "81e807ea0732efeb6125a96a6e889e547d81839c0214cff24eaac7dc665f46df"
+    },
+    "docs/results/mentat-hard-v3.1-audit/summary.json": {
+      "path": "docs/audits/test-set-relations/summary.json",
+      "sha256": "c5c6c5e66613633ae52a785def753064ed3e4df63e845e2ebdde930d55fe1dea"
+    },
+    "docs/results/mentat-hard-v3.1-audit/verify.py": {
+      "path": "docs/audits/test-set-relations/verify.py",
+      "sha256": "bb79b43d5b1adba87def7ada48c95a6b0a45558789bca3244ab4ea4da40f7745"
+    },
+    "docs/results/systemone-dev-notes-20261027.json": {
+      "path": "docs/history/notes/systemone-dev-notes-20261027.json",
+      "sha256": "663b14aa8339dd1342b2f2493b68d2c380ead8a85f38e50cc88b96dbc514feac"
+    },
+    "docs/results/systemone-dev-notes-20261027.md": {
+      "path": "docs/history/notes/systemone-dev-notes-20261027.md",
+      "sha256": "ea74d0ed3a0b53ecd271a8b13f858f92351797b0ef35a57e64e164b6c1269ae8"
+    },
+    "mentat-bench-v0.1.md": {
+      "path": "docs/history/specs/spec-2026-10-18.md",
+      "sha256": "66a0fdb57972c4800a414a02a665edb6791469897a5fc954d987bd606da77e46"
+    },
+    "mentat-bench-v0.2.md": {
+      "path": "docs/history/specs/spec-2026-10-27.md",
+      "sha256": "72dbd84c48a266d7ec1d90b491643954f58089a7196466a88cae99453a68ae93"
+    },
+    "release/baselines/baselines.json": {
+      "path": "docs/history/round-2/baselines/baselines.json",
+      "sha256": "d203d965eb3a14e5e3b17ad25c49e883b13953f5cd6d8b5002d0c6f8b5e92875"
+    },
+    "release/check_gates_v0.2.md": {
+      "path": "docs/history/round-2/check_gates.md",
+      "sha256": "98d476e2c50a99d3f1912c881eec94f357990f2a21ea4ab99676b98721934434"
+    },
+    "release/check_gates_v0.3.md": {
+      "path": "release/v0.1.0/record/check_gates.md",
+      "sha256": "afb488cffcedf48c76e83e02880fa39bf061d09e2c476c9970323ac116af9385"
+    },
+    "release/release_manifest_v0.2.json": {
+      "path": "docs/history/round-2/release_manifest.json",
+      "sha256": "0367987d0102203fe9812d829c271e0405c27a420ef1af2b4cea66f67ffe84ce"
+    },
+    "release/release_manifest_v0.3.json": {
+      "path": "release/v0.1.0/record/release_manifest.json",
+      "sha256": "1883a569215867621c97f56061ce979a6fdec4b625d80c81f7c72ce97a3ba5ff"
+    },
+    "release/runcards/clef-flash_9b.json": {
+      "path": "docs/history/round-2/runcards/clef-flash_9b.json",
+      "sha256": "9e75642981e09c419c142569bf996c8006611edd6c2b3ee2bb2e81ceb6295569"
+    },
+    "release/runcards/clef_27b-q8_0.json": {
+      "path": "docs/history/round-2/runcards/clef_27b-q8_0.json",
+      "sha256": "445ee20fa9147cb665d96e2f81b660ed3373ce776ee69b63f11eeb529739e00f"
+    },
+    "release/runcards/d3_27b-q8_0.json": {
+      "path": "docs/history/round-2/runcards/d3_27b-q8_0.json",
+      "sha256": "98820de0d11010b8e57d568847145db73df3c3f9079ec42ea6710dc12b269ea2"
+    },
+    "release/runcards/d3_9b-q8_0.json": {
+      "path": "docs/history/round-2/runcards/d3_9b-q8_0.json",
+      "sha256": "0d4e6edfb9b6fb13a9e6170c5392e2a823158fd91e8dc92f4bc32e684c4be98d"
+    },
+    "release/runcards/embedding.json": {
+      "path": "docs/history/round-2/runcards/embedding.json",
+      "sha256": "afd7ef6bd07eab846153adfa6634c13ba9a0c682c178da41e2c1331c957d87c7"
+    },
+    "release/runcards/empty.json": {
+      "path": "docs/history/round-2/runcards/empty.json",
+      "sha256": "07ea65af06580c56ec2bc81204a9c4d01cdb177f0d4889677004f43b499626b7"
+    },
+    "release/runcards/gold_view.json": {
+      "path": "docs/history/round-2/runcards/gold_view.json",
+      "sha256": "0cc526eef50b038570ea9de9adb4c750b16edeb8beb3de60e436ad537af194e8"
+    },
+    "release/runcards/heuristic.json": {
+      "path": "docs/history/round-2/runcards/heuristic.json",
+      "sha256": "0cdf749d9cc8e7225cd55fddeb42e8f03c72de82c1a64f9eb09c86d528353fbe"
+    },
+    "release/runcards/kev_9b-bf16.json": {
+      "path": "docs/history/round-2/runcards/kev_9b-bf16.json",
+      "sha256": "f3c24c771e63cf94fe87adb3a8f4bdacc7f7c7c20a96a17beb6eeb66748cf370"
+    },
+    "release/runcards/laya_latest.json": {
+      "path": "docs/history/round-2/runcards/laya_latest.json",
+      "sha256": "fe1154942d9255e956405daa0f48da9c6b369cff73607882c093c4d3e6ea0c38"
+    },
+    "release/runcards/lexical.json": {
+      "path": "docs/history/round-2/runcards/lexical.json",
+      "sha256": "a8b810335cb6a33891c193afd8b106c55a015e87350a848b299c5dbcbb0a14d3"
+    },
+    "release/runcards/nimble_9b-bf16.json": {
+      "path": "docs/history/round-2/runcards/nimble_9b-bf16.json",
+      "sha256": "6a324ab9633a7560dbe2023a63a4926a1c41a513de9805185c36b926ae70e2b4"
+    },
+    "release/runcards/oracle.json": {
+      "path": "docs/history/round-2/runcards/oracle.json",
+      "sha256": "af9a3da2b4bdb9852ad07cdb9845377cd34aba07e19defe8cdfa00ae2607035f"
+    },
+    "release/runcards/pplx-decider_27b.json": {
+      "path": "docs/history/round-2/runcards/pplx-decider_27b.json",
+      "sha256": "1dea150f7060b6089a9f7fa8f4d8999693508e8f50b7f77c362fd1fc6dcd6cf5"
+    },
+    "release/v0.3/attestations.json": {
+      "path": "release/v0.1.0/record/attestations.json",
+      "sha256": "2560d66ef14a15613f6b6af17509e0d5629233263e0f4f45733f4769f12dd73f"
+    },
+    "release/v0.3/baselines.json": {
+      "path": "release/v0.1.0/baselines.json",
+      "sha256": "603ca9e595101d2cc94259e18583184d1843ef90037dd9ff40a868c4bf0033d3"
+    },
+    "release/v0.3/runcards/clef-flash_9b.json": {
+      "path": "release/v0.1.0/runcards/clef-flash_9b.json",
+      "sha256": "3acff2a90ea9a75e313aae8cac3c01feaf832f7d265c168d21381b6f7fc8b7ac"
+    },
+    "release/v0.3/runcards/clef_27b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/clef_27b-q8_0.json",
+      "sha256": "e36673c70a04d8d4dd192b11389711cf84f89f0222e547bb67ee23f5ebd52960"
+    },
+    "release/v0.3/runcards/d1-omni_600m-q8_0.json": {
+      "path": "release/v0.1.0/runcards/d1-omni_600m-q8_0.json",
+      "sha256": "0f18f7d356167903e952510d3bd10b19b81d6644e9ce15a89040b2ae4d0bd3f3"
+    },
+    "release/v0.3/runcards/d1_3b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/d1_3b-q8_0.json",
+      "sha256": "76f5db20c3238ba425a247d76286929df76a7029663b94dbff3baf4551ce4dc8"
+    },
+    "release/v0.3/runcards/d3_27b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/d3_27b-q8_0.json",
+      "sha256": "fc6d1d6a74d5fd5dd80ea5149938149876c00eac8d4d5e9ecba4c338669c0a14"
+    },
+    "release/v0.3/runcards/d3_2b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/d3_2b-q8_0.json",
+      "sha256": "2743274da5a67429f3b934659d19d23b884300e4f17e725aeff7ae71e1f8ed32"
+    },
+    "release/v0.3/runcards/d3_4b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/d3_4b-q8_0.json",
+      "sha256": "48a9ce1667d7fe88ac72acf997d8b1ccc38214a0c99c8473d5f3008e83f3a406"
+    },
+    "release/v0.3/runcards/d3_9b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/d3_9b-q8_0.json",
+      "sha256": "8844effc3e9e950157a6604a1783ab5ee357821af4b852f96c50be5189a5e510"
+    },
+    "release/v0.3/runcards/embedding.json": {
+      "path": "release/v0.1.0/runcards/embedding.json",
+      "sha256": "c57d105c36fc1c8cf33b22bd1636b62a016134f6218c6a3b7fa205aa999ff0ff"
+    },
+    "release/v0.3/runcards/empty.json": {
+      "path": "release/v0.1.0/runcards/empty.json",
+      "sha256": "10134418b4d39f2db80306d1f22ddb6d5020ffc0cdbdf256fdb8a84db3da56f4"
+    },
+    "release/v0.3/runcards/gold_view.json": {
+      "path": "release/v0.1.0/runcards/gold_view.json",
+      "sha256": "0e7b45ba0a9e1ea5206a9f3160b044b1fd53c5fdc18351058623191e0886bdfb"
+    },
+    "release/v0.3/runcards/heuristic.json": {
+      "path": "release/v0.1.0/runcards/heuristic.json",
+      "sha256": "30ab30e7f84f96bc1acf35ebb96c77e71b1d122cd981babe48610d6f340286d0"
+    },
+    "release/v0.3/runcards/hf.json": {
+      "path": "release/v0.1.0/runcards/hf.json",
+      "sha256": "bc6ad9479bc397dfa7b602cc91c3e87dae732f0c4f506ef2d574e8626809c7c0"
+    },
+    "release/v0.3/runcards/kev_9b-bf16.json": {
+      "path": "release/v0.1.0/runcards/kev_9b-bf16.json",
+      "sha256": "1ee1053a3b7dce09586e1cc914fa93adf6a3d193544451a4579ae79913ed39f1"
+    },
+    "release/v0.3/runcards/laya_latest.json": {
+      "path": "release/v0.1.0/runcards/laya_latest.json",
+      "sha256": "6ce966e0cb433e5c240d651f98697bd7dc8df164e03960f596ecd58cbcb03d36"
+    },
+    "release/v0.3/runcards/lexical.json": {
+      "path": "release/v0.1.0/runcards/lexical.json",
+      "sha256": "2e84019770d1cc738ac770f332cfed1e82fedf39fac564d746895c6a56d5d4ee"
+    },
+    "release/v0.3/runcards/nimble-v3_9b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/nimble-v3_9b-q8_0.json",
+      "sha256": "ff73b8e9d0dbaa9af295d4230a02e09f5950515a9fcbaf42296dfd65a3fe3fce"
+    },
+    "release/v0.3/runcards/nimble_9b-bf16.json": {
+      "path": "release/v0.1.0/runcards/nimble_9b-bf16.json",
+      "sha256": "943d6cb04730725c1087d19d4dcd0a70118cf907de5e23df175ce620b61457f8"
+    },
+    "release/v0.3/runcards/oracle.json": {
+      "path": "release/v0.1.0/runcards/oracle.json",
+      "sha256": "b34dc28c313cc78965306d1e8b6c8f119d62665937faf1fc467206f442de29cd"
+    },
+    "release/v0.3/runcards/pplx-decider_27b.json": {
+      "path": "release/v0.1.0/runcards/pplx-decider_27b.json",
+      "sha256": "ed46cc6350c66c76e7d0471dae6c2d49c39b9701c1dcc5e04abe0a79d56d9cf4"
+    },
+    "release/v0.3/runcards/tev1_0.8b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/tev1_0.8b-q8_0.json",
+      "sha256": "917359ec85995c283acc4af9ee3d15e9d721f267a0fb4b3b0e046433915e01a6"
+    },
+    "release/v0.3/runcards/tev1_4b-q8_0.json": {
+      "path": "release/v0.1.0/runcards/tev1_4b-q8_0.json",
+      "sha256": "c37de324039d414048e6b6151d09b83ce797d605fbc6671cb5eb399a5b5e0c90"
+    },
+    "results/v0.3/build_bundle.py": {
+      "path": "results/v0.1.0/build_bundle.py"
+    },
+    "results/v0.3/cells/clef-flash_9b.json": {
+      "path": "results/v0.1.0/cells/clef-flash_9b.json"
+    },
+    "results/v0.3/cells/clef_27b-q8_0.json": {
+      "path": "results/v0.1.0/cells/clef_27b-q8_0.json"
+    },
+    "results/v0.3/cells/d1-omni_600m-q8_0.json": {
+      "path": "results/v0.1.0/cells/d1-omni_600m-q8_0.json"
+    },
+    "results/v0.3/cells/d1_3b-q8_0.json": {
+      "path": "results/v0.1.0/cells/d1_3b-q8_0.json"
+    },
+    "results/v0.3/cells/d3_27b-q8_0.json": {
+      "path": "results/v0.1.0/cells/d3_27b-q8_0.json"
+    },
+    "results/v0.3/cells/d3_2b-q8_0.json": {
+      "path": "results/v0.1.0/cells/d3_2b-q8_0.json"
+    },
+    "results/v0.3/cells/d3_4b-q8_0.json": {
+      "path": "results/v0.1.0/cells/d3_4b-q8_0.json"
+    },
+    "results/v0.3/cells/d3_9b-q8_0.json": {
+      "path": "results/v0.1.0/cells/d3_9b-q8_0.json"
+    },
+    "results/v0.3/cells/embedding.json": {
+      "path": "results/v0.1.0/cells/embedding.json"
+    },
+    "results/v0.3/cells/empty.json": {
+      "path": "results/v0.1.0/cells/empty.json"
+    },
+    "results/v0.3/cells/gold_view.json": {
+      "path": "results/v0.1.0/cells/gold_view.json"
+    },
+    "results/v0.3/cells/heuristic.json": {
+      "path": "results/v0.1.0/cells/heuristic.json"
+    },
+    "results/v0.3/cells/hf.json": {
+      "path": "results/v0.1.0/cells/hf.json"
+    },
+    "results/v0.3/cells/kev_9b-bf16.json": {
+      "path": "results/v0.1.0/cells/kev_9b-bf16.json"
+    },
+    "results/v0.3/cells/laya_latest.json": {
+      "path": "results/v0.1.0/cells/laya_latest.json"
+    },
+    "results/v0.3/cells/lexical.json": {
+      "path": "results/v0.1.0/cells/lexical.json"
+    },
+    "results/v0.3/cells/nimble-v3_9b-q8_0.json": {
+      "path": "results/v0.1.0/cells/nimble-v3_9b-q8_0.json"
+    },
+    "results/v0.3/cells/nimble_9b-bf16.json": {
+      "path": "results/v0.1.0/cells/nimble_9b-bf16.json"
+    },
+    "results/v0.3/cells/oracle.json": {
+      "path": "results/v0.1.0/cells/oracle.json"
+    },
+    "results/v0.3/cells/pplx-decider_27b.json": {
+      "path": "results/v0.1.0/cells/pplx-decider_27b.json"
+    },
+    "results/v0.3/cells/tev1_0.8b-q8_0.json": {
+      "path": "results/v0.1.0/cells/tev1_0.8b-q8_0.json"
+    },
+    "results/v0.3/cells/tev1_4b-q8_0.json": {
+      "path": "results/v0.1.0/cells/tev1_4b-q8_0.json"
+    },
+    "results/v0.3/leaderboard.csv": {
+      "path": "results/v0.1.0/leaderboard.csv",
+      "sha256": "e673ebe63597ce4e5b5f6cba50ae646c09e767c57f52a77f1f742430a834130e"
+    },
+    "results/v0.3/leaderboard.json": {
+      "path": "results/v0.1.0/leaderboard.json"
+    },
+    "results/v0.3/predictions/clef-flash_9b.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/clef-flash_9b.jsonl.gz",
+      "sha256": "4a11b79a2d14bb0bf6ff13d4677203bb91e12ae9dbda27b8a85e280e7d0db9cb"
+    },
+    "results/v0.3/predictions/clef_27b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/clef_27b-q8_0.jsonl.gz",
+      "sha256": "265ebb05309a2d3dff9fcd8d99e1a2fa2e998598a8ce0cec5edf2eac61aefad2"
+    },
+    "results/v0.3/predictions/d1-omni_600m-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/d1-omni_600m-q8_0.jsonl.gz",
+      "sha256": "f2fad35e6bb7124a89ccc7c897577160d8afdb8a72e2d3ca3276a51952cd6f18"
+    },
+    "results/v0.3/predictions/d1_3b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/d1_3b-q8_0.jsonl.gz",
+      "sha256": "f3259f841b1c4384d4ffe8c821eb1ac193580800b34f1bb0cdf38f4125bc54a6"
+    },
+    "results/v0.3/predictions/d3_27b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/d3_27b-q8_0.jsonl.gz",
+      "sha256": "e4d70b70aa77144a9834a52ee3cbf9ad70bced2957043156a573c6763feae155"
+    },
+    "results/v0.3/predictions/d3_2b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/d3_2b-q8_0.jsonl.gz",
+      "sha256": "cb455f8d354f374ba296bbfe07142cb23d4c32d816a5364e7088448647f5eb2d"
+    },
+    "results/v0.3/predictions/d3_4b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/d3_4b-q8_0.jsonl.gz",
+      "sha256": "9e6941f65cd70c62a9db7f3efde99efb8edc8b167ccfca771d6bbd6c4340e6ea"
+    },
+    "results/v0.3/predictions/d3_9b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/d3_9b-q8_0.jsonl.gz",
+      "sha256": "787cc5589fc5b94c811e11e5f758f19635143de8fce348c3ec26d10d406790a6"
+    },
+    "results/v0.3/predictions/embedding.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/embedding.jsonl.gz",
+      "sha256": "df561921e5f5d3830332ce60ee2a3e12e3ade98e00a8ca169321988b328f43c7"
+    },
+    "results/v0.3/predictions/gold_view.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/gold_view.jsonl.gz",
+      "sha256": "e79745ff7e2571f1a5bbd8d1ae71e9d5eae7fde08d64801221c23f7664213416"
+    },
+    "results/v0.3/predictions/heuristic.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/heuristic.jsonl.gz",
+      "sha256": "b88eac1ca9359297699508b09f7aa69d7ef6a6d07ed211395dd687f78389cf02"
+    },
+    "results/v0.3/predictions/hf.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/hf.jsonl.gz",
+      "sha256": "a1fb8147cfaa56e6cffbb86e3b0fd734141e99024f644a714b1a2155717d8f1a"
+    },
+    "results/v0.3/predictions/kev_9b-bf16.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/kev_9b-bf16.jsonl.gz",
+      "sha256": "643b2c9bb114ec588cb373973c03d235ec42d7018b4154c8d1df6e2f637f97b2"
+    },
+    "results/v0.3/predictions/laya_latest.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/laya_latest.jsonl.gz",
+      "sha256": "a14c25b247959a2bd82c5619fa489ae7a6b24dc9f8dfb11ec911a46477da3a1f"
+    },
+    "results/v0.3/predictions/lexical.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/lexical.jsonl.gz",
+      "sha256": "f3f3fef1c81d7d3e8d9907695b8f45784f917065e60b8b903badde13f3c8e361"
+    },
+    "results/v0.3/predictions/nimble-v3_9b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/nimble-v3_9b-q8_0.jsonl.gz",
+      "sha256": "ad770f5b1b41fa431d4cf64b3be15c8716396127c0ad73d107ef2592eab885cc"
+    },
+    "results/v0.3/predictions/nimble_9b-bf16.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/nimble_9b-bf16.jsonl.gz",
+      "sha256": "c5b7ef101d7b37a3e23600c75ee75a3535b756fee57b9015f8d5b03e91ae1d82"
+    },
+    "results/v0.3/predictions/pplx-decider_27b.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/pplx-decider_27b.jsonl.gz",
+      "sha256": "c1bc07fa5ed5c9d75659d14610be6eaa28f12a08e9f4c93f5351fbaef0daf470"
+    },
+    "results/v0.3/predictions/tev1_0.8b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/tev1_0.8b-q8_0.jsonl.gz",
+      "sha256": "0e54a505572a1a5002b2b5680ee1e0665488b9c92a3670595baef275f9907118"
+    },
+    "results/v0.3/predictions/tev1_4b-q8_0.jsonl.gz": {
+      "path": "results/v0.1.0/predictions/tev1_4b-q8_0.jsonl.gz",
+      "sha256": "a379ff13a7d13e92307506bbdc699a31338b50c2ca8a7daa67a4079b3ea97a4a"
+    },
+    "tests/test_mentat_hard_v2.py": {
+      "path": "tests/test_group_terms.py"
+    },
+    "tests/test_mentat_hard_v3_gold_view.py": {
+      "path": "tests/test_hard_gold_view.py"
+    }
+  }
+}

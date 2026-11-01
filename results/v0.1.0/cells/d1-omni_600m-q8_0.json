@@ -55,7 +55,7 @@
   ],
   "items": 10532,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test/d1-omni_600m-q8_0/submission",
+  "out_dir": "runs/20261030-test/d1-omni_600m-q8_0/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -110,10 +110,10 @@
   "contradiction_rate": 0.0,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test/d1-omni_600m-q8_0/answers.jsonl",
+   "answers": "runs/20261030-test/d1-omni_600m-q8_0/answers.jsonl",
    "certificate_cap": null,
    "digest": "a9a794f7dd8c3e93fe4ded00371b7e13be36f6a699c953a43742a2aa1d3ac3d9",
-   "verdicts": "runs/20261030-v31-test/d1-omni_600m-q8_0/verdicts.jsonl"
+   "verdicts": "runs/20261030-test/d1-omni_600m-q8_0/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -256,8 +256,8 @@
  },
  "id": "d1-omni_600m-q8_0",
  "kind": "system_one_model",
- "predictions": "results/v0.3/predictions/d1-omni_600m-q8_0.jsonl.gz",
- "run_dir": "runs/20261030-v31-test/d1-omni_600m-q8_0",
+ "predictions": "results/v0.1.0/predictions/d1-omni_600m-q8_0.jsonl.gz",
+ "run_dir": "runs/20261030-test/d1-omni_600m-q8_0",
  "score": {
   "N_active": null,
   "Q_N": 14.212655700004667,

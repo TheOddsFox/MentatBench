@@ -4227,7 +4227,7 @@
    "id": "systemone-choice",
    "prompt_sha256": "d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44"
   },
-  "ci_file": "mentat-hard-v3-20261030-ci.json",
+  "ci_file": "mentat-hard-20261030-ci.json",
   "ci_layout": "relation-group-headline/1",
   "code_commit": "0bff47f",
   "date": "2026-10-30",
@@ -4237,10 +4237,10 @@
    "version": "3.1"
   },
   "headline": "relation_group_mcc: the mean of relation and group MCC, on raw (unfloored) decisions",
-  "prereg": "docs/results/mentat-hard-v3-prereg-20261030.json",
+  "prereg": "release/v0.1.0/record/prereg.json",
   "reference": "d3_27b-q8_0",
-  "runs": "runs/20261030-v31-test (not committed)",
-  "script": "docs/results/mentat-hard-v3-results/build_results.py",
+  "runs": "runs/20261030-test (not committed)",
+  "script": "docs/results/mentat-hard-results/build_results.py",
   "seed": 0
  },
  "ranking": [

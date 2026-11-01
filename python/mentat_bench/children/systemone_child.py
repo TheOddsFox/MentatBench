@@ -53,7 +53,14 @@ also printed on stderr at exit.
 Configuration (environment): MB_S1_MODEL (the tag, required; a bare name is "<name>:latest"), MB_S1_URL (default
 http://127.0.0.1:11434),
 MB_S1_PARALLEL (default 4), MB_S1_TIMEOUT (seconds per request, default 300), MB_S1_ALLOW_UNPINNED (1 to allow),
-MB_S1_PINS (the pin file, default children/ollama_models.json), MB_S1_STATS (a JSON file of the cumulative counts, optional).
+MB_S1_PINS (the pin file, default children/ollama_models.json), MB_S1_STATS (a JSON file of the cumulative counts, optional),
+MB_S1_OPTION_SEED (an integer, optional; unset, the menus are as before). Set, this is the option-order diagnostic: the
+options of the named menus (binding status, negated and missing; group kind, k and the bounds) are shuffled, each relation
+menu is shuffled per pair keyed on the seed, and the ordered_chain and reading listings are shuffled; every answer is mapped
+back to the option it names. Not shuffled: the letter keys of a menu (A, B, C... name the listed positions), "none" (the last
+option of a reading), and the group's candidate listing. describe() reports the seed as option_order (top level and in the
+model block), prompt_sha256 covers it, and an MB_S1_STATS file records it; a stats file of another option order is refused
+at startup.)
 MB_S1_URL must be http(s) to localhost, 127.0.0.1 or
 ::1: the child talks to a local server only. It follows no redirects and uses no proxy.
 """
@@ -100,6 +107,7 @@ OWN_TERMS = {"ordered_chain": ("ordered_chain",), "exactly_one": ("exactly_one",
 P_FLOOR = 1e-12  # a probability of 0 is read as this, so every conf is finite
 PROB_SUM_TOLERANCE = 1e-2
 ORDER_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+OPTION_SCHEME = "crc32-shuffle-seeded-v1"  # describe()'s option_order.scheme: the menu order under MB_S1_OPTION_SEED
 STATUS = ("bound", "unresolved")
 NEGATED = ("no", "yes")
 MISSING = ("no_date", "no_source", "no_threshold", "ambiguous")
@@ -181,6 +189,20 @@ PROMPTS: dict[str, Any] = {
     "reading": {"option": "option {letter}", "none": "none of the options"},
 }
 PROMPT_SHA256 = hashlib.sha256(json.dumps(PROMPTS, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
+
+
+def option_prompt_sha256(option_seed: int) -> str:
+    """The prompt identity of a run with MB_S1_OPTION_SEED: the canonical JSON of PROMPTS with the seed, so such a run never
+    reports PROMPT_SHA256."""
+    return hashlib.sha256(json.dumps({"prompts": PROMPTS, "option_seed": option_seed}, sort_keys=True,
+                                     separators=(",", ":")).encode("utf-8")).hexdigest()
+
+
+def option_order_of(option_seed: int | None) -> dict[str, Any] | None:
+    """The option_order of a run with MB_S1_OPTION_SEED (describe(), the model block and MB_S1_STATS): None when unset."""
+    return None if option_seed is None else {"seed": option_seed, "scheme": OPTION_SCHEME}
+
+
 T = PROMPTS["text"]
 RELATION_CHOICES = tuple(PROMPTS["relation"]["choices"])
 CONTEXT_TEXTS = ("longer than the context length", "exceeds the available context size")  # the 400 texts of an input that does
@@ -198,9 +220,11 @@ STAT_FIELDS = ("units", "requests", "abstained_overlength", "item_errors", "retr
 RETRY_PAUSE_S = 0.5  # before the one retry of a 500
 
 
-def _load_stats(path: str | None) -> dict[str, dict[str, int]]:
+def _load_stats(path: str | None, option_order: dict[str, Any] | None = None) -> dict[str, dict[str, int]]:
     """The counts of an existing MB_S1_STATS file (so a restarted child continues the count), else zeros. A malformed file
-    is a RuntimeError: the count is not reset silently, and the file must be moved aside to start a new one."""
+    is a RuntimeError: the count is not reset silently, and the file must be moved aside to start a new one. So is a file
+    of another option order (its option_order, absent when unset, must be this run's): a diagnostic run never adds to or
+    rewrites the counts of another run."""
     stats = {op: dict.fromkeys(STAT_FIELDS, 0) for op in OPS}
     if path is None or not os.path.exists(path):
         return stats
@@ -215,6 +239,9 @@ def _load_stats(path: str | None) -> dict[str, dict[str, int]]:
                 stats[op][field] = value
     except (OSError, ValueError, KeyError, TypeError) as exc:
         raise RuntimeError(f"MB_S1_STATS {path} is malformed ({exc}); move it aside to start a new count") from None
+    if doc.get("option_order") != option_order:
+        raise RuntimeError(f"MB_S1_STATS {path} counts the option order {doc.get('option_order')}, this run has "
+                           f"{option_order}; use another path, or move it aside to start a new count")
     return stats
 
 
@@ -247,18 +274,30 @@ def _choice(stage: str, criteria: dict[str, Any] | None = None) -> dict[str, Any
             "criteria": spec["criteria"] if criteria is None else criteria}
 
 
-def relation_order(a: dict[str, Any], b: dict[str, Any]) -> tuple[str, ...]:
+def _menu_order(seed: int | None, stage: str, ids: Iterable[str], keys: Iterable[Any]) -> list[Any]:
+    """The keys in the order the model sees them: as given when seed is None, else a permutation keyed on the seed, the stage
+    and the question's own ids (so it depends on the question's content, not on its place in a batch)."""
+    order = list(keys)
+    if seed is not None:
+        key = "\x1f".join(ids)
+        random.Random(zlib.crc32(f"{seed}\x1f{stage}\x1f{key}".encode("utf-8"))).shuffle(order)
+    return order
+
+
+def relation_order(a: dict[str, Any], b: dict[str, Any], seed: int | None = None) -> tuple[str, ...]:
     """The menu order of the relations for one pair (PROMPTS["relation"]["menu_order"]): a shuffle keyed on the pair's ids.
     It is hf_child.relation_order applied to the five RELATION_CHOICES (hf_child has four, without EQUIV): the same
-    random.Random(crc32) shuffle of the list, so the order is not hf_child's order with EQUIV inserted."""
+    random.Random(crc32) shuffle of the list, so the order is not hf_child's order with EQUIV inserted. With MB_S1_OPTION_SEED
+    (seed) the crc32 key is prefixed with the seed."""
     order = list(RELATION_CHOICES)
-    random.Random(zlib.crc32(f"{a['id']}\x1f{b['id']}".encode("utf-8"))).shuffle(order)
+    key = f"{a['id']}\x1f{b['id']}" if seed is None else f"{seed}\x1f{a['id']}\x1f{b['id']}"
+    random.Random(zlib.crc32(key.encode("utf-8"))).shuffle(order)
     return tuple(order)
 
 
-def _relation_question(a: dict[str, Any], b: dict[str, Any]) -> dict[str, Any]:
+def _relation_question(a: dict[str, Any], b: dict[str, Any], seed: int | None = None) -> dict[str, Any]:
     spec = PROMPTS["relation"]
-    order = relation_order(a, b)
+    order = relation_order(a, b, seed)
     return {"type": "choice", "instructions": T["relation_lead"].format(proposition=_prop("B", b)) + spec["instructions"],
             "criteria": {k: spec["criteria"][k] for k in order}}
 
@@ -535,16 +574,17 @@ def pin_model(model: str, license_: str | None, env: dict[str, str]) -> dict[str
 
 class SystemOneChild:
     def __init__(self, model_id: str, url: str, digest: str, ollama_version: str, parallel: int = DEFAULT_PARALLEL,
-                 timeout: float = DEFAULT_TIMEOUT_S, stats_path: str | None = None):
+                 timeout: float = DEFAULT_TIMEOUT_S, stats_path: str | None = None, option_seed: int | None = None):
         self.model_id = model_id
         self.url = url
         self.digest = digest
         self.ollama_version = ollama_version
         self.parallel = parallel
         self.timeout = timeout
+        self.option_seed = option_seed  # MB_S1_OPTION_SEED: None keeps every menu in its fixed order
         self.rejected_400 = 0  # requests the server refused as invalid or over-length, in all calls
         self.stats_path = stats_path  # MB_S1_STATS: the cumulative counts, rewritten after every decide()
-        self.stats = _load_stats(stats_path)  # over the calls that returned, continued from MB_S1_STATS
+        self.stats = _load_stats(stats_path, option_order_of(option_seed))  # over the calls that returned, continued from MB_S1_STATS
         self._lock = threading.Lock()
         self._meter = {"tokens_in": 0, "tokens_out": 0}
         self._call = {"requests": 0, "retries_500": 0}  # the current call's requests and 500 retries
@@ -572,7 +612,8 @@ class SystemOneChild:
         stats_path = env.get("MB_S1_STATS") or None
         if stats_path is not None and not Path(stats_path).parent.is_dir():
             raise RuntimeError(f"MB_S1_STATS {stats_path}: its directory does not exist")
-        return cls(model, url, digest, version, parallel, timeout, stats_path=stats_path)
+        option_seed = int(env["MB_S1_OPTION_SEED"]) if "MB_S1_OPTION_SEED" in env else None  # set but not an integer: refused
+        return cls(model, url, digest, version, parallel, timeout, stats_path=stats_path, option_seed=option_seed)
 
     def verify_digest(self) -> None:
         """Refuses when the digest of the model is not the one checked at startup (the pin was checked then). A server that
@@ -588,15 +629,23 @@ class SystemOneChild:
                                "the run is refused")
 
     def describe(self) -> dict[str, Any]:
-        return {
+        sha = PROMPT_SHA256 if self.option_seed is None else option_prompt_sha256(self.option_seed)
+        order = option_order_of(self.option_seed)  # a shuffled run is not the pre-registered child: its identity names the seed
+        model = {"id": self.model_id, "revision": self.digest, "kind": "local", "ollama_version": self.ollama_version,
+                 "child_version": "7", "prompt_sha256": sha}  # the hello model block: a resume checks it
+        if order is not None:  # the model block is what the harness persists (policy.model), so the seed is there too
+            model["option_order"] = order
+        described: dict[str, Any] = {
             "name": "systemone-choice",
             "version": "7",  # version 7: alt_rules says a gloss that names its reading fixes it (6: rule cards; 5: bounds)
-            "model": {"id": self.model_id, "revision": self.digest, "kind": "local", "ollama_version": self.ollama_version,
-                      "child_version": "7", "prompt_sha256": PROMPT_SHA256},  # the hello model block: a resume checks it
-            "prompt_sha256": PROMPT_SHA256,
+            "model": model,
+            "prompt_sha256": sha,
             "parallel": self.parallel,
             "relation_floor": None,  # the child applies none: the harness's --relation-floor does
         }
+        if order is not None:
+            described["option_order"] = order
+        return described
 
     # Requests. A refused 400, 413 or 500 raises _Refused (a ChildError, an item error); a 500 is retried once first. Any
     # other failure raises the error itself, which fails the whole call.
@@ -645,23 +694,32 @@ class SystemOneChild:
         """The probabilities of one question, asked alone. A refused request raises _Refused."""
         return _probs(self._ask(state, {name: question}).get(name), keys)
 
+    def _pick(self, state: str, stage: str, ids: list[str], criteria: dict[str, Any] | None = None) -> dict[str, float]:
+        """The probabilities of one choice question of `stage` (its own criteria unless given), asked alone. Its options are
+        shown in the order of _menu_order, and the answer is read by option name, so it maps back to the same option. The
+        menus whose letters name a listing (ordered_chain's, a reading's) are not built here: their listing is permuted."""
+        spec = PROMPTS[stage]["criteria"] if criteria is None else criteria
+        menu = {k: spec[k] for k in _menu_order(self.option_seed, stage, ids, spec)}
+        return self._one(state, stage, _choice(stage, criteria=menu), menu)
+
     # Decisions
 
     def _binding(self, ctx: dict[str, Any]) -> dict[str, Any]:
         binary, negated = binary_label(ctx["label"])
-        status = self._one(_record(ctx), "status", _choice("status"), STATUS)
+        ids = [ctx["id"]]
+        status = self._pick(_record(ctx), "status", ids)
         if _argmax(status) == "bound":
             if not binary:  # a binary label names its own side, as in hf_child
-                negated = _argmax(self._one(_record(ctx), "negated", _choice("negated"), NEGATED)) == "yes"
+                negated = _argmax(self._pick(_record(ctx), "negated", ids)) == "yes"
             return {"status": "bound", "class": class_key(ctx["question"], ctx["label"]), "negated": negated, "missing": [],
                     "probs": status}
-        missing = _argmax(self._one(_record(ctx), "missing", _choice("missing"), MISSING))
+        missing = _argmax(self._pick(_record(ctx), "missing", ids))
         return {"status": "unresolved", "class": None, "negated": False, "missing": [missing], "probs": status}
 
     def _relation(self, a: dict[str, Any], b: dict[str, Any]) -> Any:
         """The relation decision of one pair, asked alone. Input too long for the context is an abstention; any other
         refusal, or a degenerate answer, is an item error."""
-        question = _relation_question(a, b)
+        question = _relation_question(a, b, self.option_seed)
         if len(question["instructions"]) > MAX_INSTRUCTION_CHARS:
             return _RefusedInstructions(f"relation instructions of {len(question['instructions'])} characters exceed "
                                         f"{MAX_INSTRUCTION_CHARS}: the server would truncate them")
@@ -670,7 +728,7 @@ class SystemOneChild:
         except _Refused as exc:
             return _Abstained("decide_relation") if exc.over_context else exc
         try:
-            return _relation_decision(answer, relation_order(a, b))
+            return _relation_decision(answer, relation_order(a, b, self.option_seed))
         except ChildError as exc:
             return exc
 
@@ -681,17 +739,19 @@ class SystemOneChild:
 
     def _chain(self, members: list[dict[str, Any]], rules: str) -> list[dict[str, Any]]:
         """The members strongest first: each round asks for the strongest of those not yet placed; the last one left
-        needs no question (as hf_child's order stage). rules is the lead of the group's state (see _rules)."""
+        needs no question (as hf_child's order stage). rules is the lead of the group's state (see _rules). The round's
+        members are listed in the order of _menu_order; a letter names a listed position, so it maps back through that order."""
         left: list[dict[str, Any]] = list(members)
         placed: list[dict[str, Any]] = []
         while len(left) >= 2:
             letters = ORDER_LETTERS[:len(left)]
-            listing = "\n".join(T["letter"].format(letter=letter, question=m["question"], label=m["label"])
-                                for letter, m in zip(letters, left))
+            shown = _menu_order(self.option_seed, "order", [m["id"] for m in left], range(len(left)))  # indices into left
+            listing = "\n".join(T["letter"].format(letter=letter, question=left[i]["question"], label=left[i]["label"])
+                                for letter, i in zip(letters, shown))
             state = rules + T["chain_state"].format(listing=listing)
             options = {letter: PROMPTS["order"]["option"].format(letter=letter) for letter in letters}
             scores = self._one(state, "order", _choice("order", criteria=options), letters)
-            placed.append(left.pop(letters.index(_argmax(scores))))
+            placed.append(left.pop(shown[letters.index(_argmax(scores))]))
         return placed + left
 
     def _group(self, ctx: dict[str, Any]) -> Any:
@@ -709,7 +769,7 @@ class SystemOneChild:
         ids = [m["id"] for m in members]
         n = len(ids)
         state = _rules(members) + T["group_state"].format(listing=_listing(members))
-        probs = self._one(state, "kind", _choice("kind"), GROUP_CHOICES)
+        probs = self._pick(state, "kind", ids)
         kind = _argmax(probs)
         if kind == "none":
             return {"groups": [], "probs": probs}
@@ -729,9 +789,9 @@ class SystemOneChild:
         elif kind in ("at_least_k", "at_most_k"):
             ks = tuple(str(k) for k in range(1, min(n, MAX_K) + 1))
             k_criteria = {k: PROMPTS["k"]["criteria"][k] for k in ks}
-            k = int(_argmax(self._one(state, "k", _choice("k", criteria=k_criteria), ks)))
+            k = int(_argmax(self._pick(state, "k", ids, k_criteria)))
             lo, hi = (k, n) if kind == "at_least_k" else (0, k)
-        lo, hi = self._bounds(state, kind, lo, hi, n)
+        lo, hi = self._bounds(state, kind, lo, hi, ids)
         terms = group_terms(lo, hi, n, chain_ids is not None)  # the canonical terms (adapters.base.group_terms)
         terms.sort(key=lambda term: term[0] not in OWN_TERMS[kind])  # stable: the kind's own term first, then the others
         groups: list[dict[str, Any]] = []
@@ -745,35 +805,38 @@ class SystemOneChild:
                 groups.append(decision)
         return {"groups": groups, "probs": probs}
 
-    def _bounds(self, state: str, kind: str, lo: int, hi: int, n: int) -> tuple[int, int]:
+    def _bounds(self, state: str, kind: str, lo: int, hi: int, ids: list[str]) -> tuple[int, int]:
         """The bounds of a group: each side the kind leaves open is one choice question. "lower" (the fewest that must hold)
         follows at_most_one, at_most_k and ordered_chain; "upper" (the most that can hold, or "no limit") follows at_least_k
         and ordered_chain. The menus keep lo <= hi and hi >= 1, and an upper menu is asked only when it has a choice. A set
         over MAX_K members is not asked: it keeps the kind's own bounds, as v4 did."""
+        n = len(ids)
         if n > MAX_K:
             return lo, hi
         if kind in ("at_most_one", "at_most_k", "ordered_chain"):
             menu = {str(j): PROMPTS["lower"]["criteria"][str(j)] for j in range(hi + 1)}
-            lo = int(_argmax(self._one(state, "lower", _choice("lower", criteria=menu), menu)))
+            lo = int(_argmax(self._pick(state, "lower", ids, menu)))
         if kind in ("at_least_k", "ordered_chain") and max(lo, 1) < n:
             menu = {str(j): PROMPTS["upper"]["criteria"][str(j)] for j in range(max(lo, 1), n)}
             menu["no_limit"] = PROMPTS["upper"]["criteria"]["no_limit"]
-            pick = _argmax(self._one(state, "upper", _choice("upper", criteria=menu), menu))
+            pick = _argmax(self._pick(state, "upper", ids, menu))
             hi = n if pick == "no_limit" else int(pick)
         return lo, hi
 
     def _reading(self, ctx: dict[str, Any]) -> dict[str, Any]:
         """A reading row: members[0] is the proposition u, the rest its options (lettered: four in Mentat-Hard, at most 26). Two choice questions over
         the options and none: base (the most literal reading of u) and alt (another plausible reading, which may be the same
-        option). For each reading that picks an option c, the pair [u, c] and [c, u] under that reading's scope."""
+        option). For each reading that picks an option c, the pair [u, c] and [c, u] under that reading's scope. The options are
+        listed in the order of _menu_order; the letters name the listed positions, so a pick maps back through that order."""
         u, options = ctx["members"][0], ctx["members"][1:]
         if not options:
             return {"groups": []}
         if len(options) > len(ORDER_LETTERS):
             raise ChildError(f"a reading row has {len(options)} options; the limit is {len(ORDER_LETTERS)}")
         letters = ORDER_LETTERS[:len(options)]
-        listing = "\n".join(T["letter"].format(letter=letter, question=m["question"], label=m["label"])
-                            for letter, m in zip(letters, options))
+        shown = _menu_order(self.option_seed, "reading", [m["id"] for m in ctx["members"]], range(len(options)))
+        listing = "\n".join(T["letter"].format(letter=letter, question=options[i]["question"], label=options[i]["label"])
+                            for letter, i in zip(letters, shown))
         rules = _rules([u])
         state = rules + T["reading_state"].format(proposition=_prop("U", u), listing=listing)
         menu = {letter: PROMPTS["reading"]["option"].format(letter=letter) for letter in letters}
@@ -787,7 +850,7 @@ class SystemOneChild:
                 continue
             scope = {"axis": "reading", "values": [reading], "of": ["alt", "base"]}
             conf = _margin(probs, pick, "none")
-            option = options[letters.index(pick)]["id"]
+            option = options[shown[letters.index(pick)]]["id"]
             for pair in ([u["id"], option], [option, u["id"]]):
                 groups.append({"kind": "ordered_chain", "members": pair, "direction": "forward", "scope": scope,
                                "conf": conf})
@@ -843,9 +906,11 @@ class SystemOneChild:
             return
         path = Path(self.stats_path)
         tmp = path.with_name(f"{path.name}.{os.getpid()}.tmp")
+        doc: dict[str, Any] = {"model": self.model_id, "ops": self.stats}
+        if self.option_seed is not None:  # the counts of a shuffled run say so: _load_stats refuses them under another order
+            doc["option_order"] = option_order_of(self.option_seed)
         try:
-            tmp.write_text(json.dumps({"model": self.model_id, "ops": self.stats}, indent=2, sort_keys=True) + "\n",
-                           encoding="utf-8")
+            tmp.write_text(json.dumps(doc, indent=2, sort_keys=True) + "\n", encoding="utf-8")
             replace_with_retry(tmp, path)
         except OSError as exc:
             with contextlib.suppress(OSError):

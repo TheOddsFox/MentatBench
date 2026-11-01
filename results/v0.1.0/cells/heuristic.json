@@ -61,7 +61,7 @@
   ],
   "items": 10532,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test-baselines/heuristic/submission",
+  "out_dir": "runs/20261030-test-baselines/heuristic/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -110,10 +110,10 @@
   "contradiction_rate": 0.0,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test-baselines/heuristic/answers.jsonl",
+   "answers": "runs/20261030-test-baselines/heuristic/answers.jsonl",
    "certificate_cap": null,
    "digest": "383e0848cf302ae49e28b0888d8f4e78e62874f9301630ffc9aa69d0d0858ddc",
-   "verdicts": "runs/20261030-v31-test-baselines/heuristic/verdicts.jsonl"
+   "verdicts": "runs/20261030-test-baselines/heuristic/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -224,8 +224,8 @@
  "child_stats": null,
  "id": "heuristic",
  "kind": "baseline",
- "predictions": "results/v0.3/predictions/heuristic.jsonl.gz",
- "run_dir": "runs/20261030-v31-test-baselines/heuristic",
+ "predictions": "results/v0.1.0/predictions/heuristic.jsonl.gz",
+ "run_dir": "runs/20261030-test-baselines/heuristic",
  "score": {
   "N_active": null,
   "Q_N": 32.22185718746212,

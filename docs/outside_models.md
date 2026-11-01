@@ -78,7 +78,7 @@ python -m mentat_bench.runcell --fixture fixtures/mentat_hard_test --candidates 
     --local-timeout 1800 --hello-timeout 3600 --relation-floor <floor from dev> --profile profiles/mentat-hard-v1.json \
     --out runs/<date>-<lab>/<cell>
 
-python -m mentat_bench.runcard --cell runs/<date>-<lab>/<cell> --out release/runcards/<lab>-<cell>.json
+python -m mentat_bench.runcard --cell runs/<date>-<lab>/<cell> --out docs/history/round-2/runcards/<lab>-<cell>.json
 python -m mentat_bench.report --runs runs/<date>-<lab>/<cell>
 ```
 
@@ -97,9 +97,9 @@ running after that is killed and fails the build.
   (`profiles/mentat-hard-v1.json`), the fixture and the engine of the release, against a model whose pin is in the repository's
   own `children/ollama_models.json`, as reviewed in a pull request, with a passing `conform` record (for a server that is not
   Ollama). Such runs are ranked by the headline of their fixture version (spec s8; `docs/mentat_hard.md`, section 5): the relation
-  MCC for versions 1 and 2 (owner decision 2026-10-29), and the mean of the relation and group MCC for version 3 and later
+  MCC for versions 1 and 2 (owner decision 2026-10-29), and the mean of the relation and group MCC for round 3 and later
   (owner decision 2026-10-30). The binding MCC is secondary; the reading MCC and Q_N are diagnostics, and the group MCC is a
-  part of the version 3 headline and a diagnostic in versions 1 and 2.
+  part of the round 3 headline and a diagnostic in versions 1 and 2.
 - **Not rankable.** A run whose model is pinned only in an `MB_S1_PINS` file, or unpinned (`MB_S1_ALLOW_UNPINNED=1`), or whose
   server fails `conform`. Such a run is a diagnostic only and is not ranked.
 - **Private split.** The lab does not receive the private fixture, its labels or any per-question result. The owner runs the

@@ -55,7 +55,7 @@
   ],
   "items": 10532,
   "mode": "pairwise",
-  "out_dir": "runs/20261030-v31-test-hf/hf/submission",
+  "out_dir": "runs/20261030-test-hf/hf/submission",
   "outcomes": 3348,
   "pairs_asked_cap": null,
   "pairs_capped": false,
@@ -106,10 +106,10 @@
   "contradiction_rate": 0.0,
   "decision_scoring": "ok",
   "evaluate": {
-   "answers": "runs/20261030-v31-test-hf/hf/answers.jsonl",
+   "answers": "runs/20261030-test-hf/hf/answers.jsonl",
    "certificate_cap": null,
    "digest": "2d25624e2e104ffd0c404ca77582d30c5e15d754178304240b3c63e9ea12a221",
-   "verdicts": "runs/20261030-v31-test-hf/hf/verdicts.jsonl"
+   "verdicts": "runs/20261030-test-hf/hf/verdicts.jsonl"
   },
   "extra_queries": null,
   "extra_status": null,
@@ -220,8 +220,8 @@
  "child_stats": null,
  "id": "hf",
  "kind": "pipeline_baseline",
- "predictions": "results/v0.3/predictions/hf.jsonl.gz",
- "run_dir": "runs/20261030-v31-test-hf/hf",
+ "predictions": "results/v0.1.0/predictions/hf.jsonl.gz",
+ "run_dir": "runs/20261030-test-hf/hf",
  "score": {
   "N_active": null,
   "Q_N": 9.055259730593558,
