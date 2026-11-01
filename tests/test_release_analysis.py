@@ -895,7 +895,7 @@ def test_contract_binding_auroc_equals_sklearn_on_the_committed_predictions(doc,
 def test_contract_weighting(doc):
     w = doc["weighting"]
     assert [s["name"] for s in w["schemes"]] == SCHEMES
-    assert [(s["relation"], s["group"]) for s in w["schemes"]] == pytest.approx([(1, 0), (.75, .25), (.5, .5), (.25, .75), (0, 1)])
+    assert [(s["relation"], s["group"]) for s in w["schemes"]] == [(1, 0), (.75, .25), (.5, .5), (.25, .75), (0, 1)]  # exact binary fractions
     for name in SCHEMES:
         assert set(w["ranks"][name]) == set(doc["models"])
         for m, r in w["ranks"][name].items():
