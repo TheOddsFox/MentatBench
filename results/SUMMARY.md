@@ -61,7 +61,7 @@ What's settled:
 What isn't:
 - **The next four.** D3 9B, Pplx Decider 27B, Kev 9B and D3 4B overlap on every pair of headline intervals, so their order isn't settled.
 - **Second place on groups.** Kev 9B 0.147 [0.121, 0.175] and Nimble-v3 9B 0.126 [0.106, 0.147] overlap.
-- **The rest of the order.** The results JSON lists 27 overlapping pairs of headline intervals. Overlap is not evidence of a tie. Only gaps to D3 27B are paired, so the order among the other models is untested.
+- **The rest of the order.** The results JSON lists 27 overlapping pairs of headline intervals. Overlap is not evidence of a tie. This v0.1.0 summary pairs only the gaps to D3 27B; the v0.1.1 analysis adds Holm-adjusted pairwise comparisons among all 15 models (89 of the 105 headline pairs resolved; see [v0.1.1/analysis.json](v0.1.1/analysis.json)).
 - **Runs near zero.** Lexical, embedding, the hf baseline, TEV1 0.8B and D1-Omni 600M have intervals that include 0. Laya's lies below 0.
 
 Private split (`mentat_hard_private`, sealed; aggregates only):
@@ -73,6 +73,41 @@ Other findings:
 - **Held-out wording:** D3 27B's relation MCC is 0.787 on both seen and held-out wording. Seven of the 15 models lose 0.05 or more.
 - **Readings:** D3 27B leads, with reading MCC 0.804 (diagnostic).
 - **Q_N** does not follow the decision ranking. The rules and lexical baselines score 32.2, above D3 27B's 25.0. Fourteen of the 15 model builds were repaired, so their strict Q_N is 0.
+
+## What the results support
+
+Three tiers. Each claim is backed by the results in [README.md](README.md).
+
+**Well supported**
+
+- D3 27B (rank 1 on the headline) leads this benchmark's relation and group decision tasks, and so the headline, their mean. Relation MCC 0.788, against 0.512 for the next model (Pplx Decider 27B); group MCC 0.249, against 0.147 for the next (Kev 9B). It does not lead binding: its binding MCC is 0.000.
+- Its headline difference from every other model is resolved after Holm correction (paired league bootstrap). All 14 of its headline pairs are resolved, each in its favour.
+- The owner-run private-split check agrees on the leading model: D3 27B is first on the private split too (0.525, against 0.273 for D3 9B). This is a replication run by the owner, not an independent reproduction.
+
+**Partially supported**
+
+- Generalisation to new wording within the same generator (held-out phrasing families). D3 27B's relation MCC is the same on held-out and seen wording (0.787 and 0.787), but seven of the 15 models lose 0.05 or more on held-out wording.
+
+**Not established**
+
+- General decision-making ability. The benchmark measures typed decisions from one generator, not decision-making in general.
+- Building reliable, consistent knowledge bases. Strict Q_N is 0 for 14 of the 15 models (tev1_0.8b-q8_0 is the exception, at 17.0), D3 27B included. Local conflicts: 1,505 of D3 27B's 5,172 claim-bearing answers (29.1%; 95% interval 23.5% to 34.3%) belong to a minimal conflict of at most three answers under either predicate (logical UNSAT, or a forced suite outcome), and its answer set contains a detected contradiction. Of those answers, 83 are in a logically unsatisfiable set on their own.
+
+### What this benchmark does not measure
+
+- One synthetic sports-league generator. Every item comes from it.
+- Inference depth. Of the 4,500 named relations, 3,840 are depth 0 to 2, 654 are depth 3, and only six are depth 4 or more, all in one league (test-L10).
+- Held-out wording. The held-out split changes wording, not rule types.
+- Repeats. The headline is one run per model. The option-shuffle pass covers 15 models (one seed, 20261101), and the run-to-run, Vulkan and backend repeats are diagnostics, not extra headline runs. The first d3:9b repeat attempt ran on Ollama's Vulkan backend by mistake; the CUDA repeats were run afterwards in a separate folder.
+- Test gold is public. Models built or tuned on it would carry a contamination risk that these scores do not measure.
+- One shuffle seed, one machine and one backend for the repeats (plus the Vulkan diagnostic). The build costs come from one machine.
+- Prompt wording varies only through the held-out phrasing families. No other prompt variants were run.
+- Judges. The answerability audits and the item audit use model judges (two Haiku 5.5 judge sets), not people. The item audit judged all 423 all-wrong items, 127 sampled weak-over-strong items and 50 unflagged controls: 13 of 550 flagged items are suspect labels (both judge sets agree on a non-gold answer). 9 of the 13 are group items with gold at_most_k where both answered none: an untested hypothesis, a shared misreading of the group-kind taxonomy or gold errors. 0 of 50 controls were labelled suspect (exact 95% confidence interval 0% to 7%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
+- Consistency. The check is sound but incomplete, and it ignores paraphrase identities between markets, so its counts are lower bounds.
+- Private replication. The private split is owner-run, and only its aggregates are published.
+- External reproduction. There is none yet.
+
+None of this measures general reasoning.
 
 ## Limits
 

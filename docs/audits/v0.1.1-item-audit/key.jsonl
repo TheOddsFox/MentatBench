@@ -1,0 +1,600 @@
+{"id": "A001", "qid": "g00025", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A002", "qid": "g00388", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A003", "qid": "g00540", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 5}
+{"id": "A004", "qid": "g00776", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A005", "qid": "g00818", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A006", "qid": "g00361", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 3]], "gold_class": "at_least_k:1+at_most_k:3", "kind": "at_least_k", "n": 4}
+{"id": "A007", "qid": "g00775", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A008", "qid": "r00128", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A009", "qid": "r02607", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A010", "qid": "r05199", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A011", "qid": "r03739", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A012", "qid": "g00451", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2]], "gold_class": "at_least_k:2", "kind": "at_least_k", "n": 4}
+{"id": "A013", "qid": "r02302", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A014", "qid": "r03116", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A015", "qid": "g00754", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A016", "qid": "g00983", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 4]], "gold_class": "at_least_k:4", "kind": "at_least_k", "n": 6}
+{"id": "A017", "qid": "r05192", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A018", "qid": "r02441", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A019", "qid": "r03765", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A020", "qid": "r03928", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A021", "qid": "g00745", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 2]], "gold_class": "at_least_k:2+at_most_k:2", "kind": "at_least_k", "n": 6}
+{"id": "A022", "qid": "r01332", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A023", "qid": "r05188", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A024", "qid": "g00825", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 5}
+{"id": "A025", "qid": "g00115", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 5}
+{"id": "A026", "qid": "r02082", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A027", "qid": "g00990", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A028", "qid": "g00503", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A029", "qid": "r03546", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A030", "qid": "g00677", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 5}
+{"id": "A031", "qid": "r05425", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A032", "qid": "r03771", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A033", "qid": "r03743", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A034", "qid": "r01285", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A035", "qid": "g00760", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 2}
+{"id": "A036", "qid": "g00259", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A037", "qid": "r02806", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A038", "qid": "r03990", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A039", "qid": "g00951", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 5]], "gold_class": "at_least_k:1+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A040", "qid": "r04244", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A041", "qid": "r05565", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A042", "qid": "r04805", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A043", "qid": "r03335", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A044", "qid": "g00601", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A045", "qid": "r04332", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A046", "qid": "g00550", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A047", "qid": "g00695", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A048", "qid": "r02835", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A049", "qid": "r02729", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A050", "qid": "r04574", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A051", "qid": "r04163", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A052", "qid": "r05776", "op": "decide_relation", "group": "control", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A053", "qid": "g00242", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 5]], "gold_class": "at_most_k:5", "kind": "at_most_k", "n": 6}
+{"id": "A054", "qid": "r01794", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A055", "qid": "g00091", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A056", "qid": "r01010", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A057", "qid": "g00237", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A058", "qid": "r01227", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A059", "qid": "g00880", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A060", "qid": "r02446", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A061", "qid": "r00805", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A062", "qid": "r05794", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A063", "qid": "g00688", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A064", "qid": "r01681", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A065", "qid": "r05455", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A066", "qid": "g00533", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A067", "qid": "r03283", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A068", "qid": "r03649", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A069", "qid": "r00836", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A070", "qid": "g00935", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 5]], "gold_class": "at_least_k:1+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A071", "qid": "g00674", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A072", "qid": "r01039", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A073", "qid": "g00708", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A074", "qid": "r04961", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A075", "qid": "g00231", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A076", "qid": "r03667", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A077", "qid": "g00021", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 7]], "gold_class": "at_least_k:2+at_most_k:7", "kind": "at_least_k", "n": 8}
+{"id": "A078", "qid": "g00293", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A079", "qid": "r03194", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A080", "qid": "r04234", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A081", "qid": "r00501", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A082", "qid": "g00137", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A083", "qid": "r01904", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A084", "qid": "r05866", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A085", "qid": "r03637", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A086", "qid": "g00316", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 5}
+{"id": "A087", "qid": "r02181", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A088", "qid": "r04271", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A089", "qid": "g00125", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A090", "qid": "r00106", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A091", "qid": "g00351", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 6}
+{"id": "A092", "qid": "r03597", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A093", "qid": "r05319", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A094", "qid": "g00504", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A095", "qid": "g00258", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A096", "qid": "g00017", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A097", "qid": "r05634", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A098", "qid": "r01194", "op": "decide_relation", "group": "control", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A099", "qid": "r01932", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A100", "qid": "r05642", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A101", "qid": "r01983", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A102", "qid": "g00824", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A103", "qid": "r03956", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A104", "qid": "g00301", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 2]], "gold_class": "at_least_k:2+at_most_k:2", "kind": "at_least_k", "n": 6}
+{"id": "A105", "qid": "g00232", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 3]], "gold_class": "at_least_k:3", "kind": "at_least_k", "n": 5}
+{"id": "A106", "qid": "g00774", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["exactly_one", null]], "gold_class": "exactly_one", "kind": "exactly_one", "n": 3}
+{"id": "A107", "qid": "r02895", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A108", "qid": "r04485", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A109", "qid": "g00619", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 4}
+{"id": "A110", "qid": "r03073", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A111", "qid": "g00414", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 5]], "gold_class": "at_least_k:1+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A112", "qid": "r05436", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A113", "qid": "r00534", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A114", "qid": "r04341", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A115", "qid": "r00746", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A116", "qid": "r00096", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A117", "qid": "r03789", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A118", "qid": "g00363", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 6}
+{"id": "A119", "qid": "g00604", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A120", "qid": "g00229", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A121", "qid": "r01998", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A122", "qid": "g00651", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A123", "qid": "g00396", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A124", "qid": "r04850", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A125", "qid": "r01354", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A126", "qid": "r02622", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A127", "qid": "r01734", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A128", "qid": "r01079", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A129", "qid": "g00366", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A130", "qid": "g00654", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A131", "qid": "r01054", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A132", "qid": "r05739", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A133", "qid": "g00144", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A134", "qid": "g00410", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A135", "qid": "r05333", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A136", "qid": "g00986", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A137", "qid": "g00751", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A138", "qid": "r02366", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A139", "qid": "r04464", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A140", "qid": "r01426", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A141", "qid": "g00633", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A142", "qid": "g00112", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A143", "qid": "r00277", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A144", "qid": "r03482", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A145", "qid": "g00122", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A146", "qid": "g00123", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A147", "qid": "r02125", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A148", "qid": "r02416", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A149", "qid": "r02341", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A150", "qid": "g00617", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A151", "qid": "g00490", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 4}
+{"id": "A152", "qid": "r00883", "op": "decide_relation", "group": "control", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A153", "qid": "g00215", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 4}
+{"id": "A154", "qid": "g00686", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A155", "qid": "r02032", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A156", "qid": "r05724", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A157", "qid": "g00397", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A158", "qid": "r01999", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A159", "qid": "r05238", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A160", "qid": "r03799", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A161", "qid": "g00560", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 2]], "gold_class": "at_least_k:2+at_most_k:2", "kind": "at_least_k", "n": 6}
+{"id": "A162", "qid": "r05175", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A163", "qid": "r00149", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A164", "qid": "r05221", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A165", "qid": "g00010", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 5]], "gold_class": "at_least_k:1+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A166", "qid": "r05226", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A167", "qid": "r03515", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A168", "qid": "g00492", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A169", "qid": "r05878", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A170", "qid": "r04767", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A171", "qid": "r05960", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A172", "qid": "r04674", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A173", "qid": "r02875", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A174", "qid": "g00476", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 2}
+{"id": "A175", "qid": "g00900", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 6}
+{"id": "A176", "qid": "g00247", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 4}
+{"id": "A177", "qid": "g00435", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A178", "qid": "r02176", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A179", "qid": "r04452", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A180", "qid": "r01224", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A181", "qid": "g00252", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 2}
+{"id": "A182", "qid": "g00422", "op": "decide_group", "group": "control", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 7}
+{"id": "A183", "qid": "r01367", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A184", "qid": "r00449", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A185", "qid": "r02797", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A186", "qid": "g00205", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 2]], "gold_class": "at_least_k:1+at_most_k:2", "kind": "at_least_k", "n": 4}
+{"id": "A187", "qid": "r04666", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A188", "qid": "r03977", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A189", "qid": "r04365", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A190", "qid": "r03111", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A191", "qid": "r04942", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A192", "qid": "r05304", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A193", "qid": "g00661", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A194", "qid": "r03628", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A195", "qid": "r05941", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A196", "qid": "g00419", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A197", "qid": "r05632", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A198", "qid": "g00139", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A199", "qid": "g00590", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A200", "qid": "g00891", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A201", "qid": "g00936", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A202", "qid": "r05404", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A203", "qid": "r05661", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A204", "qid": "r01502", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A205", "qid": "r02465", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A206", "qid": "g00941", "op": "decide_group", "group": "control", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 3}
+{"id": "A207", "qid": "r01929", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A208", "qid": "g00211", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A209", "qid": "r02187", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A210", "qid": "g00716", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 6}
+{"id": "A211", "qid": "r02251", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A212", "qid": "r00490", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A213", "qid": "r05237", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A214", "qid": "r02116", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A215", "qid": "r02885", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A216", "qid": "r00017", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A217", "qid": "r05183", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A218", "qid": "r00035", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A219", "qid": "r01074", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A220", "qid": "r03202", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A221", "qid": "g00189", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A222", "qid": "g00464", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A223", "qid": "g00400", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A224", "qid": "r00814", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A225", "qid": "g00066", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A226", "qid": "g00657", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 2]], "gold_class": "at_least_k:2+at_most_k:2", "kind": "at_least_k", "n": 6}
+{"id": "A227", "qid": "r00856", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A228", "qid": "r00995", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A229", "qid": "r02456", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A230", "qid": "r03705", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A231", "qid": "g00037", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A232", "qid": "g01000", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 5}
+{"id": "A233", "qid": "r02693", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A234", "qid": "g00766", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 4], ["at_most_k", 5]], "gold_class": "at_least_k:4+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A235", "qid": "r03531", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A236", "qid": "r01761", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A237", "qid": "r02363", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A238", "qid": "r05687", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A239", "qid": "g00101", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 2]], "gold_class": "at_least_k:2+at_most_k:2", "kind": "at_least_k", "n": 5}
+{"id": "A240", "qid": "r03309", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A241", "qid": "r05932", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A242", "qid": "r04486", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A243", "qid": "r03936", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A244", "qid": "g00069", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A245", "qid": "g00896", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A246", "qid": "r01461", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A247", "qid": "r01417", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A248", "qid": "g00415", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 3], ["at_most_k", 3]], "gold_class": "at_least_k:3+at_most_k:3", "kind": "at_least_k", "n": 6}
+{"id": "A249", "qid": "r03201", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A250", "qid": "r04928", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A251", "qid": "g00894", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A252", "qid": "r02002", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A253", "qid": "r02198", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A254", "qid": "r04348", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A255", "qid": "r05071", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A256", "qid": "g00380", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A257", "qid": "g00223", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2]], "gold_class": "at_least_k:2", "kind": "at_least_k", "n": 5}
+{"id": "A258", "qid": "r02145", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A259", "qid": "g00683", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A260", "qid": "r05947", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A261", "qid": "r03998", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A262", "qid": "g00485", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A263", "qid": "g00845", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A264", "qid": "r00269", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A265", "qid": "r03958", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A266", "qid": "g00596", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 5}
+{"id": "A267", "qid": "r03146", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A268", "qid": "r00361", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A269", "qid": "g00888", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A270", "qid": "g00861", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 5]], "gold_class": "at_most_k:5", "kind": "at_most_k", "n": 6}
+{"id": "A271", "qid": "r01152", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A272", "qid": "r02488", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A273", "qid": "r03828", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A274", "qid": "g00359", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A275", "qid": "g00841", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A276", "qid": "r01241", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A277", "qid": "r00400", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A278", "qid": "g00567", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 3]], "gold_class": "at_least_k:1+at_most_k:3", "kind": "at_least_k", "n": 6}
+{"id": "A279", "qid": "g00810", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A280", "qid": "r01632", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A281", "qid": "g00859", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A282", "qid": "g00433", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 5}
+{"id": "A283", "qid": "g00899", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A284", "qid": "g00722", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 2}
+{"id": "A285", "qid": "r04596", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A286", "qid": "r03729", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A287", "qid": "g00047", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A288", "qid": "r00759", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A289", "qid": "g00507", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 6}
+{"id": "A290", "qid": "r03814", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A291", "qid": "g00347", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A292", "qid": "g00785", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A293", "qid": "r00602", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A294", "qid": "r04361", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A295", "qid": "r05039", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A296", "qid": "r02620", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A297", "qid": "g00429", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A298", "qid": "r04934", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A299", "qid": "r03432", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A300", "qid": "g00371", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A301", "qid": "r00215", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A302", "qid": "r00672", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A303", "qid": "g00665", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 3], ["at_most_k", 5]], "gold_class": "at_least_k:3+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A304", "qid": "g00529", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A305", "qid": "r01916", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A306", "qid": "r04839", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A307", "qid": "g00031", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 7]], "gold_class": "at_most_k:7", "kind": "at_most_k", "n": 8}
+{"id": "A308", "qid": "r04439", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A309", "qid": "g00645", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A310", "qid": "r02644", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A311", "qid": "r02030", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A312", "qid": "g00662", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 7]], "gold_class": "at_most_k:7", "kind": "at_most_k", "n": 8}
+{"id": "A313", "qid": "r04811", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A314", "qid": "r01626", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A315", "qid": "r00516", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A316", "qid": "g00092", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A317", "qid": "r05342", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A318", "qid": "r02316", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A319", "qid": "r05019", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A320", "qid": "r04861", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A321", "qid": "g00753", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A322", "qid": "g00274", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A323", "qid": "r00052", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A324", "qid": "g00093", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A325", "qid": "r05381", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A326", "qid": "r01411", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A327", "qid": "r00112", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A328", "qid": "r05536", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A329", "qid": "g00926", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 3}
+{"id": "A330", "qid": "g00159", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["exactly_one", null]], "gold_class": "exactly_one", "kind": "exactly_one", "n": 3}
+{"id": "A331", "qid": "r04558", "op": "decide_relation", "group": "control", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A332", "qid": "g00913", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A333", "qid": "g00643", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A334", "qid": "g00870", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A335", "qid": "r02870", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A336", "qid": "g00638", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A337", "qid": "g00735", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A338", "qid": "g00107", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 4}
+{"id": "A339", "qid": "g00690", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 4]], "gold_class": "at_most_k:4", "kind": "at_most_k", "n": 5}
+{"id": "A340", "qid": "g00310", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 6}
+{"id": "A341", "qid": "g00539", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 3]], "gold_class": "at_least_k:1+at_most_k:3", "kind": "at_least_k", "n": 6}
+{"id": "A342", "qid": "g00054", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A343", "qid": "g00969", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A344", "qid": "r04252", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A345", "qid": "r01257", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A346", "qid": "g00023", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 8}
+{"id": "A347", "qid": "g00324", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A348", "qid": "g00506", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 3]], "gold_class": "at_least_k:3", "kind": "at_least_k", "n": 6}
+{"id": "A349", "qid": "g00947", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A350", "qid": "r05432", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A351", "qid": "r02779", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A352", "qid": "r05969", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A353", "qid": "g00999", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A354", "qid": "r01395", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A355", "qid": "r05991", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A356", "qid": "g00312", "op": "decide_group", "group": "control", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A357", "qid": "r01912", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A358", "qid": "r00659", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A359", "qid": "r00286", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A360", "qid": "r01150", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A361", "qid": "g00950", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A362", "qid": "g00782", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A363", "qid": "r02025", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A364", "qid": "r00121", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A365", "qid": "r04940", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A366", "qid": "r04906", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A367", "qid": "r04456", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A368", "qid": "r00538", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A369", "qid": "g00329", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 2}
+{"id": "A370", "qid": "r04326", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A371", "qid": "r04577", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A372", "qid": "r01256", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A373", "qid": "r00124", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A374", "qid": "r01159", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A375", "qid": "g00966", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 4}
+{"id": "A376", "qid": "r05055", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A377", "qid": "g00234", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A378", "qid": "g00501", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 6}
+{"id": "A379", "qid": "r03232", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A380", "qid": "r04382", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A381", "qid": "r06000", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A382", "qid": "r03307", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A383", "qid": "g00174", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A384", "qid": "r05080", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A385", "qid": "r00737", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A386", "qid": "r02957", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A387", "qid": "r03691", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A388", "qid": "r02210", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A389", "qid": "g00085", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A390", "qid": "r03353", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A391", "qid": "r01072", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A392", "qid": "r01037", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A393", "qid": "r00094", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A394", "qid": "r04052", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A395", "qid": "r02016", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A396", "qid": "r04753", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A397", "qid": "r05037", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A398", "qid": "g00498", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 3], ["at_most_k", 5]], "gold_class": "at_least_k:3+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A399", "qid": "g00855", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A400", "qid": "g00377", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 4}
+{"id": "A401", "qid": "r01141", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A402", "qid": "g00126", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A403", "qid": "g00050", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 3]], "gold_class": "at_least_k:1+at_most_k:3", "kind": "at_least_k", "n": 4}
+{"id": "A404", "qid": "r00495", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A405", "qid": "r03753", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A406", "qid": "r01358", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A407", "qid": "g00838", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A408", "qid": "g00356", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A409", "qid": "r02614", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A410", "qid": "r00153", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A411", "qid": "g00276", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 6}
+{"id": "A412", "qid": "r05448", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A413", "qid": "g00108", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 3]], "gold_class": "at_least_k:3", "kind": "at_least_k", "n": 5}
+{"id": "A414", "qid": "r00182", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A415", "qid": "g00985", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 2]], "gold_class": "at_least_k:2+at_most_k:2", "kind": "at_least_k", "n": 6}
+{"id": "A416", "qid": "g00879", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 5]], "gold_class": "at_least_k:2+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A417", "qid": "r04276", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A418", "qid": "g00717", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 2}
+{"id": "A419", "qid": "r01777", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A420", "qid": "r04769", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A421", "qid": "r00294", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A422", "qid": "g00146", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 4}
+{"id": "A423", "qid": "g00632", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 4}
+{"id": "A424", "qid": "r01236", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A425", "qid": "g00332", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A426", "qid": "r05857", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A427", "qid": "r01002", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A428", "qid": "g00555", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A429", "qid": "r04242", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A430", "qid": "g00370", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A431", "qid": "g00644", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2], ["at_most_k", 6]], "gold_class": "at_least_k:2+at_most_k:6", "kind": "at_least_k", "n": 7}
+{"id": "A432", "qid": "r04082", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A433", "qid": "r02733", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A434", "qid": "g00475", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A435", "qid": "g00794", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A436", "qid": "g00780", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 4], ["at_most_k", 5]], "gold_class": "at_least_k:4+at_most_k:5", "kind": "at_least_k", "n": 6}
+{"id": "A437", "qid": "r02613", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A438", "qid": "r03654", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A439", "qid": "r05509", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A440", "qid": "r05276", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A441", "qid": "g00043", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A442", "qid": "g00386", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A443", "qid": "r02044", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A444", "qid": "g00130", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 7]], "gold_class": "at_least_k:1+at_most_k:7", "kind": "at_least_k", "n": 8}
+{"id": "A445", "qid": "r01108", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A446", "qid": "g00719", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A447", "qid": "r00176", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A448", "qid": "r02152", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A449", "qid": "r03950", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A450", "qid": "r02762", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A451", "qid": "r05669", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A452", "qid": "r01445", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A453", "qid": "r04459", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A454", "qid": "r00673", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A455", "qid": "g00039", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 5]], "gold_class": "at_least_k:1+at_most_k:5", "kind": "at_least_k", "n": 7}
+{"id": "A456", "qid": "r05929", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A457", "qid": "r04369", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A458", "qid": "g00854", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A459", "qid": "r03086", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A460", "qid": "g00471", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A461", "qid": "g00175", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A462", "qid": "r05006", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A463", "qid": "r00166", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A464", "qid": "g00614", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A465", "qid": "r03916", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A466", "qid": "r01669", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A467", "qid": "g00488", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A468", "qid": "g00170", "op": "decide_group", "group": "control", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A469", "qid": "r01593", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A470", "qid": "g00198", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A471", "qid": "g00851", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 5]], "gold_class": "at_most_k:5", "kind": "at_most_k", "n": 6}
+{"id": "A472", "qid": "r01887", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A473", "qid": "g00033", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2]], "gold_class": "at_least_k:2", "kind": "at_least_k", "n": 4}
+{"id": "A474", "qid": "g00872", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A475", "qid": "r01176", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A476", "qid": "r01073", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A477", "qid": "g00704", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 8}
+{"id": "A478", "qid": "r05736", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A479", "qid": "r05474", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A480", "qid": "g00244", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A481", "qid": "g00163", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A482", "qid": "r02144", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A483", "qid": "r04693", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A484", "qid": "r02982", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A485", "qid": "r00022", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A486", "qid": "g00893", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A487", "qid": "g00515", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A488", "qid": "g00295", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 5}
+{"id": "A489", "qid": "r02748", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A490", "qid": "r00398", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A491", "qid": "r02381", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A492", "qid": "r02603", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A493", "qid": "r04859", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A494", "qid": "g00837", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 7]], "gold_class": "at_least_k:1+at_most_k:7", "kind": "at_least_k", "n": 8}
+{"id": "A495", "qid": "r02045", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A496", "qid": "r04289", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A497", "qid": "g00920", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A498", "qid": "r02745", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A499", "qid": "r00342", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A500", "qid": "g00073", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A501", "qid": "r01247", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A502", "qid": "g00903", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A503", "qid": "g00948", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A504", "qid": "g00466", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A505", "qid": "r02064", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A506", "qid": "r02350", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A507", "qid": "g00241", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A508", "qid": "r03384", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A509", "qid": "r03253", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A510", "qid": "r05974", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A511", "qid": "g00462", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A512", "qid": "g00572", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A513", "qid": "g00427", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 8}
+{"id": "A514", "qid": "r00974", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A515", "qid": "r03884", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A516", "qid": "r01349", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A517", "qid": "r02597", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A518", "qid": "g00011", "op": "decide_group", "group": "control", "stratum": "real", "gold": [["exactly_one", null]], "gold_class": "exactly_one", "kind": "exactly_one", "n": 3}
+{"id": "A519", "qid": "g00453", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 4}
+{"id": "A520", "qid": "g00582", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 6]], "gold_class": "at_most_k:6", "kind": "at_most_k", "n": 7}
+{"id": "A521", "qid": "g00309", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 5]], "gold_class": "at_most_k:5", "kind": "at_most_k", "n": 6}
+{"id": "A522", "qid": "r05587", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A523", "qid": "r03740", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A524", "qid": "g00816", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 4]], "gold_class": "at_least_k:4", "kind": "at_least_k", "n": 6}
+{"id": "A525", "qid": "r03937", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A526", "qid": "g00996", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A527", "qid": "r02540", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A528", "qid": "g00409", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 6}
+{"id": "A529", "qid": "g00609", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A530", "qid": "r05872", "op": "decide_relation", "group": "control", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A531", "qid": "g00793", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A532", "qid": "g00734", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A533", "qid": "r02629", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A534", "qid": "r01102", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A535", "qid": "r02126", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A536", "qid": "r03101", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A537", "qid": "r05223", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A538", "qid": "r00213", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A539", "qid": "r02323", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A540", "qid": "g00325", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 3}
+{"id": "A541", "qid": "g00713", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 2]], "gold_class": "at_least_k:1+at_most_k:2", "kind": "at_least_k", "n": 5}
+{"id": "A542", "qid": "g00978", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 2]], "gold_class": "at_least_k:2", "kind": "at_least_k", "n": 4}
+{"id": "A543", "qid": "g00656", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A544", "qid": "r04511", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A545", "qid": "g00927", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A546", "qid": "r03818", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A547", "qid": "r03356", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A548", "qid": "g00777", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 5}
+{"id": "A549", "qid": "g00711", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A550", "qid": "r00162", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A551", "qid": "r00687", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A552", "qid": "g00282", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1], ["at_most_k", 4]], "gold_class": "at_least_k:1+at_most_k:4", "kind": "at_least_k", "n": 6}
+{"id": "A553", "qid": "r02561", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A554", "qid": "g00358", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A555", "qid": "g00946", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["at_most_one", null]], "gold_class": "at_most_one", "kind": "at_most_one", "n": 2}
+{"id": "A556", "qid": "g00551", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A557", "qid": "r01378", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A558", "qid": "r04185", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A559", "qid": "r00402", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A560", "qid": "g00789", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A561", "qid": "r00040", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A562", "qid": "g00161", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A563", "qid": "r04933", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A564", "qid": "r01434", "op": "decide_relation", "group": "inverted", "stratum": "hard_distractor", "gold": "NONE", "gold_class": "NONE"}
+{"id": "A565", "qid": "r05314", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A566", "qid": "g00606", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A567", "qid": "g00193", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A568", "qid": "g00937", "op": "decide_group", "group": "inverted", "stratum": "decoy", "gold": [], "gold_class": "none", "kind": "none", "n": 3}
+{"id": "A569", "qid": "g00491", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 3}
+{"id": "A570", "qid": "g00368", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 4}
+{"id": "A571", "qid": "g00253", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["exactly_one", null]], "gold_class": "exactly_one", "kind": "exactly_one", "n": 3}
+{"id": "A572", "qid": "r02725", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A573", "qid": "g00790", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A574", "qid": "r00347", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A575", "qid": "r02533", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A576", "qid": "r03198", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A577", "qid": "r03160", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A578", "qid": "r03602", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EQUIV", "gold_class": "EQUIV"}
+{"id": "A579", "qid": "r00912", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "IMPLIES", "gold_class": "IMPLIES"}
+{"id": "A580", "qid": "g00803", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 2]], "gold_class": "at_most_k:2", "kind": "at_most_k", "n": 3}
+{"id": "A581", "qid": "r00296", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A582", "qid": "g00705", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 6]], "gold_class": "at_most_k:6", "kind": "at_most_k", "n": 8}
+{"id": "A583", "qid": "g00403", "op": "decide_group", "group": "inverted", "stratum": "real", "gold": [["exactly_one", null]], "gold_class": "exactly_one", "kind": "exactly_one", "n": 3}
+{"id": "A584", "qid": "r00010", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A585", "qid": "r00102", "op": "decide_relation", "group": "control", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A586", "qid": "g00141", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_most_k", 3]], "gold_class": "at_most_k:3", "kind": "at_most_k", "n": 4}
+{"id": "A587", "qid": "r05672", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A588", "qid": "g00072", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["ordered_chain", null]], "gold_class": "ordered_chain", "kind": "ordered_chain", "n": 2}
+{"id": "A589", "qid": "g00226", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 3}
+{"id": "A590", "qid": "r00786", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A591", "qid": "g00075", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A592", "qid": "r05656", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A593", "qid": "r02500", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A594", "qid": "r02105", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A595", "qid": "r01820", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A596", "qid": "g00626", "op": "decide_group", "group": "all_wrong", "stratum": "real", "gold": [["at_least_k", 1]], "gold_class": "at_least_k:1", "kind": "at_least_k", "n": 7}
+{"id": "A597", "qid": "r05477", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}
+{"id": "A598", "qid": "r04243", "op": "decide_relation", "group": "inverted", "stratum": "trivial", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A599", "qid": "r02525", "op": "decide_relation", "group": "inverted", "stratum": "real", "gold": "EXCLUDES", "gold_class": "EXCLUDES"}
+{"id": "A600", "qid": "r01629", "op": "decide_relation", "group": "all_wrong", "stratum": "real", "gold": "IMPLIED_BY", "gold_class": "IMPLIED_BY"}

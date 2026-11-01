@@ -7,6 +7,7 @@ committed bundle against the committed sources, and check the README's tables ce
 
 import csv
 import gzip
+import hashlib
 import importlib.util
 import io
 import json
@@ -16,6 +17,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 LB_PATH = RESULTS / "v0.1.0" / "leaderboard.json"
+V011_LB_PATH = RESULTS / "v0.1.1" / "leaderboard.json"
+V010_CSV_PATH = RESULTS / "v0.1.0" / "leaderboard.csv"
+V011_CSV_PATH = RESULTS / "v0.1.1" / "leaderboard.csv"
+ANALYSIS_PATH = RESULTS / "v0.1.1" / "analysis.json"
 README = RESULTS / "README.md"
 MAIN = ROOT / "docs" / "results" / "mentat-hard-20261030.json"
 PRIVATE = ROOT / "docs" / "results" / "mentat-hard-private-20261030.json"
@@ -31,13 +36,17 @@ EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.\w+")
 PERSONAL = ("falty", "C:\\Users", "C:/Users", "/c/Users", "AppData", "scratchpad")
 PATH_KEYS = {"readme", "leaderboard_json", "leaderboard_csv", "predictions_dir", "cells_dir", "runcards_dir", "builder",
              "release_manifest", "release_gate_output", "attestations", "results_md", "results_json", "private_results_md",
-             "private_results_json", "prereg"}
+             "private_results_json", "prereg", "analysis_json", "item_audit_flagged", "item_audit_verdicts"}
 BINARY_SUFFIXES = {".gz", ".parquet", ".bin", ".pyc", ".png", ".jpg", ".jpeg", ".pdf", ".zip", ".sqlite"}
 NO_PREDICTIONS = {"empty", "oracle"}  # the two baselines that write no predictions file (their predictions field is null)
 
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def sha256_file(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def entries(lb: dict) -> list[dict]:
@@ -410,8 +419,10 @@ def test_index_paths_exist_and_latest_is_consistent():
     idx = load(RESULTS / "index.json")
     versions = [v["version"] for v in idx["versions"]]
     latest = [v for v in idx["versions"] if v["status"] == "latest"]
-    assert len(latest) == 1 and latest[0]["version"] == idx["latest"] == "v0.1.0"
+    assert len(latest) == 1 and latest[0]["version"] == idx["latest"] == "v0.1.1"
     assert all(v["superseded_by"] in versions or v["superseded_by"] is None for v in idx["versions"])
+    by_version = {v["version"]: v for v in idx["versions"]}
+    assert by_version["v0.1.0"]["status"] == "superseded" and by_version["v0.1.0"]["superseded_by"] == "v0.1.1"
     checked = 0
     for version in idx["versions"]:
         for key, value in version.items():
@@ -449,6 +460,71 @@ def test_bundle_identity():
     for role in ("prereg", "release_manifest", "release_gate_output", "attestations", "runcards_dir", "results_md",
                  "results_json", "private_results_md", "private_results_json"):
         assert entry.get(role) and (ROOT / entry[role]).exists(), role
+
+
+def test_v011_scores_equal_v010():
+    """v0.1.1 is the v0.1.0 measurements with analysis added. Every row keeps its v0.1.0 metrics, gap, depth, private figures,
+    rank and relation floor exactly. Each model adds a rank interval of integers (lo <= median <= hi, and lo <= rank <= hi);
+    the baselines are unranked and add none."""
+    v10, v11 = load(LB_PATH), load(V011_LB_PATH)
+    assert v11["release"] == "v0.1.1" and v11["ranking"] == v10["ranking"]
+    old_rows, new_rows = entries(v10), entries(v11)
+    assert [e["id"] for e in new_rows] == [e["id"] for e in old_rows]
+    for old, new in zip(old_rows, new_rows):
+        for key in ("metrics", "gap_to_reference", "depth_accuracy", "private", "rank", "relation_floor"):
+            assert new[key] == old[key], (old["id"], key)
+    assert len(v11["models"]) == 15
+    for e in v11["models"]:
+        interval = e["rank_interval"]
+        assert all(type(interval[k]) is int for k in ("lo", "median", "hi")), e["id"]
+        assert interval["lo"] <= interval["median"] <= interval["hi"], e["id"]
+        assert interval["lo"] <= e["rank"] <= interval["hi"], e["id"]
+    assert all("rank_interval" not in e for e in v11["baselines"])
+
+
+def test_v011_points_at_the_v010_records_and_pins_its_analysis():
+    """v0.1.1 copies no cells, predictions or run cards: every row names the v0.1.0 files. The provenance pins the committed
+    analysis by sha256, and the CSV keeps the v0.1.0 columns as a prefix of each row, with the rank bounds appended."""
+    v10, v11 = load(LB_PATH), load(V011_LB_PATH)
+    assert not (RESULTS / "v0.1.1" / "cells").exists() and not (RESULTS / "v0.1.1" / "predictions").exists()
+    prov = v11["provenance"]
+    assert prov["based_on_release"] == "v0.1.0"
+    assert prov["analysis"]["path"] == "results/v0.1.1/analysis.json"
+    assert prov["analysis"]["sha256"] == sha256_file(ANALYSIS_PATH)
+    for old, new in zip(entries(v10), entries(v11)):
+        assert new["cell"] == old["cell"] and new["cell"].startswith("results/v0.1.0/cells/"), new["id"]
+        assert new["runcard"] == old["runcard"] and new["runcard"].startswith("release/v0.1.0/runcards/"), new["id"]
+        assert new["predictions"] == old["predictions"], new["id"]
+        if new["predictions"] is not None:
+            assert new["predictions"].startswith("results/v0.1.0/predictions/"), new["id"]
+            assert (ROOT / new["predictions"]).is_file(), new["id"]
+    old_csv = list(csv.reader(io.StringIO(V010_CSV_PATH.read_text(encoding="utf-8"))))
+    new_csv = list(csv.reader(io.StringIO(V011_CSV_PATH.read_text(encoding="utf-8"))))
+    width, id_col = len(old_csv[0]), old_csv[0].index("id")
+    assert new_csv[0][:width] == old_csv[0] and new_csv[0][width:] == ["rank_lo", "rank_hi"]
+    old_by_id = {row[id_col]: row for row in old_csv[1:]}
+    bounds = {e["id"]: e["rank_interval"] for e in v11["models"]}
+    assert len(new_csv) - 1 == len(old_by_id)
+    for row in new_csv[1:]:
+        assert row[:width] == old_by_id[row[id_col]], row[id_col]
+        interval = bounds.get(row[id_col])
+        assert row[width:] == ([str(interval["lo"]), str(interval["hi"])] if interval else ["", ""]), row[id_col]
+
+
+def test_analysis_based_on_matches_the_committed_blobs():
+    """The analysis names the bytes it was computed from, and the importer checks them: the v0.1.0 leaderboard and each
+    predictions file by sha256, and the fixture's content hash as the leaderboard records it."""
+    analysis = load(ANALYSIS_PATH)
+    based = analysis["based_on"]
+    assert analysis["release"] == "v0.1.1" and based["release"] == "v0.1.0"
+    assert based["leaderboard"]["path"] == "results/v0.1.0/leaderboard.json"
+    assert based["leaderboard"]["sha256"] == sha256_file(LB_PATH)
+    expected = {e["predictions"] for e in entries(load(LB_PATH)) if e["predictions"]}
+    assert set(based["predictions"]) == expected and len(expected) == 20
+    for path, digest in based["predictions"].items():
+        assert sha256_file(ROOT / path) == digest, path
+    assert based["fixture"]["name"] == "mentat_hard_test" and based["fixture"]["revision"] == "3.1"
+    assert based["fixture"]["content_hash"] == load(LB_PATH)["provenance"]["fixture"]["content_hash"]
 
 
 def test_readme_links_resolve():

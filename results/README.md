@@ -20,8 +20,9 @@ Start here:
 - **D3 27B** (Ollama `d3:27b-q8_0`) is first on the pre-registered headline, the mean of relation MCC and group MCC:
   0.519 [0.497, 0.541] on the public test split and 0.525 [0.504, 0.546] on the private split. It is the reference model, chosen on dev.
 - **Next is D3 9B**, at 0.275 [0.251, 0.300]. Its paired gap to D3 27B is 0.244 [0.221, 0.266], an interval that excludes 0.
-- **Most of the middle of the table is not resolved.** Several headline intervals overlap. Overlap is not evidence of a tie, and the
-  paired comparison among runs other than the reference was not computed. See [Which differences are resolved](#which-differences-are-resolved).
+- **Several middle pairs are not resolved.** Several headline intervals overlap, and overlap is not evidence of a tie. The Holm-adjusted
+  pairwise comparisons among all 15 models are in the v0.1.1 analysis section: 89 of the 105 headline pairs are resolved, and the other 16
+  are not (all 105 are in [analysis.json](v0.1.1/analysis.json)). See [Which differences are resolved](#which-differences-are-resolved).
 - **Relation MCC alone also puts D3 27B first** (0.788, against 0.512 for Pplx Decider 27B). The group lead is smaller:
   0.249 against 0.147 for Kev 9B.
 - **Baselines.** The pre-registered rules baseline (a heuristic child) scores 0.140 [0.121, 0.153]. gold_view, which uses perfect
@@ -30,6 +31,41 @@ Start here:
 - **Caveats that matter.** Laya 0.4B's abstentions are scored as NONE answers, as pre-registered. TEV1 0.8B and D1-Omni 600M are at
   chance. D3 9B's binding score fell from 0.293 on dev to 0.000 on test and the cause is not known. Each model was run once. See
   [Limits and disclosures](#limits-and-disclosures).
+
+## What the results support
+
+Three tiers. Each claim is backed by the tables in this file: the leaderboard, the analysis section, the private-split section and the limits.
+
+**Well supported**
+
+- D3 27B (rank 1 on the headline) leads this benchmark's relation and group decision tasks, and so the headline, their mean. Relation MCC 0.788, against 0.512 for the next model (Pplx Decider 27B); group MCC 0.249, against 0.147 for the next (Kev 9B). It does not lead binding: its binding MCC is 0.000.
+- Its headline difference from every other model is resolved after Holm correction (paired league bootstrap). All 14 of its headline pairs are resolved, each in its favour.
+- The owner-run private-split check agrees on the leading model: D3 27B is first on the private split too (0.525, against 0.273 for D3 9B). This is a replication run by the owner, not an independent reproduction.
+
+**Partially supported**
+
+- Generalisation to new wording within the same generator (held-out phrasing families). D3 27B's relation MCC is the same on held-out and seen wording (0.787 and 0.787), but seven of the 15 models lose 0.05 or more on held-out wording.
+
+**Not established**
+
+- General decision-making ability. The benchmark measures typed decisions from one generator, not decision-making in general.
+- Building reliable, consistent knowledge bases. Strict Q_N is 0 for 14 of the 15 models (tev1_0.8b-q8_0 is the exception, at 17.0), D3 27B included. Local conflicts: 1,505 of D3 27B's 5,172 claim-bearing answers (29.1%; 95% interval 23.5% to 34.3%) belong to a minimal conflict of at most three answers under either predicate (logical UNSAT, or a forced suite outcome), and its answer set contains a detected contradiction. Of those answers, 83 are in a logically unsatisfiable set on their own.
+
+### What this benchmark does not measure
+
+- One synthetic sports-league generator. Every item comes from it.
+- Inference depth. Of the 4,500 named relations, 3,840 are depth 0 to 2, 654 are depth 3, and only six are depth 4 or more, all in one league (test-L10). See [Limits and disclosures](#limits-and-disclosures).
+- Held-out wording. The held-out split changes wording, not rule types.
+- Repeats. The headline is one run per model. The option-shuffle pass covers 15 models (one seed, 20261101), and the run-to-run, Vulkan and backend repeats are diagnostics, not extra headline runs. The first d3:9b repeat attempt ran on Ollama's Vulkan backend by mistake; the CUDA repeats were run afterwards in a separate folder.
+- Test gold is public. Models built or tuned on it would carry a contamination risk that these scores do not measure.
+- One shuffle seed, one machine and one backend for the repeats (plus the Vulkan diagnostic). The build costs come from one machine.
+- Prompt wording varies only through the held-out phrasing families. No other prompt variants were run.
+- Judges. The answerability audits and the item audit use model judges (two Haiku 5.5 judge sets), not people. The item audit judged all 423 all-wrong items, 127 sampled weak-over-strong items and 50 unflagged controls: 13 of 550 flagged items are suspect labels (both judge sets agree on a non-gold answer). 9 of the 13 are group items with gold at_most_k where both answered none: an untested hypothesis, a shared misreading of the group-kind taxonomy or gold errors. 0 of 50 controls were labelled suspect (exact 95% confidence interval 0% to 7%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors. Suspect labels are not adjudicated, and they remain in the scores.
+- Consistency. The check is sound but incomplete, and it ignores paraphrase identities between markets, so its counts are lower bounds.
+- Private replication. The private split is owner-run, and only its aggregates are published.
+- External reproduction. There is none yet.
+
+None of this measures general reasoning.
 
 ## What the benchmark measures
 
@@ -112,6 +148,572 @@ The statements below follow the round 3 results document. Intervals are the leag
   intervals (`headline_interval_overlaps` in [leaderboard.json](v0.1.0/leaderboard.json)). Overlap is not evidence of a tie.
 - **Some runs are indistinguishable from zero.** Lexical (0.000), embedding (0.007, [-0.002, 0.014]), hf (0.008, [-0.002, 0.018]),
   TEV1 0.8B and D1-Omni 600M all have headline intervals that include 0. Laya's interval lies entirely below 0 (upper bound -0.007).
+
+<!-- analysis:start -->
+
+### Analysis (v0.1.1, same measurements)
+
+Every table in this section is computed by `tools/eval/release_analysis.py` from the committed v0.1.0 predictions, cells and fixture; the numbers are in [v0.1.1/analysis.json](v0.1.1/analysis.json). No score changes.
+
+The leaderboard's intervals are the published league-bootstrap intervals (B = 2000). The rank, pairwise and depth intervals and the p-values in this section are the paired draws of the same resampling at B = 20000 (the first 2000 are the published draws). Uncertainty comes only from resampling the 18 leagues of one fixture: each model has one deterministic run, and the three metric families (headline, relation, group) are corrected separately, not against each other.
+
+#### Rank intervals
+
+Rank 1 is the highest point. The interval is the 2.5% to 97.5% range of the rank over the draws.
+
+| Model | Headline rank (95%) | Relation rank (95%) | Group rank (95%) |
+|---|---|---|---|
+| d3_27b-q8_0 | 1 [1, 1] (median 1) | 1 [1, 1] (median 1) | 1 [1, 1] (median 1) |
+| d3_9b-q8_0 | 2 [2, 3] (median 2) | 3 [3, 3] (median 3) | 5 [3, 7] (median 5) |
+| pplx-decider_27b | 3 [2, 4] (median 3) | 2 [2, 2] (median 2) | 11 [9, 14] (median 11) |
+| kev_9b-bf16 | 4 [3, 5] (median 4) | 6 [6, 6] (median 6) | 2 [2, 3] (median 2) |
+| d3_4b-q8_0 | 5 [4, 5] (median 5) | 4 [4, 5] (median 4) | 7 [5, 7] (median 7) |
+| clef_27b-q8_0 | 6 [6, 7] (median 6) | 5 [4, 5] (median 5) | 9 [8, 11] (median 9) |
+| nimble-v3_9b-q8_0 | 7 [6, 7] (median 7) | 8 [8, 10] (median 8) | 3 [2, 4] (median 3) |
+| nimble_9b-bf16 | 8 [8, 9] (median 8) | 9 [7, 9] (median 9) | 6 [4, 7] (median 6) |
+| clef-flash_9b | 9 [8, 9] (median 9) | 10 [9, 10] (median 10) | 4 [4, 6] (median 5) |
+| tev1_4b-q8_0 | 10 [10, 10] (median 10) | 7 [7, 8] (median 7) | 12 [9, 14] (median 12) |
+| d1_3b-q8_0 | 11 [11, 12] (median 11) | 12 [12, 12] (median 12) | 8 [8, 10] (median 8) |
+| d3_2b-q8_0 | 12 [11, 12] (median 12) | 11 [11, 11] (median 11) | 15 [15, 15] (median 15) |
+| tev1_0.8b-q8_0 | 13 [13, 14] (median 13) | 14 [13, 15] (median 14) | 10 [9, 12] (median 10) |
+| d1-omni_600m-q8_0 | 14 [13, 14] (median 14) | 13 [13, 14] (median 13) | 13 [11, 14] (median 13) |
+| laya_latest | 15 [15, 15] (median 15) | 15 [14, 15] (median 15) | 14 [11, 14] (median 13) |
+
+#### Holm-resolved pairs
+
+Differences are higher minus lower. The Holm p-value is adjusted within each family; when no draw lies on the other side it is a floor. Leave-one-league-out: each resolved pair's point difference is recomputed with each of the 18 leagues left out.
+
+**Headline**: 89 of 105 pairs are resolved (Holm, alpha 0.05). Leave-one-league-out: 89 of 89 keep their sign in all 18 recomputations.
+- d3_27b-q8_0 over d3_9b-q8_0: higher minus lower 0.244 [0.221, 0.266], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over pplx-decider_27b: higher minus lower 0.266 [0.245, 0.289], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over kev_9b-bf16: higher minus lower 0.283 [0.265, 0.301], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d3_4b-q8_0: higher minus lower 0.286 [0.267, 0.306], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over clef_27b-q8_0: higher minus lower 0.312 [0.288, 0.337], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.317 [0.296, 0.339], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over nimble_9b-bf16: higher minus lower 0.340 [0.317, 0.364], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over clef-flash_9b: higher minus lower 0.347 [0.328, 0.368], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over tev1_4b-q8_0: higher minus lower 0.374 [0.350, 0.399], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d1_3b-q8_0: higher minus lower 0.447 [0.428, 0.469], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d3_2b-q8_0: higher minus lower 0.463 [0.447, 0.481], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.519 [0.499, 0.540], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.522 [0.500, 0.545], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over laya_latest: higher minus lower 0.539 [0.511, 0.564], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over kev_9b-bf16: higher minus lower 0.039 [0.021, 0.056], p_holm 0.0105 (1 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d3_4b-q8_0: higher minus lower 0.042 [0.020, 0.063], p_holm 0.0105 (5 of 20,000 draws on the other side)
+- d3_9b-q8_0 over clef_27b-q8_0: higher minus lower 0.068 [0.041, 0.094], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.073 [0.052, 0.095], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over nimble_9b-bf16: higher minus lower 0.096 [0.068, 0.124], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over clef-flash_9b: higher minus lower 0.103 [0.077, 0.129], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over tev1_4b-q8_0: higher minus lower 0.131 [0.108, 0.154], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d1_3b-q8_0: higher minus lower 0.204 [0.180, 0.227], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d3_2b-q8_0: higher minus lower 0.220 [0.200, 0.239], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.275 [0.251, 0.300], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.278 [0.253, 0.305], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over laya_latest: higher minus lower 0.295 [0.269, 0.318], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over clef_27b-q8_0: higher minus lower 0.046 [0.022, 0.070], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over nimble-v3_9b-q8_0: higher minus lower 0.051 [0.030, 0.071], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over nimble_9b-bf16: higher minus lower 0.074 [0.054, 0.095], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over clef-flash_9b: higher minus lower 0.081 [0.065, 0.099], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over tev1_4b-q8_0: higher minus lower 0.109 [0.089, 0.128], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d1_3b-q8_0: higher minus lower 0.182 [0.159, 0.201], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d3_2b-q8_0: higher minus lower 0.197 [0.181, 0.214], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over tev1_0.8b-q8_0: higher minus lower 0.253 [0.241, 0.266], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d1-omni_600m-q8_0: higher minus lower 0.256 [0.239, 0.274], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over laya_latest: higher minus lower 0.273 [0.251, 0.294], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over nimble-v3_9b-q8_0: higher minus lower 0.034 [0.017, 0.054], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over nimble_9b-bf16: higher minus lower 0.058 [0.033, 0.082], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over clef-flash_9b: higher minus lower 0.064 [0.044, 0.086], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over tev1_4b-q8_0: higher minus lower 0.092 [0.069, 0.114], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d1_3b-q8_0: higher minus lower 0.165 [0.146, 0.185], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d3_2b-q8_0: higher minus lower 0.181 [0.162, 0.199], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over tev1_0.8b-q8_0: higher minus lower 0.236 [0.216, 0.258], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d1-omni_600m-q8_0: higher minus lower 0.239 [0.216, 0.264], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over laya_latest: higher minus lower 0.256 [0.233, 0.277], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.031 [0.018, 0.046], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over nimble_9b-bf16: higher minus lower 0.054 [0.033, 0.076], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over clef-flash_9b: higher minus lower 0.061 [0.044, 0.079], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over tev1_4b-q8_0: higher minus lower 0.089 [0.068, 0.109], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d1_3b-q8_0: higher minus lower 0.162 [0.148, 0.175], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d3_2b-q8_0: higher minus lower 0.177 [0.159, 0.196], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.233 [0.216, 0.250], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.236 [0.219, 0.254], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over laya_latest: higher minus lower 0.253 [0.231, 0.273], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over clef-flash_9b: higher minus lower 0.035 [0.017, 0.053], p_holm 0.0105 (4 of 20,000 draws on the other side)
+- clef_27b-q8_0 over tev1_4b-q8_0: higher minus lower 0.063 [0.035, 0.089], p_holm 0.0105 (2 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d1_3b-q8_0: higher minus lower 0.136 [0.110, 0.162], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d3_2b-q8_0: higher minus lower 0.152 [0.133, 0.172], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.207 [0.186, 0.230], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.210 [0.187, 0.235], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over laya_latest: higher minus lower 0.227 [0.202, 0.254], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over clef-flash_9b: higher minus lower 0.030 [0.015, 0.045], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over tev1_4b-q8_0: higher minus lower 0.057 [0.038, 0.078], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d1_3b-q8_0: higher minus lower 0.130 [0.118, 0.142], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d3_2b-q8_0: higher minus lower 0.146 [0.127, 0.164], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.202 [0.189, 0.216], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.205 [0.190, 0.220], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over laya_latest: higher minus lower 0.221 [0.201, 0.240], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d1_3b-q8_0: higher minus lower 0.107 [0.089, 0.123], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d3_2b-q8_0: higher minus lower 0.123 [0.103, 0.143], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over tev1_0.8b-q8_0: higher minus lower 0.178 [0.165, 0.193], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d1-omni_600m-q8_0: higher minus lower 0.181 [0.171, 0.192], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over laya_latest: higher minus lower 0.198 [0.179, 0.217], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d1_3b-q8_0: higher minus lower 0.101 [0.085, 0.114], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d3_2b-q8_0: higher minus lower 0.117 [0.101, 0.132], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over tev1_0.8b-q8_0: higher minus lower 0.172 [0.163, 0.181], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d1-omni_600m-q8_0: higher minus lower 0.175 [0.165, 0.186], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over laya_latest: higher minus lower 0.192 [0.174, 0.209], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over d1_3b-q8_0: higher minus lower 0.073 [0.051, 0.094], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over d3_2b-q8_0: higher minus lower 0.089 [0.073, 0.107], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.144 [0.127, 0.161], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.147 [0.129, 0.166], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over laya_latest: higher minus lower 0.164 [0.146, 0.182], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.071 [0.058, 0.087], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.074 [0.060, 0.091], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over laya_latest: higher minus lower 0.091 [0.069, 0.113], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.055 [0.042, 0.069], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.058 [0.043, 0.075], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over laya_latest: higher minus lower 0.075 [0.057, 0.092], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+
+**Relation**: 97 of 105 pairs are resolved (Holm, alpha 0.05). Leave-one-league-out: 97 of 97 keep their sign in all 18 recomputations.
+- d3_27b-q8_0 over d3_9b-q8_0: higher minus lower 0.327 [0.307, 0.348], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over pplx-decider_27b: higher minus lower 0.276 [0.253, 0.301], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over kev_9b-bf16: higher minus lower 0.464 [0.443, 0.487], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d3_4b-q8_0: higher minus lower 0.395 [0.372, 0.420], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over clef_27b-q8_0: higher minus lower 0.396 [0.375, 0.416], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.512 [0.486, 0.538], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over nimble_9b-bf16: higher minus lower 0.516 [0.489, 0.546], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over clef-flash_9b: higher minus lower 0.538 [0.509, 0.569], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over tev1_4b-q8_0: higher minus lower 0.488 [0.463, 0.514], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d1_3b-q8_0: higher minus lower 0.673 [0.655, 0.692], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d3_2b-q8_0: higher minus lower 0.618 [0.601, 0.636], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.789 [0.769, 0.811], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.773 [0.747, 0.804], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over laya_latest: higher minus lower 0.805 [0.775, 0.831], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d3_9b-q8_0: higher minus lower 0.050 [0.024, 0.077], p_holm 0.0105 (1 of 20,000 draws on the other side)
+- d3_9b-q8_0 over kev_9b-bf16: higher minus lower 0.137 [0.118, 0.157], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d3_4b-q8_0: higher minus lower 0.068 [0.055, 0.082], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over clef_27b-q8_0: higher minus lower 0.069 [0.047, 0.092], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.185 [0.167, 0.203], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over nimble_9b-bf16: higher minus lower 0.189 [0.162, 0.219], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over clef-flash_9b: higher minus lower 0.211 [0.178, 0.243], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over tev1_4b-q8_0: higher minus lower 0.161 [0.147, 0.176], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d1_3b-q8_0: higher minus lower 0.346 [0.327, 0.364], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d3_2b-q8_0: higher minus lower 0.291 [0.275, 0.307], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.462 [0.438, 0.485], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.446 [0.416, 0.478], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over laya_latest: higher minus lower 0.478 [0.448, 0.500], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over kev_9b-bf16: higher minus lower 0.187 [0.156, 0.217], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d3_4b-q8_0: higher minus lower 0.119 [0.089, 0.148], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over clef_27b-q8_0: higher minus lower 0.119 [0.095, 0.143], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over nimble-v3_9b-q8_0: higher minus lower 0.235 [0.208, 0.262], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over nimble_9b-bf16: higher minus lower 0.240 [0.217, 0.263], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over clef-flash_9b: higher minus lower 0.261 [0.232, 0.291], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over tev1_4b-q8_0: higher minus lower 0.212 [0.178, 0.244], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d1_3b-q8_0: higher minus lower 0.397 [0.374, 0.418], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d3_2b-q8_0: higher minus lower 0.341 [0.317, 0.365], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over tev1_0.8b-q8_0: higher minus lower 0.512 [0.492, 0.533], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over d1-omni_600m-q8_0: higher minus lower 0.497 [0.472, 0.526], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- pplx-decider_27b over laya_latest: higher minus lower 0.528 [0.496, 0.559], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over kev_9b-bf16: higher minus lower 0.069 [0.051, 0.087], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over kev_9b-bf16: higher minus lower 0.068 [0.045, 0.094], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over nimble-v3_9b-q8_0: higher minus lower 0.048 [0.023, 0.070], p_holm 0.0105 (1 of 20,000 draws on the other side)
+- kev_9b-bf16 over nimble_9b-bf16: higher minus lower 0.052 [0.026, 0.080], p_holm 0.0105 (1 of 20,000 draws on the other side)
+- kev_9b-bf16 over clef-flash_9b: higher minus lower 0.074 [0.048, 0.102], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over tev1_4b-q8_0: higher minus lower 0.025 [0.009, 0.039], p_holm 0.0330 (31 of 20,000 draws on the other side)
+- kev_9b-bf16 over d1_3b-q8_0: higher minus lower 0.210 [0.190, 0.230], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d3_2b-q8_0: higher minus lower 0.154 [0.136, 0.170], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over tev1_0.8b-q8_0: higher minus lower 0.325 [0.303, 0.349], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d1-omni_600m-q8_0: higher minus lower 0.309 [0.280, 0.341], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over laya_latest: higher minus lower 0.341 [0.312, 0.362], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.117 [0.102, 0.131], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over nimble_9b-bf16: higher minus lower 0.121 [0.095, 0.147], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over clef-flash_9b: higher minus lower 0.143 [0.113, 0.172], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over tev1_4b-q8_0: higher minus lower 0.093 [0.075, 0.109], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d1_3b-q8_0: higher minus lower 0.278 [0.258, 0.299], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d3_2b-q8_0: higher minus lower 0.223 [0.207, 0.240], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.393 [0.371, 0.417], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.378 [0.348, 0.409], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over laya_latest: higher minus lower 0.410 [0.379, 0.433], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.116 [0.093, 0.139], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over nimble_9b-bf16: higher minus lower 0.121 [0.096, 0.146], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over clef-flash_9b: higher minus lower 0.142 [0.113, 0.172], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over tev1_4b-q8_0: higher minus lower 0.093 [0.066, 0.119], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d1_3b-q8_0: higher minus lower 0.278 [0.252, 0.302], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d3_2b-q8_0: higher minus lower 0.222 [0.205, 0.240], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.393 [0.368, 0.419], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.378 [0.349, 0.409], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over laya_latest: higher minus lower 0.409 [0.378, 0.438], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d1_3b-q8_0: higher minus lower 0.162 [0.139, 0.185], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d3_2b-q8_0: higher minus lower 0.106 [0.088, 0.127], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.277 [0.253, 0.302], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.261 [0.227, 0.297], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over laya_latest: higher minus lower 0.293 [0.261, 0.323], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d1_3b-q8_0: higher minus lower 0.157 [0.127, 0.185], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d3_2b-q8_0: higher minus lower 0.102 [0.079, 0.124], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over tev1_0.8b-q8_0: higher minus lower 0.273 [0.254, 0.289], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d1-omni_600m-q8_0: higher minus lower 0.257 [0.242, 0.273], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over laya_latest: higher minus lower 0.289 [0.263, 0.309], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over clef-flash_9b: higher minus lower 0.050 [0.016, 0.086], p_holm 0.0330 (29 of 20,000 draws on the other side)
+- clef-flash_9b over d1_3b-q8_0: higher minus lower 0.135 [0.102, 0.166], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d3_2b-q8_0: higher minus lower 0.080 [0.056, 0.103], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over tev1_0.8b-q8_0: higher minus lower 0.251 [0.232, 0.268], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d1-omni_600m-q8_0: higher minus lower 0.235 [0.216, 0.256], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over laya_latest: higher minus lower 0.267 [0.241, 0.290], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over d1_3b-q8_0: higher minus lower 0.185 [0.163, 0.208], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over d3_2b-q8_0: higher minus lower 0.130 [0.109, 0.152], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.300 [0.274, 0.329], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.285 [0.250, 0.322], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- tev1_4b-q8_0 over laya_latest: higher minus lower 0.316 [0.283, 0.342], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over d1_3b-q8_0: higher minus lower 0.056 [0.038, 0.073], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.115 [0.096, 0.137], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.100 [0.071, 0.132], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over laya_latest: higher minus lower 0.131 [0.101, 0.155], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.171 [0.155, 0.188], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.155 [0.132, 0.179], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_2b-q8_0 over laya_latest: higher minus lower 0.187 [0.163, 0.204], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1-omni_600m-q8_0 over laya_latest: higher minus lower 0.031 [0.010, 0.048], p_holm 0.0360 (39 of 20,000 draws on the other side)
+
+**Group**: 65 of 105 pairs are resolved (Holm, alpha 0.05). Leave-one-league-out: 65 of 65 keep their sign in all 18 recomputations.
+- d3_27b-q8_0 over d3_9b-q8_0: higher minus lower 0.160 [0.124, 0.196], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over pplx-decider_27b: higher minus lower 0.255 [0.219, 0.293], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over kev_9b-bf16: higher minus lower 0.101 [0.079, 0.124], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d3_4b-q8_0: higher minus lower 0.176 [0.152, 0.200], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over clef_27b-q8_0: higher minus lower 0.228 [0.192, 0.266], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over nimble-v3_9b-q8_0: higher minus lower 0.122 [0.093, 0.155], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over nimble_9b-bf16: higher minus lower 0.164 [0.136, 0.197], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over clef-flash_9b: higher minus lower 0.156 [0.141, 0.171], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over tev1_4b-q8_0: higher minus lower 0.261 [0.223, 0.299], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d1_3b-q8_0: higher minus lower 0.222 [0.183, 0.263], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d3_2b-q8_0: higher minus lower 0.309 [0.281, 0.338], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.249 [0.224, 0.273], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.270 [0.246, 0.293], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_27b-q8_0 over laya_latest: higher minus lower 0.272 [0.239, 0.305], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over pplx-decider_27b: higher minus lower 0.095 [0.051, 0.141], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d3_9b-q8_0: higher minus lower 0.059 [0.024, 0.098], p_holm 0.0344 (7 of 20,000 draws on the other side)
+- d3_9b-q8_0 over tev1_4b-q8_0: higher minus lower 0.100 [0.052, 0.151], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d3_2b-q8_0: higher minus lower 0.148 [0.108, 0.187], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.088 [0.055, 0.123], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.110 [0.074, 0.143], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_9b-q8_0 over laya_latest: higher minus lower 0.112 [0.078, 0.145], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over pplx-decider_27b: higher minus lower 0.154 [0.117, 0.193], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over pplx-decider_27b: higher minus lower 0.079 [0.050, 0.109], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over pplx-decider_27b: higher minus lower 0.133 [0.097, 0.169], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over pplx-decider_27b: higher minus lower 0.091 [0.057, 0.126], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over pplx-decider_27b: higher minus lower 0.100 [0.065, 0.135], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d3_4b-q8_0: higher minus lower 0.075 [0.044, 0.104], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over clef_27b-q8_0: higher minus lower 0.126 [0.093, 0.164], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over clef-flash_9b: higher minus lower 0.054 [0.029, 0.078], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over tev1_4b-q8_0: higher minus lower 0.159 [0.116, 0.201], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d1_3b-q8_0: higher minus lower 0.120 [0.079, 0.163], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d3_2b-q8_0: higher minus lower 0.207 [0.174, 0.241], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over tev1_0.8b-q8_0: higher minus lower 0.147 [0.121, 0.176], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over d1-omni_600m-q8_0: higher minus lower 0.169 [0.139, 0.199], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- kev_9b-bf16 over laya_latest: higher minus lower 0.171 [0.140, 0.203], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d3_4b-q8_0: higher minus lower 0.054 [0.026, 0.081], p_holm 0.0176 (3 of 20,000 draws on the other side)
+- d3_4b-q8_0 over tev1_4b-q8_0: higher minus lower 0.084 [0.047, 0.122], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d3_2b-q8_0: higher minus lower 0.132 [0.101, 0.165], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.072 [0.049, 0.096], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.094 [0.073, 0.115], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d3_4b-q8_0 over laya_latest: higher minus lower 0.096 [0.065, 0.130], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over clef_27b-q8_0: higher minus lower 0.105 [0.070, 0.139], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over clef_27b-q8_0: higher minus lower 0.072 [0.041, 0.105], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef_27b-q8_0 over d3_2b-q8_0: higher minus lower 0.081 [0.048, 0.117], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over tev1_4b-q8_0: higher minus lower 0.138 [0.105, 0.177], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d1_3b-q8_0: higher minus lower 0.099 [0.077, 0.123], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d3_2b-q8_0: higher minus lower 0.186 [0.153, 0.220], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over tev1_0.8b-q8_0: higher minus lower 0.126 [0.106, 0.147], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.148 [0.126, 0.169], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble-v3_9b-q8_0 over laya_latest: higher minus lower 0.150 [0.121, 0.181], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over tev1_4b-q8_0: higher minus lower 0.096 [0.057, 0.134], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d1_3b-q8_0: higher minus lower 0.057 [0.023, 0.094], p_holm 0.0344 (7 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d3_2b-q8_0: higher minus lower 0.144 [0.107, 0.180], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over tev1_0.8b-q8_0: higher minus lower 0.084 [0.057, 0.110], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over d1-omni_600m-q8_0: higher minus lower 0.106 [0.080, 0.129], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- nimble_9b-bf16 over laya_latest: higher minus lower 0.108 [0.075, 0.140], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over tev1_4b-q8_0: higher minus lower 0.105 [0.075, 0.135], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d1_3b-q8_0: higher minus lower 0.066 [0.033, 0.102], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d3_2b-q8_0: higher minus lower 0.153 [0.131, 0.175], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over tev1_0.8b-q8_0: higher minus lower 0.093 [0.074, 0.112], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over d1-omni_600m-q8_0: higher minus lower 0.114 [0.095, 0.135], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- clef-flash_9b over laya_latest: higher minus lower 0.117 [0.088, 0.145], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over d3_2b-q8_0: higher minus lower 0.087 [0.052, 0.120], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+- d1_3b-q8_0 over d1-omni_600m-q8_0: higher minus lower 0.048 [0.019, 0.077], p_holm 0.0369 (8 of 20,000 draws on the other side)
+- tev1_0.8b-q8_0 over d3_2b-q8_0: higher minus lower 0.060 [0.038, 0.082], p_holm < 0.0105 (0 of 20,000 draws on the other side)
+
+#### Weighting of relation and group MCC
+
+The headline weights the relation and group MCC equally (the published scheme, w = 0.5). Each scheme weights the relation MCC by w and the group MCC by 1 - w, with its own rank intervals and its own Holm family of 105 pairs. The published column reproduces the headline ranks and pairs.
+
+| Model | relation_only (1 / 0) | r75 (0.75 / 0.25) | published (0.5 / 0.5) | r25 (0.25 / 0.75) | group_only (0 / 1) |
+|---|---|---|---|---|---|
+| d3_27b-q8_0 | 1 [1, 1] | 1 [1, 1] | 1 [1, 1] | 1 [1, 1] | 1 [1, 1] |
+| d3_9b-q8_0 | 3 [3, 3] | 3 [2, 3] | 2 [2, 3] | 3 [2, 5] | 5 [3, 7] |
+| pplx-decider_27b | 2 [2, 2] | 2 [2, 3] | 3 [2, 4] | 8 [6, 9] | 11 [9, 14] |
+| kev_9b-bf16 | 6 [6, 6] | 6 [5, 6] | 4 [3, 5] | 2 [2, 3] | 2 [2, 3] |
+| d3_4b-q8_0 | 4 [4, 5] | 4 [4, 5] | 5 [4, 5] | 5 [4, 6] | 7 [5, 7] |
+| clef_27b-q8_0 | 5 [4, 5] | 5 [4, 6] | 6 [6, 7] | 9 [6, 9] | 9 [8, 11] |
+| nimble-v3_9b-q8_0 | 8 [8, 10] | 7 [7, 8] | 7 [6, 7] | 4 [3, 5] | 3 [2, 4] |
+| nimble_9b-bf16 | 9 [7, 9] | 8 [7, 9] | 8 [8, 9] | 7 [5, 9] | 6 [4, 7] |
+| clef-flash_9b | 10 [9, 10] | 10 [9, 10] | 9 [8, 9] | 6 [6, 8] | 4 [4, 6] |
+| tev1_4b-q8_0 | 7 [7, 8] | 9 [7, 10] | 10 [10, 10] | 10 [10, 11] | 12 [9, 14] |
+| d1_3b-q8_0 | 12 [12, 12] | 12 [12, 12] | 11 [11, 12] | 11 [10, 11] | 8 [8, 10] |
+| d3_2b-q8_0 | 11 [11, 11] | 11 [11, 11] | 12 [11, 12] | 13 [12, 15] | 15 [15, 15] |
+| tev1_0.8b-q8_0 | 14 [13, 15] | 14 [13, 14] | 13 [13, 14] | 12 [12, 13] | 10 [9, 12] |
+| d1-omni_600m-q8_0 | 13 [13, 14] | 13 [13, 14] | 14 [13, 14] | 14 [13, 15] | 13 [11, 14] |
+| laya_latest | 15 [14, 15] | 15 [15, 15] | 15 [15, 15] | 15 [14, 15] | 14 [11, 14] |
+
+Holm-resolved pairs per scheme (of 105): relation_only 97, r75 94, published 89, r25 80, group_only 65.
+
+Robust pairs: 48 are resolved under every scheme with the same winner (weighting.robust_pairs in analysis.json).
+
+Weight-dependent pairs (53): the winner differs across schemes, or the pair is resolved under some schemes only.
+
+- D3 9B vs Pplx Decider 27B, higher by scheme: relation_only Pplx Decider 27B, r75 not resolved, published not resolved, r25 D3 9B, group_only D3 9B.
+- D3 9B vs Kev 9B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 not resolved, group_only Kev 9B.
+- D3 9B vs D3 4B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 not resolved, group_only not resolved.
+- D3 9B vs Clef 27B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 D3 9B, group_only not resolved.
+- D3 9B vs Nimble-v3 9B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 not resolved, group_only not resolved.
+- D3 9B vs Nimble 9B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 not resolved, group_only not resolved.
+- D3 9B vs Clef-Flash 9B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 D3 9B, group_only not resolved.
+- D3 9B vs D1 3B, higher by scheme: relation_only D3 9B, r75 D3 9B, published D3 9B, r25 D3 9B, group_only not resolved.
+- Pplx Decider 27B vs Kev 9B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published not resolved, r25 Kev 9B, group_only Kev 9B.
+- Pplx Decider 27B vs D3 4B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published not resolved, r25 not resolved, group_only D3 4B.
+- Pplx Decider 27B vs Clef 27B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 not resolved, group_only not resolved.
+- Pplx Decider 27B vs Nimble-v3 9B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Nimble-v3 9B, group_only Nimble-v3 9B.
+- Pplx Decider 27B vs Nimble 9B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 not resolved, group_only Nimble 9B.
+- Pplx Decider 27B vs Clef-Flash 9B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 not resolved, group_only Clef-Flash 9B.
+- Pplx Decider 27B vs TEV1 4B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Pplx Decider 27B, group_only not resolved.
+- Pplx Decider 27B vs D1 3B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Pplx Decider 27B, group_only not resolved.
+- Pplx Decider 27B vs D3 2B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Pplx Decider 27B, group_only not resolved.
+- Pplx Decider 27B vs TEV1 0.8B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Pplx Decider 27B, group_only not resolved.
+- Pplx Decider 27B vs D1-Omni 600M, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Pplx Decider 27B, group_only not resolved.
+- Pplx Decider 27B vs Laya 0.4B, higher by scheme: relation_only Pplx Decider 27B, r75 Pplx Decider 27B, published Pplx Decider 27B, r25 Pplx Decider 27B, group_only not resolved.
+- Kev 9B vs D3 4B, higher by scheme: relation_only D3 4B, r75 D3 4B, published not resolved, r25 Kev 9B, group_only Kev 9B.
+- Kev 9B vs Clef 27B, higher by scheme: relation_only Clef 27B, r75 not resolved, published not resolved, r25 Kev 9B, group_only Kev 9B.
+- Kev 9B vs Nimble-v3 9B, higher by scheme: relation_only Kev 9B, r75 Kev 9B, published Kev 9B, r25 not resolved, group_only not resolved.
+- Kev 9B vs Nimble 9B, higher by scheme: relation_only Kev 9B, r75 Kev 9B, published Kev 9B, r25 Kev 9B, group_only not resolved.
+- D3 4B vs Nimble-v3 9B, higher by scheme: relation_only D3 4B, r75 D3 4B, published D3 4B, r25 not resolved, group_only Nimble-v3 9B.
+- D3 4B vs Nimble 9B, higher by scheme: relation_only D3 4B, r75 D3 4B, published D3 4B, r25 not resolved, group_only not resolved.
+- D3 4B vs Clef-Flash 9B, higher by scheme: relation_only D3 4B, r75 D3 4B, published D3 4B, r25 not resolved, group_only not resolved.
+- D3 4B vs D1 3B, higher by scheme: relation_only D3 4B, r75 D3 4B, published D3 4B, r25 D3 4B, group_only not resolved.
+- Clef 27B vs Nimble-v3 9B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published not resolved, r25 Nimble-v3 9B, group_only Nimble-v3 9B.
+- Clef 27B vs Nimble 9B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published not resolved, r25 not resolved, group_only not resolved.
+- Clef 27B vs Clef-Flash 9B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published Clef 27B, r25 not resolved, group_only Clef-Flash 9B.
+- Clef 27B vs TEV1 4B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published Clef 27B, r25 not resolved, group_only not resolved.
+- Clef 27B vs D1 3B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published Clef 27B, r25 Clef 27B, group_only not resolved.
+- Clef 27B vs TEV1 0.8B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published Clef 27B, r25 Clef 27B, group_only not resolved.
+- Clef 27B vs D1-Omni 600M, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published Clef 27B, r25 Clef 27B, group_only not resolved.
+- Clef 27B vs Laya 0.4B, higher by scheme: relation_only Clef 27B, r75 Clef 27B, published Clef 27B, r25 Clef 27B, group_only not resolved.
+- Nimble-v3 9B vs Clef-Flash 9B, higher by scheme: relation_only not resolved, r75 not resolved, published Nimble-v3 9B, r25 Nimble-v3 9B, group_only not resolved.
+- Nimble-v3 9B vs TEV1 4B, higher by scheme: relation_only not resolved, r75 not resolved, published Nimble-v3 9B, r25 Nimble-v3 9B, group_only Nimble-v3 9B.
+- Nimble 9B vs Clef-Flash 9B, higher by scheme: relation_only not resolved, r75 Nimble 9B, published not resolved, r25 not resolved, group_only not resolved.
+- Nimble 9B vs TEV1 4B, higher by scheme: relation_only not resolved, r75 not resolved, published not resolved, r25 Nimble 9B, group_only Nimble 9B.
+- Clef-Flash 9B vs TEV1 4B, higher by scheme: relation_only TEV1 4B, r75 not resolved, published not resolved, r25 Clef-Flash 9B, group_only Clef-Flash 9B.
+- TEV1 4B vs D1 3B, higher by scheme: relation_only TEV1 4B, r75 TEV1 4B, published TEV1 4B, r25 not resolved, group_only not resolved.
+- TEV1 4B vs D3 2B, higher by scheme: relation_only TEV1 4B, r75 TEV1 4B, published TEV1 4B, r25 TEV1 4B, group_only not resolved.
+- TEV1 4B vs TEV1 0.8B, higher by scheme: relation_only TEV1 4B, r75 TEV1 4B, published TEV1 4B, r25 TEV1 4B, group_only not resolved.
+- TEV1 4B vs D1-Omni 600M, higher by scheme: relation_only TEV1 4B, r75 TEV1 4B, published TEV1 4B, r25 TEV1 4B, group_only not resolved.
+- TEV1 4B vs Laya 0.4B, higher by scheme: relation_only TEV1 4B, r75 TEV1 4B, published TEV1 4B, r25 TEV1 4B, group_only not resolved.
+- D1 3B vs D3 2B, higher by scheme: relation_only D3 2B, r75 not resolved, published not resolved, r25 D1 3B, group_only D1 3B.
+- D1 3B vs TEV1 0.8B, higher by scheme: relation_only D1 3B, r75 D1 3B, published D1 3B, r25 D1 3B, group_only not resolved.
+- D1 3B vs Laya 0.4B, higher by scheme: relation_only D1 3B, r75 D1 3B, published D1 3B, r25 D1 3B, group_only not resolved.
+- D3 2B vs TEV1 0.8B, higher by scheme: relation_only D3 2B, r75 D3 2B, published D3 2B, r25 not resolved, group_only TEV1 0.8B.
+- D3 2B vs D1-Omni 600M, higher by scheme: relation_only D3 2B, r75 D3 2B, published D3 2B, r25 not resolved, group_only not resolved.
+- D3 2B vs Laya 0.4B, higher by scheme: relation_only D3 2B, r75 D3 2B, published D3 2B, r25 not resolved, group_only not resolved.
+- D1-Omni 600M vs Laya 0.4B, higher by scheme: relation_only D1-Omni 600M, r75 D1-Omni 600M, published not resolved, r25 not resolved, group_only not resolved.
+
+#### Depth (accuracy by gold depth, with intervals)
+
+A `*` marks a degenerate cell (n < 30 or valid draws below 99%); its interval is shown as n/a. The 4+ bucket holds 6 items in 1 league.
+
+| Run (depth, 95% interval) | 0 | 1 | 2 | 3 | 4+ | NONE |
+|---|---|---|---|---|---|---|
+| d3_27b-q8_0 | 0.915 [0.901, 0.929] | 0.920 [0.909, 0.931] | 0.716 [0.677, 0.761] | 0.648 [0.611, 0.683] | 0.500* (n/a) | 0.837 [0.803, 0.869] |
+| d3_9b-q8_0 | 0.679 [0.654, 0.704] | 0.377 [0.344, 0.407] | 0.349 [0.319, 0.381] | 0.310 [0.273, 0.348] | 0.000* (n/a) | 0.787 [0.759, 0.816] |
+| pplx-decider_27b | 0.810 [0.789, 0.828] | 0.662 [0.631, 0.692] | 0.482 [0.449, 0.517] | 0.463 [0.423, 0.504] | 0.333* (n/a) | 0.407 [0.366, 0.449] |
+| kev_9b-bf16 | 0.465 [0.433, 0.496] | 0.316 [0.287, 0.346] | 0.113 [0.094, 0.133] | 0.122 [0.088, 0.154] | 0.167* (n/a) | 0.898 [0.873, 0.920] |
+| d3_4b-q8_0 | 0.563 [0.538, 0.588] | 0.379 [0.355, 0.403] | 0.327 [0.302, 0.357] | 0.301 [0.263, 0.342] | 0.333* (n/a) | 0.719 [0.688, 0.749] |
+| clef_27b-q8_0 | 0.754 [0.734, 0.772] | 0.489 [0.450, 0.525] | 0.437 [0.412, 0.463] | 0.434 [0.405, 0.467] | 0.167* (n/a) | 0.247 [0.201, 0.301] |
+| nimble-v3_9b-q8_0 | 0.451 [0.421, 0.483] | 0.428 [0.384, 0.474] | 0.245 [0.228, 0.263] | 0.234 [0.195, 0.264] | 0.000* (n/a) | 0.640 [0.602, 0.679] |
+| nimble_9b-bf16 | 0.520 [0.502, 0.539] | 0.545 [0.500, 0.591] | 0.502 [0.471, 0.528] | 0.460 [0.403, 0.506] | 0.333* (n/a) | 0.094 [0.074, 0.114] |
+| clef-flash_9b | 0.503 [0.480, 0.526] | 0.499 [0.467, 0.532] | 0.486 [0.465, 0.505] | 0.477 [0.434, 0.523] | 0.333* (n/a) | 0.026 [0.015, 0.039] |
+| tev1_4b-q8_0 | 0.488 [0.457, 0.516] | 0.295 [0.269, 0.321] | 0.122 [0.103, 0.144] | 0.098 [0.066, 0.135] | 0.000* (n/a) | 0.852 [0.837, 0.867] |
+| d1_3b-q8_0 | 0.245 [0.227, 0.266] | 0.330 [0.297, 0.362] | 0.208 [0.188, 0.232] | 0.213 [0.177, 0.248] | 0.000* (n/a) | 0.480 [0.445, 0.515] |
+| d3_2b-q8_0 | 0.163 [0.141, 0.186] | 0.236 [0.209, 0.263] | 0.137 [0.113, 0.164] | 0.115 [0.093, 0.139] | 0.000* (n/a) | 0.870 [0.843, 0.895] |
+| tev1_0.8b-q8_0 | 0.014 [0.010, 0.018] | 0.006 [0.001, 0.012] | 0.012 [0.005, 0.019] | 0.015 [0.005, 0.024] | 0.000* (n/a) | 0.950 [0.938, 0.962] |
+| d1-omni_600m-q8_0 | 0.151 [0.137, 0.166] | 0.377 [0.343, 0.408] | 0.339 [0.316, 0.363] | 0.320 [0.271, 0.359] | 0.167* (n/a) | 0.061 [0.044, 0.079] |
+| laya_latest | 0.051 [0.010, 0.106] | 0.059 [0.012, 0.121] | 0.039 [0.002, 0.092] | 0.021 [0.004, 0.053] | 0.167* (n/a) | 0.801 [0.602, 0.959] |
+| heuristic (baseline) | 0.288 [0.272, 0.303] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000* (n/a) | 1.000 [1.000, 1.000] |
+| lexical (baseline) | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000* (n/a) | 1.000 [1.000, 1.000] |
+| embedding (baseline) | 0.006 [0.002, 0.011] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000* (n/a) | 0.995 [0.992, 0.998] |
+| gold_view (gold-backed ceiling) | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 1.000* (n/a) | 1.000 [1.000, 1.000] |
+| hf (baseline) | 0.021 [0.014, 0.028] | 0.013 [0.007, 0.018] | 0.001 [0.000, 0.003] | 0.000 [0.000, 0.000] | 0.000* (n/a) | 0.987 [0.981, 0.993] |
+
+#### Consistency
+
+An answer is conflicting if it belongs to a minimal conflict of at most 3 answers under either predicate: the main predicate (logical UNSAT, a forced suite outcome, a cardinality or an invalid group) or the UNSAT-only predicate. The conflicting share is that union, so the UNSAT share is part of it in total and in every op. The main-predicate count is shown on its own. The smallest-witness columns count the main-predicate answers by the size of their smallest witness under the main predicate, so they sum to the main-predicate count; an answer only in a minimal UNSAT-only conflict has no main witness. Each share is over claim-bearing answers, with a league-bootstrap 95% interval. Contradiction detected: the detector finds a conflict in the whole answer set (sound, not complete).
+
+| Run (consistency) | Claim-bearing | Conflicting share (95%) | UNSAT share (95%) | Main-predicate conflicts | Contradiction detected | Smallest witness 1 / 2 / 3 (main predicate) |
+|---|---|---|---|---|---|---|
+| d3_27b-q8_0 | 5172 | 0.291 [0.235, 0.343] | 0.016 [0.010, 0.022] | 1491 | yes | 76 / 589 / 826 |
+| d3_9b-q8_0 | 4159 | 0.435 [0.392, 0.474] | 0.085 [0.060, 0.111] | 1741 | yes | 177 / 797 / 767 |
+| pplx-decider_27b | 5941 | 0.538 [0.493, 0.577] | 0.150 [0.132, 0.167] | 3012 | yes | 262 / 1283 / 1467 |
+| kev_9b-bf16 | 2522 | 0.414 [0.354, 0.467] | 0.108 [0.083, 0.132] | 1004 | yes | 206 / 427 / 371 |
+| d3_4b-q8_0 | 4808 | 0.457 [0.419, 0.491] | 0.039 [0.026, 0.054] | 2162 | yes | 75 / 1092 / 995 |
+| clef_27b-q8_0 | 6318 | 0.569 [0.519, 0.613] | 0.078 [0.066, 0.090] | 3569 | yes | 70 / 1716 / 1783 |
+| nimble-v3_9b-q8_0 | 4991 | 0.589 [0.552, 0.620] | 0.144 [0.117, 0.171] | 2850 | yes | 172 / 1424 / 1254 |
+| nimble_9b-bf16 | 6556 | 0.608 [0.567, 0.645] | 0.231 [0.210, 0.255] | 3699 | yes | 382 / 1673 / 1644 |
+| clef-flash_9b | 6937 | 0.559 [0.520, 0.594] | 0.057 [0.044, 0.072] | 3851 | yes | 120 / 1982 / 1749 |
+| tev1_4b-q8_0 | 3690 | 0.482 [0.454, 0.508] | 0.076 [0.066, 0.086] | 1778 | yes | 136 / 892 / 750 |
+| d1_3b-q8_0 | 5172 | 0.609 [0.577, 0.639] | 0.087 [0.075, 0.099] | 3122 | yes | 300 / 1469 / 1353 |
+| d3_2b-q8_0 | 1929 | 0.369 [0.321, 0.413] | 0.061 [0.042, 0.079] | 695 | yes | 107 / 313 / 275 |
+| tev1_0.8b-q8_0 | 324 | 0.083 [0.045, 0.120] | 0.040 [0.020, 0.064] | 27 | yes | 13 / 10 / 4 |
+| d1-omni_600m-q8_0 | 6709 | 0.732 [0.707, 0.753] | 0.516 [0.482, 0.551] | 4303 | yes | 1072 / 1560 / 1671 |
+| laya_latest | 1150 | 0.505 [0.376, 0.592] | 0.185 [0.157, 0.210] | 544 | yes | 102 / 214 / 228 |
+| heuristic (baseline) | 1 | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0 | no | 0 / 0 / 0 |
+| lexical (baseline) | 0 | n/a | n/a | 0 | no | 0 / 0 / 0 |
+| embedding (baseline) | 0 | n/a | n/a | 0 | no | 0 / 0 / 0 |
+| gold_view (gold-backed ceiling) | 5200 | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0 | no | 0 / 0 / 0 |
+| hf (baseline) | 1079 | 0.674 [0.641, 0.704] | 0.475 [0.429, 0.521] | 623 | yes | 562 / 50 / 11 |
+
+Stop rule: gold_view (gold-backed ceiling) has 0 conflicting answers, 0 of them UNSAT, and contradiction detected: no (it must be 0, 0 and no).
+
+#### Calibration (relations and bindings)
+
+Brier is summed over the options (range 0 to 2). Calibration is copied from each cell's score_decisions, not rescored; groups and readings have no probabilities here.
+
+| Run (calibration) | Relation Brier | Relation ECE | Binding Brier | Binding ECE |
+|---|---|---|---|---|
+| d3_27b-q8_0 | 0.288 | 0.144 | 0.075 | 0.091 |
+| d3_9b-q8_0 | 0.573 | 0.051 | 0.105 | 0.148 |
+| pplx-decider_27b | 0.537 | 0.061 | 0.098 | 0.147 |
+| kev_9b-bf16 | 0.687 | 0.045 | 0.172 | 0.172 |
+| d3_4b-q8_0 | 0.652 | 0.043 | 0.088 | 0.113 |
+| clef_27b-q8_0 | 0.608 | 0.062 | 0.104 | 0.143 |
+| nimble-v3_9b-q8_0 | 0.718 | 0.128 | 0.097 | 0.048 |
+| nimble_9b-bf16 | 0.728 | 0.175 | 0.060 | 0.050 |
+| clef-flash_9b | 0.721 | 0.051 | 0.127 | 0.162 |
+| tev1_4b-q8_0 | 0.807 | 0.267 | 0.701 | 0.298 |
+| d1_3b-q8_0 | 0.778 | 0.056 | 0.140 | 0.183 |
+| d3_2b-q8_0 | 0.806 | 0.193 | 0.290 | 0.157 |
+| tev1_0.8b-q8_0 | 1.120 | 0.478 | 1.029 | 0.687 |
+| d1-omni_600m-q8_0 | 0.833 | 0.136 | 1.030 | 0.630 |
+| laya_latest | 0.904 | 0.229 | 0.857 | 0.529 |
+| heuristic (baseline) | n/a | n/a | n/a | n/a |
+| lexical (baseline) | n/a | n/a | n/a | n/a |
+| embedding (baseline) | n/a | n/a | n/a | n/a |
+| gold_view (gold-backed ceiling) | n/a | n/a | n/a | n/a |
+| hf (baseline) | n/a | n/a | n/a | n/a |
+#### Binding detection
+
+Does each run's own probability of an unresolved binding separate the unresolved items from the bound ones? AUROC is the Mann-Whitney statistic (a tied pair counts one half); average precision is the step-wise area under the precision-recall curve. Both have league-bootstrap 95% intervals over the same draws. Flagged counts items predicted unresolved (argmax of the two probabilities). MCC is the leaderboard's binding point. Runs without probabilities (the baselines and the gold_view ceiling) have no AUROC.
+
+D3 27B's probabilities rank unresolved bindings above bound ones (AUROC 0.717 [0.670, 0.766]), but its decisions flag 0 (MCC 0.000): the ranking signal is not used at its decision threshold.
+The same pattern (AUROC interval above 0.5, no flagged items) holds for d3_9b-q8_0, pplx-decider_27b.
+
+| Run | Items | Unresolved (prevalence) | Flagged | Binding MCC | AUROC (95%) | Average precision (95%) |
+|---|---|---|---|---|---|---|
+| d3_27b-q8_0 | 3348 | 92 (0.0275) | 0 | 0.000 | 0.717 [0.670, 0.766] | 0.067 [0.048, 0.106] |
+| d3_9b-q8_0 | 3348 | 92 (0.0275) | 0 | 0.000 | 0.670 [0.619, 0.723] | 0.076 [0.053, 0.138] |
+| pplx-decider_27b | 3348 | 92 (0.0275) | 0 | 0.000 | 0.762 [0.710, 0.815] | 0.088 [0.069, 0.124] |
+| kev_9b-bf16 | 3348 | 92 (0.0275) | 116 | -0.012 | 0.486 [0.435, 0.539] | 0.025 [0.022, 0.031] |
+| d3_4b-q8_0 | 3348 | 92 (0.0275) | 0 | 0.000 | 0.452 [0.389, 0.510] | 0.028 [0.024, 0.036] |
+| clef_27b-q8_0 | 3348 | 92 (0.0275) | 47 | 0.213 | 0.875 [0.845, 0.901] | 0.180 [0.111, 0.282] |
+| nimble-v3_9b-q8_0 | 3348 | 92 (0.0275) | 73 | -0.025 | 0.357 [0.304, 0.411] | 0.020 [0.018, 0.022] |
+| nimble_9b-bf16 | 3348 | 92 (0.0275) | 2 | 0.145 | 0.707 [0.650, 0.762] | 0.131 [0.062, 0.232] |
+| clef-flash_9b | 3348 | 92 (0.0275) | 35 | 0.019 | 0.509 [0.468, 0.557] | 0.036 [0.029, 0.056] |
+| tev1_4b-q8_0 | 3348 | 92 (0.0275) | 2280 | 0.009 | 0.448 [0.401, 0.497] | 0.023 [0.021, 0.027] |
+| d1_3b-q8_0 | 3348 | 92 (0.0275) | 48 | 0.072 | 0.786 [0.757, 0.818] | 0.091 [0.063, 0.164] |
+| d3_2b-q8_0 | 3348 | 92 (0.0275) | 478 | -0.022 | 0.328 [0.249, 0.408] | 0.022 [0.017, 0.040] |
+| tev1_0.8b-q8_0 | 3348 | 92 (0.0275) | 3322 | -0.027 | 0.522 [0.461, 0.582] | 0.067 [0.036, 0.127] |
+| d1-omni_600m-q8_0 | 3348 | 92 (0.0275) | 3127 | 0.045 | 0.637 [0.589, 0.686] | 0.036 [0.032, 0.043] |
+| laya_latest | 3348 | 92 (0.0275) | 2927 | -0.036 | 0.472 [0.417, 0.526] | 0.029 [0.024, 0.038] |
+| heuristic (baseline) | 3348 | 92 (0.0275) | 0 | 0.000 | n/a | n/a |
+| lexical (baseline) | 3348 | 92 (0.0275) | 0 | 0.000 | n/a | n/a |
+| embedding (baseline) | 3348 | 92 (0.0275) | 0 | 0.000 | n/a | n/a |
+| gold_view (gold-backed ceiling) | 3348 | 92 (0.0275) | 92 | 1.000 | n/a | n/a |
+| hf (baseline) | 3348 | 92 (0.0275) | 37 | -0.018 | n/a | n/a |
+
+
+#### Item audit (candidates for review)
+
+These flags are candidates for review only. They are not label errors: a flag says the items look hard or inconsistent with the models, and a reviewer decides. `all_wrong`: all 15 models are wrong. `weak-over-strong (inverted)`: within each (op, gold class, stratum) cell each model's correctness is centred on its cell mean; the weak half's mean residual is above the strong half's and the residuals' point-biserial correlation with the op's own MCC is below 0. The halves rank the models by each op's MCC: top 7 strong, bottom 7 weak, rank 8 in neither.
+
+2962 of 7000 items are flagged: 423 all wrong, 2875 weak-over-strong (inverted), of which 2539 are not all wrong. The list is in [flagged.jsonl](../docs/audits/v0.1.1-item-audit/flagged.jsonl).
+
+The inverted rule is pre-registered and is not changed here. An all-wrong item tends to satisfy it mechanically, because each cell mean includes the item itself: 336 of the 423 all-wrong items also carry the inverted flag. So the overlap of the two flags is not evidence, and the null comparison below inherits it.
+
+| Op | Items | Flagged | All wrong | Weak-over-strong (inverted) | Inverted, not all wrong |
+|---|---|---|---|---|---|
+| decide_relation | 6000 | 2422 | 196 | 2422 | 2226 |
+| decide_group | 1000 | 540 | 227 | 453 | 313 |
+
+decide_relation halves: strong d3_27b-q8_0, pplx-decider_27b, d3_9b-q8_0, d3_4b-q8_0, clef_27b-q8_0, kev_9b-bf16, tev1_4b-q8_0; rank 8 nimble-v3_9b-q8_0; weak nimble_9b-bf16, clef-flash_9b, d3_2b-q8_0, d1_3b-q8_0, d1-omni_600m-q8_0, tev1_0.8b-q8_0, laya_latest.
+
+decide_group halves: strong d3_27b-q8_0, kev_9b-bf16, nimble-v3_9b-q8_0, clef-flash_9b, d3_9b-q8_0, nimble_9b-bf16, d3_4b-q8_0; rank 8 d1_3b-q8_0; weak clef_27b-q8_0, tev1_0.8b-q8_0, pplx-decider_27b, tev1_4b-q8_0, d1-omni_600m-q8_0, laya_latest, d3_2b-q8_0.
+
+Null rate: under 1000 random 7-vs-7 splits of the 15 models (seed 20261101), the share of items flagged weak-over-strong (inverted) is mean 0.2284 (95th percentile 0.3210), against an observed 0.4107 over the same 7000 items.
+
+Judging: the item audit used model judges (2 Haiku 5.5 judge sets), not people. 550 of 2962 flagged items were judged (PREREG.md: all 423 all_wrong items; 127 inverted (not all_wrong) items, stratified by op x gold class x stratum; 50 unflagged controls, stratified the same way over the unflagged items): suspect label 13, hard but valid 427, unclear 110. Of the 13 suspect labels, 9 are group items with gold at_most_k where both judges answered none: an untested hypothesis, a shared misreading of the group-kind taxonomy or gold errors. 0 of 50 controls were labelled suspect (exact 95% confidence interval 0% to 7%; only 5 controls are groups). Flags and suspect labels are candidates for review, not confirmed label errors.
+
+#### Robustness: option order, run to run and backend
+
+Deltas are headline changes against the published run. The option-shuffle delta is one pass with the answer options in a seeded random order (one seed, 20261101). Run to run is the largest change of the r2 and r3 repeats. Backend is the Vulkan pass of d3:9b. Flip rate is the share of the 10,716 decision rows whose label differs. The published run is the r1 reference in results/v0.1.0 (its predictions and cell are not copied here).
+
+| Model | Option shuffle delta | Shuffle flip rate | Run to run max abs delta | Run to run max flip rate | Vulkan delta | Vulkan flip rate |
+|---|---|---|---|---|---|---|
+| d3_27b-q8_0 | +0.0073 | 4.8% | n/a | n/a | n/a | n/a |
+| d3_9b-q8_0 | +0.0083 | 6.7% | 0.0000 | 0.0% | +0.0040 | 1.3% |
+| pplx-decider_27b | +0.0220 | 12.0% | n/a | n/a | n/a | n/a |
+| kev_9b-bf16 | +0.0041 | 11.8% | 0.0004 | 0.1% | n/a | n/a |
+| d3_4b-q8_0 | +0.0046 | 10.6% | 0.0000 | 0.0% | n/a | n/a |
+| clef_27b-q8_0 | +0.0000 | 0.7% | n/a | n/a | n/a | n/a |
+| nimble-v3_9b-q8_0 | +0.0012 | 18.1% | n/a | n/a | n/a | n/a |
+| nimble_9b-bf16 | -0.0098 | 17.8% | n/a | n/a | n/a | n/a |
+| clef-flash_9b | +0.0000 | 1.0% | n/a | n/a | n/a | n/a |
+| tev1_4b-q8_0 | +0.0206 | 22.7% | n/a | n/a | n/a | n/a |
+| d1_3b-q8_0 | -0.0350 | 20.3% | n/a | n/a | n/a | n/a |
+| d3_2b-q8_0 | +0.0091 | 8.5% | n/a | n/a | n/a | n/a |
+| tev1_0.8b-q8_0 | +0.0022 | 6.1% | n/a | n/a | n/a | n/a |
+| d1-omni_600m-q8_0 | -0.0073 | 27.9% | n/a | n/a | n/a | n/a |
+| laya_latest | +0.0029 | 4.7% | n/a | n/a | n/a | n/a |
+
+One option-shuffle pass per model (15 models) moves the headline by up to ±0.0350 (median 0.0073).
+Run to run, for the 3 repeated models (d3_9b-q8_0, kev_9b-bf16, d3_4b-q8_0), the r2 and r3 repeats were bit-identical for 2 (d3_9b-q8_0, d3_4b-q8_0) and differed by at most ±0.0004 for kev_9b-bf16.
+Over the 3 models with run-to-run repeats (presentation_matched), the shuffle moves the headline by at most ±0.0083, against a run-to-run change of at most ±0.0004: larger than run noise.
+Backend: the Vulkan pass moves the headline by ±0.0040 (1 model).
+
+Disclosure: the first d3:9b repeat attempt ran on Ollama's Vulkan backend by mistake (runs/20261101-repeat); the CUDA repeats r2 and r3 were run afterwards in a separate folder (runs/20261101-cuda-repeat). The Vulkan passes are kept as a backend diagnostic, and the headline is the CUDA run.
+
+- Diagnostic only: the leaderboard headline remains the single pre-registered run; repeats use the pre-registered command on CUDA (Ollama 0.40.11, both A6000s).
+- shuffle = one pass with answer options presented in a seeded random order (MB_S1_OPTION_SEED=20261101); same model, weights and prompts otherwise.
+- vulkan = the d3:9b repeats run on Ollama's Vulkan backend instead of CUDA (two passes, r2 and r3, which must agree); reported as a backend-sensitivity diagnostic.
+
+#### Cost
+
+Hardware: 2× NVIDIA RTX A6000 (48 GB), Ollama 0.40.11 (CUDA), one server per GPU, OLLAMA_NUM_PARALLEL=2. From the single published run per model; build-phase wall clock, includes harness overhead.
+
+Decisions are the cell's decision count, one per decision item (a reading's base and alt rows count once). Decisions per second is decisions over the build wall seconds; build minutes are the same time over 60.
+
+| Model | Params | Quant | Size (GB) | Build (min) | Decisions | Decisions/s |
+|---|---|---|---|---|---|---|
+| d3_27b-q8_0 | 27B | q8_0 | 29.53 | 74.6 | 10532 | 2.35 |
+| d3_9b-q8_0 | 9B | q8_0 | 10.45 | 21.9 | 10532 | 8.00 |
+| pplx-decider_27b | 27B | n/a | 17.48 | 74.4 | 10532 | 2.36 |
+| kev_9b-bf16 | 9B | bf16 | 17.92 | 34.9 | 10532 | 5.03 |
+| d3_4b-q8_0 | 4B | q8_0 | 5.83 | 15.4 | 10532 | 11.41 |
+| clef_27b-q8_0 | 27B | q8_0 | 29.66 | 78.7 | 10532 | 2.23 |
+| nimble-v3_9b-q8_0 | 9B | q8_0 | 9.53 | 28.3 | 10532 | 6.20 |
+| nimble_9b-bf16 | 9B | bf16 | 17.92 | 27.7 | 10532 | 6.35 |
+| clef-flash_9b | 9B | n/a | 10.58 | 26.4 | 10532 | 6.65 |
+| tev1_4b-q8_0 | 4B | q8_0 | 4.61 | 17.2 | 10532 | 10.19 |
+| d1_3b-q8_0 | 3B | q8_0 | 3.73 | 8.5 | 10532 | 20.63 |
+| d3_2b-q8_0 | 2B | q8_0 | 3.22 | 6.9 | 10532 | 25.34 |
+| tev1_0.8b-q8_0 | 0.8B | q8_0 | 0.83 | 6.6 | 10532 | 26.80 |
+| d1-omni_600m-q8_0 | 600M | q8_0 | 0.85 | 4.7 | 10532 | 37.35 |
+| laya_latest | n/a | n/a | 0.84 | 2.4 | 10532 | 72.46 |
+
+<!-- analysis:end -->
 
 ## Parts and the secondary binding score
 

@@ -1,7 +1,8 @@
 """The v0.1.0 relabel: no internal round or measurement label (v0.2, v0.3, Mentat-Hard v2/v3, v3.1, "measurement release",
 "internal release") in the paths or text of the repo's files, outside the frozen record. The frozen record keeps its labels as
-written: docs/history/, release/v0.1.0/record/ and docs/audits/ are listed with sha256 in docs/history/RENAMES.json, and
-the fixture and fixture-manifest files are pinned by hash. The scan covers tracked files and untracked files that git does
+written: docs/history/, release/v0.1.0/record/ and the two v0.1.0 audits (docs/audits/test-set-groups/, test-set-relations/) are
+listed with sha256 in docs/history/RENAMES.json, and the fixture and fixture-manifest files are pinned by hash. The v0.1.1
+item audit is not frozen yet, so it is scanned. The scan covers tracked files and untracked files that git does
 not ignore, so a new file is checked before it is committed. A second test checks the run-directory label (v31) that the
 2026-11-01 run-directory rename removed; the one remaining match is the builder's former-name literal, allowed below."""
 
@@ -17,8 +18,12 @@ LABEL = re.compile(r"(?i)v0\.[23]\b|Mentat-Hard v\d|mentat[-_ ]hard[-_ ]v[23]|\b
 RUN_LABEL = re.compile(r"(?i)\bv31\b|-v31-")  # the run-directory label that the 2026-11-01 rename removed
 
 # Frozen or hash-pinned trees, and the fixture manifests and golden files that are compared byte for byte.
-EXEMPT_PREFIXES = ("docs/history/", "release/v0.1.0/record/", "docs/audits/", "fixtures/manifests/", "tests/golden/")
-EXEMPT_PATHS = {"fixtures/VERSIONS.json", THIS_FILE}
+EXEMPT_PREFIXES = ("docs/history/", "release/v0.1.0/record/", "docs/audits/test-set-groups/", "docs/audits/test-set-relations/",
+                   "fixtures/manifests/", "tests/golden/")
+EXEMPT_PATHS = {"fixtures/VERSIONS.json", THIS_FILE,
+                # The judges' instructions for the v0.1.1 item audit, kept byte for byte as the judges used them (frozen audit
+                # text, like docs/audits/test-set-*): the one exemption from the scan in the audit folder.
+                "docs/audits/v0.1.1-item-audit/JUDGE.md"}
 # Files the public tree omits: the catalogue tooling, the native and scoped toy fixtures, the release module, the exact-scale
 # results, and the tests of those modules (every tests/ file that imports one of them). An entry belongs here only while the
 # public tree lacks that file.
