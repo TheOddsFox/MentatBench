@@ -18,7 +18,7 @@ A market question introduces a proposition. It does not assert that the proposit
 
 # 2 Corpus and meaning policy
 
-The initial source is the Polymarket catalogue contract in [DATA.md](data/DATA.md). It describes 4,321,358 market records and 8,639,383 outcome records, including 4,319,644 usable markets. Benchmark builds require the four Parquet relations and manifest, pinned by their release and content hashes.
+The initial source is the Polymarket catalogue contract, `DATA.md` (catalogue snapshot; not distributed). It describes 4,321,358 market records and 8,639,383 outcome records, including 4,319,644 usable markets. Benchmark builds require the four Parquet relations and manifest, pinned by their release and content hashes.
 
 An outcome is referenced by `(venue, market_id, outcome_index)`, with its original asset identity retained. Questions, outcome labels, and event context jointly determine meaning. All outcomes of a selected market remain available, including nonbinary outcomes. Identifiers remain strings; membership joins preserve unlinked markets.
 
@@ -227,7 +227,7 @@ A release is scoreable only when it includes:
 
 - A public correction process that versions faulty fixtures and applies changes consistently to submitted runs.
 
-A release whose panel is Mentat-Hard only declares that scope (`release build --scope mentat-hard`). The native items above (declared coverage for every native scope, and audited separation of unjudged material) then do not apply to it, and the release records that they do not.
+A release whose panel is Mentat-Hard only declares that scope (`release build --scope mentat-hard`, maintainer tooling, not included in the public repository). The native items above (declared coverage for every native scope, and audited separation of unjudged material) then do not apply to it, and the release records that they do not.
 
 The static compile-and-query benchmark is part of this revision. Incremental edits, additions, deletions, and retraction of stale consequences belong to a subsequent maintenance track; constructed updates must be distinguished from observed history.
 

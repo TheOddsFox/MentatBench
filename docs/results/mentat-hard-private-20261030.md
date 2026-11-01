@@ -12,13 +12,13 @@ The public test results are in `mentat-hard-20261030.md` and `mentat-hard-202610
 
 ## Setup
 
-- **Split:** `mentat_hard_private`, built by the revision 3.1 generator (`fixtures_hard` round 3.1) from one seed drawn with a CSPRNG (per the private build log).
+- **Split:** `mentat_hard_private`, built by the revision 3.1 generator (`fixtures_hard` round 3.1) from one seed drawn with a CSPRNG (per the maintainer's build log, not published).
   The seed is not recorded anywhere in the repository. The split has 3,228 outcomes, 10,406 candidates and a 200-query exam.
   Each model cell scores 10,406 decisions: 6,000 relation questions, 1,178 group questions (1,000 group and 178 reading questions,
   each reading question having two items, 356 in all) and 3,228 binding outcomes. See Limits, item 3, for how this differs from
   the public test split.
 - **Protocol:** the pre-registered round 3 test protocol (`prereg.md`).
-  - Code: the 15 model cells record commit 0bff47f, a clean tree (from each cell's repo record). The prereg names 9ad5f2c; as in
+  - Code: the 15 model cells record commit 0bff47f (a commit of the private development repository, not published here), a clean tree (from each cell's repo record). The prereg names 9ad5f2c; as in
     the public test, 0bff47f adds only the two prereg files on top of it. The rules, gold_view and oracle cells record
     caec42d, which differs from 0bff47f only in docs (`python`, `tools`, `profiles` and `fixtures` are unchanged).
   - Child: `systemone-choice` version 7, prompt sha256 `d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44` (the
@@ -168,13 +168,13 @@ All three 27B cells finished inside the 5,400 s build deadline (Clef 27B at 76.9
 
 - **Hash:** `1253bb5dfee2c02a34ded7e659a0158dc8996be9660d7be0ee14ffba19077263` (content hash, sealed). The bootstrap was run with `--sealed` at this hash, and the CI file records it.
 - **Generator:** `fixtures_hard` round 3.1, the same generator version as the public test split.
-- **Seed:** per the private build log, one seed was drawn, from a CSPRNG. It is not recorded in the repository, the results or the CI file.
-- **Self-checks:** 0 uncovered (`score.json`, anchor and active families, every cell). Per the private build log, there are also
+- **Seed:** per the maintainer's build log (not published), one seed was drawn, from a CSPRNG. It is not recorded in the repository, the results or the CI file.
+- **Self-checks:** 0 uncovered (`score.json`, anchor and active families, every cell). Per the maintainer's build log (not published), there are also
   0 constants and no audit failures.
 - **Size:** 3,228 outcomes, 10,406 candidates, 200 queries.
 - **Registry note:** each private cell's fixture stamp carries an error note. The lookup found no registered fixture version with
-  this content hash, so the stamp keeps only the content hash, which matches the sealed commitment. I did not check whether the
-  public cells carry the same note.
+  this content hash, so the stamp keeps only the content hash, which matches the sealed commitment. The public test cells carry no
+  fixture stamp, so the note does not appear in them.
 
 ## Limits
 
@@ -187,10 +187,10 @@ All three 27B cells finished inside the 5,400 s build deadline (Clef 27B at 76.9
    the private split and does not change any score.
 5. **Laya's abstention scoring** is the pre-registered one, and it drives most of Laya's NONE accuracy (see Laya abstentions).
 6. **Secondary binding** is fragile across the two splits (see Binding).
-7. **Child identity** was checked by the coordinator against each private cell's build policy in the private run directory,
+7. **Child identity** was checked by the maintainer against each private cell's build policy in the private run directory,
    not from the summary copies: all 15 record child
    version 7, prompt hash `d6d5ed56…` and their pinned model digest.
-8. **Commitment facts** (the CSPRNG draw, one seed, 0 constants and no audit failures) are from the coordinator's private build log,
+8. **Commitment facts** (the CSPRNG draw, one seed, 0 constants and no audit failures) are from the maintainer's build log (not published),
    not from the summary copies, which do not contain the seed or the generator log.
 9. **Baselines.** The pre-registration lists the 15 models plus gold_view and the oracle for the private split; the rules
    baseline was added. Lexical, embedding and hf were not run on the private split, so the private table compares the models

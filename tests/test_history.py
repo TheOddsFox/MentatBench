@@ -18,14 +18,15 @@ PREREG_PATH = ROOT / "release" / "v0.1.0" / "record" / "prereg.json"
 OLLAMA_PATH = ROOT / "python" / "mentat_bench" / "children" / "ollama_models.json"
 SHA256_HEX = re.compile(r"[0-9a-f]{64}")
 
-# The public export tree has no release.py. The export edits these two files, so their pins hold in the private repo only.
+# The public tree has no release.py and carries its own docs/ir.md and fixtures/VERSIONS.json, so the pins of those two files
+# are checked only in the full repository.
 PUBLIC_TREE = not (ROOT / "python" / "mentat_bench" / "release.py").exists()
 EXPORT_EDITED = {"docs/ir.md", "fixtures/VERSIONS.json"}
 # Pins outside the repo: the external data tables, and the engine binary that the build puts under target/.
 NOT_IN_REPO = ("external:", "target/")
 # Manifest keys that map a path to its pin (not a {path, sha256} object); they are read by name below.
 PATH_KEYED = {"fixture_manifests", "profiles", "fixtures"}
-# An old path that the tree reuses for a new current file (docs/ir.md, commit 811bef3): the frozen bytes moved to the
+# An old path that the tree reuses for a new current file (docs/ir.md): the frozen bytes moved to the
 # RENAMES target, and the old path now holds the rewritten document. Its bytes must differ from the frozen sha.
 REUSED_OLD_PATHS = {"docs/ir.md"}
 # Frozen directories, and the files in them that stay editable (the index of the history and the record's readme).
@@ -106,7 +107,7 @@ def test_renames_old_paths_are_gone_and_new_paths_hold_the_recorded_bytes():
 def test_manifest_sha256_pins_resolve_through_renames():
     manifest, table = load(MANIFEST_PATH), renames()
     pins = checked_pins(manifest)
-    assert len(pins) >= 50, f"the walk found only {len(pins)} pins"  # 58 on the public tree, 60 in the private repo
+    assert len(pins) >= 50, f"the walk found only {len(pins)} pins"  # 58 on the public tree, 60 in the full repository
     problems = []
     for where, path, sha in pins:
         target = resolve(path, table)

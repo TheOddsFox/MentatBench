@@ -31,13 +31,13 @@ These files were written under the earlier labels. Read them with this key.
 - **recorded_at** is not a sign that the gates were run again. The results bundle carries `recorded_at: "defed6a, 2026-10-31"`
   next to the gate table so that the table never reads as a re-verification at a later commit.
 
-`python -m mentat_bench.release verify` and `check-gates` resolve each pin through [docs/history/RENAMES.json](../../../docs/history/RENAMES.json)
+`python -m mentat_bench.release verify` and `check-gates` (maintainer tooling, not included in the public repository) resolve each pin through [docs/history/RENAMES.json](../../../docs/history/RENAMES.json)
 when its path has moved, and accept the file there only if it has the sha256 that RENAMES records. The bundle builder
 (`results/v0.1.0/build_bundle.py`) reads the gate table from `check_gates.md` with the old paths mapped.
 
 ## Re-checking the gates on this tree
 
-From the repository root, with `PYTHONPATH=python` and `MB_ENGINE` pointing at the engine:
+The commands below are maintainer tooling and are not included in the public repository. From the repository root, with `PYTHONPATH=python` and `MB_ENGINE` pointing at the engine:
 
     python -m mentat_bench.release check-gates --manifest release/v0.1.0/record/release_manifest.json
 

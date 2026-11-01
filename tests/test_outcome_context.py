@@ -255,7 +255,8 @@ def _golden(tmp_path: Path) -> dict:
     }
 
 
-# taken from a git archive of 5e65729 (the commit before the field existed), by _golden run from that tree
+# taken from the tree at the commit before the field existed (a commit of the private development repository, not published
+# here), by _golden run from that tree
 GOLDEN_BEFORE_CONTEXT = {
     "corpus": "294bebb4ef15642f38291c5beb7d515683a7c1facc5fa85b29c55990502cd363",
     "records_sha256": "294bebb4ef15642f38291c5beb7d515683a7c1facc5fa85b29c55990502cd363",

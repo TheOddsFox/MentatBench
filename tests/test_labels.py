@@ -18,9 +18,9 @@ RUN_LABEL = re.compile(r"(?i)\bv31\b|-v31-")  # the run-directory label that the
 # Frozen or hash-pinned trees, and the fixture manifests and golden files that are compared byte for byte.
 EXEMPT_PREFIXES = ("docs/history/", "release/v0.1.0/record/", "docs/audits/", "fixtures/manifests/", "tests/golden/")
 EXEMPT_PATHS = {"fixtures/VERSIONS.json", THIS_FILE}
-# Private-only, excluded from the public export: the catalogue tooling, the native and scoped toy fixtures, the release
-# module, the exact-scale results, and the tests of those modules (every tests/ file that imports one of them). Keep in
-# step with the export map (plan E1, tools/export/EXPORT.json in the private repo).
+# Files this public tree omits: the catalogue tooling, the native and scoped toy fixtures, the release module, the exact-scale
+# results, and the tests of those modules (every tests/ file that imports one of them). An entry belongs here only while the
+# public tree lacks that file.
 PRIVATE_ONLY = (
     "python/mentat_bench/corpus.py", "python/mentat_bench/datacheck.py", "python/mentat_bench/fixtures_native*.py",
     "python/mentat_bench/fixtures_scoped.py", "python/mentat_bench/release.py",

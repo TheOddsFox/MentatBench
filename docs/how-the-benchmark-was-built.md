@@ -22,7 +22,7 @@ The gold answer for each question is computed by the engine and re-checked by an
 
 ## 2. Project history and the decisions behind each change
 
-Dates are the dates the repository records for each event: the decision, the document or the run. PR numbers are merge commits (`git log --merges`); where a PR is cited for a date, its merge date is given. The table lists each phase in order. The "why" column gives the reason recorded in the repository.
+Dates are the dates the repository records for each event: the decision, the document or the run. PR numbers refer to pull requests of the private development repository, which is not published here; where a PR is cited for a date, its merge date is given. The table lists each phase in order. The "why" column gives the reason recorded in the repository.
 
 | When | What | Why it changed | Sources |
 |---|---|---|---|
@@ -214,7 +214,7 @@ Relation, group and reading rows come in **league blocks**: leagues in a seeded 
 - **Flags.** `--top-k 24`, `--batch-size 128`, a build deadline of 5,400 s (1.5 hours), and each model's dev floor. The cells also set `--local-timeout 600.0` and `--hello-timeout 900.0`, which the pre-registered command does not list, and this is disclosed.
 - **Size and time.** Relations were cut from 10,000 to 6,000 to keep the 27B cells at or under 80 minutes ([prereg](../release/v0.1.0/record/prereg.md), "Size"). The build wall times on test for the three 27B models were 74.6, 74.4 and 78.7 minutes ([results README](../results/README.md), runtime). On the private split, the slowest 27B cell took 76.9 minutes ([private results](results/mentat-hard-private-20261030.md)). The baselines ran in 0.7 to 17.5 seconds each.
 - **Determinism.** Each model was run once on test, so there is no test repeat. A dev repeat of D3 9B, on the other GPU, gave byte-identical decisions and scores.
-- **Commit.** The test cells ran at commit `0bff47f`, a clean tree. The pre-registration names `9ad5f2c`. The two commits differ only by the two pre-registration files ([results README](../results/README.md), "Code").
+- **Commit.** The test cells ran at commit `0bff47f` (a commit of the private development repository, not published here), a clean tree. The pre-registration names `9ad5f2c`. The two commits differ only by the two pre-registration files ([results README](../results/README.md), "Code").
 
 ## 10. Pre-registration and what was post-hoc
 

@@ -12,7 +12,7 @@ Scores follow the pre-registration. Anything not pre-registered is labelled post
 runs. The overlap statements below are descriptive, not tests.
 
 ## Setup
-- **Code:** the test cells record commit 0bff47f, a clean tree. The prereg names 9ad5f2c. 0bff47f adds only the two prereg files (`docs/results/prereg.{md,json}`) on top of it, with no code change (`git diff --stat 9ad5f2c 0bff47f`).
+- **Code:** the test cells record commit 0bff47f (a commit of the private development repository, not published here), a clean tree. The prereg names 9ad5f2c. 0bff47f adds only the two prereg files (`docs/results/prereg.{md,json}`) on top of it, with no code change (`git diff --stat 9ad5f2c 0bff47f`).
 - **Child:** `systemone-choice` version 7, `prompt_sha256` d6d5ed56e65e98e2c9c948c69939257bb4b971325f72da3ef5967ea4b5b4fb44.
   One question per request, rule cards in the relation, group and reading states.
 - **Fixture:** `mentat_hard_test` revision 3.1, content hash 7b408459…. 6,000 relation questions (1,500 NONE), 1,184 group questions

@@ -400,7 +400,7 @@ models is unchanged except for one adjacent pair: D1 3B moves above D3 2B on tes
 - **Build flags:** `--top-k 24`, `--batch-size 128`, a build deadline of 5,400 s, and the per-model relation floor from dev. The cells also set
   `--local-timeout 600.0` and `--hello-timeout 900.0`, which the pre-registered command does not list. Every model cell completed with no
   item errors, no 500 retries and no refused instructions (child stats).
-- **Code:** the test cells ran at commit `0bff47f`, a clean tree. The pre-registration names `9ad5f2c`. The two commits differ only by the two
+- **Code:** the test cells ran at commit `0bff47f` (a commit of the private development repository, not published here), a clean tree. The pre-registration names `9ad5f2c`. The two commits differ only by the two
   pre-registration files.
 - **Models:** 15. Seven are new in round 3: D3 2B and 4B, D1 3B, D1-Omni 600M, Nimble-v3 9B, and TEV1 0.8B and 4B. Skipped: `d1:2b` and
   `d1-omni:2b`, because they need a newer Ollama (an owner decision), and `strands-decider:2b`, which runs only on MLX.
@@ -473,7 +473,7 @@ These are the limits disclosed in the results documents, plus the release record
 18. **The empty and oracle baselines have Q_N only.** They have no scored decisions and no interval.
 19. **Strict Q_N is 0 for every repaired build.** TEV1 0.8B is the one exception (see Q_N).
 20. **Private split.** Only aggregates are published. The seed is not recorded. The sealed directory is not in the repository. Gate 2 (the complete
-    oracle panel) is MET for the directory the owner gave `check-gates`, on the owner's machine.
+    oracle panel) is MET for the directory the owner gave `check-gates` (maintainer tooling, not included in the public repository), on the owner's machine.
 21. **Engine provenance.** `target/release/mb-engine.exe` (sha256 `2df1bdfb...`) is a copy of the binary the round 3 runs used. It is not a rebuild
     at the pinned commit, and the sha was not reproduced by a rebuild. The engine source is the one the round 2 and round 3 runs used.
 22. **Local children are not sandboxed.** Every run card is a local adapter at 0 USD, and the price schedule is `none`.
@@ -664,10 +664,12 @@ are recomputed from the rounded probabilities, so they agree to within 1e-4 (Bri
 **`v0.1.0/cells/<id>.json`**: `id`, `kind`, `run_dir`, `score` (the cell's `score.json`), `score_decisions` (its `score_decisions.json`; `null` for
 empty and oracle), `build_summary`, `child_stats` (model cells only), `cell` (the cell's `cell.json`: adapter, build flags, fixture stamp,
 engine and repo facts, step timings), `wall` (`build_wall_s`, `build_wall_min`, `step_build_s`), and `predictions` (the source measurement path, or `null`).
-These cell summaries are byte-identical to the original round 3 measurement bundle; use the leaderboard or index for public v0.1.0 artifact paths.
+Use the leaderboard or index for public v0.1.0 artifact paths.
 
 The JSON files are UTF-8, with one-space indentation and sorted keys. The builder writes them byte-identically on rerun.
 
 ## Changelog
 
 - 2026-10-31: v0.1.0 results bundle (this folder). `v0.1.0/` is the bundle that was there before the relabel (its earlier path is in `docs/history/RENAMES.json`), relabelled and regenerated, not a new addition; the numbers are unchanged. The round-3 results report (`docs/results/mentat-hard-20261030.md`) was relabelled and its JSON regenerated, and the private document's title was edited. The release record (`release/v0.1.0/record/`) is byte-identical to its originals (sha256 in `docs/history/RENAMES.json`).
+
+- 2026-10-31 (regenerated files): the 22 cell files and `leaderboard.json` changed only in paths, labels and provenance fields. The run directories were renamed on 2026-11-01 (their former names carried the earlier run label; see [docs/history/README.md](../docs/history/README.md)), so the cells' `run_dir`, `out_dir`, `answers` and `verdicts` fields, and the leaderboard's baseline run directories, now carry the new names. The `predictions` path of the 20 cells that have predictions pointed at a directory that does not exist in this checkout (the former results folder); it now points at `results/v0.1.0/predictions/`. The leaderboard's document paths, split label and release-gate notes now name the current files and labels, and its provenance field for the earlier release label was removed. The run-card paths in the leaderboard moved to `release/v0.1.0/runcards/`. No local paths were present in the previous files, so none were removed. The CSV is unchanged. No score changed: every numeric value in the cells and in `leaderboard.json` is identical to the previous bundle, and the 20 predictions files are byte-identical to it.
