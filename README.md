@@ -73,6 +73,62 @@ This diagnostic should produce Q_N 100 and a headline of 1.000. `gold_view` read
 
 To connect an existing model server, pin it and run `systemone_child conform <tag>`; see [docs/outside_models.md](docs/outside_models.md) and [docs/local_protocol.md](docs/local_protocol.md). Do not tune on the test split.
 
+## Reproduce a published result
+
+Two offline checks read only committed files:
+
+```bash
+python results/v0.1.1/build_bundle.py build --check
+python tools/eval/release_analysis.py --check
+```
+
+The first rebuilds the v0.1.1 leaderboard, CSV and index, and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
+
+To re-run published cells, build the engine and point `MB_ENGINE` at it, then start the Ollama server with the published model tags. Set `MB_ENGINE` in the shell that runs the tool. A POSIX shell (Linux, macOS):
+
+```bash
+export MB_ENGINE="$PWD/target/release/mb-engine"
+python tools/reproduce.py run d3_27b-q8_0 lexical --out-root runs/reproduce
+```
+
+On Windows the engine is `mb-engine.exe`, in Git Bash too: `export MB_ENGINE="$PWD/target/release/mb-engine.exe"`. In PowerShell:
+
+```powershell
+$env:MB_ENGINE = "$PWD\target\release\mb-engine.exe"
+python tools/reproduce.py run d3_27b-q8_0 lexical --out-root runs\reproduce
+```
+
+If `MB_ENGINE` does not name an existing file, the harness skips engine confirmation with a warning, and the run still completes.
+
+`run` re-runs each cell with the flags recorded in `results/v0.1.0/cells/<id>.json`, into a new `<out-root>/<id>`, and then compares the run with the published predictions. Before anything runs, it refuses a duplicate id, a model cell without its model tag, a child interpreter it cannot find, and a directory that is not empty (`<id>`, `<id>.meta` or `<id>.reproduce`). A published cell records its child interpreter as `python.exe`; the run uses the Python that runs the tool instead. `--url` names the Ollama server (default `http://127.0.0.1:11434`). A model whose digest differs from the pinned one is refused by the child, and this tool cannot override that.
+
+To compare a run that already exists, use `compare`:
+
+```bash
+python tools/reproduce.py compare runs/reproduce/d3_27b-q8_0 --id d3_27b-q8_0
+```
+
+Each comparison writes `<run>.reproduce/report.json` and `<run>.reproduce/predictions.jsonl.gz`, and rewrites them if they exist. It prints one line. The report gives the headline, relation, group, binding and reading MCC (published and reproduced), the decision flips overall and per operation, each check with its value and limit, the largest probability difference, and the environment. The verdicts are:
+
+- **exact**: the decompressed predictions are byte-identical to the published ones, and no run-defining fact differs. The gzip container is compared separately and reported.
+- **within tolerance**: not identical, but every check passes. The headline, relation and group MCC are within 0.001 of the published values; the reading and binding MCC within 0.01. At most 0.5% of all decisions changed answer, and no operation has more flips than the larger of 0.5% of its items and two flips. No probability differs by more than 0.02. The published headline matches the one rescored from the published predictions.
+- **differs**: a check fails. The report names each failing check. A difference in a run-defining fact always gives differs: build flags, adapter, child arguments, fixture path and files, profile path and hash, model digest and prompt sha256.
+- **incomplete**: the run's cell, score or build policy is missing, unreadable or not complete, or its decisions cannot be read.
+
+The Ollama version, the engine sha256, the package versions and the GPUs are reported, not checked. Package versions are compared only where both runs record the package; one-sided packages are listed separately.
+
+The limits were chosen by the owner from the committed repeats of `kev_9b-bf16` on CUDA (`results/v0.1.1/repeats/`), compared with the published run. Those repeats moved the headline by 0.00038 at most, the relation MCC by 0.00077, and the reading MCC by 0.0049 (two flips out of 368 items). They flipped 0.14% of decisions, and moved one probability by 0.011. The q8 repeats of `d3_4b` and `d3_9b` were byte-identical. The Vulkan diagnostic of `d3_9b` is rejected as `differs`. The binding limit is 0.01 because one flip on a near-zero binding MCC moves it by about 0.003, and the CUDA repeats had no binding flip to measure.
+
+`run` exits 0 only when every verdict is exact or within tolerance. Q_N is reported but does not decide the verdict.
+
+Caveats:
+
+- A re-run needs the same model digests as the published run. The local child refuses a tag whose digest differs from [`children/ollama_models.json`](python/mentat_bench/children/ollama_models.json).
+- The Ollama version and the GPU backend can change scores. The published runs used Ollama 0.40.11 on CUDA; a Vulkan run of one model moved its headline by 0.004.
+- Q_N may differ. The published engine binary was not rebuilt, so its sha256 differs from a fresh build; the environment section of the report lists it.
+- The `hf` and `embedding` baselines need their model weights in the local cache. A cell whose build fails is incomplete, and `run` says so.
+- The comparison reuses the publication's own rescoring code (`results/v0.1.0/build_bundle.py`), and the owner chose the limits. It is a consistency check against the published run, not an independent verification. A re-run by the owner is not an independent reproduction either.
+
 ## Tests
 
 Install `pytest` in the venv if it is not already available:
