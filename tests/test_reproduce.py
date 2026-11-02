@@ -211,7 +211,8 @@ def test_compare_of_a_published_cells_own_predictions_is_exact(tmp_path, monkeyp
     run = fake_run(tmp_path, cell_id)
     report, path = R.compare_run(run, cell_id)
     assert report["verdict"] == "exact" and report["reasons"] == []
-    assert report["predictions_bytes_equal"] is True and report["predictions_gzip_equal"] is True and report["same_items"] is True
+    # The gzip container depends on the zlib build (it differs on Linux CI), so only the content decides exact.
+    assert report["predictions_bytes_equal"] is True and report["same_items"] is True
     assert report["environment"]["differences"] == []
     assert report["environment"]["child_interpreter"] == {"published": "python.exe", "reproduced": "python.exe"}
     assert report["metrics"]["headline"]["delta"] == 0 and report["decisions"]["flips"] == 0
