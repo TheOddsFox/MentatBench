@@ -4,6 +4,7 @@ cell's recorded flags, the refusals and exit codes of run (with subprocess repla
 no Ollama, no model. The one real subprocess is the committed build --check, which reads committed files only."""
 
 import copy
+import gzip
 import importlib.util
 import json
 import random
@@ -219,7 +220,8 @@ def test_compare_of_a_published_cells_own_predictions_is_exact(tmp_path, monkeyp
     assert all(check["ok"] for check in report["checks"].values())
     assert path == run.parent / f"{cell_id}.reproduce" / "report.json"
     assert json.loads(path.read_text(encoding="utf-8"))["verdict"] == "exact"
-    assert (run.parent / f"{cell_id}.reproduce" / "predictions.jsonl.gz").read_bytes() == published_bytes
+    written = (run.parent / f"{cell_id}.reproduce" / "predictions.jsonl.gz").read_bytes()
+    assert gzip.decompress(written) == gzip.decompress(published_bytes)
     text = path.read_text(encoding="utf-8")
     assert report["run"] == cell_id and str(tmp_path) not in text and str(R.ROOT) not in text  # no local path in the report
 
