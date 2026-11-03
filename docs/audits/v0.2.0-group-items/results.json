@@ -1,0 +1,402 @@
+{
+ "models": [
+  "d3_27b-q8_0",
+  "d3_9b-q8_0",
+  "pplx-decider_27b",
+  "kev_9b-bf16",
+  "d3_4b-q8_0",
+  "clef_27b-q8_0",
+  "nimble-v3_9b-q8_0",
+  "nimble_9b-bf16",
+  "clef-flash_9b",
+  "tev1_4b-q8_0",
+  "kev_4b-q8_0",
+  "d1_3b-q8_0",
+  "d3_2b-q8_0",
+  "kev_0.8b-q8_0",
+  "tev1_0.8b-q8_0",
+  "d1-omni_600m-q8_0",
+  "laya_latest"
+ ],
+ "items": 1000,
+ "per_model": {
+  "d3_27b-q8_0": {
+   "outcomes": {
+    "correct": 372,
+    "not_entailed": 424,
+    "weaker_other_kind": 129,
+    "weaker_right_kind": 8,
+    "weaker_said_none": 67
+   },
+   "mcc": 0.254055,
+   "mcc_kind_only": 0.285246
+  },
+  "d3_9b-q8_0": {
+   "outcomes": {
+    "correct": 258,
+    "not_entailed": 484,
+    "weaker_other_kind": 157,
+    "weaker_said_none": 101
+   },
+   "mcc": 0.088809,
+   "mcc_kind_only": 0.128591
+  },
+  "pplx-decider_27b": {
+   "outcomes": {
+    "correct": 146,
+    "not_entailed": 668,
+    "weaker_other_kind": 30,
+    "weaker_right_kind": 1,
+    "weaker_said_none": 155
+   },
+   "mcc": 0.004255,
+   "mcc_kind_only": 0.022282
+  },
+  "kev_9b-bf16": {
+   "outcomes": {
+    "correct": 338,
+    "not_entailed": 171,
+    "weaker_other_kind": 4,
+    "weaker_said_none": 487
+   },
+   "mcc": 0.148108,
+   "mcc_kind_only": 0.15278
+  },
+  "d3_4b-q8_0": {
+   "outcomes": {
+    "correct": 217,
+    "not_entailed": 568,
+    "weaker_other_kind": 183,
+    "weaker_right_kind": 1,
+    "weaker_said_none": 31
+   },
+   "mcc": 0.071003,
+   "mcc_kind_only": 0.097742
+  },
+  "clef_27b-q8_0": {
+   "outcomes": {
+    "correct": 197,
+    "not_entailed": 566,
+    "weaker_other_kind": 109,
+    "weaker_right_kind": 2,
+    "weaker_said_none": 126
+   },
+   "mcc": 0.020293,
+   "mcc_kind_only": 0.037583
+  },
+  "nimble-v3_9b-q8_0": {
+   "outcomes": {
+    "correct": 241,
+    "not_entailed": 731,
+    "weaker_other_kind": 10,
+    "weaker_right_kind": 3,
+    "weaker_said_none": 15
+   },
+   "mcc": 0.126007,
+   "mcc_kind_only": 0.171811
+  },
+  "nimble_9b-bf16": {
+   "outcomes": {
+    "correct": 195,
+    "not_entailed": 702,
+    "weaker_other_kind": 2,
+    "weaker_said_none": 101
+   },
+   "mcc": 0.081999,
+   "mcc_kind_only": 0.105411
+  },
+  "clef-flash_9b": {
+   "outcomes": {
+    "correct": 199,
+    "not_entailed": 759,
+    "weaker_other_kind": 26,
+    "weaker_right_kind": 11,
+    "weaker_said_none": 5
+   },
+   "mcc": 0.095008,
+   "mcc_kind_only": 0.143325
+  },
+  "tev1_4b-q8_0": {
+   "outcomes": {
+    "correct": 185,
+    "not_entailed": 758,
+    "weaker_said_none": 57
+   },
+   "mcc": -0.016676,
+   "mcc_kind_only": -0.015505
+  },
+  "kev_4b-q8_0": {
+   "outcomes": {
+    "correct": 300,
+    "weaker_said_none": 700
+   },
+   "mcc": 0.0,
+   "mcc_kind_only": 0.0
+  },
+  "d1_3b-q8_0": {
+   "outcomes": {
+    "correct": 185,
+    "not_entailed": 739,
+    "weaker_other_kind": 7,
+    "weaker_right_kind": 8,
+    "weaker_said_none": 61
+   },
+   "mcc": 0.026961,
+   "mcc_kind_only": 0.058521
+  },
+  "d3_2b-q8_0": {
+   "outcomes": {
+    "correct": 229,
+    "not_entailed": 171,
+    "weaker_other_kind": 1,
+    "weaker_said_none": 599
+   },
+   "mcc": -0.06265,
+   "mcc_kind_only": -0.038344
+  },
+  "kev_0.8b-q8_0": {
+   "outcomes": {
+    "correct": 290,
+    "not_entailed": 117,
+    "weaker_said_none": 593
+   },
+   "mcc": 0.034854,
+   "mcc_kind_only": 0.039718
+  },
+  "tev1_0.8b-q8_0": {
+   "outcomes": {
+    "correct": 300,
+    "weaker_said_none": 700
+   },
+   "mcc": 0.0,
+   "mcc_kind_only": 0.0
+  },
+  "d1-omni_600m-q8_0": {
+   "outcomes": {
+    "correct": 13,
+    "not_entailed": 983,
+    "weaker_said_none": 4
+   },
+   "mcc": -0.021479,
+   "mcc_kind_only": -0.021831
+  },
+  "laya_latest": {
+   "outcomes": {
+    "correct": 259,
+    "not_entailed": 138,
+    "weaker_said_none": 603
+   },
+   "mcc": -0.02385,
+   "mcc_kind_only": -0.027904
+  }
+ },
+ "pooled_outcomes": {
+  "correct": 3924,
+  "not_entailed": 7979,
+  "weaker_other_kind": 658,
+  "weaker_right_kind": 34,
+  "weaker_said_none": 4405
+ },
+ "pooled_errors": 13076,
+ "by_gold_kind": {
+  "none": {
+   "items": 300,
+   "pooled_acc": 0.3873,
+   "leader_acc": 0.2767
+  },
+  "at_most_one": {
+   "items": 239,
+   "pooled_acc": 0.1947,
+   "leader_acc": 0.8828
+  },
+  "exactly_one": {
+   "items": 185,
+   "pooled_acc": 0.351,
+   "leader_acc": 0.2919
+  },
+  "at_most_k": {
+   "items": 81,
+   "pooled_acc": 0.0116,
+   "leader_acc": 0.0741
+  },
+  "ordered_chain": {
+   "items": 79,
+   "pooled_acc": 0.0112,
+   "leader_acc": 0.1646
+  },
+  "at_least_k": {
+   "items": 63,
+   "pooled_acc": 0.0037,
+   "leader_acc": 0.0317
+  },
+  "at_least_k+at_most_k": {
+   "items": 53,
+   "pooled_acc": 0.0211,
+   "leader_acc": 0.0566
+  }
+ },
+ "real_by_member_count": {
+  "2": {
+   "items": 253,
+   "pooled_acc": 0.1614,
+   "leader_acc": 0.751
+  },
+  "3": {
+   "items": 246,
+   "pooled_acc": 0.2331,
+   "leader_acc": 0.3089
+  },
+  "4": {
+   "items": 55,
+   "pooled_acc": 0.108,
+   "leader_acc": 0.2364
+  },
+  "5": {
+   "items": 56,
+   "pooled_acc": 0.0662,
+   "leader_acc": 0.0714
+  },
+  "6": {
+   "items": 69,
+   "pooled_acc": 0.0989,
+   "leader_acc": 0.087
+  },
+  "7": {
+   "items": 12,
+   "pooled_acc": 0.0,
+   "leader_acc": 0.0
+  },
+  "8": {
+   "items": 9,
+   "pooled_acc": 0.0,
+   "leader_acc": 0.0
+  }
+ },
+ "no_model_correct": {
+  "items": 229,
+  "by_gold": {
+   "at_least_k+at_most_k/real": 35,
+   "at_least_k/real": 59,
+   "at_most_k/real": 67,
+   "at_most_one/real": 3,
+   "ordered_chain/real": 65
+  }
+ },
+ "count_or_chain_items": {
+  "items": 276,
+  "answers": {
+   "correct": 0.0115,
+   "none": 0.396,
+   "other_kind": 0.5243,
+   "right_kind_wrong_k": 0.0682
+  }
+ },
+ "decoys": {
+  "items": 300,
+  "leader_answers": {
+   "none": 83,
+   "at_least_k+at_most_k": 60,
+   "at_most_one": 54,
+   "at_least_k": 41,
+   "exactly_one": 37,
+   "ordered_chain+at_least_k+at_most_k": 8,
+   "ordered_chain+at_most_k": 7,
+   "at_most_k": 5,
+   "ordered_chain": 3,
+   "ordered_chain+at_least_k": 2
+  }
+ },
+ "exactly_one": {
+  "seed_groups": {
+   "items": 54,
+   "leader_correct": 30,
+   "leader_answers": {
+    "exactly_one": 30,
+    "at_most_one": 21,
+    "none": 2,
+    "at_least_k:1+at_most_k:2": 1
+   }
+  },
+  "derived": {
+   "items": 131,
+   "leader_correct": 24,
+   "leader_answers": {
+    "at_most_one": 70,
+    "exactly_one": 24,
+    "at_most_k:2": 18,
+    "none": 14,
+    "at_least_k:1+at_most_k:2": 5
+   }
+  }
+ },
+ "mcc_by_set_size": {
+  "d3_27b-q8_0": {
+   "decoys_and_n_2_3": 0.312767,
+   "decoys_and_n_4_8": 0.041637
+  },
+  "d3_9b-q8_0": {
+   "decoys_and_n_2_3": 0.129559,
+   "decoys_and_n_4_8": -0.050658
+  },
+  "pplx-decider_27b": {
+   "decoys_and_n_2_3": 0.046041,
+   "decoys_and_n_4_8": -0.155575
+  },
+  "kev_9b-bf16": {
+   "decoys_and_n_2_3": 0.155204,
+   "decoys_and_n_4_8": 0.178549
+  },
+  "d3_4b-q8_0": {
+   "decoys_and_n_2_3": 0.079525,
+   "decoys_and_n_4_8": -0.020475
+  },
+  "clef_27b-q8_0": {
+   "decoys_and_n_2_3": 0.05007,
+   "decoys_and_n_4_8": -0.054796
+  },
+  "nimble-v3_9b-q8_0": {
+   "decoys_and_n_2_3": 0.134808,
+   "decoys_and_n_4_8": 0.077405
+  },
+  "nimble_9b-bf16": {
+   "decoys_and_n_2_3": 0.087267,
+   "decoys_and_n_4_8": 0.068803
+  },
+  "clef-flash_9b": {
+   "decoys_and_n_2_3": 0.092988,
+   "decoys_and_n_4_8": 0.036509
+  },
+  "tev1_4b-q8_0": {
+   "decoys_and_n_2_3": 0.068026,
+   "decoys_and_n_4_8": -0.159924
+  },
+  "kev_4b-q8_0": {
+   "decoys_and_n_2_3": 0.0,
+   "decoys_and_n_4_8": 0.0
+  },
+  "d1_3b-q8_0": {
+   "decoys_and_n_2_3": -0.005286,
+   "decoys_and_n_4_8": 0.061156
+  },
+  "d3_2b-q8_0": {
+   "decoys_and_n_2_3": -0.088974,
+   "decoys_and_n_4_8": -0.029568
+  },
+  "kev_0.8b-q8_0": {
+   "decoys_and_n_2_3": 0.025253,
+   "decoys_and_n_4_8": 0.052398
+  },
+  "tev1_0.8b-q8_0": {
+   "decoys_and_n_2_3": 0.0,
+   "decoys_and_n_4_8": 0.0
+  },
+  "d1-omni_600m-q8_0": {
+   "decoys_and_n_2_3": -0.024021,
+   "decoys_and_n_4_8": -0.016429
+  },
+  "laya_latest": {
+   "decoys_and_n_2_3": 0.004248,
+   "decoys_and_n_4_8": -0.135819
+  }
+ }
+}
