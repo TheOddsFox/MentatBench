@@ -1,0 +1,50 @@
+{"id": "H351", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H352", "answer": {"relation": "IMPLIES"}}
+{"id": "H353", "answer": {"relation": "EQUIV"}}
+{"id": "H354", "answer": {"relation": "IMPLIES"}}
+{"id": "H355", "answer": {"relation": "EQUIV"}}
+{"id": "H356", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H357", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "H358", "answer": {"relation": "NONE"}}
+{"id": "H359", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H360", "answer": {"kind": "none", "lower": 0, "upper": 5, "chain": []}}
+{"id": "H361", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H362", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H363", "answer": {"relation": "EQUIV"}}
+{"id": "H364", "answer": {"relation": "EQUIV"}}
+{"id": "H365", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H366", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "H367", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "H368", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H369", "answer": {"kind": "at_least_k", "lower": 1, "upper": 3, "chain": []}}
+{"id": "H370", "answer": {"relation": "NONE"}}
+{"id": "H371", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "H372", "answer": {"relation": "EQUIV"}}
+{"id": "H373", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H374", "answer": {"relation": "IMPLIES"}}
+{"id": "H375", "answer": {"kind": "at_most_k", "lower": 0, "upper": 2, "chain": []}}
+{"id": "H376", "answer": {"relation": "EXCLUDES"}}
+{"id": "H377", "answer": {"relation": "EXCLUDES"}}
+{"id": "H378", "answer": {"relation": "NONE"}}
+{"id": "H379", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H380", "answer": {"relation": "IMPLIES"}}
+{"id": "H381", "answer": {"relation": "IMPLIES"}}
+{"id": "H382", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H383", "answer": {"relation": "IMPLIES"}}
+{"id": "H384", "answer": {"relation": "EQUIV"}}
+{"id": "H385", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H386", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H387", "answer": {"kind": "ordered_chain", "lower": 0, "upper": 2, "chain": [2, 1]}}
+{"id": "H388", "answer": {"relation": "EXCLUDES"}}
+{"id": "H389", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H390", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H391", "answer": {"kind": "at_most_k", "lower": 0, "upper": 2, "chain": []}}
+{"id": "H392", "answer": {"relation": "IMPLIED_BY"}}
+{"id": "H393", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "H394", "answer": {"kind": "at_least_k", "lower": 2, "upper": 2, "chain": []}}
+{"id": "H395", "answer": {"kind": "none", "lower": 0, "upper": 2, "chain": []}}
+{"id": "H396", "answer": {"relation": "EXCLUDES"}}
+{"id": "H397", "answer": {"kind": "exactly_one", "lower": 1, "upper": 1, "chain": []}}
+{"id": "H398", "answer": {"kind": "at_most_one", "lower": 0, "upper": 1, "chain": []}}
+{"id": "H399", "answer": {"relation": "EXCLUDES"}}
+{"id": "H400", "answer": {"relation": "EQUIV"}}

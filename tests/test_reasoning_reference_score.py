@@ -595,9 +595,12 @@ def test_the_schema_error_names_the_type_in_plain_words():
 # ---- the pinned files and the wording
 
 
-def test_results_json_and_representativeness_json_are_the_models_only_run(tmp_path):
+def test_results_json_is_the_scored_run_and_representativeness_json_the_models_only_run(tmp_path):
+    # results.json is the score of the committed answers and ledger (PREREG: the models-only pin is replaced by this one).
+    scored = SC.run(AUDIT)
+    assert scored["status"] == "scored"
+    assert SC.render(scored).encode("utf-8") == (AUDIT / "results.json").read_bytes()
     doc = SC.run(tmp_path)  # no answers: the models-only run
-    assert SC.render(doc).encode("utf-8") == (AUDIT / "results.json").read_bytes()
     leaderboard = json.loads(SC.LEADERBOARD.read_text(encoding="utf-8"))
     assert RP.document(doc, leaderboard).encode("utf-8") == (AUDIT / "representativeness.json").read_bytes()
 
