@@ -1,5 +1,8 @@
 # Mentat-Hard results bundle v0.1.1 summary (analysis of the v0.1.0 measurements)
 
+> **v0.2.0 is the latest release.** It is a new measurement on Ollama 0.40.13; this page reports v0.1.x, on Ollama 0.40.11,
+> and stays as the frozen v0.1.x record. See [v0.2.0/README.md](v0.2.0/README.md).
+
 This public bundle reports the development round 3 measurements on the Mentat-Hard test set, revision 3.1, released as v0.1.0.
 
 **What it measures:** how accurately System One decision models (small typed-decision LLMs, run locally through an Ollama `/v1/systemone` endpoint) make the typed decisions a logical map is built from. There is no generated reasoning: each question has a fixed menu of typed answers, one question per request, and the model returns a probability for each option.

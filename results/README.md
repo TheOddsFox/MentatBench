@@ -1,5 +1,8 @@
 # Mentat-Hard results, v0.1.1 (analysis of the v0.1.0 measurements)
 
+> **v0.2.0 is the latest release.** It is a new measurement on Ollama 0.40.13; this page reports v0.1.x, on Ollama 0.40.11,
+> and stays as the frozen v0.1.x record. See [v0.2.0/README.md](v0.2.0/README.md).
+
 This folder holds the results of the development round 3 test matrix (test set revision 3.1, released as v0.1.0 on 2026-10-31): 15 System One
 models, their baselines (the rules child, lexical, embedding, empty, oracle, gold_view as the ceiling, and the hf pipeline baseline), and a replication on the sealed private split. It is the entry point for the
 website and for anyone who wants the numbers in machine-readable form. The tables below are checked cell by cell against [v0.1.0/leaderboard.json](v0.1.0/leaderboard.json) by `tests/test_results_bundle.py`. That JSON is built by the bundle builder from the committed results documents and the run directories. The figures in the prose were checked by hand against the same JSON. Nothing here is a new measurement. This is the v0.1.1 analysis release: it analyses the v0.1.0 measurements and changes no score.

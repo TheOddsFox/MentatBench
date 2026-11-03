@@ -191,3 +191,32 @@ def test_repeats_disclosure_and_shuffle_count_match_runs_json():
     assert len(shuffled) == _facts()["summary"]["presentation"]["n_models"]
     for name in ("README.md", "results/README.md", "results/SUMMARY.md"):
         assert f"covers {len(shuffled)} models" in _doc(ROOT / name), name
+
+
+def test_v020_prose_numbers_are_the_committed_v020_data():
+    """The v0.2.0 sentences of the top-level README and results/v0.2.0/README.md, derived from the committed leaderboard,
+    analysis and repeat index (not typed in)."""
+    lb = _json(ROOT / "results" / "v0.2.0" / "leaderboard.json")
+    an = _json(ROOT / "results" / "v0.2.0" / "analysis.json")
+    runs = _json(ROOT / "results" / "v0.2.0" / "repeats" / "runs.json")["runs"]
+    d3 = next(e for e in lb["models"] if e["id"] == "d3_27b-q8_0")
+    head = d3["metrics"]["headline"]
+    rr = an["robustness"]["summary"]["run_to_run"]
+    vs = an["robustness"]["summary"]["version_shift"]
+    resolved = sum(p["resolved"] for p in an["pairwise"]["headline"])
+    d3_pairs = [p for p in an["pairwise"]["headline"] if "d3_27b-q8_0" in (p["a"], p["b"])]
+    labels = sum(r["identical_labels"] for r in runs)
+    decisions = sum(r["identical_to_published_decisions"] for r in runs)
+    top = (f"D3 27B ranks first, with a headline of {head['point']:.3f} (95% interval {head['ci95'][0]:.3f} to "
+           f"{head['ci95'][1]:.3f}; its rank interval is {d3['rank_interval']['lo']} to {d3['rank_interval']['hi']})")
+    assert top in _doc(ROOT / "README.md")
+    assert f"all {len(d3_pairs)} of its headline pairs are resolved in its favour" in _doc(ROOT / "README.md")
+    assert f"{resolved} of the {len(an['pairwise']['headline'])} headline pairs" in _doc(ROOT / "README.md")
+    assert f"identical answers for {labels} of {len(runs)} models and a byte-identical decisions file for {decisions}" \
+        in _doc(ROOT / "README.md")
+    assert f"The largest headline change is {rr['max_abs_delta']:.4f}" in _doc(ROOT / "results" / "v0.2.0" / "README.md")
+    assert f"a median absolute value of {vs['median_abs_delta']:.4f} and a largest of {vs['max_abs_delta']:.4f}" \
+        in _doc(ROOT / "results" / "v0.2.0" / "README.md")
+    assert all(p["higher"] == "d3_27b-q8_0" for p in d3_pairs if p["resolved"])
+    # the leaderboard row of D3 27B in the v0.2.0 README is the leaderboard's own headline
+    assert f"| {head['point']:.3f} [{head['ci95'][0]:.3f}, {head['ci95'][1]:.3f}]" in _doc(ROOT / "results" / "v0.2.0" / "README.md")

@@ -1,0 +1,14 @@
+{
+ "kev:0.8b-q8_0": {
+  "digest": "a2f47e09befbeaf7548572310d46f794b05c010a20ea5e64e9947eb479c23b31",
+  "license": "Apache-2.0",
+  "ollama_version": "0.40.13",
+  "size": 812429182
+ },
+ "kev:4b-q8_0": {
+  "digest": "46203beabf65d133ff2291c5482f37c9ce210175d162b2d49fc3c5f2ae3a83f8",
+  "license": "Apache-2.0",
+  "ollama_version": "0.40.13",
+  "size": 4483824379
+ }
+}

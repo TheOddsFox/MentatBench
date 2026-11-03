@@ -189,9 +189,10 @@ def _same_interval(a: list | None, b: list | None) -> bool:
     return _close(a[0], b[0]) and _close(a[1], b[1])
 
 
-def _self_check(data: dict, ci: dict, W: np.ndarray, L: int, models: list[str]) -> bool:
+def _self_check(data: dict, ci: dict | None, W: np.ndarray, L: int, models: list[str]) -> bool:
     """Every check of the module against the committed numbers. Failures are collected and reported together. Returns whether the
-    first 2000 draws equal the published draws (and so reproduce the published intervals)."""
+    first 2000 draws equal the published draws (and so reproduce the published intervals). ci is the published CI file, or None
+    when the release has none: the intervals are then checked against the leaderboard only."""
     bad = []
     first_2000 = bool(np.array_equal(W[:PUBLISHED_B], LC.draws(PUBLISHED_B, SEED, L)))
     if not first_2000:
@@ -214,6 +215,8 @@ def _self_check(data: dict, ci: dict, W: np.ndarray, L: int, models: list[str]) 
                     bad.append(f"{rid} {fam}: point {point} differs from the leaderboard {block['point']}")
                 if not _same_interval(ours, block["ci95"]):
                     bad.append(f"{rid} {fam}: the first 2000 draws give {ours}, the leaderboard {block['ci95']}")
+            if ci is None:
+                continue
             published = ci["runs"][rid]["metrics"][CI_KEY[fam]]
             if not (_close(round(point, 6), published["point"])
                     and _same_interval(ours, [published["lo"], published["hi"]])):
@@ -605,7 +608,8 @@ def _pred_key(r: dict) -> tuple:
     return (r["qid"], r["op"], r.get("reading"))
 
 
-def _repeats(folder: Path, rows_of: dict, headline: dict, bundle, version: int) -> dict:
+def _repeats(folder: Path, rows_of: dict, headline: dict, bundle, version: int, notes: dict = REPEAT_NOTES,
+             bytes_imply_labels: bool = False, verify_prediction_hashes: bool = False) -> dict:
     """The repeat runs of the models (plan D1-D3). For each repeat (not r1, the published run): identical, the share of the 10,716
     prediction rows whose label equals the published run's; delta_vs_published, its headline minus the published headline;
     flip_rate, the share whose label differs. Empty when the folder is absent or empty; a folder with files and no runs.json is
@@ -625,13 +629,25 @@ def _repeats(folder: Path, rows_of: dict, headline: dict, bundle, version: int) 
         check(rid in rows_of and rid in headline,
               f"{rid} {tag}: not one of the 15 models or baselines of this analysis")
         blob = (ROOT / rec["predictions"]).read_bytes()
+        if verify_prediction_hashes:
+            # v0.2.0: the predictions file's bytes are the bytes collect recorded for this run
+            check("predictions_sha256" in rec and _sha(blob) == rec["predictions_sha256"],
+                  f"{rid} {tag}: {rec['predictions']} does not match its recorded predictions_sha256")
         rep = {_pred_key(r): r["pred"] for r in (json.loads(line) for line in gzip.decompress(blob).decode("utf-8").splitlines())}
         pub = {_pred_key(r): r["pred"] for r in rows_of[rid]}
         check(len(rep) == 10716 and set(rep) == set(pub), f"{rid} {tag}: its rows do not match the published rows")
         same = sum(rep[k] == pub[k] for k in pub) / len(pub)
-        check((same == 1.0) == rec["identical_to_published_decisions"],
-              f"{rid} {tag}: identical {same} disagrees with identical_to_published_decisions "
-              f"{rec['identical_to_published_decisions']}")
+        if bytes_imply_labels:
+            # v0.2.0: the decisions file's bytes (which include the probabilities) are the identity; equal bytes imply equal
+            # labels. Equal labels with different probabilities is allowed, and is described as such in the prose.
+            check(not rec["identical_to_published_decisions"] or same == 1.0,
+                  f"{rid} {tag}: the decisions are byte-identical but {1 - same:.4%} of the labels differ")
+            check(rec["identical_labels"] == (same == 1.0),
+                  f"{rid} {tag}: identical_labels {rec['identical_labels']} disagrees with the rows ({same})")
+        else:
+            check((same == 1.0) == rec["identical_to_published_decisions"],
+                  f"{rid} {tag}: identical {same} disagrees with identical_to_published_decisions "
+                  f"{rec['identical_to_published_decisions']}")
         scored = bundle.rescore(blob, version)["headline"]["relation_group_mcc"]
         check(_close(scored, rec["headline_relation_group_mcc"]),
               f"{rid} {tag}: headline {rec['headline_relation_group_mcc']} in the index, {scored} rescored")
@@ -640,9 +656,11 @@ def _repeats(folder: Path, rows_of: dict, headline: dict, bundle, version: int) 
             continue
         key = REPEAT_KEYS[tag]
         entry = {"identical": same, "delta_vs_published": rec["headline_relation_group_mcc"] - headline[rid], "flip_rate": 1.0 - same}
+        if bytes_imply_labels:
+            entry.update({"identical_decisions": rec["identical_to_published_decisions"], "identical_labels": same == 1.0})
         check(key not in out.get(rid, {}) or out[rid][key] == entry, f"{rid} {tag}: differs from the other {key} pass")
         out.setdefault(rid, {})[key] = entry
-    return {**out, **REPEAT_NOTES}
+    return {**out, **notes}
 
 
 def _robustness(repeats: dict, models: list[str]) -> dict:
@@ -711,7 +729,7 @@ def _weighting(models: list[str], V: dict, P: dict, headline_pairs: list[dict], 
     return out
 
 
-def _cost(models: list[str], entries: dict) -> dict:
+def _cost(models: list[str], entries: dict, hardware: str = HARDWARE) -> dict:
     """Per model, from the single published run: the leaderboard's build wall time, its decision count (the cell's, one per
     decision item: a reading's base and alt rows count once) and the ratio of the two."""
     runs = {}
@@ -721,7 +739,7 @@ def _cost(models: list[str], entries: dict) -> dict:
         check(seconds > 0, f"{m}: build_wall_s is {seconds}")
         runs[m] = {"build_wall_s": seconds, "decisions": decisions, "decisions_per_s": decisions / seconds,
                    "size_bytes": e["size_bytes"], "params": e["params"], "quant": e["quant"]}
-    return {"hardware": HARDWARE, "note": COST_NOTE, "runs": runs}
+    return {"hardware": hardware, "note": COST_NOTE, "runs": runs}
 
 
 def build(repeats: Path, verdicts: Path = VERDICTS) -> tuple[dict, bytes]:
@@ -925,16 +943,17 @@ def _signed(x) -> str:
 def _weighting_lines(doc: dict, names: dict) -> list[str]:
     w = doc["weighting"]
     schemes = [s["name"] for s in w["schemes"]]
+    family = doc["method"]["family_size"]
     lines = ["#### Weighting of relation and group MCC", "",
              "The headline weights the relation and group MCC equally (the published scheme, w = 0.5). Each scheme weights the "
-             "relation MCC by w and the group MCC by 1 - w, with its own rank intervals and its own Holm family of 105 pairs. The "
+             f"relation MCC by w and the group MCC by 1 - w, with its own rank intervals and its own Holm family of {family} pairs. The "
              "published column reproduces the headline ranks and pairs.", "",
              "| Model | " + " | ".join(f"{s['name']} ({s['relation']:g} / {s['group']:g})" for s in w["schemes"]) + " |",
              "|---|" + "---|" * len(schemes)]
     for m in doc["models"]:
         cells = [f"{w['ranks'][s][m]['rank']} [{w['ranks'][s][m]['ci95'][0]}, {w['ranks'][s][m]['ci95'][1]}]" for s in schemes]
         lines.append(f"| {m} | " + " | ".join(cells) + " |")
-    lines += ["", "Holm-resolved pairs per scheme (of 105): " + ", ".join(f"{s} {len(w['resolved'][s])}" for s in schemes) + ".", "",
+    lines += ["", f"Holm-resolved pairs per scheme (of {family}): " + ", ".join(f"{s} {len(w['resolved'][s])}" for s in schemes) + ".", "",
               f"Robust pairs: {len(w['robust_pairs'])} are resolved under every scheme with the same winner (weighting.robust_pairs "
               "in analysis.json).", "",
               f"Weight-dependent pairs ({len(w['weight_dependent_pairs'])}): the winner differs across schemes, or the pair is "
@@ -986,14 +1005,23 @@ def _binding_lines(doc: dict) -> list[str]:
              "unresolved (argmax of the two probabilities). MCC is the leaderboard's binding point. Runs without probabilities "
              "(the baselines and the gold_view ceiling) have no AUROC.", ""]
     ref = runs["d3_27b-q8_0"]
-    lo, hi = ref["auroc"]["ci95"]
     same = [m for m in doc["models"] if m != "d3_27b-q8_0" and runs[m]["auroc"] and runs[m]["auroc"]["ci95"]
             and runs[m]["auroc"]["ci95"][0] > 0.5 and runs[m]["flagged"] == 0]
-    lines += [f"D3 27B's probabilities rank unresolved bindings above bound ones (AUROC {ref['auroc']['point']:.3f} "
-              f"[{lo:.3f}, {hi:.3f}]), but its decisions flag {ref['flagged']} (MCC {ref['mcc']:.3f}): the ranking signal is not used "
-              "at its decision threshold."]
-    if same:
-        lines.append("The same pattern (AUROC interval above 0.5, no flagged items) holds for " + ", ".join(same) + ".")
+    interval = ref["auroc"]["ci95"] if ref["auroc"] is not None else None
+    if ref["auroc"] is None:
+        lines.append("D3 27B's run has no probabilities, so it has no AUROC.")
+    elif interval is not None and interval[0] > 0.5 and ref["flagged"] == 0:
+        # the ranking claim holds only here: the interval is above chance and the decisions flag nothing
+        lo, hi = interval
+        lines += [f"D3 27B's probabilities rank unresolved bindings above bound ones (AUROC {ref['auroc']['point']:.3f} "
+                  f"[{lo:.3f}, {hi:.3f}]), but its decisions flag {ref['flagged']} (MCC {ref['mcc']:.3f}): the ranking signal is not used "
+                  "at its decision threshold."]
+        if same:
+            lines.append("The same pattern (AUROC interval above 0.5, no flagged items) holds for " + ", ".join(same) + ".")
+    else:
+        span = "no interval" if interval is None else f"[{interval[0]:.3f}, {interval[1]:.3f}]"
+        lines.append(f"D3 27B's probabilities give an AUROC of {ref['auroc']['point']:.3f} ({span}); its decisions flag "
+                     f"{ref['flagged']} (MCC {ref['mcc']:.3f}).")
     lines += ["", "| Run | Items | Unresolved (prevalence) | Flagged | Binding MCC | AUROC (95%) | Average precision (95%) |",
               "|---|---|---|---|---|---|---|"]
     for rid, b in runs.items():
@@ -1106,30 +1134,25 @@ def _cost_lines(doc: dict) -> list[str]:
     return lines + [""]
 
 
-def markdown(doc: dict) -> str:
-    """The analysis section of results/README.md, with its markers. Its numbers are the analysis.json numbers."""
-    method, ranks, pairs = doc["method"], doc["rank_intervals"], doc["pairwise"]
-    names = _names()
-    audit, cons, B_draws = doc["item_audit"], doc["consistency"], method["bootstrap"]["B"]
-    lines = [START, "", "### Analysis (v0.1.1, same measurements)", "",
-             "Every table in this section is computed by `tools/eval/release_analysis.py` from the committed v0.1.0 predictions, "
-             "cells and fixture; the numbers are in [v0.1.1/analysis.json](v0.1.1/analysis.json). No score changes.", "",
-             "The leaderboard's intervals are the published league-bootstrap intervals (B = 2000). The rank, pairwise and depth "
-             "intervals and the p-values in this section are the paired draws of the same resampling at B = 20000 (the first 2000 "
-             "are the published draws). Uncertainty comes only from resampling the 18 leagues of one fixture: each model has one "
-             "deterministic run, and the three metric families (headline, relation, group) are corrected separately, not against "
-             "each other.", "",
-             "#### Rank intervals", "",
+def _rank_lines(doc: dict) -> list[str]:
+    ranks = doc["rank_intervals"]
+    lines = ["#### Rank intervals", "",
              "Rank 1 is the highest point. The interval is the 2.5% to 97.5% range of the rank over the draws.", "",
              "| Model | Headline rank (95%) | Relation rank (95%) | Group rank (95%) |", "|---|---|---|---|"]
     for m in doc["models"]:
         cells = [f"{ranks[f][m]['rank']} [{ranks[f][m]['ci95'][0]}, {ranks[f][m]['ci95'][1]}] (median {ranks[f][m]['median']})"
                  for f in FAMILIES]
         lines.append(f"| {m} | " + " | ".join(cells) + " |")
-    lines += ["", "#### Holm-resolved pairs", "",
-              "Differences are higher minus lower. The Holm p-value is adjusted within each family; when no draw lies on the other "
-              "side it is a floor. Leave-one-league-out: each resolved pair's point difference is recomputed with each of the "
-              f"{method['bootstrap']['leagues']} leagues left out.", ""]
+    return lines
+
+
+def _pair_lines(doc: dict) -> list[str]:
+    method, pairs = doc["method"], doc["pairwise"]
+    B_draws = method["bootstrap"]["B"]
+    lines = ["#### Holm-resolved pairs", "",
+             "Differences are higher minus lower. The Holm p-value is adjusted within each family; when no draw lies on the other "
+             "side it is a floor. Leave-one-league-out: each resolved pair's point difference is recomputed with each of the "
+             f"{method['bootstrap']['leagues']} leagues left out.", ""]
     for fam in FAMILIES:
         lolo = method["lolo"][fam]
         lines.append(f"**{fam.capitalize()}**: {method['resolved_pairs'][fam]} of {method['family_size']} pairs are resolved "
@@ -1141,12 +1164,16 @@ def markdown(doc: dict) -> str:
             if pr["resolved"]:
                 lines.append(_pair_line(pr, B_draws))
         lines.append("")
-    lines += _weighting_lines(doc, names)
+    return lines
+
+
+def _depth_lines(doc: dict) -> list[str]:
+    method = doc["method"]
     n4, k4 = method["depth_4plus_items"], method["depth_4plus_leagues"]
-    lines += ["#### Depth (accuracy by gold depth, with intervals)", "",
-              "A `*` marks a degenerate cell (n < 30 or valid draws below 99%); its interval is shown as n/a. The 4+ bucket holds "
-              f"{n4} items in {k4} league{'' if k4 == 1 else 's'}.", "",
-              "| Run (depth, 95% interval) | " + " | ".join(doc["depth"]["buckets"]) + " |", "|" + "---|" * (len(DEPTH_BUCKETS) + 1)]
+    lines = ["#### Depth (accuracy by gold depth, with intervals)", "",
+             "A `*` marks a degenerate cell (n < 30 or valid draws below 99%); its interval is shown as n/a. The 4+ bucket holds "
+             f"{n4} items in {k4} league{'' if k4 == 1 else 's'}.", "",
+             "| Run (depth, 95% interval) | " + " | ".join(doc["depth"]["buckets"]) + " |", "|" + "---|" * (len(DEPTH_BUCKETS) + 1)]
     for rid, cells in doc["depth"]["runs"].items():
         out = []
         for c in cells.values():
@@ -1155,16 +1182,21 @@ def markdown(doc: dict) -> str:
             else:
                 out.append(_interval_text(c))
         lines.append(f"| {_label(rid, doc)} | " + " | ".join(out) + " |")
-    lines += ["", "#### Consistency", "",
-              f"An answer is conflicting if it belongs to a minimal conflict of at most {cons['max_witness']} answers under either "
-              "predicate: the main predicate (logical UNSAT, a forced suite outcome, a cardinality or an invalid group) or the UNSAT-only "
-              "predicate. The conflicting share is that union, so the UNSAT share is part of it in total and in every op. The main-predicate "
-              "count is shown on its own. The smallest-witness columns count the main-predicate answers by the size of their smallest "
-              "witness under the main predicate, so they sum to the main-predicate count; an answer only in a minimal UNSAT-only conflict "
-              "has no main witness. Each share is over claim-bearing answers, with a league-bootstrap 95% interval. Contradiction "
-              "detected: the detector finds a conflict in the whole answer set (sound, not complete).", "",
-              "| Run (consistency) | Claim-bearing | Conflicting share (95%) | UNSAT share (95%) | Main-predicate conflicts | "
-              "Contradiction detected | Smallest witness 1 / 2 / 3 (main predicate) |", "|---|---|---|---|---|---|---|"]
+    return lines
+
+
+def _consistency_lines(doc: dict) -> list[str]:
+    cons = doc["consistency"]
+    lines = ["#### Consistency", "",
+             f"An answer is conflicting if it belongs to a minimal conflict of at most {cons['max_witness']} answers under either "
+             "predicate: the main predicate (logical UNSAT, a forced suite outcome, a cardinality or an invalid group) or the UNSAT-only "
+             "predicate. The conflicting share is that union, so the UNSAT share is part of it in total and in every op. The main-predicate "
+             "count is shown on its own. The smallest-witness columns count the main-predicate answers by the size of their smallest "
+             "witness under the main predicate, so they sum to the main-predicate count; an answer only in a minimal UNSAT-only conflict "
+             "has no main witness. Each share is over claim-bearing answers, with a league-bootstrap 95% interval. Contradiction "
+             "detected: the detector finds a conflict in the whole answer set (sound, not complete).", "",
+             "| Run (consistency) | Claim-bearing | Conflicting share (95%) | UNSAT share (95%) | Main-predicate conflicts | "
+             "Contradiction detected | Smallest witness 1 / 2 / 3 (main predicate) |", "|---|---|---|---|---|---|---|"]
     for rid, c in cons["runs"].items():
         sizes = c["by_size"]
         lines.append(f"| {_label(rid, doc)} | {c['claim_bearing']} | "
@@ -1173,32 +1205,39 @@ def markdown(doc: dict) -> str:
                      f"{'yes' if c['contradiction_detected'] else 'no'} | {sizes['1']} / {sizes['2']} / {sizes['3']} |")
     gv = cons["runs"]["gold_view"]
     lines += ["", f"Stop rule: gold_view (gold-backed ceiling) has {gv['conflicting']} conflicting answers, {gv['conflicting_unsat']} of them UNSAT, and "
-              f"contradiction detected: {'yes' if gv['contradiction_detected'] else 'no'} (it must be 0, 0 and no).", "",
-              "#### Calibration (relations and bindings)", "",
-              "Brier is summed over the options (range 0 to 2). Calibration is copied from each cell's score_decisions, not rescored; "
-              "groups and readings have no probabilities here.", "",
-              "| Run (calibration) | Relation Brier | Relation ECE | Binding Brier | Binding ECE |", "|---|---|---|---|---|"]
+              f"contradiction detected: {'yes' if gv['contradiction_detected'] else 'no'} (it must be 0, 0 and no)."]
+    return lines
+
+
+def _calibration_lines(doc: dict) -> list[str]:
+    lines = ["#### Calibration (relations and bindings)", "",
+             "Brier is summed over the options (range 0 to 2). Calibration is copied from each cell's score_decisions, not rescored; "
+             "groups and readings have no probabilities here.", "",
+             "| Run (calibration) | Relation Brier | Relation ECE | Binding Brier | Binding ECE |", "|---|---|---|---|---|"]
     for rid, c in doc["calibration"].items():
         rel, bind = c["decide_relation"], c["decide_binding"]
         lines.append(f"| {_label(rid, doc)} | {_fmt(rel['brier'])} | {_fmt(rel['ece'])} | {_fmt(bind['brier'])} | {_fmt(bind['ece'])} |")
-    lines += _binding_lines(doc)
+    return lines
+
+
+def _audit_lines(doc: dict, judging: str) -> list[str]:
+    """The item audit section (v0.1.1 only): its counts, halves and null rate; judging is the judging paragraph."""
+    method, audit = doc["method"], doc["item_audit"]
     nul, observed = audit["null_inverted_rate"], audit["inverted"] / audit["items"]
-    judged = audit["judged"]
-    judging = "pending (no verdicts file yet)." if judged is None else _judging_text(doc, judged)
-    lines += ["", "#### Item audit (candidates for review)", "",
-              "These flags are candidates for review only. They are not label errors: a flag says the items look hard or "
-              "inconsistent with the models, and a reviewer decides. `all_wrong`: all 15 models are wrong. "
-              "`weak-over-strong (inverted)`: within each (op, gold class, stratum) cell each model's correctness is centred on its "
-              "cell mean; the weak half's mean residual is above the strong half's and the residuals' point-biserial correlation with "
-              "the op's own MCC is below 0. The halves rank the models by each op's MCC: top 7 strong, bottom 7 weak, rank 8 in "
-              "neither.", "",
-              f"{audit['flagged']} of {audit['items']} items are flagged: {audit['all_wrong']} all wrong, "
-              f"{audit['inverted']} weak-over-strong (inverted), of which {audit['inverted_not_all_wrong']} are not all wrong. The list "
-              "is in [flagged.jsonl](../docs/audits/v0.1.1-item-audit/flagged.jsonl).", "",
-              "The inverted rule is pre-registered and is not changed here. An all-wrong item tends to satisfy it mechanically, because "
-              f"each cell mean includes the item itself: {audit['all_wrong_and_inverted']} of the {audit['all_wrong']} all-wrong items also "
-              "carry the inverted flag. So the overlap of the two flags is not evidence, and the null comparison below inherits it.", "",
-              "| Op | Items | Flagged | All wrong | Weak-over-strong (inverted) | Inverted, not all wrong |", "|---|---|---|---|---|---|"]
+    lines = ["", "#### Item audit (candidates for review)", "",
+             "These flags are candidates for review only. They are not label errors: a flag says the items look hard or "
+             "inconsistent with the models, and a reviewer decides. `all_wrong`: all 15 models are wrong. "
+             "`weak-over-strong (inverted)`: within each (op, gold class, stratum) cell each model's correctness is centred on its "
+             "cell mean; the weak half's mean residual is above the strong half's and the residuals' point-biserial correlation with "
+             "the op's own MCC is below 0. The halves rank the models by each op's MCC: top 7 strong, bottom 7 weak, rank 8 in "
+             "neither.", "",
+             f"{audit['flagged']} of {audit['items']} items are flagged: {audit['all_wrong']} all wrong, "
+             f"{audit['inverted']} weak-over-strong (inverted), of which {audit['inverted_not_all_wrong']} are not all wrong. The list "
+             "is in [flagged.jsonl](../docs/audits/v0.1.1-item-audit/flagged.jsonl).", "",
+             "The inverted rule is pre-registered and is not changed here. An all-wrong item tends to satisfy it mechanically, because "
+             f"each cell mean includes the item itself: {audit['all_wrong_and_inverted']} of the {audit['all_wrong']} all-wrong items also "
+             "carry the inverted flag. So the overlap of the two flags is not evidence, and the null comparison below inherits it.", "",
+             "| Op | Items | Flagged | All wrong | Weak-over-strong (inverted) | Inverted, not all wrong |", "|---|---|---|---|---|---|"]
     for op, c in audit["by_op"].items():
         lines.append(f"| {op} | {c['items']} | {c['flagged']} | {c['all_wrong']} | {c['inverted']} | {c['inverted_not_all_wrong']} |")
     for op in OP_OF.values():
@@ -1209,6 +1248,27 @@ def markdown(doc: dict) -> str:
               f"{nul['mean']:.4f} (95th percentile {nul['p95']:.4f}), against an observed {observed:.4f} over the same "
               f"{audit['items']} items.", "",
               "Judging: " + judging, ""]
+    return lines
+
+
+def markdown(doc: dict) -> str:
+    """The analysis section of results/README.md, with its markers. Its numbers are the analysis.json numbers."""
+    names = _names()
+    judged = doc["item_audit"]["judged"]
+    judging = "pending (no verdicts file yet)." if judged is None else _judging_text(doc, judged)
+    lines = [START, "", "### Analysis (v0.1.1, same measurements)", "",
+             "Every table in this section is computed by `tools/eval/release_analysis.py` from the committed v0.1.0 predictions, "
+             "cells and fixture; the numbers are in [v0.1.1/analysis.json](v0.1.1/analysis.json). No score changes.", "",
+             "The leaderboard's intervals are the published league-bootstrap intervals (B = 2000). The rank, pairwise and depth "
+             "intervals and the p-values in this section are the paired draws of the same resampling at B = 20000 (the first 2000 "
+             "are the published draws). Uncertainty comes only from resampling the 18 leagues of one fixture: each model has one "
+             "deterministic run, and the three metric families (headline, relation, group) are corrected separately, not against "
+             "each other.", ""]
+    lines += _rank_lines(doc) + [""] + _pair_lines(doc)
+    lines += _weighting_lines(doc, names)
+    lines += _depth_lines(doc) + [""] + _consistency_lines(doc) + [""] + _calibration_lines(doc)
+    lines += _binding_lines(doc)
+    lines += _audit_lines(doc, judging)
     lines += _robustness_lines(doc, names) + _cost_lines(doc) + [END]
     return "\n".join(lines)
 
