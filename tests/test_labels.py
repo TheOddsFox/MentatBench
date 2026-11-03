@@ -14,7 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 THIS_FILE = "tests/test_labels.py"
-LABEL = re.compile(r"(?i)v0\.2\b(?!\.0\b)|v0\.3\b|Mentat-Hard v\d|mentat[-_ ]hard[-_ ]v[23]|\bv3\.1\b|measurement[ _-]release|internal release")
+# v0.2.0 and v0.2.1 are public release names (v0.2.1 is an analysis release based on v0.2.0); other v0.2.x names are still caught.
+LABEL = re.compile(r"(?i)v0\.2\b(?!\.[01]\b)|v0\.3\b|Mentat-Hard v\d|mentat[-_ ]hard[-_ ]v[23]|\bv3\.1\b|measurement[ _-]release|internal release")
 RUN_LABEL = re.compile(r"(?i)\bv31\b|-v31-")  # the run-directory label that the 2026-11-01 rename removed
 
 # Frozen or hash-pinned trees, and the fixture manifests and golden files that are compared byte for byte.
@@ -131,10 +132,11 @@ def test_allowed_literals_are_each_on_exactly_one_line():
 
 
 def test_pattern_catches_each_label_form_and_not_the_current_names():
-    for label in ("v0.2", "v0.3", "v0.2.1", "Mentat-Hard v2", "mentat_hard_v3", "mentat-hard v3", "fixture v3.1",
+    for label in ("v0.2", "v0.3", "v0.2.2", "Mentat-Hard v2", "mentat_hard_v3", "mentat-hard v3", "fixture v3.1",
                   "measurement release", "measurement_release", "measurement-release", "internal release"):
         assert LABEL.search(label), label
-    for current in ("v0.1.0", "v0.1.1", "v0.2.0", "v0.10","mentat_hard_dev", "Mentat-Hard test set, revision 3.1", "revision 3.1"):
+    for current in ("v0.1.0", "v0.1.1", "v0.2.0", "v0.2.1", "v0.10","mentat_hard_dev", "Mentat-Hard test set, revision 3.1",
+                    "revision 3.1"):
         assert not LABEL.search(current), current
     for run in ("v31", "x-v31-y", "runs/x-v31-test/hf"):  # generic samples: the real run prefix is what the rename changes
         assert RUN_LABEL.search(run), run

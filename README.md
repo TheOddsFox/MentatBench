@@ -1,12 +1,14 @@
-# MentatBench v0.2.0 (latest release; v0.1.x record kept)
+# MentatBench v0.2.1 (latest release; v0.2.0 measurements and v0.1.x record kept)
 
 MentatBench evaluates whether a model can turn a corpus of propositions into a logically faithful representation and answer new global questions from it. This checkout contains the benchmark software, the Mentat-Hard fixtures, and a public results bundle.
 
 ## Results
 
-**v0.2.0** (the latest release) re-measures the **Mentat-Hard test set, revision 3.1** on Ollama 0.40.13: the 15 pre-registered models, two Kev models added after pre-registration (`kev_4b-q8_0` and `kev_0.8b-q8_0`, marked not pre-registered), and the baselines. The headline is the mean of relation MCC and group MCC; Q_N is a diagnostic. D3 27B ranks first, with a headline of 0.521 (95% interval 0.500 to 0.545; its rank interval is 1 to 1), and all 16 of its headline pairs are resolved in its favour after Holm correction. 117 of the 136 headline pairs among the 17 models are resolved. This is an owner re-measurement on the same machine, not an independent reproduction. The scores are scores on this benchmark's relation and group decisions, not general capability.
+**v0.2.1** (the latest release) is an analysis release based on v0.2.0. It changes no leaderboard row, score or prediction. It adds exploratory material outside the leaderboard: per-model profiles of relation and group accuracy with one failure example per op ([profiles](results/v0.2.1/profiles.json)), and an unranked reasoning reference, Claude Haiku 5.5 with reasoning allowed on a 500-item sample, which has no rank and is not on the leaderboard. See [results/v0.2.1/README.md](results/v0.2.1/README.md).
 
-Repeats: a run-to-run repeat of each model's headline run gives identical answers for 14 of 17 models and a byte-identical decisions file for 13; the largest headline change is 0.0003. Moving from Ollama 0.40.11 (v0.1.0) to 0.40.13, the headline of the 15 pre-registered models moves by a median of 0.0009 and at most 0.0044. Full tables and the run-to-run and version-shift details are in [results/v0.2.0/README.md](results/v0.2.0/README.md), with [leaderboard JSON](results/v0.2.0/leaderboard.json) and [analysis JSON](results/v0.2.0/analysis.json).
+**v0.2.0** re-measures the **Mentat-Hard test set, revision 3.1** on Ollama 0.40.13: the 15 pre-registered models, two Kev models added after pre-registration (`kev_4b-q8_0` and `kev_0.8b-q8_0`, marked not pre-registered), and the baselines. The headline is the mean of relation MCC and group MCC; Q_N is a diagnostic. D3 27B ranks first, with a headline of 0.521 (95% interval 0.500 to 0.545; its rank interval is 1 to 1), and all 16 of its headline pairs are resolved in its favour after Holm correction. 117 of the 136 headline pairs among the 17 models are resolved. This is an owner re-measurement on the same machine, not an independent reproduction. The scores are scores on this benchmark's relation and group decisions, not general capability.
+
+Repeats: a run-to-run repeat of each model's headline run gives identical answers for 14 of 17 models and a byte-identical decisions file for 13; the largest headline change is 0.0003. Moving from Ollama 0.40.11 (v0.1.0) to 0.40.13, the headline of the 15 pre-registered models moves by a median of 0.0009 and at most 0.0044. Full tables and the run-to-run and version-shift details are in [results/v0.2.0/README.md](results/v0.2.0/README.md), with [leaderboard JSON](results/v0.2.0/leaderboard.json) and [analysis JSON](results/v0.2.0/analysis.json). The v0.2.1 release has the same leaderboard rows; its analysis is [results/v0.2.1/analysis.json](results/v0.2.1/analysis.json).
 
 ### v0.1.x results (frozen record)
 
@@ -102,9 +104,15 @@ python results/v0.2.0/build_bundle.py build --check
 python tools/eval/release_analysis_v020.py --check
 ```
 
+The v0.2.1 analysis release is checked by its builder, which reads committed files only, including the reasoning reference's scored results:
+
+```bash
+python results/v0.2.1/build_bundle.py build --check
+```
+
 `--release` names a release in [`results/index.json`](results/index.json). The release must hold the cell, or carry it (`record_from`, for baseline cells only) or base it (`based_on`). The default is `v0.1.0`. It is fixed rather than `latest`, so an unflagged command keeps its meaning when a release is added. The v0.2.0 model cells are in `results/v0.2.0/cells/`. Its seven baselines are carried from v0.1.0, so `--release v0.2.0` compares them with the v0.1.0 measurement; the report's `measured_in` names the release that holds it. How scores are compared is in [docs/comparability.md](docs/comparability.md).
 
-The first rebuilds the v0.1.1 leaderboard and CSV, and their index while v0.1.1 is the latest release (from v0.2.0 on, `results/index.json` belongs to the v0.2.0 builder, whose `build --check` checks it), and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
+The first rebuilds the v0.1.1 leaderboard and CSV, and their index while v0.1.1 is the latest release (from v0.2.0 on, `results/index.json` belongs to the v0.2.0 builder while v0.2.0 is the latest release, and from v0.2.1 on to the v0.2.1 builder, whose `build --check` checks it), and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
 
 Two quick checks:
 
