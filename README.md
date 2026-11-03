@@ -131,7 +131,7 @@ $env:MB_ENGINE = "$PWD\target\release\mb-engine.exe"
 python tools/reproduce.py run lexical heuristic --out-root runs\reproduce
 ```
 
-If `MB_ENGINE` does not name an existing file, the harness skips engine confirmation with a warning, and the run still completes.
+If `MB_ENGINE` does not name an existing file, the harness skips engine confirmation with a warning, but the evaluate step needs the engine: the cell ends `incomplete` (failed step `evaluate`), and `run` exits 1.
 
 `run` re-runs each cell with the flags recorded in its published cell (`results/<release>/cells/<id>.json`, or the release that holds it), into a new `<out-root>/<id>`, and then compares the run with the published predictions. Before anything runs, it refuses a duplicate id, a model cell without its model tag, a child interpreter it cannot find, and a directory that is not empty (`<id>`, `<id>.meta` or `<id>.reproduce`). A published cell records its child interpreter as `python.exe`; the run uses the Python that runs the tool instead. `--url` names the Ollama server (default `http://127.0.0.1:11434`). A model whose digest differs from the pinned one is refused by the child, and this tool cannot override that.
 

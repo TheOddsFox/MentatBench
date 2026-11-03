@@ -309,13 +309,18 @@ def load_index() -> dict[str, dict]:
     return {entry["version"]: entry for entry in read_json(INDEX)["versions"]}
 
 
+def cells_dir_of(index: dict, release: str) -> str:
+    """The cells directory of a release, as the index names it (default results/<release>/cells)."""
+    return index[release].get("cells_dir", f"results/{release}/cells")
+
+
 def own_cell(index: dict, release: str, cell_id: str) -> Path | None:
-    """The file of a cell the release holds itself, in its cells_dir (default results/<release>/cells), or None. An analysis release
-    whose cells_dir is its base's holds no cells of its own."""
+    """The file of a cell the release holds itself, in its cells directory, or None. An analysis release whose cells directory is
+    its base's holds no cells of its own."""
     entry = index[release]
-    cells_dir = entry.get("cells_dir", f"results/{release}/cells")
+    cells_dir = cells_dir_of(index, release)
     base = entry.get("based_on")
-    if base is not None and index.get(base, {}).get("cells_dir", f"results/{base}/cells") == cells_dir:
+    if base is not None and index.get(base) is not None and cells_dir_of(index, base) == cells_dir:
         return None
     path = ROOT / cells_dir / f"{cell_id}.json"
     return path if path.is_file() else None
@@ -328,7 +333,7 @@ def resolve(index: dict, release: str, cell_id: str) -> tuple[str | None, list[s
     chain, current, through_record_from = [], release, False
     while True:
         if current not in index:
-            raise UsageError(f"no release {current!r} in results/index.json")
+            raise UsageError(f"no release {current!r} in results/index.json (reached through {' -> '.join([*chain, current])})")
         chain.append(current)
         path = own_cell(index, current, cell_id)
         if path is not None:
@@ -351,8 +356,8 @@ def holding_release(release: str, cell_id: str) -> str:
     index = load_index()
     holder, chain = resolve(index, release, cell_id)
     if holder is None:
-        raise UsageError(f"no published cell {cell_id!r} in results/{release}/cells, nor in the releases it carries or bases on "
-                         f"({' -> '.join(chain)})")
+        dirs = " or ".join(cells_dir_of(index, r) for r in chain)
+        raise UsageError(f"no published cell {cell_id!r} in {dirs} (followed {' -> '.join(chain)})")
     base = index[release].get("based_on")
     if holder == release and base is not None and resolve(index, base, cell_id)[0] is not None:
         raise UsageError(f"{release} is an analysis release based on {base}, which holds {cell_id!r}; an analysis release may not "

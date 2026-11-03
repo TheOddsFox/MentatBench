@@ -44,7 +44,7 @@ The check found seven frictions. The status column says what the change that acc
 | 6 | The README's reproduce example was `d3_27b-q8_0` (29.5 GB, about 70 minutes), with no cheap first example. | The README gives `lexical heuristic` and `d1-omni_600m-q8_0 laya_latest --release v0.2.0` as first checks. |
 | 7 | `--release v0.2.0` refused the baselines, which are carried from v0.1.0. | `tools/reproduce.py` resolves a carried baseline to the release that holds it, and the report names it as `measured_in`. |
 
-One friction was found and not changed: the README's harness check uses POSIX syntax (`MB_ENGINE="$PWD/..." CUDA_VISIBLE_DEVICES= python ...`), which does not run unchanged in PowerShell.
+One more friction was found: the README's harness check used POSIX syntax (`MB_ENGINE="$PWD/..." CUDA_VISIBLE_DEVICES= python ...`), which does not run unchanged in PowerShell. The README now also gives a PowerShell form of that command. It was run after the check, against a scratch folder, with `PYTHONPATH` set in place of the editable install, and gave headline 1.0000 on the dev fixture. The check itself did not use it.
 
 ## What this record does and does not show
 

@@ -667,16 +667,16 @@ def test_a_model_added_after_v010_is_refused_under_v010(tmp_path, monkeypatch, c
 
 def test_an_unknown_release_in_the_middle_of_a_chain_is_refused(tmp_path, monkeypatch):
     index_with(tmp_path, monkeypatch, {"version": "v0.9.7", "record_from": "v9.9.9"})
-    with pytest.raises(R.UsageError, match="no release 'v9.9.9' in results/index.json"):
+    with pytest.raises(R.UsageError) as err:
         R.holding_release("v0.9.7", "lexical")
+    assert str(err.value) == "no release 'v9.9.9' in results/index.json (reached through v0.9.7 -> v9.9.9)"
 
 
 def test_a_cycle_of_release_entries_is_refused_not_looped(tmp_path, monkeypatch):
     index_with(tmp_path, monkeypatch, {"version": "vA", "based_on": "vB"}, {"version": "vB", "based_on": "vA"})
     with pytest.raises(R.UsageError) as err:
         R.holding_release("vA", "lexical")
-    assert str(err.value) == ("no published cell 'lexical' in results/vA/cells, nor in the releases it carries or bases on "
-                              "(vA -> vB)")
+    assert str(err.value) == "no published cell 'lexical' in results/vA/cells or results/vB/cells (followed vA -> vB)"
 
 
 def test_a_run_whose_rows_cannot_be_read_drops_an_earlier_predictions_file(tmp_path, monkeypatch):
