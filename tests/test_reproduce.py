@@ -8,6 +8,7 @@ import gzip
 import importlib.util
 import json
 import random
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -181,11 +182,11 @@ def test_the_gzip_container_does_not_decide_exact():
 
 # ---------------------------------------------------------------- a run directory built from the published records
 
-def write_fake_run(run: Path, cell_id: str, status: str = "complete") -> None:
+def write_fake_run(run: Path, cell_id: str, status: str = "complete", release: str = R.RELEASE) -> None:
     """A run directory with the files compare reads, built from the published records (not from a run). Its decisions file is
     empty: the rows are supplied by the test (run_rows is replaced)."""
-    doc = R.published_doc(cell_id, R.RELEASE)
-    card = R.read_json(ROOT / "release" / R.RELEASE / "runcards" / f"{cell_id}.json")
+    doc = R.published_doc(cell_id, release)
+    card = R.runcard(release, cell_id)
     (run / "submission.build").mkdir(parents=True, exist_ok=True)
     (run / "submission").mkdir(exist_ok=True)
     (run / "submission.build" / "decisions.jsonl").write_text("", encoding="utf-8")
@@ -195,14 +196,14 @@ def write_fake_run(run: Path, cell_id: str, status: str = "complete") -> None:
     (run / "submission" / "build_policy.json").write_text(json.dumps(card["build_policy"]), encoding="utf-8")
 
 
-def fake_run(tmp_path: Path, cell_id: str, status: str = "complete") -> Path:
+def fake_run(tmp_path: Path, cell_id: str, status: str = "complete", release: str = R.RELEASE) -> Path:
     run = tmp_path / cell_id
-    write_fake_run(run, cell_id, status)
+    write_fake_run(run, cell_id, status, release)
     return run
 
 
-def published_rows(cell_id: str) -> list[dict]:
-    return R.decode((ROOT / R.published_doc(cell_id, R.RELEASE)["predictions"]).read_bytes())
+def published_rows(cell_id: str, release: str = R.RELEASE) -> list[dict]:
+    return R.decode((ROOT / R.published_doc(cell_id, release)["predictions"]).read_bytes())
 
 
 def test_compare_of_a_published_cells_own_predictions_is_exact(tmp_path, monkeypatch):
@@ -436,14 +437,14 @@ def no_subprocess(monkeypatch):
     monkeypatch.setattr(R.subprocess, "run", refuse)
 
 
-def fake_subprocess(monkeypatch, cell_id: str, returncode: int = 0, status: str = "complete") -> dict:
+def fake_subprocess(monkeypatch, cell_id: str, returncode: int = 0, status: str = "complete", release: str = R.RELEASE) -> dict:
     """Replaces subprocess.run: the fake runcell writes a complete run directory (or one with the given status) and returns the
     given exit code; the arguments and the environment it was started with are recorded."""
     seen = {}
 
     def run(argv, cwd, env):
         seen.update(argv=argv, cwd=cwd, env=env)
-        write_fake_run(Path(argv[argv.index("--out") + 1]), cell_id, status)
+        write_fake_run(Path(argv[argv.index("--out") + 1]), cell_id, status, release)
         return subprocess.CompletedProcess(argv, returncode)
 
     monkeypatch.setattr(R.subprocess, "run", run)
@@ -538,6 +539,164 @@ def test_compare_returns_0_for_an_exact_run(tmp_path, monkeypatch, capsys):
     run = fake_run(tmp_path, "lexical")
     assert R.main(["compare", str(run), "--id", "lexical"]) == 0
     assert capsys.readouterr().out.startswith("lexical: exact")
+
+
+# ---------------------------------------------------------------- releases: carried baselines, analysis releases, unknown ones
+
+def index_with(tmp_path: Path, monkeypatch, *entries: dict) -> None:
+    """A copy of results/index.json with extra release entries. R.INDEX points at the copy for this test only."""
+    index = json.loads(R.INDEX.read_text(encoding="utf-8"))
+    index["versions"].extend(entries)
+    path = tmp_path / "index.json"
+    path.write_text(json.dumps(index), encoding="utf-8")
+    monkeypatch.setattr(R, "INDEX", path)
+
+
+def test_a_v020_baseline_resolves_to_the_v010_cell_and_run_card():
+    assert R.holding_release("v0.2.0", "lexical") == "v0.1.0"
+    assert R.holding_release("v0.2.0", "d3_27b-q8_0") == "v0.2.0"  # a model measured in v0.2.0 holds its own cell
+    assert R.published_doc("lexical", "v0.2.0") == R.published_doc("lexical", "v0.1.0")
+    assert R.runcard("v0.2.0", "lexical") == R.runcard("v0.1.0", "lexical")
+    assert R.holding_release("v0.1.1", "lexical") == "v0.1.0"  # v0.1.1's cells_dir is v0.1.0's: it holds no cells of its own
+
+
+def test_a_v020_model_cell_runs_its_recorded_command_and_settings(tmp_path, monkeypatch):
+    cell_id = "d1-omni_600m-q8_0"
+    doc = R.published_doc(cell_id, "v0.2.0")
+    assert doc["predictions"] == "results/v0.2.0/predictions/d1-omni_600m-q8_0.jsonl.gz"
+    assert R.model_tag(cell_id, doc) == "d1-omni:600m-q8_0"
+    monkeypatch.setattr(R, "run_rows", lambda run_dir: published_rows(cell_id, "v0.2.0"))
+    seen = fake_subprocess(monkeypatch, cell_id, release="v0.2.0")
+    assert R.main(["run", cell_id, "--release", "v0.2.0", "--out-root", str(tmp_path)]) == 0
+    argv = seen["argv"]
+    assert argv[argv.index("--fixture") + 1] == doc["cell"]["fixture_path"] == "fixtures/mentat_hard_test"
+    assert argv[argv.index("--adapter") + 1] == doc["cell"]["adapter"]
+    assert argv[argv.index("--profile") + 1] == doc["cell"]["profile"]
+    assert seen["env"]["MB_S1_MODEL"] == "d1-omni:600m-q8_0" and seen["env"]["MB_S1_PARALLEL"] == "2"
+    report = json.loads((tmp_path / f"{cell_id}.reproduce" / "report.json").read_text(encoding="utf-8"))
+    assert report["verdict"] == "exact" and report["release"] == "v0.2.0" and report["measured_in"] == "v0.2.0"
+    assert report["builder"] == "results/v0.2.0/build_bundle.py"
+    assert report["rescoring_builder"] == "results/v0.1.0/build_bundle.py"
+
+
+def test_a_v020_baseline_is_run_and_compared_with_the_v010_measurement(tmp_path, monkeypatch):
+    monkeypatch.setattr(R, "run_rows", lambda run_dir: published_rows("lexical", "v0.2.0"))
+    seen = fake_subprocess(monkeypatch, "lexical", release="v0.2.0")
+    assert R.main(["run", "lexical", "--release", "v0.2.0", "--out-root", str(tmp_path)]) == 0
+    assert not any(k.startswith("MB_S1_") for k in seen["env"])  # a baseline is not a model cell
+    report = json.loads((tmp_path / "lexical.reproduce" / "report.json").read_text(encoding="utf-8"))
+    assert report["verdict"] == "exact" and report["release"] == "v0.2.0" and report["measured_in"] == "v0.1.0"
+
+
+def test_an_unknown_release_or_cell_is_refused_before_anything_runs(tmp_path, monkeypatch, capsys):
+    no_subprocess(monkeypatch)
+    assert R.main(["run", "lexical", "--release", "v9.9.9", "--out-root", str(tmp_path)]) == 2
+    assert "no release 'v9.9.9' in results/index.json" in capsys.readouterr().err
+    assert R.main(["compare", str(tmp_path), "--id", "lexical", "--release", "v9.9.9"]) == 2
+    assert R.main(["run", "no-such-cell", "--release", "v0.2.0", "--out-root", str(tmp_path)]) == 2
+    assert "no published cell 'no-such-cell'" in capsys.readouterr().err
+    assert not (tmp_path / "lexical").exists() and not (tmp_path / "no-such-cell").exists()
+
+
+def test_an_analysis_release_resolves_through_its_base_to_the_cell(tmp_path, monkeypatch):
+    index_with(tmp_path, monkeypatch, {"version": "v0.9.1", "based_on": "v0.2.0"},
+               {"version": "v0.9.2", "based_on": "v0.9.1"})  # a synthetic analysis chain: v0.9.2 -> v0.9.1 -> v0.2.0
+    assert R.holding_release("v0.9.1", "d3_27b-q8_0") == "v0.2.0"
+    assert R.holding_release("v0.9.2", "d3_27b-q8_0") == "v0.2.0"
+    assert R.holding_release("v0.9.2", "lexical") == "v0.1.0"  # v0.2.0 carries the baseline from v0.1.0
+    assert R.published_doc("d3_27b-q8_0", "v0.9.1") == R.published_doc("d3_27b-q8_0", "v0.2.0")
+    monkeypatch.setattr(R, "run_rows", lambda run_dir: published_rows("d3_27b-q8_0", "v0.2.0"))
+    run = fake_run(tmp_path / "runs", "d3_27b-q8_0", release="v0.9.1")
+    report, _ = R.compare_run(run, "d3_27b-q8_0", "v0.9.1")
+    assert report["verdict"] == "exact" and report["release"] == "v0.9.1" and report["measured_in"] == "v0.2.0"
+
+
+def fake_results(tmp_path: Path, monkeypatch, entries: list[dict], own: dict[str, list[str]]) -> None:
+    """A temporary repository: copies of the v0.1.0 and v0.2.0 cells, an index with extra entries, and own cells (copies of a model
+    cell, one per id) in the cells directory of each release named in own. R.ROOT and R.INDEX point at it for this test only."""
+    root = tmp_path / "repo"
+    for release in ("v0.1.0", "v0.2.0"):
+        shutil.copytree(ROOT / "results" / release / "cells", root / "results" / release / "cells")
+    index = json.loads(R.INDEX.read_text(encoding="utf-8"))
+    index["versions"].extend(entries)
+    for release, ids in own.items():
+        entry = next(e for e in index["versions"] if e["version"] == release)
+        cells_dir = root / entry.get("cells_dir", f"results/{release}/cells")
+        cells_dir.mkdir(parents=True, exist_ok=True)
+        for cell_id in ids:
+            shutil.copy(ROOT / "results" / "v0.2.0" / "cells" / "d3_27b-q8_0.json", cells_dir / f"{cell_id}.json")
+    (root / "index.json").write_text(json.dumps(index), encoding="utf-8")
+    monkeypatch.setattr(R, "ROOT", root)
+    monkeypatch.setattr(R, "INDEX", root / "index.json")
+
+
+def test_an_analysis_release_may_not_hold_a_cell_its_base_holds(tmp_path, monkeypatch):
+    fake_results(tmp_path, monkeypatch, [{"version": "v0.9.3", "based_on": "v0.2.0"}],
+                 {"v0.9.3": ["d3_27b-q8_0", "synthetic_new"]})
+    with pytest.raises(R.UsageError, match="may not hold a cell that its base holds"):
+        R.holding_release("v0.9.3", "d3_27b-q8_0")
+    assert R.holding_release("v0.9.3", "synthetic_new") == "v0.9.3"  # a cell the base does not hold is the analysis release's own
+    no_subprocess(monkeypatch)
+    assert R.main(["run", "d3_27b-q8_0", "--release", "v0.9.3", "--out-root", str(tmp_path / "out")]) == 2
+
+
+def test_a_record_from_release_keeps_its_own_cell_over_the_carried_one(tmp_path, monkeypatch):
+    fake_results(tmp_path, monkeypatch, [{"version": "v0.9.5", "record_from": "v0.2.0"}], {"v0.9.5": ["d3_27b-q8_0"]})
+    assert R.holding_release("v0.9.5", "d3_27b-q8_0") == "v0.9.5"
+
+
+def test_the_cells_dir_of_an_index_entry_is_read(tmp_path, monkeypatch):
+    fake_results(tmp_path, monkeypatch, [{"version": "v0.9.8", "cells_dir": "results/v0.9.8/alt-cells"}],
+                 {"v0.9.8": ["synthetic_new"]})
+    assert R.holding_release("v0.9.8", "synthetic_new") == "v0.9.8"
+    assert R.published_doc("synthetic_new", "v0.9.8")["kind"] == "system_one_model"
+
+
+def test_a_model_absent_from_a_record_from_release_is_not_carried(tmp_path, monkeypatch):
+    index_with(tmp_path, monkeypatch, {"version": "v0.9.6", "record_from": "v0.1.0"})
+    assert R.holding_release("v0.9.6", "lexical") == "v0.1.0"  # a baseline is carried
+    with pytest.raises(R.UsageError, match="no published cell 'd3_27b-q8_0'"):
+        R.holding_release("v0.9.6", "d3_27b-q8_0")  # a model is not
+
+
+def test_a_model_added_after_v010_is_refused_under_v010(tmp_path, monkeypatch, capsys):
+    no_subprocess(monkeypatch)
+    assert R.main(["run", "kev_4b-q8_0", "--out-root", str(tmp_path)]) == 2
+    assert "no published cell 'kev_4b-q8_0' in results/v0.1.0/cells" in capsys.readouterr().err
+
+
+def test_an_unknown_release_in_the_middle_of_a_chain_is_refused(tmp_path, monkeypatch):
+    index_with(tmp_path, monkeypatch, {"version": "v0.9.7", "record_from": "v9.9.9"})
+    with pytest.raises(R.UsageError, match="no release 'v9.9.9' in results/index.json"):
+        R.holding_release("v0.9.7", "lexical")
+
+
+def test_a_cycle_of_release_entries_is_refused_not_looped(tmp_path, monkeypatch):
+    index_with(tmp_path, monkeypatch, {"version": "vA", "based_on": "vB"}, {"version": "vB", "based_on": "vA"})
+    with pytest.raises(R.UsageError) as err:
+        R.holding_release("vA", "lexical")
+    assert str(err.value) == ("no published cell 'lexical' in results/vA/cells, nor in the releases it carries or bases on "
+                              "(vA -> vB)")
+
+
+def test_a_run_whose_rows_cannot_be_read_drops_an_earlier_predictions_file(tmp_path, monkeypatch):
+    def unreadable(run_dir):
+        raise ValueError("unreadable decisions")
+
+    monkeypatch.setattr(R, "run_rows", unreadable)
+    run = fake_run(tmp_path, "lexical")
+    stale = tmp_path / "lexical.reproduce" / "predictions.jsonl.gz"
+    stale.parent.mkdir()
+    stale.write_bytes(b"stale")
+    report, _ = R.compare_run(run, "lexical")
+    assert report["verdict"] == "incomplete" and not stale.exists()
+
+
+def test_compare_names_the_release_that_measured_a_carried_cell(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(R, "run_rows", lambda run_dir: published_rows("lexical", "v0.2.0"))
+    run = fake_run(tmp_path, "lexical", release="v0.2.0")
+    assert R.main(["compare", str(run), "--id", "lexical", "--release", "v0.2.0"]) == 0
+    assert capsys.readouterr().out.startswith("lexical: exact (measured in v0.1.0)")
 
 
 # ---------------------------------------------------------------- the committed bundle still builds

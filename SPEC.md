@@ -209,6 +209,8 @@ Submission loading, validation, normalization, solver setup, query-index initial
 
 Report build/setup spend, build/setup time, CPU/GPU use, peak RAM, stored representation size, query p50/p95, throughput, and timeouts. Compute amortized cost as `build_and_setup_cost / query_count + deterministic_query_cost`, using the measured 1,000-query workload. Projections at other query volumes are explicitly labelled projections. Record both billed prices and usage quantities to support later repricing.
 
+Which facts must match for two scores to be compared, and which are only reported (such as the Ollama version), is in [docs/comparability.md](docs/comparability.md).
+
 # 10 Baselines and release gates
 
 Required baselines are an empty/unresolved theory, lexical retrieval, embeddings without semantic reasoning, deterministic parsing plus rules, a fixed model-to-theory pipeline, and oracle meanings through the common query engine. Include an oracle-retrieval or supplied-evidence diagnostic to separate candidate loss from semantic mistakes; it does not replace the corpus score.

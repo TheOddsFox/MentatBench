@@ -31,8 +31,12 @@ python -m mentat_bench.report --runs runs/model-a runs/model-b
 
 The report summarizes the supplied `runcell` directories. It does not combine quality and cost into a single ranking.
 
+## Re-running published cells
+
+`tools/reproduce.py` re-runs a published cell with the flags recorded in it, then compares the run with the published predictions. `--release` names a release in [`results/index.json`](../results/index.json) that holds the cell, or carries it (`record_from`, for baseline cells only) or bases it (`based_on`); the cell is read from the release that holds it. Usage and verdicts are in the [README](../README.md#reproduce-a-published-result). The facts that must match for two scores to be compared are in [comparability.md](comparability.md).
+
 ## Historical release evidence
 
-The manifests, run cards, and gate reports for development round 2 are kept unchanged under [`docs/history/round-2/`](history/round-2/), and those for v0.1.0 under [`release/v0.1.0/record/`](../release/v0.1.0/record/). They are measurement records. The v0.1.0 record concerns the Mentat-Hard test set, revision 3.1, and the results now published in the [v0.1.0 bundle](../results/README.md).
+The manifests, run cards, and gate reports for development round 2 are kept unchanged under [`docs/history/round-2/`](history/round-2/), and those for v0.1.0 under [`release/v0.1.0/record/`](../release/v0.1.0/record/). They are measurement records. The v0.1.0 record concerns the Mentat-Hard test set, revision 3.1, and the results published in the [v0.1.0 bundle](../results/README.md). The v0.2.0 measurement record (its deviations from the pre-registration, the two models added after it, and the commit of each cell) is in [`release/v0.2.0/record/`](../release/v0.2.0/record/README.md).
 
 Those manifests pin inputs that are not present here: the original private source snapshot, a Windows `mb-engine.exe`, the external Parquet catalogue, and a sealed private fixture. The release runner was omitted from this source checkout. Consequently this checkout has no active `release build`, `release verify`, or `release check-gates` command, and the archived gate reports are not verification of the current public source tree.
