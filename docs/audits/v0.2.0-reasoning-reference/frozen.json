@@ -1,0 +1,11 @@
+{
+ "files": {
+  "INSTRUCTIONS.md": "44ebb4a53af157eb2ab47403de666148be254f96c550432e6629ddc253a980ba",
+  "key.jsonl": "a1f0aebdf73cfd26624185fc49a766c25d6a88aa0632694c38f53c836e0e8522",
+  "run_slice.py": "644234d57391c67f19728eb9ee4ed67d0d03a04e3175ebf8b8a58b1b091a96e8",
+  "sample.jsonl": "0bb3f70b34946769f0fc97bd2d4787d95810ddbae53e8edc139639c76f146c47",
+  "score.py": "8fa4e486e07006b01fe3b8e73ae7915e8c9c2fd2b637f7dc1fb7784b8d375c37",
+  "slices.json": "970379a56cfbc1e9381a76638fa13bb17926bd3376bd42ee2da6535ed1296aa1"
+ },
+ "schema": "mentat-bench-reasoning-frozen/1"
+}

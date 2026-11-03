@@ -1,0 +1,475 @@
+{
+ "descriptive": "Descriptive only. The intervals are conditional on the 500 sampled items (they exclude item-sampling variance); the inside counts describe this sample and are not a test of representativeness.",
+ "interval": "95% percentile (numpy, linear) of the draws; the same draws for every source; conditional on the 500 sampled items",
+ "items": 500,
+ "models": {
+  "clef-flash_9b": {
+   "group": {
+    "difference": -0.038812,
+    "full_set": 0.095008,
+    "full_set_in_sample_interval": true,
+    "sample": 0.056196,
+    "sample_hi": 0.104837,
+    "sample_lo": 0.00648
+   },
+   "headline": {
+    "difference": -0.040194,
+    "full_set": 0.173222,
+    "full_set_in_sample_interval": true,
+    "sample": 0.133028,
+    "sample_hi": 0.174857,
+    "sample_lo": 0.096057
+   },
+   "relation": {
+    "difference": -0.041576,
+    "full_set": 0.251436,
+    "full_set_in_sample_interval": true,
+    "sample": 0.20986,
+    "sample_hi": 0.276632,
+    "sample_lo": 0.140366
+   }
+  },
+  "clef_27b-q8_0": {
+   "group": {
+    "difference": 0.021412,
+    "full_set": 0.020293,
+    "full_set_in_sample_interval": true,
+    "sample": 0.041705,
+    "sample_hi": 0.112675,
+    "sample_lo": -0.025013
+   },
+   "headline": {
+    "difference": 0.006204,
+    "full_set": 0.207694,
+    "full_set_in_sample_interval": true,
+    "sample": 0.213898,
+    "sample_hi": 0.279542,
+    "sample_lo": 0.149682
+   },
+   "relation": {
+    "difference": -0.009004,
+    "full_set": 0.395096,
+    "full_set_in_sample_interval": true,
+    "sample": 0.386092,
+    "sample_hi": 0.47348,
+    "sample_lo": 0.299652
+   }
+  },
+  "d1-omni_600m-q8_0": {
+   "group": {
+    "difference": 0.003858,
+    "full_set": -0.021479,
+    "full_set_in_sample_interval": true,
+    "sample": -0.017621,
+    "sample_hi": 0.012042,
+    "sample_lo": -0.038721
+   },
+   "headline": {
+    "difference": 0.000486,
+    "full_set": -0.003022,
+    "full_set_in_sample_interval": true,
+    "sample": -0.002536,
+    "sample_hi": 0.029865,
+    "sample_lo": -0.032241
+   },
+   "relation": {
+    "difference": -0.002886,
+    "full_set": 0.015434,
+    "full_set_in_sample_interval": true,
+    "sample": 0.012548,
+    "sample_hi": 0.068705,
+    "sample_lo": -0.047193
+   }
+  },
+  "d1_3b-q8_0": {
+   "group": {
+    "difference": 0.024858,
+    "full_set": 0.026961,
+    "full_set_in_sample_interval": true,
+    "sample": 0.051819,
+    "sample_hi": 0.107156,
+    "sample_lo": 0.007379
+   },
+   "headline": {
+    "difference": 0.012826,
+    "full_set": 0.071002,
+    "full_set_in_sample_interval": true,
+    "sample": 0.083828,
+    "sample_hi": 0.129785,
+    "sample_lo": 0.042494
+   },
+   "relation": {
+    "difference": 0.000794,
+    "full_set": 0.115043,
+    "full_set_in_sample_interval": true,
+    "sample": 0.115837,
+    "sample_hi": 0.190905,
+    "sample_lo": 0.04594
+   }
+  },
+  "d3_27b-q8_0": {
+   "group": {
+    "difference": 0.026453,
+    "full_set": 0.254055,
+    "full_set_in_sample_interval": true,
+    "sample": 0.280508,
+    "sample_hi": 0.353007,
+    "sample_lo": 0.204104
+   },
+   "headline": {
+    "difference": -0.003097,
+    "full_set": 0.521211,
+    "full_set_in_sample_interval": true,
+    "sample": 0.518114,
+    "sample_hi": 0.567405,
+    "sample_lo": 0.468617
+   },
+   "relation": {
+    "difference": -0.032647,
+    "full_set": 0.788367,
+    "full_set_in_sample_interval": true,
+    "sample": 0.75572,
+    "sample_hi": 0.818616,
+    "sample_lo": 0.694853
+   }
+  },
+  "d3_2b-q8_0": {
+   "group": {
+    "difference": 0.011755,
+    "full_set": -0.06265,
+    "full_set_in_sample_interval": true,
+    "sample": -0.050895,
+    "sample_hi": 0.004669,
+    "sample_lo": -0.10143
+   },
+   "headline": {
+    "difference": 0.008717,
+    "full_set": 0.052496,
+    "full_set_in_sample_interval": true,
+    "sample": 0.061213,
+    "sample_hi": 0.107933,
+    "sample_lo": 0.014249
+   },
+   "relation": {
+    "difference": 0.005679,
+    "full_set": 0.167643,
+    "full_set_in_sample_interval": true,
+    "sample": 0.173322,
+    "sample_hi": 0.2484,
+    "sample_lo": 0.110809
+   }
+  },
+  "d3_4b-q8_0": {
+   "group": {
+    "difference": 0.003803,
+    "full_set": 0.071003,
+    "full_set_in_sample_interval": true,
+    "sample": 0.074806,
+    "sample_hi": 0.131343,
+    "sample_lo": 0.016791
+   },
+   "headline": {
+    "difference": -0.002765,
+    "full_set": 0.231902,
+    "full_set_in_sample_interval": true,
+    "sample": 0.229137,
+    "sample_hi": 0.287772,
+    "sample_lo": 0.176886
+   },
+   "relation": {
+    "difference": -0.009335,
+    "full_set": 0.392802,
+    "full_set_in_sample_interval": true,
+    "sample": 0.383467,
+    "sample_hi": 0.467294,
+    "sample_lo": 0.303571
+   }
+  },
+  "d3_9b-q8_0": {
+   "group": {
+    "difference": -0.040046,
+    "full_set": 0.088809,
+    "full_set_in_sample_interval": true,
+    "sample": 0.048763,
+    "sample_hi": 0.094935,
+    "sample_lo": 0.005517
+   },
+   "headline": {
+    "difference": -0.011269,
+    "full_set": 0.274467,
+    "full_set_in_sample_interval": true,
+    "sample": 0.263198,
+    "sample_hi": 0.304871,
+    "sample_lo": 0.22197
+   },
+   "relation": {
+    "difference": 0.017508,
+    "full_set": 0.460125,
+    "full_set_in_sample_interval": true,
+    "sample": 0.477633,
+    "sample_hi": 0.544637,
+    "sample_lo": 0.40933
+   }
+  },
+  "kev_0.8b-q8_0": {
+   "group": {
+    "difference": 0.008722,
+    "full_set": 0.034854,
+    "full_set_in_sample_interval": true,
+    "sample": 0.043576,
+    "sample_hi": 0.128155,
+    "sample_lo": -0.046314
+   },
+   "headline": {
+    "difference": 0.005538,
+    "full_set": 0.051527,
+    "full_set_in_sample_interval": true,
+    "sample": 0.057065,
+    "sample_hi": 0.124317,
+    "sample_lo": -0.00919
+   },
+   "relation": {
+    "difference": 0.002352,
+    "full_set": 0.068201,
+    "full_set_in_sample_interval": true,
+    "sample": 0.070553,
+    "sample_hi": 0.151744,
+    "sample_lo": -0.00705
+   }
+  },
+  "kev_4b-q8_0": {
+   "group": {
+    "difference": 0.0,
+    "full_set": 0.0,
+    "full_set_in_sample_interval": true,
+    "sample": 0.0,
+    "sample_hi": 0.0,
+    "sample_lo": 0.0
+   },
+   "headline": {
+    "difference": 0.000361,
+    "full_set": 0.136989,
+    "full_set_in_sample_interval": true,
+    "sample": 0.13735,
+    "sample_hi": 0.154116,
+    "sample_lo": 0.118568
+   },
+   "relation": {
+    "difference": 0.000724,
+    "full_set": 0.273977,
+    "full_set_in_sample_interval": true,
+    "sample": 0.274701,
+    "sample_hi": 0.308232,
+    "sample_lo": 0.237136
+   }
+  },
+  "kev_9b-bf16": {
+   "group": {
+    "difference": 0.000428,
+    "full_set": 0.148108,
+    "full_set_in_sample_interval": true,
+    "sample": 0.148536,
+    "sample_hi": 0.203996,
+    "sample_lo": 0.094724
+   },
+   "headline": {
+    "difference": 0.006591,
+    "full_set": 0.236207,
+    "full_set_in_sample_interval": true,
+    "sample": 0.242798,
+    "sample_hi": 0.282905,
+    "sample_lo": 0.199512
+   },
+   "relation": {
+    "difference": 0.012752,
+    "full_set": 0.324307,
+    "full_set_in_sample_interval": true,
+    "sample": 0.337059,
+    "sample_hi": 0.379196,
+    "sample_lo": 0.284422
+   }
+  },
+  "laya_latest": {
+   "group": {
+    "difference": 0.010341,
+    "full_set": -0.02385,
+    "full_set_in_sample_interval": true,
+    "sample": -0.013509,
+    "sample_hi": 0.022869,
+    "sample_lo": -0.059079
+   },
+   "headline": {
+    "difference": 0.005145,
+    "full_set": -0.020055,
+    "full_set_in_sample_interval": true,
+    "sample": -0.01491,
+    "sample_hi": 0.013746,
+    "sample_lo": -0.038207
+   },
+   "relation": {
+    "difference": -5.1e-05,
+    "full_set": -0.01626,
+    "full_set_in_sample_interval": true,
+    "sample": -0.016311,
+    "sample_hi": 0.039589,
+    "sample_lo": -0.068578
+   }
+  },
+  "nimble-v3_9b-q8_0": {
+   "group": {
+    "difference": 0.048951,
+    "full_set": 0.126007,
+    "full_set_in_sample_interval": false,
+    "sample": 0.174958,
+    "sample_hi": 0.21949,
+    "sample_lo": 0.12886
+   },
+   "headline": {
+    "difference": 0.029204,
+    "full_set": 0.199784,
+    "full_set_in_sample_interval": true,
+    "sample": 0.228988,
+    "sample_hi": 0.28016,
+    "sample_lo": 0.181428
+   },
+   "relation": {
+    "difference": 0.009458,
+    "full_set": 0.273561,
+    "full_set_in_sample_interval": true,
+    "sample": 0.283019,
+    "sample_hi": 0.36184,
+    "sample_lo": 0.213709
+   }
+  },
+  "nimble_9b-bf16": {
+   "group": {
+    "difference": 0.009935,
+    "full_set": 0.081999,
+    "full_set_in_sample_interval": true,
+    "sample": 0.091934,
+    "sample_hi": 0.140531,
+    "sample_lo": 0.04381
+   },
+   "headline": {
+    "difference": 0.002378,
+    "full_set": 0.177375,
+    "full_set_in_sample_interval": true,
+    "sample": 0.179753,
+    "sample_hi": 0.217555,
+    "sample_lo": 0.142136
+   },
+   "relation": {
+    "difference": -0.005179,
+    "full_set": 0.272752,
+    "full_set_in_sample_interval": true,
+    "sample": 0.267573,
+    "sample_hi": 0.33195,
+    "sample_lo": 0.209005
+   }
+  },
+  "pplx-decider_27b": {
+   "group": {
+    "difference": 0.033517,
+    "full_set": 0.004255,
+    "full_set_in_sample_interval": true,
+    "sample": 0.037772,
+    "sample_hi": 0.090335,
+    "sample_lo": -0.022449
+   },
+   "headline": {
+    "difference": 0.006023,
+    "full_set": 0.257143,
+    "full_set_in_sample_interval": true,
+    "sample": 0.263166,
+    "sample_hi": 0.301253,
+    "sample_lo": 0.221323
+   },
+   "relation": {
+    "difference": -0.02147,
+    "full_set": 0.51003,
+    "full_set_in_sample_interval": true,
+    "sample": 0.48856,
+    "sample_hi": 0.550668,
+    "sample_lo": 0.426373
+   }
+  },
+  "tev1_0.8b-q8_0": {
+   "group": {
+    "difference": 0.0,
+    "full_set": 0.0,
+    "full_set_in_sample_interval": true,
+    "sample": 0.0,
+    "sample_hi": 0.0,
+    "sample_lo": 0.0
+   },
+   "headline": {
+    "difference": 0.005574,
+    "full_set": 0.000273,
+    "full_set_in_sample_interval": true,
+    "sample": 0.005847,
+    "sample_hi": 0.039086,
+    "sample_lo": -0.028726
+   },
+   "relation": {
+    "difference": 0.011149,
+    "full_set": 0.000546,
+    "full_set_in_sample_interval": true,
+    "sample": 0.011695,
+    "sample_hi": 0.078172,
+    "sample_lo": -0.057451
+   }
+  },
+  "tev1_4b-q8_0": {
+   "group": {
+    "difference": 0.062644,
+    "full_set": -0.016676,
+    "full_set_in_sample_interval": true,
+    "sample": 0.045968,
+    "sample_hi": 0.105411,
+    "sample_lo": -0.018739
+   },
+   "headline": {
+    "difference": 0.045726,
+    "full_set": 0.142255,
+    "full_set_in_sample_interval": false,
+    "sample": 0.187981,
+    "sample_hi": 0.220119,
+    "sample_lo": 0.155267
+   },
+   "relation": {
+    "difference": 0.028809,
+    "full_set": 0.301185,
+    "full_set_in_sample_interval": true,
+    "sample": 0.329994,
+    "sample_hi": 0.392369,
+    "sample_lo": 0.267261
+   }
+  }
+ },
+ "schema": "mentat-bench-reasoning-representativeness/1",
+ "source": "results.json (score.py), leaderboard.json",
+ "status": "models_only",
+ "summary": {
+  "group": {
+   "full_set_inside_sample_interval": 16,
+   "max_abs_difference": 0.062644,
+   "mean_abs_difference": 0.020326,
+   "of": 17,
+   "spearman": 0.923926
+  },
+  "headline": {
+   "full_set_inside_sample_interval": 16,
+   "max_abs_difference": 0.045726,
+   "mean_abs_difference": 0.0113,
+   "of": 17,
+   "spearman": 0.985294
+  },
+  "relation": {
+   "full_set_inside_sample_interval": 17,
+   "max_abs_difference": 0.041576,
+   "mean_abs_difference": 0.012434,
+   "of": 17,
+   "spearman": 0.997549
+  }
+ }
+}
