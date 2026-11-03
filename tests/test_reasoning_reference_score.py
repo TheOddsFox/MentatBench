@@ -16,11 +16,20 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = ROOT / "docs" / "audits" / "v0.2.0-reasoning-reference"
+# Other audits ship modules with the same names (score, build_sample): import ours fresh and leave neither the modules nor the
+# folder behind, so a later `import score` in another audit's script finds its own.
+_SHARED = ("score", "run_slice", "representativeness", "build_sample")
+for _name in _SHARED:
+    sys.modules.pop(_name, None)
 sys.path.insert(0, str(AUDIT))
 import representativeness as RP  # noqa: E402
 import run_slice as RS  # noqa: E402
 import score as SC  # noqa: E402
 from mentat_bench import decision_scoring as DS  # noqa: E402
+
+sys.path[:] = [p for p in sys.path if not p or Path(p).resolve() != AUDIT]
+for _name in _SHARED:
+    sys.modules.pop(_name, None)
 
 sys.path.insert(0, str(ROOT / "tools" / "eval"))
 import league_ci as LC  # noqa: E402

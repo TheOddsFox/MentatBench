@@ -12,8 +12,13 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 AUDIT = ROOT / "docs" / "audits" / "v0.2.0-reasoning-reference"
+# Other audits ship a build_sample module too: import ours fresh and leave neither it nor the folder behind.
+sys.modules.pop("build_sample", None)
 sys.path.insert(0, str(AUDIT))
 import build_sample as BS  # noqa: E402
+
+sys.path[:] = [p for p in sys.path if not p or Path(p).resolve() != AUDIT]
+sys.modules.pop("build_sample", None)
 
 
 def _rows(name):
