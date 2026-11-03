@@ -1,6 +1,6 @@
 # Project status (historical note)
 
-This page preserves a short status record from development round 3 (the Mentat-Hard test set, revision 3.1), released as v0.1.0. It is not an active roadmap or runbook. At that time the public software and results bundle was MentatBench v0.1.0. The latest release is v0.2.0, a new measurement; start with the [README](../README.md) and [results overview](../results/README.md).
+This page preserves a short status record from development round 3 (the Mentat-Hard test set, revision 3.1), released as v0.1.0. It is not an active roadmap or runbook. At that time the public software and results bundle was MentatBench v0.1.0. For the current releases, start with the [README](../README.md) and [results overview](../results/README.md).
 
 ### 2.3 Release gates
 

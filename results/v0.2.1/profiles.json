@@ -1,0 +1,2008 @@
+{
+ "schema": "mentat-bench-profiles/1",
+ "release": "v0.2.1",
+ "based_on": "v0.2.0",
+ "definitions": {
+  "relation_accuracy": "share of the 6,000 relation items whose predicted relation equals the gold relation",
+  "group_accuracy": "share of the 1,000 curated group items whose predicted class equals the gold class exactly (kind, k and chain); readings excluded",
+  "set_size": "number of member outcomes in a group item",
+  "missing": "relation: abstained items, scored as their recorded answer as in the published scores (an abstention is recorded as NONE); group: items with no answer, counted wrong (group abstentions are not recorded per item)",
+  "examples": "the modal-confusion rule: for each op, the model's most frequent wrong (gold, predicted) cell, ties by class name; within it, the item the most other models answered correctly, ties by lowest qid; abstentions and items the v0.1.1 audit judged suspect_label or unclear are excluded"
+ },
+ "set_size_buckets": [
+  "2",
+  "3",
+  "4-8"
+ ],
+ "group_kinds": [
+  "none",
+  "at_most_one",
+  "exactly_one",
+  "at_most_k",
+  "at_least_k",
+  "at_least_k+at_most_k",
+  "ordered_chain"
+ ],
+ "leagues": {
+  "test-L01": {
+   "name": "Lunaria",
+   "card": "Rules of the Lunaria League and Lunaria Cup. Teams: Belford, Karworth, Henworth, Falport, Karmoor, Henby.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Karworth wins the Cup, Henby is runner-up.\nAt least 1 team has 5 points or more.\nAt most 5 teams have 2 points or more.\nFor each t from 1 to 5: if Belford has at least t points, Falport has at least t + 1.\nKarworth has at least as many points as Henworth.\nThe Cup winner has at least 4 points.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Henby, Karmoor, Belford. Exactly one of them is the seed, with at least 1 point.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Belford, Henworth, Falport. Exactly one of them is the seed, with at least 2 points.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Henworth, Falport, Henby, Karworth. Exactly one of them is the seed, with at least 2 points.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 6 points."
+  },
+  "test-L02": {
+   "name": "Eldaria",
+   "card": "Rules of the Eldaria League and Eldaria Cup. Teams: Henford, Belmere, Eldford, Gorton, Jorstead.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Gorton wins the Cup, Belmere is runner-up.\nIf Henford wins the Cup, Gorton is runner-up.\nAt least 1 team has 5 points or more.\nAt most 4 teams have 2 points or more.\nFor each t from 1 to 5: if Eldford has at least t points, Belmere has at least t + 1.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Gorton, Jorstead, Henford. Exactly one of them is the seed, with at least 1 point.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Gorton, Eldford, Henford, Belmere. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Gorton, Belmere, Henford. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 3 points."
+  },
+  "test-L03": {
+   "name": "Lunova",
+   "card": "Rules of the Lunova League and Lunova Cup. Teams: Jormere, Prymoor, Gorby, Jorham, Dunham, Falholt.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Falholt wins the Cup, Gorby is runner-up.\nAt least 4 teams have 1 point or more.\nAt most 4 teams have 3 points or more.\nFor each t from 1 to 4: if Dunham has at least t points, Prymoor has at least t + 1.\nJormere has at least as many points as Jorham.\nThe Cup winner has at least 2 points.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Falholt, Jormere, Dunham. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Jormere, Prymoor, Jorham. Exactly one of them is the seed, with at least 2 points.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Gorby, Prymoor, Falholt. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 3 points."
+  },
+  "test-L04": {
+   "name": "Henura",
+   "card": "Rules of the Henura League and Henura Cup. Teams: Jorwick, Jorstead, Ormworth, Belfield, Falton, Karworth.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Falton wins the Cup, Karworth is runner-up.\nAt least 1 team has 5 points or more.\nAt most 4 teams have 3 points or more.\nJorwick has at least as many points as Jorstead.\nThe Cup winner has at least 4 points.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Jorstead, Falton, Belfield. Exactly one of them is the seed, with at least 1 point.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Falton, Belfield, Ormworth, Jorwick. Exactly one of them is the seed, with at least 1 point.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Jorwick, Falton, Jorstead. Exactly one of them is the seed, with at least 2 points.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round."
+  },
+  "test-L05": {
+   "name": "Ormica",
+   "card": "Rules of the Ormica League and Ormica Cup. Teams: Eldmoor, Cormoor, Lungate, Belmere, Ithby, Lunford.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Eldmoor wins the Cup, Lungate is runner-up.\nAt least 1 team has 4 points or more.\nAt most 4 teams have 3 points or more.\nCormoor has at least as many points as Belmere.\nThe Cup winner has at least 2 points.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Cormoor, Ithby, Lungate. Exactly one of them is the seed, with at least 2 points.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Lunford, Lungate, Ithby. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Lunford, Eldmoor, Ithby, Belmere. Exactly one of them is the seed, with at least 2 points.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 5 points."
+  },
+  "test-L06": {
+   "name": "Falene",
+   "card": "Rules of the Falene League and Falene Cup. Teams: Dunham, Karwick, Dundale, Gorfield.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Dunham wins the Cup, Karwick is runner-up.\nIf Dundale wins the Cup, Gorfield is runner-up.\nAt least 2 teams have 3 points or more.\nAt most 1 team has 5 points or more.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Karwick, Dundale, Gorfield. Exactly one of them is the seed, with at least 1 point.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Karwick, Dundale, Dunham. Exactly one of them is the seed, with at least 1 point.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Gorfield, Dundale, Dunham. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 5 points."
+  },
+  "test-L07": {
+   "name": "Asharia",
+   "card": "Rules of the Asharia League and Asharia Cup. Teams: Lunham, Ashton, Eldfield, Corport, Falmoor, Ithholt.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Corport wins the Cup, Ithholt is runner-up.\nFor each t from 1 to 5: if Falmoor has at least t points, Corport has at least t + 1.\nIthholt has at least as many points as Falmoor.\nThe Cup winner has at least 1 point.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Falmoor, Lunham, Ithholt. Exactly one of them is the seed, with at least 2 points.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Eldfield, Ashton, Ithholt. Exactly one of them is the seed, with at least 1 point.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Ithholt, Falmoor, Ashton. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 2 points."
+  },
+  "test-L08": {
+   "name": "Gorura",
+   "card": "Rules of the Gorura League and Gorura Cup. Teams: Belby, Pryport, Cordale, Ormdale, Gorham.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Gorham wins the Cup, Ormdale is runner-up.\nIf Ormdale wins the Cup, Pryport is runner-up.\nAt least 1 team has 7 points or more.\nAt most 2 teams have 7 points or more.\nFor each t from 1 to 6: if Gorham has at least t points, Belby has at least t + 1.\nBelby has at least as many points as Gorham.\nThe Cup winner has at least 5 points.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Pryport, Cordale, Belby. Exactly one of them is the seed, with at least 1 point.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Belby, Pryport, Gorham, Ormdale. Exactly one of them is the seed, with at least 1 point.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Gorham, Cordale, Belby. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 6 points."
+  },
+  "test-L09": {
+   "name": "Falaria",
+   "card": "Rules of the Falaria League and Falaria Cup. Teams: Morford, Ithdale, Dunfield, Jorworth, Gorton.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Ithdale wins the Cup, Dunfield is runner-up.\nIf Morford wins the Cup, Dunfield is runner-up.\nAt least 3 teams have 2 points or more.\nAt most 4 teams have 3 points or more.\nFor each t from 1 to 6: if Morford has at least t points, Dunfield has at least t + 1.\nDunfield has at least as many points as Morford.\nThe Cup winner has at least 1 point.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Dunfield, Ithdale, Morford, Jorworth. Exactly one of them is the seed, with at least 1 point.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Ithdale, Gorton, Dunfield. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Jorworth, Ithdale, Gorton. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 4 points."
+  },
+  "test-L10": {
+   "name": "Coraria",
+   "card": "Rules of the Coraria League and Coraria Cup. Teams: Ashfield, Ashstead, Morstead, Elddale, Ormstead, Ithmere.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Elddale wins the Cup, Ashfield is runner-up.\nIf Morstead wins the Cup, Ithmere is runner-up.\nOrmstead has at least as many points as Ashfield.\nThe Cup winner has at least 1 point.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Morstead, Ithmere, Elddale. Exactly one of them is the seed, with at least 2 points.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Ithmere, Morstead, Ashfield, Ashstead. Exactly one of them is the seed, with at least 1 point.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Ithmere, Morstead, Ormstead. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round."
+  },
+  "test-L11": {
+   "name": "Eldova",
+   "card": "Rules of the Eldova League and Eldova Cup. Teams: Morholt, Belham, Ithdale, Cordale, Eldstead, Belton.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Belham wins the Cup, Ithdale is runner-up.\nIf Eldstead wins the Cup, Belton is runner-up.\nFor each t from 1 to 5: if Eldstead has at least t points, Belham has at least t + 1.\nCordale has at least as many points as Morholt.\nThe Cup winner has at least 2 points.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Eldstead, Belton, Morholt. Exactly one of them is the seed, with at least 1 point.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Belham, Morholt, Eldstead. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Ithdale, Belton, Cordale. Exactly one of them is the seed, with at least 2 points.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 3 points."
+  },
+  "test-L12": {
+   "name": "Lunura",
+   "card": "Rules of the Lunura League and Lunura Cup. Teams: Corstead, Ithgate, Dunport, Ashmere, Cormere, Gorton.\nExactly 3 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nIf Corstead wins the Cup, Gorton is runner-up.\nAt least 1 team has 6 points or more.\nAt most 5 teams have 2 points or more.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Cormere, Dunport, Corstead. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Gorton, Ithgate, Dunport. Exactly one of them is the seed, with at least 2 points.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Corstead, Ashmere, Dunport. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 2 points."
+  },
+  "test-L13": {
+   "name": "Corova",
+   "card": "Rules of the Corova League and Corova Cup. Teams: Jorport, Ashton, Cordale, Karwick, Morstead, Karstead.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Karstead wins the Cup, Ashton is runner-up.\nFor each t from 1 to 4: if Cordale has at least t points, Karstead has at least t + 1.\nJorport has at least as many points as Karwick.\nThe Cup winner has at least 1 point.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Karwick, Ashton, Karstead, Jorport. Exactly one of them is the seed, with at least 2 points.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Karstead, Cordale, Morstead. Exactly one of them is the seed, with at least 2 points.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Karwick, Karstead, Cordale. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 3 points."
+  },
+  "test-L14": {
+   "name": "Belica",
+   "card": "Rules of the Belica League and Belica Cup. Teams: Morton, Pryholt, Lunworth, Mormoor, Ashdale, Belfield.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Morton wins the Cup, Pryholt is runner-up.\nIf Lunworth wins the Cup, Morton is runner-up.\nAt least 4 teams have 1 point or more.\nAt most 5 teams have 1 point or more.\nFor each t from 1 to 4: if Mormoor has at least t points, Morton has at least t + 1.\nPryholt has at least as many points as Mormoor.\nThe Cup winner has at least 4 points.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Ashdale, Morton, Lunworth. Exactly one of them is the seed, with at least 1 point.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Mormoor, Ashdale, Morton. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Belfield, Lunworth, Pryholt. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 5 points."
+  },
+  "test-L15": {
+   "name": "Corica",
+   "card": "Rules of the Corica League and Corica Cup. Teams: Ithfield, Ormwick, Karfield, Corfield, Dunford, Falmere.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Dunford wins the Cup, Falmere is runner-up.\nIf Ormwick wins the Cup, Corfield is runner-up.\nFor each t from 1 to 5: if Corfield has at least t points, Ormwick has at least t + 1.\nFalmere has at least as many points as Ithfield.\nThe Cup winner has at least 6 points.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Dunford, Ormwick, Karfield. Exactly one of them is the seed, with at least 2 points.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Falmere, Ithfield, Dunford. Exactly one of them is the seed, with at least 2 points.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Corfield, Falmere, Ithfield, Dunford. Exactly one of them is the seed, with at least 2 points.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 6 points."
+  },
+  "test-L16": {
+   "name": "Dunova",
+   "card": "Rules of the Dunova League and Dunova Cup. Teams: Jorfield, Morham, Eldholt, Ormford, Pryholt.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 2 points.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Jorfield wins the Cup, Morham is runner-up.\nAt least 3 teams have 2 points or more.\nAt most 3 teams have 4 points or more.\nFor each t from 1 to 4: if Pryholt has at least t points, Ormford has at least t + 1.\nMorham has at least as many points as Pryholt.\nThe Cup winner has at least 1 point.\nGroup Upland (the upland sides; the hill clubs; the highland teams): Eldholt, Jorfield, Pryholt. Exactly one of them is the seed, with at least 1 point.\nGroup Capital (the capital sides; the clubs from the capital; the big-city teams): Jorfield, Morham, Pryholt. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Eldholt, Jorfield, Ormford. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round."
+  },
+  "test-L17": {
+   "name": "Dunura",
+   "card": "Rules of the Dunura League and Dunura Cup. Teams: Corford, Pryford, Ormton, Falfield, Cormoor.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Pryford wins the Cup, Cormoor is runner-up.\nFor each t from 1 to 5: if Falfield has at least t points, Cormoor has at least t + 1.\nOrmton has at least as many points as Falfield.\nThe Cup winner has at least 1 point.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Corford, Ormton, Cormoor, Falfield. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Ormton, Falfield, Pryford. Exactly one of them is the seed, with at least 2 points.\nGroup Northern (the northern sides; the clubs from the north; the teams up north): Corford, Pryford, Falfield. Exactly one of them is the seed, with at least 2 points.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 4 points."
+  },
+  "test-L18": {
+   "name": "Jorova",
+   "card": "Rules of the Jorova League and Jorova Cup. Teams: Pryham, Gorham, Jorwick, Ashmoor, Karham, Belstead.\nExactly 2 teams qualify for the playoffs; each qualifier has at least 1 point.\nThe Cup has exactly one winner and one runner-up, two different teams, both playoff qualifiers.\nSo the 2 qualifiers are exactly the Cup winner and the runner-up.\nIf Ashmoor wins the Cup, Belstead is runner-up.\nIf Gorham wins the Cup, Ashmoor is runner-up.\nAt least 4 teams have 1 point or more.\nAt most 3 teams have 4 points or more.\nPryham has at least as many points as Jorwick.\nThe Cup winner has at least 5 points.\nGroup Riverside (the riverside sides; the clubs along the river; the teams by the river): Karham, Jorwick, Gorham, Belstead. Exactly one of them is the seed, with at least 1 point.\nGroup Founding (the founding clubs; the original member clubs; the charter sides): Gorham, Ashmoor, Belstead. Exactly one of them is the seed, with at least 1 point.\nGroup Coastal (the coastal sides; the clubs on the coast; the seaside teams): Ashmoor, Gorham, Jorwick. Exactly one of them is the seed, with at least 1 point.\nNo team is the seed of two groups.\n'By the break' has two readings: (1) final points; (2) final points plus the 1 point every team gets in the Shield round.\n'Top half' has two readings: (1) a playoff place; (2) at least 1 point."
+  }
+ },
+ "models": {
+  "d3_27b-q8_0": {
+   "relation": {
+    "accuracy": 0.827167,
+    "correct": 4963,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.372,
+    "correct": 372,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.642674,
+      "correct": 250,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.255682,
+      "correct": 90,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.123552,
+      "correct": 32,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.276667,
+      "correct": 83,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.882845,
+      "correct": 211,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.291892,
+      "correct": 54,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.074074,
+      "correct": 6,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.031746,
+      "correct": 2,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.056604,
+      "correct": 3,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.164557,
+      "correct": 13,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r01073",
+     "league": "test-L07",
+     "gold": "IMPLIED_BY",
+     "pred": "NONE",
+     "cell_count": 313,
+     "others_correct": 12,
+     "outcomes": [
+      {
+       "text": "Will Corport score at least 1 point in the Asharia League?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Falmoor take the Asharia Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00319",
+     "league": "test-L05",
+     "gold": "exactly_one",
+     "pred": "at_most_one",
+     "cell_count": 89,
+     "others_correct": 9,
+     "outcomes": [
+      {
+       "text": "Will Cormoor finish anywhere but second in the Ormica Cup?",
+       "label": "No"
+      },
+      {
+       "text": "Will Cormoor be crowned Ormica Cup champions?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cormoor book a place in the Ormica playoffs?",
+       "label": "No"
+      }
+     ]
+    }
+   ]
+  },
+  "d3_9b-q8_0": {
+   "relation": {
+    "accuracy": 0.5545,
+    "correct": 3327,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.258,
+    "correct": 258,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.416452,
+      "correct": 162,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.1875,
+      "correct": 66,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.11583,
+      "correct": 30,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.243333,
+      "correct": 73,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.719665,
+      "correct": 172,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.07027,
+      "correct": 13,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00851",
+     "league": "test-L05",
+     "gold": "IMPLIES",
+     "pred": "NONE",
+     "cell_count": 698,
+     "others_correct": 12,
+     "outcomes": [
+      {
+       "text": "Will Lunford lose the Ormica Cup final?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Lunford end the Ormica League season with not fewer than 1 point?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00393",
+     "league": "test-L15",
+     "gold": "exactly_one",
+     "pred": "at_most_one",
+     "cell_count": 154,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Ithfield end the Corica Cup in second place?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Ithfield finish the Corica Cup without the trophy?",
+       "label": "No"
+      },
+      {
+       "text": "Will Ithfield sit out the Corica postseason?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "pplx-decider_27b": {
+   "relation": {
+    "accuracy": 0.582333,
+    "correct": 3494,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.146,
+    "correct": 146,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.131105,
+      "correct": 51,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.238636,
+      "correct": 84,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.042471,
+      "correct": 11,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.043333,
+      "correct": 13,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.213389,
+      "correct": 51,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.437838,
+      "correct": 81,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.018868,
+      "correct": 1,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r01375",
+     "league": "test-L07",
+     "gold": "NONE",
+     "pred": "EXCLUDES",
+     "cell_count": 712,
+     "others_correct": 15,
+     "outcomes": [
+      {
+       "text": "Will Lunham be crowned Asharia Cup champions?",
+       "label": "No"
+      },
+      {
+       "text": "Will Lunham fail to reach 6 points by the Asharia League break, counted on final points?",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00087",
+     "league": "test-L17",
+     "gold": "none",
+     "pred": "exactly_one",
+     "cell_count": 113,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Corford punch a ticket to the Dunura postseason?",
+       "label": "No"
+      },
+      {
+       "text": "Is it untrue that Cormoor stays under 4 points in the Dunura League?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "kev_9b-bf16": {
+   "relation": {
+    "accuracy": 0.443667,
+    "correct": 2662,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.338,
+    "correct": 338,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.33419,
+      "correct": 130,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.380682,
+      "correct": 134,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.285714,
+      "correct": 74,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.9,
+      "correct": 270,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.008368,
+      "correct": 2,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.356757,
+      "correct": 66,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r05026",
+     "league": "test-L08",
+     "gold": "IMPLIES",
+     "pred": "NONE",
+     "cell_count": 832,
+     "others_correct": 11,
+     "outcomes": [
+      {
+       "text": "Will Gorham pick up 7 points or more in the Gorura League?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Belby not fail to reach 7 points in the Gorura League?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00136",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "none",
+     "cell_count": 150,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cordale take the Gorura Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "d3_4b-q8_0": {
+   "relation": {
+    "accuracy": 0.499333,
+    "correct": 2996,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.217,
+    "correct": 217,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.395887,
+      "correct": 154,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.136364,
+      "correct": 48,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.057915,
+      "correct": 15,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.056667,
+      "correct": 17,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.719665,
+      "correct": 172,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.075676,
+      "correct": 14,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.123457,
+      "correct": 10,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.031746,
+      "correct": 2,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.018868,
+      "correct": 1,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.012658,
+      "correct": 1,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r01989",
+     "league": "test-L01",
+     "gold": "IMPLIED_BY",
+     "pred": "EXCLUDES",
+     "cell_count": 492,
+     "others_correct": 11,
+     "outcomes": [
+      {
+       "text": "Will Belford hit the 2-point mark in the Lunaria League?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Belford earn a Lunaria playoff berth?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00541",
+     "league": "test-L18",
+     "gold": "exactly_one",
+     "pred": "at_most_one",
+     "cell_count": 119,
+     "others_correct": 11,
+     "outcomes": [
+      {
+       "text": "Will Ashmoor be the Jorova Cup runner-up?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Ashmoor be denied the Jorova Cup crown?",
+       "label": "No"
+      },
+      {
+       "text": "Will Ashmoor book a place in the Jorova playoffs?",
+       "label": "No"
+      }
+     ]
+    }
+   ]
+  },
+  "clef_27b-q8_0": {
+   "relation": {
+    "accuracy": 0.491833,
+    "correct": 2951,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.197,
+    "correct": 197,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.251928,
+      "correct": 98,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.213068,
+      "correct": 75,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.092664,
+      "correct": 24,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.166667,
+      "correct": 50,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.389121,
+      "correct": 93,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.281081,
+      "correct": 52,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.037736,
+      "correct": 2,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r02633",
+     "league": "test-L13",
+     "gold": "NONE",
+     "pred": "EXCLUDES",
+     "cell_count": 775,
+     "others_correct": 15,
+     "outcomes": [
+      {
+       "text": "Will Ashton go unseeded among the founding clubs in the Corova Cup draw?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Jorport have at least 4 points by the Corova League mid-season break?",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00087",
+     "league": "test-L17",
+     "gold": "none",
+     "pred": "exactly_one",
+     "cell_count": 148,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Corford punch a ticket to the Dunura postseason?",
+       "label": "No"
+      },
+      {
+       "text": "Is it untrue that Cormoor stays under 4 points in the Dunura League?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "nimble-v3_9b-q8_0": {
+   "relation": {
+    "accuracy": 0.4275,
+    "correct": 2565,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.241,
+    "correct": 241,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.169666,
+      "correct": 66,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.375,
+      "correct": 132,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.166023,
+      "correct": 43,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.1,
+      "correct": 30,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.1841,
+      "correct": 44,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.902703,
+      "correct": 167,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00136",
+     "league": "test-L16",
+     "gold": "IMPLIES",
+     "pred": "NONE",
+     "cell_count": 405,
+     "others_correct": 13,
+     "outcomes": [
+      {
+       "text": "Will Pryholt score at least 3 points in the Dunova League?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Pryholt end the Dunova League season with not fewer than 2 points?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00169",
+     "league": "test-L08",
+     "gold": "none",
+     "pred": "exactly_one",
+     "cell_count": 213,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Gorham finish the Gorura League with fewer than 2 points?",
+       "label": "No"
+      },
+      {
+       "text": "Will Gorham be handed the seed in Group Upland for the Gorura Cup?",
+       "label": "No"
+      }
+     ]
+    }
+   ]
+  },
+  "nimble_9b-bf16": {
+   "relation": {
+    "accuracy": 0.406833,
+    "correct": 2441,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.195,
+    "correct": 195,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.151671,
+      "correct": 59,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.301136,
+      "correct": 106,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.11583,
+      "correct": 30,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.26,
+      "correct": 78,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.016736,
+      "correct": 4,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.610811,
+      "correct": 113,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r02633",
+     "league": "test-L13",
+     "gold": "NONE",
+     "pred": "EXCLUDES",
+     "cell_count": 670,
+     "others_correct": 15,
+     "outcomes": [
+      {
+       "text": "Will Ashton go unseeded among the founding clubs in the Corova Cup draw?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Jorport have at least 4 points by the Corova League mid-season break?",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00170",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "exactly_one",
+     "cell_count": 143,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Pryport emerge as Gorura Cup winners?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "clef-flash_9b": {
+   "relation": {
+    "accuracy": 0.377333,
+    "correct": 2264,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.199,
+    "correct": 199,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.102828,
+      "correct": 40,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.346591,
+      "correct": 122,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.142857,
+      "correct": 37,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.01,
+      "correct": 3,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.154812,
+      "correct": 37,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.821622,
+      "correct": 152,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.132075,
+      "correct": 7,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00375",
+     "league": "test-L02",
+     "gold": "NONE",
+     "pred": "EXCLUDES",
+     "cell_count": 998,
+     "others_correct": 15,
+     "outcomes": [
+      {
+       "text": "Will Gorton be held to 0 points or fewer in the Eldaria League?",
+       "label": "No"
+      },
+      {
+       "text": "Will Jorstead not fail to reach 4 points by the Eldaria League break?",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00087",
+     "league": "test-L17",
+     "gold": "none",
+     "pred": "exactly_one",
+     "cell_count": 194,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Corford punch a ticket to the Dunura postseason?",
+       "label": "No"
+      },
+      {
+       "text": "Is it untrue that Cormoor stays under 4 points in the Dunura League?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "tev1_4b-q8_0": {
+   "relation": {
+    "accuracy": 0.435667,
+    "correct": 2614,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.185,
+    "correct": 185,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.392045,
+      "correct": 138,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.181467,
+      "correct": 47,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.033333,
+      "correct": 10,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.945946,
+      "correct": 175,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r01576",
+     "league": "test-L12",
+     "gold": "IMPLIES",
+     "pred": "NONE",
+     "cell_count": 742,
+     "others_correct": 15,
+     "outcomes": [
+      {
+       "text": "Will Dunport be the Lunura Cup runner-up?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Dunport earn a Lunura playoff berth?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00029",
+     "league": "test-L06",
+     "gold": "none",
+     "pred": "exactly_one",
+     "cell_count": 287,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Karwick be held to 2 points or fewer in the Falene League?",
+       "label": "No"
+      },
+      {
+       "text": "Will Dundale finish the Falene League with fewer than 3 points?",
+       "label": "No"
+      }
+     ]
+    }
+   ]
+  },
+  "kev_4b-q8_0": {
+   "relation": {
+    "accuracy": 0.3765,
+    "correct": 2259,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.3,
+    "correct": 300,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.349614,
+      "correct": 136,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.301136,
+      "correct": 106,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.223938,
+      "correct": 58,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 1.0,
+      "correct": 300,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r01562",
+     "league": "test-L12",
+     "gold": "EXCLUDES",
+     "pred": "NONE",
+     "cell_count": 1105,
+     "others_correct": 14,
+     "outcomes": [
+      {
+       "text": "Will Ithgate sit out the Lunura postseason?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Ithgate sit out the Lunura postseason?",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00136",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "none",
+     "cell_count": 238,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cordale take the Gorura Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "d1_3b-q8_0": {
+   "relation": {
+    "accuracy": 0.304833,
+    "correct": 1829,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.185,
+    "correct": 185,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.048843,
+      "correct": 19,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.346591,
+      "correct": 122,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.169884,
+      "correct": 44,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.066667,
+      "correct": 20,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.864865,
+      "correct": 160,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.09434,
+      "correct": 5,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00664",
+     "league": "test-L05",
+     "gold": "IMPLIED_BY",
+     "pred": "NONE",
+     "cell_count": 361,
+     "others_correct": 13,
+     "outcomes": [
+      {
+       "text": "Will Ithby score at least 1 point in the Ormica League?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Ithby be the Ormica Cup runner-up?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00002",
+     "league": "test-L06",
+     "gold": "none",
+     "pred": "exactly_one",
+     "cell_count": 241,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Dunham punch a ticket to the Falene postseason?",
+       "label": "No"
+      },
+      {
+       "text": "Is it untrue that Karwick misses the Falene Cup silver?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Karwick's Falene League tally top 3 points?",
+       "label": "No"
+      },
+      {
+       "text": "Will Gorfield land the protected slot in Group Founding in the Falene Cup?",
+       "label": "Yes"
+      },
+      {
+       "text": "Is it untrue that Gorfield stays under 1 point in the Falene League?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "d3_2b-q8_0": {
+   "relation": {
+    "accuracy": 0.338,
+    "correct": 2028,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.229,
+    "correct": 229,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.290488,
+      "correct": 113,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.213068,
+      "correct": 75,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.158301,
+      "correct": 41,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.736667,
+      "correct": 221,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.008368,
+      "correct": 2,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.032432,
+      "correct": 6,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00420",
+     "league": "test-L02",
+     "gold": "EXCLUDES",
+     "pred": "NONE",
+     "cell_count": 923,
+     "others_correct": 13,
+     "outcomes": [
+      {
+       "text": "Will Henford hold the seeding in Group Founding in the Eldaria Cup draw?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Henford hold the seeding in Group Founding in the Eldaria Cup draw?",
+       "label": "No"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00136",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "none",
+     "cell_count": 229,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cordale take the Gorura Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "kev_0.8b-q8_0": {
+   "relation": {
+    "accuracy": 0.277,
+    "correct": 1662,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.29,
+    "correct": 290,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.326478,
+      "correct": 127,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.298295,
+      "correct": 105,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.223938,
+      "correct": 58,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.866667,
+      "correct": 260,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.012552,
+      "correct": 3,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.145946,
+      "correct": 27,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00074",
+     "league": "test-L16",
+     "gold": "EXCLUDES",
+     "pred": "NONE",
+     "cell_count": 782,
+     "others_correct": 14,
+     "outcomes": [
+      {
+       "text": "Will Jorfield claim Dunova Cup glory?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Jorfield take the Dunova Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00136",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "none",
+     "cell_count": 201,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cordale take the Gorura Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "tev1_0.8b-q8_0": {
+   "relation": {
+    "accuracy": 0.2465,
+    "correct": 1479,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.3,
+    "correct": 300,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.349614,
+      "correct": 136,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.301136,
+      "correct": 106,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.223938,
+      "correct": 58,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 1.0,
+      "correct": 300,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00074",
+     "league": "test-L16",
+     "gold": "EXCLUDES",
+     "pred": "NONE",
+     "cell_count": 1199,
+     "others_correct": 14,
+     "outcomes": [
+      {
+       "text": "Will Jorfield claim Dunova Cup glory?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Jorfield take the Dunova Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00136",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "none",
+     "cell_count": 238,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cordale take the Gorura Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "d1-omni_600m-q8_0": {
+   "relation": {
+    "accuracy": 0.217667,
+    "correct": 1306,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.013,
+    "correct": 13,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.005141,
+      "correct": 2,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.028409,
+      "correct": 10,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.003861,
+      "correct": 1,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.003333,
+      "correct": 1,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.059459,
+      "correct": 11,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.012658,
+      "correct": 1,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 0,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r00967",
+     "league": "test-L05",
+     "gold": "NONE",
+     "pred": "IMPLIES",
+     "cell_count": 968,
+     "others_correct": 16,
+     "outcomes": [
+      {
+       "text": "Will Cormoor collect more than 2 points in the Ormica League?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Lunford finish the Ormica League season with 3 or more points?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00002",
+     "league": "test-L06",
+     "gold": "none",
+     "pred": "ordered_chain+exactly_one",
+     "cell_count": 158,
+     "others_correct": 10,
+     "outcomes": [
+      {
+       "text": "Will Dunham punch a ticket to the Falene postseason?",
+       "label": "No"
+      },
+      {
+       "text": "Is it untrue that Karwick misses the Falene Cup silver?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Karwick's Falene League tally top 3 points?",
+       "label": "No"
+      },
+      {
+       "text": "Will Gorfield land the protected slot in Group Founding in the Falene Cup?",
+       "label": "Yes"
+      },
+      {
+       "text": "Is it untrue that Gorfield stays under 1 point in the Falene League?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  },
+  "laya_latest": {
+   "relation": {
+    "accuracy": 0.2345,
+    "correct": 1407,
+    "n": 6000
+   },
+   "group": {
+    "accuracy": 0.259,
+    "correct": 259,
+    "n": 1000,
+    "by_set_size": {
+     "2": {
+      "accuracy": 0.251928,
+      "correct": 98,
+      "n": 389
+     },
+     "3": {
+      "accuracy": 0.298295,
+      "correct": 105,
+      "n": 352
+     },
+     "4-8": {
+      "accuracy": 0.216216,
+      "correct": 56,
+      "n": 259
+     }
+    },
+    "by_kind": {
+     "none": {
+      "accuracy": 0.82,
+      "correct": 246,
+      "n": 300
+     },
+     "at_most_one": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 239
+     },
+     "exactly_one": {
+      "accuracy": 0.07027,
+      "correct": 13,
+      "n": 185
+     },
+     "at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 81
+     },
+     "at_least_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 63
+     },
+     "at_least_k+at_most_k": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 53
+     },
+     "ordered_chain": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 79
+     }
+    }
+   },
+   "missing": {
+    "relation": 4981,
+    "group": 0
+   },
+   "examples": [
+    {
+     "op": "decide_relation",
+     "qid": "r01649",
+     "league": "test-L12",
+     "gold": "NONE",
+     "pred": "IMPLIES",
+     "cell_count": 218,
+     "others_correct": 15,
+     "outcomes": [
+      {
+       "text": "Will Dunport have more than 2 points by the Lunura League break?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cormere collect more than 2 points in the Lunura League?",
+       "label": "Yes"
+      }
+     ]
+    },
+    {
+     "op": "decide_group",
+     "qid": "g00136",
+     "league": "test-L08",
+     "gold": "at_most_one",
+     "pred": "none",
+     "cell_count": 180,
+     "others_correct": 7,
+     "outcomes": [
+      {
+       "text": "Will the Gorura Cup be won by Cordale?",
+       "label": "Yes"
+      },
+      {
+       "text": "Will Cordale take the Gorura Cup silver medal?",
+       "label": "Yes"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

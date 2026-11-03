@@ -1,7 +1,9 @@
 # Mentat-Hard results, v0.1.1 (analysis of the v0.1.0 measurements)
 
-> **v0.2.0 is the latest release.** It is a new measurement on Ollama 0.40.13; this page reports v0.1.x, on Ollama 0.40.11,
-> and stays as the frozen v0.1.x record. See [v0.2.0/README.md](v0.2.0/README.md).
+> **v0.2.1 is the latest release.** It is an analysis release based on v0.2.0: the same measurements, no score changed. It adds
+> exploratory profiles and an unranked reasoning reference, outside the leaderboard. v0.2.0 is a new measurement on Ollama
+> 0.40.13 ([v0.2.0/README.md](v0.2.0/README.md)); see [v0.2.1/README.md](v0.2.1/README.md). This page reports v0.1.x, on
+> Ollama 0.40.11, and stays as the frozen v0.1.x record.
 
 This folder holds the results of the development round 3 test matrix (test set revision 3.1, released as v0.1.0 on 2026-10-31): 15 System One
 models, their baselines (the rules child, lexical, embedding, empty, oracle, gold_view as the ceiling, and the hf pipeline baseline), and a replication on the sealed private split. It is the entry point for the

@@ -18,7 +18,7 @@ Every check runs on every cell before anything is written. A failed check prints
 build [--check] reads committed files only: results/v0.2.0/cells, predictions and baselines.json (a carried baseline's files are
 the v0.1.0 ones), the fixture, the v0.1.0 leaderboard and results/index.json. It recomputes every interval with
 tools/eval/league_ci.py's primitives (B = 2000, seed 0) and every rank interval (B = 20000, release_analysis's rank function), and
-writes results/v0.2.0/leaderboard.json, leaderboard.csv and results/index.json. With --check it compares the bytes with the
+writes results/v0.2.0/leaderboard.json, leaderboard.csv and (while v0.2.0 is the index's latest release) results/index.json. With --check it compares the bytes with the
 committed files and exits 1 on any difference. The analysis (results/v0.2.0/analysis.json) is written by
 tools/eval/release_analysis_v020.py, which pins the leaderboard by sha256.
 
@@ -622,8 +622,10 @@ def build_outputs() -> dict[str, bytes]:
     lb = leaderboard(models, baselines, ranking, prior_lb, commits, L, everything)
     lb_bytes = bundle.dump_json(lb)
     csv_text = leaderboard_csv(lb)
+    out = {"leaderboard.json": lb_bytes, "leaderboard.csv": csv_text}
     index_bytes = index_doc()
-    out = {"leaderboard.json": lb_bytes, "leaderboard.csv": csv_text, "index.json": index_bytes}
+    if index_bytes is not None:  # the index is written only while v0.2.0 is its latest release
+        out["index.json"] = index_bytes
     for name, data in out.items():
         scrubbed(data)
     print(f"build: {len(models)} models, {len(baselines)} baselines; fixture {version}; checked {len(rows_info)} runs",
@@ -839,10 +841,13 @@ def leaderboard_csv(lb: dict) -> bytes:
     return buf.getvalue().encode("utf-8")
 
 
-def index_doc() -> bytes:
+def index_doc() -> bytes | None:
     """results/index.json with v0.2.0 as the latest release. v0.1.1 is superseded by it (the same index, built on the v0.1.1
-    entry, which is kept as it is except its status); the v0.2.0 entry names its files by role."""
+    entry, which is kept as it is except its status); the v0.2.0 entry names its files by role. None once a later release is the
+    index's latest: that release's builder owns the index from then on."""
     index = jload(RESULTS / "index.json")
+    if index["latest"] != RELEASE:
+        return None
     versions = [v for v in index["versions"] if v["version"] != RELEASE]
     v011 = next(v for v in versions if v["version"] == "v0.1.1")
     check(v011["status"] in ("latest", "superseded"), "the index does not hold v0.1.1 as a release")
