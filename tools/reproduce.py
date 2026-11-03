@@ -1,11 +1,16 @@
 """Re-runs published cells of the Mentat-Hard test set and compares each run with its published cell.
 
 usage, from the repository root:
-  python tools/reproduce.py run <id> [<id> ...] --out-root DIR [--url URL] [--release v0.1.0|v0.2.0]
-  python tools/reproduce.py compare <run_dir> --id <id> [--release v0.1.0|v0.2.0]
+  python tools/reproduce.py run <id> [<id> ...] --out-root DIR [--url URL] [--release RELEASE]
+  python tools/reproduce.py compare <run_dir> --id <id> [--release RELEASE]
 
-run re-runs each cell with the flags recorded in results/<release>/cells/<id>.json (fixture_path, adapter, local_arg, profile,
-build_flags), into a new <out-root>/<id>, then compares it. A published cell records its child interpreter as a Windows name
+RELEASE is a version in results/index.json (default v0.1.0). A cell is read from the cells directory of the release that holds it:
+the release's own cell, or else the cell of the release its record_from entry carries (baseline cells only) or its based_on entry
+bases (an analysis release, which may not hold a cell its base holds). That release's cell, predictions and run card are used, and
+the report names it as measured_in.
+
+run re-runs each cell with the flags recorded in its cell (fixture_path, adapter, local_arg, profile, build_flags), into a new
+<out-root>/<id>, then compares it. A published cell records its child interpreter as a Windows name
 (python.exe); the run uses the interpreter that runs this tool. A system_one_model cell runs against the Ollama server at --url
 (default http://127.0.0.1:11434) with the model tag of the published run, MB_S1_PARALLEL=2 and a child stats file. Duplicate ids,
 a non-empty <out-root>/<id> or <out-root>/<id>.meta, a missing model tag and an unusable child interpreter are refused before any
@@ -41,8 +46,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE = "v0.1.0"  # the default; RELEASES lists the published cells that can be re-run and compared
-RELEASES = ("v0.1.0", "v0.2.0")
+# The default is fixed, not the index's "latest": an unflagged run keeps the same comparison target when a release is added.
+RELEASE = "v0.1.0"
+INDEX = ROOT / "results" / "index.json"
+# The per-cell builders of every release: results/v0.2.0/build_bundle.py imports this file unchanged.
+BUILDER = ROOT / "results" / "v0.1.0" / "build_bundle.py"
 TEST_FIXTURE = ROOT / "fixtures" / "mentat_hard_test"
 DEFAULT_URL = "http://127.0.0.1:11434"
 SCHEMA = "mentat-bench-reproduce/1"
@@ -69,7 +77,7 @@ class UsageError(Exception):
 
 def load_bundle():
     """results/v0.1.0/build_bundle.py, imported unchanged: its prediction rows, encoding and rescoring are the published ones."""
-    spec = importlib.util.spec_from_file_location("build_bundle_v010", ROOT / "results" / RELEASE / "build_bundle.py")
+    spec = importlib.util.spec_from_file_location("build_bundle_v010", BUILDER)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -296,11 +304,79 @@ def decode(blob: bytes) -> list[dict]:
     return [json.loads(line) for line in gzip.decompress(blob).decode("utf-8").splitlines()]
 
 
+def load_index() -> dict[str, dict]:
+    """The releases of results/index.json, by version."""
+    return {entry["version"]: entry for entry in read_json(INDEX)["versions"]}
+
+
+def cells_dir_of(index: dict, release: str) -> str:
+    """The cells directory of a release, as the index names it (default results/<release>/cells)."""
+    return index[release].get("cells_dir", f"results/{release}/cells")
+
+
+def own_cell(index: dict, release: str, cell_id: str) -> Path | None:
+    """The file of a cell the release holds itself, in its cells directory, or None. An analysis release whose cells directory is
+    its base's holds no cells of its own."""
+    entry = index[release]
+    cells_dir = cells_dir_of(index, release)
+    base = entry.get("based_on")
+    if base is not None and index.get(base) is not None and cells_dir_of(index, base) == cells_dir:
+        return None
+    path = ROOT / cells_dir / f"{cell_id}.json"
+    return path if path.is_file() else None
+
+
+def resolve(index: dict, release: str, cell_id: str) -> tuple[str | None, list[str]]:
+    """(the release that holds the cell, or None; the releases followed). The release's own cell comes first. Otherwise record_from
+    (carried baselines) or based_on (analysis releases) is followed, one link at a time. A record_from link carries only baseline
+    cells: a model cell found through one is not carried."""
+    chain, current, through_record_from = [], release, False
+    while True:
+        if current not in index:
+            raise UsageError(f"no release {current!r} in results/index.json (reached through {' -> '.join([*chain, current])})")
+        chain.append(current)
+        path = own_cell(index, current, cell_id)
+        if path is not None:
+            carried_model = through_record_from and read_json(path).get("kind") == "system_one_model"
+            return (None if carried_model else current), chain
+        entry = index[current]
+        if entry.get("record_from"):
+            current, through_record_from = entry["record_from"], True
+        elif entry.get("based_on"):
+            current = entry["based_on"]
+        else:
+            return None, chain
+        if current in chain:
+            return None, chain
+
+
+def holding_release(release: str, cell_id: str) -> str:
+    """The release whose cells hold the cell (see resolve). UsageError when the release is unknown, when the chain holds no such cell,
+    or when an analysis release holds a cell that its base also holds (an analysis release changes no prediction)."""
+    index = load_index()
+    holder, chain = resolve(index, release, cell_id)
+    if holder is None:
+        dirs = " or ".join(cells_dir_of(index, r) for r in chain)
+        raise UsageError(f"no published cell {cell_id!r} in {dirs} (followed {' -> '.join(chain)})")
+    base = index[release].get("based_on")
+    if holder == release and base is not None and resolve(index, base, cell_id)[0] is not None:
+        raise UsageError(f"{release} is an analysis release based on {base}, which holds {cell_id!r}; an analysis release may not "
+                         "hold a cell that its base holds")
+    return holder
+
+
+def cell_file(release: str, cell_id: str) -> Path:
+    """The published cell file, from the release that holds it."""
+    return own_cell(load_index(), holding_release(release, cell_id), cell_id)
+
+
+def runcard(release: str, cell_id: str) -> dict:
+    """The run card of a published cell, from the release that holds it."""
+    return read_json(ROOT / load_index()[holding_release(release, cell_id)]["runcards_dir"] / f"{cell_id}.json")
+
+
 def published_doc(cell_id: str, release: str) -> dict:
-    path = ROOT / "results" / release / "cells" / f"{cell_id}.json"
-    if not path.is_file():
-        raise UsageError(f"no published cell {cell_id!r} in results/{release}/cells")
-    doc = read_json(path)
+    doc = read_json(cell_file(release, cell_id))
     if doc["predictions"] is None:
         raise UsageError(f"{cell_id} has no published predictions (it has no decision log), so there is nothing to compare")
     return doc
@@ -358,7 +434,8 @@ def compare_run(run_dir: Path, cell_id: str, release: str = RELEASE) -> tuple[di
     """Compares a run directory with its published cell, writes <run_dir>.reproduce/ and returns (report, report path)."""
     doc = published_doc(cell_id, release)
     pub_blob = (ROOT / doc["predictions"]).read_bytes()
-    card = read_json(ROOT / "release" / release / "runcards" / f"{cell_id}.json")
+    card = runcard(release, cell_id)
+    holder = holding_release(release, cell_id)
     reasons: list[str] = []
     cell_record = read_record(run_dir / "cell.json", "cell.json", reasons, run_dir)
     policy_record = read_record(run_dir / "submission" / "build_policy.json", "submission/build_policy.json", reasons, run_dir)
@@ -375,7 +452,8 @@ def compare_run(run_dir: Path, cell_id: str, release: str = RELEASE) -> tuple[di
     environment["child_interpreter"] = {"published": interpreter_name(doc["cell"]["local_arg"]),
                                         "reproduced": interpreter_name(cell.get("local_arg"))}
     report = {
-        "schema": SCHEMA, "id": cell_id, "release": release, "run": run_dir.name, "verdict": "incomplete", "reasons": reasons,
+        "schema": SCHEMA, "id": cell_id, "release": release, "measured_in": holder, "run": run_dir.name, "verdict": "incomplete",
+        "reasons": reasons, "builder": load_index()[holder].get("builder"), "rescoring_builder": BUILDER.relative_to(ROOT).as_posix(),
         "cell_status": cell.get("status"), "failed_step": cell.get("failed_step"), "predictions_bytes_equal": None,
         "predictions_gzip_equal": None, "same_items": None, "metrics": None, "decisions": None, "max_prob_diff": None,
         "checks": {}, "environment": environment,
@@ -388,6 +466,8 @@ def compare_run(run_dir: Path, cell_id: str, release: str = RELEASE) -> tuple[di
     report["q_n"]["delta"] = delta(report["q_n"]["published"], report["q_n"]["reproduced"])
     out = run_dir.parent / f"{run_dir.name}.reproduce"
     out.mkdir(parents=True, exist_ok=True)
+    if rows is None:
+        (out / "predictions.jsonl.gz").unlink(missing_ok=True)  # an earlier compare's file must not stand for this run
     if rows is not None:
         blob = BUNDLE.encode_predictions(rows)
         (out / "predictions.jsonl.gz").write_bytes(blob)
@@ -405,6 +485,8 @@ def compare_run(run_dir: Path, cell_id: str, release: str = RELEASE) -> tuple[di
 
 def summary_line(report: dict, path: Path) -> str:
     head = f"{report['id']}: {report['verdict']}"
+    if report["measured_in"] != report["release"]:
+        head += f" (measured in {report['measured_in']})"
     if report["metrics"] is None:
         return f"{head} ({'; '.join(report['reasons'])}) | report {path}"
     h, d = report["metrics"]["headline"], report["decisions"]
@@ -459,11 +541,11 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("ids", nargs="+", metavar="id", help="published cell ids, e.g. lexical d3_27b-q8_0")
     r.add_argument("--out-root", required=True, type=Path, help="directory that receives <id>/ for each cell")
     r.add_argument("--url", default=DEFAULT_URL, help="Ollama server for model cells (default %(default)s)")
-    r.add_argument("--release", default=RELEASE, choices=RELEASES, help="published release (default %(default)s)")
+    r.add_argument("--release", default=RELEASE, help="a release in results/index.json (default %(default)s)")
     c = sub.add_parser("compare", help="compare an existing run directory with its published cell")
     c.add_argument("run_dir", type=Path, help="a run directory written by runcell")
     c.add_argument("--id", required=True, help="the published cell id")
-    c.add_argument("--release", default=RELEASE, choices=RELEASES, help="published release (default %(default)s)")
+    c.add_argument("--release", default=RELEASE, help="a release in results/index.json (default %(default)s)")
     a = ap.parse_args(argv)
     try:
         if a.command == "run":
