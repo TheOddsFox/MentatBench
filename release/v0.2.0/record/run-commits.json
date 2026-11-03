@@ -1,0 +1,70 @@
+{
+ "clef-flash_9b": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "clef_27b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "d1-omni_600m-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "d1_3b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "d3_27b-q8_0": {
+  "commit": "29ce00d72f81f779b1e5a472287ba30f73ea8eac",
+  "dirty": true
+ },
+ "d3_2b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "d3_4b-q8_0": {
+  "commit": "29ce00d72f81f779b1e5a472287ba30f73ea8eac",
+  "dirty": true
+ },
+ "d3_9b-q8_0": {
+  "commit": "29ce00d72f81f779b1e5a472287ba30f73ea8eac",
+  "dirty": true
+ },
+ "kev_0.8b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "kev_4b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "kev_9b-bf16": {
+  "commit": "29ce00d72f81f779b1e5a472287ba30f73ea8eac",
+  "dirty": true
+ },
+ "laya_latest": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "nimble-v3_9b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "nimble_9b-bf16": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "pplx-decider_27b": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ },
+ "tev1_0.8b-q8_0": {
+  "commit": "29ce00d72f81f779b1e5a472287ba30f73ea8eac",
+  "dirty": true
+ },
+ "tev1_4b-q8_0": {
+  "commit": "f1652ad60bf701da86bbedfe94319b5b21c7923b",
+  "dirty": false
+ }
+}

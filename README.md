@@ -1,8 +1,14 @@
-# MentatBench v0.1.1 (analysis release)
+# MentatBench v0.2.0 (latest release; v0.1.x record kept)
 
 MentatBench evaluates whether a model can turn a corpus of propositions into a logically faithful representation and answer new global questions from it. This checkout contains the benchmark software, the Mentat-Hard fixtures, and a public results bundle.
 
 ## Results
+
+**v0.2.0** (the latest release) re-measures the **Mentat-Hard test set, revision 3.1** on Ollama 0.40.13: the 15 pre-registered models, two Kev models added after pre-registration (`kev_4b-q8_0` and `kev_0.8b-q8_0`, marked not pre-registered), and the baselines. The headline is the mean of relation MCC and group MCC; Q_N is a diagnostic. D3 27B ranks first, with a headline of 0.521 (95% interval 0.500 to 0.545; its rank interval is 1 to 1), and all 16 of its headline pairs are resolved in its favour after Holm correction. 117 of the 136 headline pairs among the 17 models are resolved. This is an owner re-measurement on the same machine, not an independent reproduction. The scores are scores on this benchmark's relation and group decisions, not general capability.
+
+Repeats: a run-to-run repeat of each model's headline run gives identical answers for 14 of 17 models and a byte-identical decisions file for 13; the largest headline change is 0.0003. Moving from Ollama 0.40.11 (v0.1.0) to 0.40.13, the headline of the 15 pre-registered models moves by a median of 0.0009 and at most 0.0044. Full tables and the run-to-run and version-shift details are in [results/v0.2.0/README.md](results/v0.2.0/README.md), with [leaderboard JSON](results/v0.2.0/leaderboard.json) and [analysis JSON](results/v0.2.0/analysis.json).
+
+### v0.1.x results (frozen record)
 
 The published panel is the **Mentat-Hard test set, revision 3.1**. Its headline is the mean of relation MCC and group MCC; Q_N is an end-to-end diagnostic, not the model ranking. See the [results overview](results/README.md), [leaderboard JSON](results/v0.1.0/leaderboard.json), and [leaderboard CSV](results/v0.1.0/leaderboard.csv).
 
@@ -10,7 +16,7 @@ The `v0.1.0` label identifies this public software and results bundle, exported 
 
 The `v0.1.1` label identifies the analysis release. It analyses the same `v0.1.0` measurements and changes no score; the analysis is in [results/README.md](results/README.md).
 
-### What the results support
+### What the v0.1.x results support
 
 Three tiers. Each claim is backed by the results in [results/README.md](results/README.md).
 
@@ -82,7 +88,16 @@ python results/v0.1.1/build_bundle.py build --check
 python tools/eval/release_analysis.py --check
 ```
 
-The first rebuilds the v0.1.1 leaderboard, CSV and index, and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
+The v0.2.0 release has the same kind of offline checks, on its committed files:
+
+```bash
+python results/v0.2.0/build_bundle.py build --check
+python tools/eval/release_analysis_v020.py --check
+```
+
+`tools/reproduce.py` accepts `--release v0.2.0` as well as the default `v0.1.0`; the v0.2.0 cells are in `results/v0.2.0/cells/`.
+
+The first rebuilds the v0.1.1 leaderboard and CSV, and their index while v0.1.1 is the latest release (from v0.2.0 on, `results/index.json` belongs to the v0.2.0 builder, whose `build --check` checks it), and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
 
 To re-run published cells, build the engine and point `MB_ENGINE` at it, then start the Ollama server with the published model tags. Set `MB_ENGINE` in the shell that runs the tool. A POSIX shell (Linux, macOS):
 

@@ -1,0 +1,35 @@
+{
+ "based_on": "v0.1.0",
+ "baselines": {
+  "embedding": {
+   "from": "v0.1.0",
+   "status": "carried"
+  },
+  "empty": {
+   "from": "v0.1.0",
+   "status": "carried"
+  },
+  "gold_view": {
+   "from": "v0.1.0",
+   "status": "carried"
+  },
+  "heuristic": {
+   "from": "v0.1.0",
+   "status": "carried"
+  },
+  "hf": {
+   "from": "v0.1.0",
+   "status": "carried"
+  },
+  "lexical": {
+   "from": "v0.1.0",
+   "status": "carried"
+  },
+  "oracle": {
+   "from": "v0.1.0",
+   "status": "carried"
+  }
+ },
+ "release": "v0.2.0",
+ "schema": "mentat-bench-v020-baselines/1"
+}

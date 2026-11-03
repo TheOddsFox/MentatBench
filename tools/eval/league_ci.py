@@ -134,14 +134,9 @@ def read_fixture(fixture: Path) -> dict:
     return {"leagues": leagues, "item_league": item_league, "design": design}
 
 
-def read_run(run: Path, fixture: Path, fx: dict) -> dict:
-    """One run's score.json per-league family sums and counts, and its decision items when it has score_decisions.json."""
-    score = _json_file(run / "score.json")
-    if not isinstance(score.get("per_query"), dict):
-        raise CIError(f"{run}/score.json has no per_query object")
-    if "Q_N" not in score:
-        raise CIError(f"{run}/score.json has no Q_N")
-    _number(score["Q_N"], f"{run}/score.json Q_N")
+def _family_sums(run: Path, score: dict, fx: dict) -> tuple[np.ndarray, np.ndarray]:
+    """The per-league, per-family sums of the utilities in a score's per_query, and the query counts (league, family arrays).
+    Every scored query must have a design row."""
     shape = (len(fx["leagues"]), len(FAMILIES))
     fam_sum, fam_n = np.zeros(shape), np.zeros(shape, dtype=np.int64)
     for qid, utility in score["per_query"].items():
@@ -150,6 +145,18 @@ def read_run(run: Path, fixture: Path, fx: dict) -> dict:
         family, league = fx["design"][qid]
         fam_sum[league, family] += _number(utility, f"{run}/score.json utility of {qid}")
         fam_n[league, family] += 1
+    return fam_sum, fam_n
+
+
+def read_run(run: Path, fixture: Path, fx: dict) -> dict:
+    """One run's score.json per-league family sums and counts, and its decision items when it has score_decisions.json."""
+    score = _json_file(run / "score.json")
+    if not isinstance(score.get("per_query"), dict):
+        raise CIError(f"{run}/score.json has no per_query object")
+    if "Q_N" not in score:
+        raise CIError(f"{run}/score.json has no Q_N")
+    _number(score["Q_N"], f"{run}/score.json Q_N")
+    fam_sum, fam_n = _family_sums(run, score, fx)
     adapter = _json_file(run / "cell.json").get("adapter") if (run / "cell.json").is_file() else None
     data = {"name": run.name, "score": score, "fam_sum": fam_sum, "fam_n": fam_n, "items": None, "scored": None,
             "adapter": adapter, "diagnostic": adapter in GOLD_READING}

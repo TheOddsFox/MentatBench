@@ -1,0 +1,28 @@
+[
+ {
+  "added_after_preregistration": true,
+  "dev_headline": 0.1594339537036803,
+  "digest": "46203beabf65d133ff2291c5482f37c9ce210175d162b2d49fc3c5f2ae3a83f8",
+  "family": "kev",
+  "id": "kev_4b-q8_0",
+  "license": "Apache-2.0",
+  "names_relations": true,
+  "ollama_tag": "kev:4b-q8_0",
+  "ollama_version": "0.40.13",
+  "relation_floor": 0.4150489932077879,
+  "size_bytes": 4483824379
+ },
+ {
+  "added_after_preregistration": true,
+  "dev_headline": 0.042176088366131806,
+  "digest": "a2f47e09befbeaf7548572310d46f794b05c010a20ea5e64e9947eb479c23b31",
+  "family": "kev",
+  "id": "kev_0.8b-q8_0",
+  "license": "Apache-2.0",
+  "names_relations": true,
+  "ollama_tag": "kev:0.8b-q8_0",
+  "ollama_version": "0.40.13",
+  "relation_floor": 1.4908574616241355,
+  "size_bytes": 812429182
+ }
+]

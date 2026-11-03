@@ -1,8 +1,8 @@
 """Re-runs published cells of the Mentat-Hard test set and compares each run with its published cell.
 
 usage, from the repository root:
-  python tools/reproduce.py run <id> [<id> ...] --out-root DIR [--url URL] [--release v0.1.0]
-  python tools/reproduce.py compare <run_dir> --id <id> [--release v0.1.0]
+  python tools/reproduce.py run <id> [<id> ...] --out-root DIR [--url URL] [--release v0.1.0|v0.2.0]
+  python tools/reproduce.py compare <run_dir> --id <id> [--release v0.1.0|v0.2.0]
 
 run re-runs each cell with the flags recorded in results/<release>/cells/<id>.json (fixture_path, adapter, local_arg, profile,
 build_flags), into a new <out-root>/<id>, then compares it. A published cell records its child interpreter as a Windows name
@@ -41,7 +41,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE = "v0.1.0"
+RELEASE = "v0.1.0"  # the default; RELEASES lists the published cells that can be re-run and compared
+RELEASES = ("v0.1.0", "v0.2.0")
 TEST_FIXTURE = ROOT / "fixtures" / "mentat_hard_test"
 DEFAULT_URL = "http://127.0.0.1:11434"
 SCHEMA = "mentat-bench-reproduce/1"
@@ -458,11 +459,11 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("ids", nargs="+", metavar="id", help="published cell ids, e.g. lexical d3_27b-q8_0")
     r.add_argument("--out-root", required=True, type=Path, help="directory that receives <id>/ for each cell")
     r.add_argument("--url", default=DEFAULT_URL, help="Ollama server for model cells (default %(default)s)")
-    r.add_argument("--release", default=RELEASE, choices=[RELEASE], help="published release (default %(default)s)")
+    r.add_argument("--release", default=RELEASE, choices=RELEASES, help="published release (default %(default)s)")
     c = sub.add_parser("compare", help="compare an existing run directory with its published cell")
     c.add_argument("run_dir", type=Path, help="a run directory written by runcell")
     c.add_argument("--id", required=True, help="the published cell id")
-    c.add_argument("--release", default=RELEASE, choices=[RELEASE], help="published release (default %(default)s)")
+    c.add_argument("--release", default=RELEASE, choices=RELEASES, help="published release (default %(default)s)")
     a = ap.parse_args(argv)
     try:
         if a.command == "run":

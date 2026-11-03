@@ -13,7 +13,8 @@ labelled as such: the leaderboard headline stays the single pre-registered run.
 
 build [--check] reads committed files only (results/v0.1.0/, results/v0.1.1/analysis.json, results/index.json) and writes
 results/v0.1.1/leaderboard.json, results/v0.1.1/leaderboard.csv and results/index.json. With --check it compares the bytes with the
-committed files and exits 1 on any difference.
+committed files and exits 1 on any difference. Once a later release is the index's latest, results/index.json belongs to that
+release's builder: this script then leaves the index alone (it writes and checks the two v0.1.1 files only).
 
 The per-run cell and prediction builders are the v0.1.0 ones, imported unchanged from results/v0.1.0/build_bundle.py.
 """
@@ -277,7 +278,8 @@ def jload(path: Path):
 
 
 def build_outputs() -> dict[str, bytes]:
-    """The three v0.1.1 files, in memory, from committed files: results/v0.1.0/, analysis.json and results/index.json."""
+    """The v0.1.1 files, in memory, from committed files: results/v0.1.0/, analysis.json and results/index.json (the index only
+    while v0.1.1 is its latest release)."""
     bundle = load_v010()
     analysis_path = V011 / "analysis.json"
     analysis_bytes = analysis_path.read_bytes()
@@ -313,6 +315,8 @@ def build_outputs() -> dict[str, bytes]:
     csv_bytes = buf.getvalue().encode("utf-8")
 
     index = jload(RESULTS / "index.json")
+    if index["latest"] != RELEASE:  # a later release's index (its builder derives it from this release's output)
+        return {"leaderboard.json": lb_bytes, "leaderboard.csv": csv_bytes}
     v010 = next(v for v in index["versions"] if v["version"] == BASED_ON)
     v010["status"] = "superseded"
     v010["superseded_by"] = RELEASE
