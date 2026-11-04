@@ -560,6 +560,13 @@ def test_a_v020_baseline_resolves_to_the_v010_cell_and_run_card():
     assert R.holding_release("v0.1.1", "lexical") == "v0.1.0"  # v0.1.1's cells_dir is v0.1.0's: it holds no cells of its own
 
 
+def test_v022_resolves_a_model_to_its_v020_cell_through_v021():
+    """v0.2.2 is based on v0.2.1, which is based on v0.2.0: the two analysis releases hold no cells, so the model is v0.2.0's cell."""
+    assert R.holding_release("v0.2.2", "d3_27b-q8_0") == "v0.2.0"
+    assert R.published_doc("d3_27b-q8_0", "v0.2.2") == R.published_doc("d3_27b-q8_0", "v0.2.0")
+    assert R.runcard("v0.2.2", "d3_27b-q8_0") == R.runcard("v0.2.0", "d3_27b-q8_0")
+
+
 def test_a_v020_model_cell_runs_its_recorded_command_and_settings(tmp_path, monkeypatch):
     cell_id = "d1-omni_600m-q8_0"
     doc = R.published_doc(cell_id, "v0.2.0")

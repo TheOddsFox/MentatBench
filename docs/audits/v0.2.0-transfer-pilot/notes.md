@@ -123,7 +123,7 @@ estimate.
   each event's title, but only in the binding prompt, as in v0.2.0. Judges did not see it.
 - **Memorisation is possible.** The questions are public and recent, and the models' training data is not known.
 - **One pilot.** These are 200 items in 89 clusters, from one snapshot of one venue. The relation floors were calibrated on the
-  v0.2.0 test fixture and carried over unchanged.
+  v0.2.0 Mentat-Hard test set and carried over unchanged.
 - **One run per model,** as on the leaderboard. The v0.2.0 run-to-run and Ollama-version shifts are far smaller than the pilot
   intervals.
 

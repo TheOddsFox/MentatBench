@@ -9,3 +9,5 @@ The v0.1.0 release recorded its gate results in [check_gates.md](../release/v0.1
 The old gate run depended on the original private source snapshot, Windows engine binary, external catalogue, and sealed private fixture. The release runner is not included in this checkout, so the archived manifest and gate report do not verify the current public source tree. This heading is retained because the bundle's provenance notes refer to section 2.3.
 
 For the earlier exact-scale track's status, see [exact_scale.md](exact_scale.md).
+
+Transfer pilot: done ([notes](audits/v0.2.0-transfer-pilot/notes.md)), to be published as the v0.2.2 analysis release.

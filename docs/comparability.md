@@ -34,9 +34,9 @@ A difference in a fact marked "yes" makes `tools/reproduce.py compare` return `d
 ## Release types
 
 - **New measurement** (`record_from` in [`results/index.json`](../results/index.json)). The models are measured again on a stated setup, and the release record lists each deviation. v0.2.0 measured on Ollama 0.40.13, not the pre-registered 0.40.11 ([`release/v0.2.0/record/README.md`](../release/v0.2.0/record/README.md), item 1). A new measurement may carry baselines from its `record_from` release when their predictions reproduce exactly (empty and oracle have none, so their scores must match). v0.2.0 carries all seven baselines from v0.1.0 (item 11). Its scores are compared with the earlier release only through the facts above.
-- **Analysis release** (`based_on`). It analyses the measurements of its base release and changes no score, prediction or leaderboard row. v0.1.1 is one, based on v0.1.0. It may add unranked exploratory material outside the leaderboard, such as per-model accuracy profiles or a reasoning reference.
+- **Analysis release** (`based_on`). It analyses the measurements of its base release and changes no score, prediction or leaderboard row. v0.1.1 is one, based on v0.1.0. It may add unranked exploratory material outside the leaderboard, such as per-model accuracy profiles, a reasoning reference or a transfer check.
 - **Correction.** A fixture fault is corrected by registering a new fixture version. The saved answers of each run are re-scored under it, and no run is rebuilt for a gold correction ([`docs/corrections.md`](corrections.md), sections 3 and 5). A correction changes the scores it corrects.
 
 ## Unranked material
 
-Unranked material, such as per-model accuracy profiles or a reasoning reference, is outside the System One scope. [SPEC.md](../SPEC.md), section 1, scopes the revision to System One models under the fixed harness. Unranked material has no leaderboard row and no rank. Its numbers are not on the leaderboard and are not ranked against it.
+Unranked material, such as per-model accuracy profiles, a reasoning reference or a transfer check, is outside the System One scope. [SPEC.md](../SPEC.md), section 1, scopes the revision to System One models under the fixed harness. Unranked material has no leaderboard row and no rank. Its numbers are not on the leaderboard and are not ranked against it.

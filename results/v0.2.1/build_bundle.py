@@ -10,7 +10,7 @@ It writes:
   analysis.json                      v0.2.0's analysis with its release field re-pointed to v0.2.1; nothing recomputed
   profiles.json                      per model: relation and group accuracy, missing answers and the failure examples (see DEFINITIONS)
   reference.json                     the unranked reasoning reference, from its scored results.json
-  index.json                         only while v0.2.0 or v0.2.1 is the index's latest release; a later release's builder owns it then
+  index.json                         only while v0.2.1 is the index's latest release; a later release's builder owns it then
 README.md is written by hand.
 
 The reference needs its scored results (three complete instances). Until they exist, build writes the other files, does not write
@@ -356,7 +356,7 @@ def index_doc() -> bytes | None:
     """results/index.json with v0.2.1 as the latest release and v0.2.0 superseded by it. None once a later release is the index's
     latest: that release's builder owns the index from then on."""
     index = jload(RESULTS / "index.json")
-    if index["latest"] not in (BASED_ON, RELEASE):
+    if index["latest"] != RELEASE:  # the index is written only while v0.2.1 is its latest release
         return None
     versions = [v for v in index["versions"] if v["version"] != RELEASE]
     v020 = next(v for v in versions if v["version"] == BASED_ON)

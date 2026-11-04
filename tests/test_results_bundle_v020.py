@@ -132,11 +132,11 @@ def test_csv_has_one_row_per_entry_and_the_columns_of_the_json(tmp_path):
     assert row["headline_point"] == "0.25" and row["headline_lo"] == "0.2" and row["rank_lo"] == "1" and row["q_n_strict"] == "0.0"
 
 
-def test_committed_index_hands_over_to_v021_and_v020_keeps_its_entry():
-    """The committed results/index.json (no skip) is owned by v0.2.1 now: v0.2.0 is superseded by it, keeps its record_from and
-    files, and the v0.2.0 builder reports no index to write (index_doc is None) while v0.2.1 is the latest."""
+def test_committed_index_hands_over_to_v022_and_v020_keeps_its_entry():
+    """The committed results/index.json (no skip) is owned by v0.2.2 now: v0.2.0 is superseded by v0.2.1, keeps its record_from and
+    files, and the v0.2.0 builder reports no index to write (index_doc is None) while v0.2.2 is the latest."""
     doc = json.loads((ROOT / "results" / "index.json").read_bytes().decode("utf-8"))
-    assert doc["latest"] == "v0.2.1" and doc["versions"][0]["version"] == "v0.2.1"
+    assert doc["latest"] == "v0.2.2" and doc["versions"][0]["version"] == "v0.2.2"
     v020 = next(v for v in doc["versions"] if v["version"] == "v0.2.0")
     assert v020["status"] == "superseded" and v020["superseded_by"] == "v0.2.1" and v020["record_from"] == "v0.1.0"
     assert [v["version"] for v in doc["versions"]].count("v0.2.0") == 1
