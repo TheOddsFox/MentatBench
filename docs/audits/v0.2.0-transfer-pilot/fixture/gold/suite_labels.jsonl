@@ -1,0 +1,200 @@
+{"depth": null, "held_out": false, "k": null, "label": "at_most_one", "missing": null, "op": "decide_group", "order": null, "qid": "T0001", "stratum": "real", "terms": [["at_most_one", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0002", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0004", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0005", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0008", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0011", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0013", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0014", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0017", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0020", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0021", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0022", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0023", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0026", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0027", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0028", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0029", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0030", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0032", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0033", "stratum": "real", "terms": [["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0038", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0039", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0041", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0042", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0047", "stratum": "real", "terms": [["at_least_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0052", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0057", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0058", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0059", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_one", "missing": null, "op": "decide_group", "order": null, "qid": "T0060", "stratum": "real", "terms": [["at_most_one", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_one", "missing": null, "op": "decide_group", "order": null, "qid": "T0068", "stratum": "real", "terms": [["at_most_one", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0070", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0071", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0072", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0073", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0074", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0075", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0079", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0080", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0084", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0086", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0089", "stratum": "real", "terms": [["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0097", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:2+at_most_k:5", "missing": null, "op": "decide_group", "order": null, "qid": "T0098", "stratum": "real", "terms": [["at_least_k", 2], ["at_most_k", 5]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0099", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0109", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0118", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0119", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0120", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0122", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0123", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0124", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0125", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0127", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0132", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0136", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_one", "missing": null, "op": "decide_group", "order": null, "qid": "T0143", "stratum": "real", "terms": [["at_most_one", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0146", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0151", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:6", "missing": null, "op": "decide_group", "order": null, "qid": "T0155", "stratum": "real", "terms": [["at_most_k", 6]]}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0157", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0159", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0162", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0165", "stratum": "real", "terms": [["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:2+at_most_k:5", "missing": null, "op": "decide_group", "order": null, "qid": "T0167", "stratum": "real", "terms": [["at_least_k", 2], ["at_most_k", 5]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0171", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0175", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:3", "missing": null, "op": "decide_group", "order": null, "qid": "T0176", "stratum": "real", "terms": [["at_most_k", 3]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0180", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0182", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0183", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0184", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0187", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0190", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0191", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0192", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0202", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0208", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0209", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0211", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0214", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0220", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0222", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0223", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0224", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0227", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0228", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0229", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0230", "stratum": "real", "terms": [["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0234", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0239", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0241", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0246", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0255", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0258", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0262", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0263", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:3", "missing": null, "op": "decide_group", "order": null, "qid": "T0264", "stratum": "real", "terms": [["at_most_k", 3]]}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0267", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:3", "missing": null, "op": "decide_group", "order": null, "qid": "T0271", "stratum": "real", "terms": [["at_most_k", 3]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0276", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:3", "missing": null, "op": "decide_group", "order": null, "qid": "T0277", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 3]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0278", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0283", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0286", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0290", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0293", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0294", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0301", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0302", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0305", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:3", "missing": null, "op": "decide_group", "order": null, "qid": "T0307", "stratum": "real", "terms": [["at_most_k", 3]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0308", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:3+at_most_k:5", "missing": null, "op": "decide_group", "order": null, "qid": "T0309", "stratum": "real", "terms": [["at_least_k", 3], ["at_most_k", 5]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:3+at_most_k:5", "missing": null, "op": "decide_group", "order": null, "qid": "T0319", "stratum": "real", "terms": [["at_least_k", 3], ["at_most_k", 5]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0322", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0328", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0333", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0335", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0338", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0339", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:3+at_most_k:5", "missing": null, "op": "decide_group", "order": null, "qid": "T0340", "stratum": "real", "terms": [["at_least_k", 3], ["at_most_k", 5]]}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0341", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0346", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0347", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0351", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0355", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0356", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0360", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0363", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0365", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0366", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0367", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0368", "stratum": "real", "terms": [["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0370", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0371", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0374", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0376", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0377", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0378", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0381", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0382", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0387", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0391", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0398", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0400", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0402", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0407", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0408", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0409", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0410", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0416", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0417", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_one", "missing": null, "op": "decide_group", "order": null, "qid": "T0419", "stratum": "real", "terms": [["at_most_one", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0420", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0421", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0429", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0432", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0433", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0442", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:2+at_most_k:3", "missing": null, "op": "decide_group", "order": null, "qid": "T0444", "stratum": "real", "terms": [["at_least_k", 2], ["at_most_k", 3]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0445", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0446", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0447", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0453", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0460", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0463", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0465", "stratum": "real", "terms": [["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0471", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0472", "stratum": "trivial"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0473", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0476", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0477", "stratum": "real", "terms": [["at_least_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0481", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0482", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0483", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0488", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0489", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0491", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0492", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0493", "stratum": "real", "terms": [["at_least_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0495", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0505", "stratum": "decoy", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_one", "missing": null, "op": "decide_group", "order": null, "qid": "T0519", "stratum": "real", "terms": [["at_most_one", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "ordered_chain", "missing": null, "op": "decide_group", "order": null, "qid": "T0521", "stratum": "real", "terms": [["ordered_chain", null]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:4", "missing": null, "op": "decide_group", "order": null, "qid": "T0523", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 4]]}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0526", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "none", "missing": null, "op": "decide_group", "order": null, "qid": "T0527", "stratum": "real", "terms": []}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1+at_most_k:2", "missing": null, "op": "decide_group", "order": null, "qid": "T0529", "stratum": "real", "terms": [["at_least_k", 1], ["at_most_k", 2]]}
+{"depth": null, "held_out": false, "k": null, "label": "at_least_k:1", "missing": null, "op": "decide_group", "order": null, "qid": "T0532", "stratum": "real", "terms": [["at_least_k", 1]]}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0534", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0535", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0538", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0540", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0545", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "NONE", "missing": null, "op": "decide_relation", "order": null, "qid": "T0546", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIED_BY", "missing": null, "op": "decide_relation", "order": null, "qid": "T0547", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "EXCLUDES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0550", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "IMPLIES", "missing": null, "op": "decide_relation", "order": null, "qid": "T0554", "stratum": "real"}
+{"depth": null, "held_out": false, "k": null, "label": "at_most_k:4", "missing": null, "op": "decide_group", "order": null, "qid": "T0556", "stratum": "real", "terms": [["at_most_k", 4]]}

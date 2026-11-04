@@ -1,0 +1,113 @@
+{
+ "group_seats": {
+  "drawn": 80,
+  "requested": 80
+ },
+ "groups": {
+  "group|at_least_k+at_most_k|3": {
+   "allocated": 5,
+   "drawn": 5,
+   "pool": 5
+  },
+  "group|at_least_k+at_most_k|4-8": {
+   "allocated": 8,
+   "drawn": 8,
+   "pool": 17
+  },
+  "group|at_least_k|2": {
+   "allocated": 3,
+   "drawn": 3,
+   "pool": 3
+  },
+  "group|at_least_k|3": {
+   "allocated": 6,
+   "drawn": 6,
+   "pool": 6
+  },
+  "group|at_least_k|4-8": {
+   "allocated": 6,
+   "drawn": 6,
+   "pool": 6
+  },
+  "group|at_most_k|3": {
+   "allocated": 4,
+   "drawn": 4,
+   "pool": 4
+  },
+  "group|at_most_k|4-8": {
+   "allocated": 8,
+   "drawn": 8,
+   "pool": 13
+  },
+  "group|at_most_one|2": {
+   "allocated": 6,
+   "drawn": 6,
+   "pool": 6
+  },
+  "group|none|2": {
+   "allocated": 8,
+   "drawn": 8,
+   "pool": 16
+  },
+  "group|none|3": {
+   "allocated": 7,
+   "drawn": 7,
+   "pool": 12
+  },
+  "group|none|4-8": {
+   "allocated": 11,
+   "drawn": 11,
+   "pool": 29
+  },
+  "group|ordered_chain|2": {
+   "allocated": 8,
+   "drawn": 8,
+   "pool": 16
+  }
+ },
+ "inputs": {
+  "final_labels.jsonl": "a0895fdae56bc622fc08c3f1909d5ac18704842b5d7dfc39a9eca1472c4a8829"
+ },
+ "no_per_class_statement": [],
+ "per_class_drawn": {
+  "EXCLUDES": 48,
+  "IMPLIED_BY": 19,
+  "IMPLIES": 17,
+  "NONE": 36
+ },
+ "per_kind_drawn": {
+  "at_least_k": 15,
+  "at_least_k+at_most_k": 13,
+  "at_most_k": 12,
+  "at_most_one": 6,
+  "none": 26,
+  "ordered_chain": 8
+ },
+ "relation_seats": {
+  "drawn": 120,
+  "requested": 120
+ },
+ "relations": {
+  "EXCLUDES": {
+   "allocated": 36,
+   "drawn": 36,
+   "pool": 43
+  },
+  "IMPLIES|IMPLIED_BY": {
+   "allocated": 36,
+   "drawn": 36,
+   "pool": 61
+  },
+  "NONE": {
+   "allocated": 36,
+   "drawn": 36,
+   "pool": 226
+  },
+  "trivial": {
+   "allocated": 12,
+   "drawn": 12,
+   "pool": 40
+  }
+ },
+ "trivial_share_of_relations": 0.1
+}

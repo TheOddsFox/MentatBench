@@ -1,0 +1,11 @@
+{
+ "controlled": false,
+ "generator": "polymarket-gamma-snapshot",
+ "groups": 80,
+ "items": 200,
+ "name": "transfer_pilot",
+ "relations": 120,
+ "sample_seed": "transfer-pilot-select:0",
+ "split": "pilot",
+ "version": "3.1"
+}
