@@ -14,8 +14,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 THIS_FILE = "tests/test_labels.py"
-# v0.2.0 and v0.2.1 are public release names (v0.2.1 is an analysis release based on v0.2.0); other v0.2.x names are still caught.
-LABEL = re.compile(r"(?i)v0\.2\b(?!\.[01]\b)|v0\.3\b|Mentat-Hard v\d|mentat[-_ ]hard[-_ ]v[23]|\bv3\.1\b|measurement[ _-]release|internal release")
+# v0.2.0, v0.2.1 and v0.2.2 are public release names (v0.2.1 is an analysis release based on v0.2.0, v0.2.2 on v0.2.1); other v0.2.x
+# names are still caught.
+LABEL = re.compile(r"(?i)v0\.2\b(?!\.[012]\b)|v0\.3\b|Mentat-Hard v\d|mentat[-_ ]hard[-_ ]v[23]|\bv3\.1\b|measurement[ _-]release|internal release")
 RUN_LABEL = re.compile(r"(?i)\bv31\b|-v31-")  # the run-directory label that the 2026-11-01 rename removed
 
 # Frozen or hash-pinned trees, and the fixture manifests and golden files that are compared byte for byte.
@@ -39,10 +40,13 @@ PRIVATE_ONLY = (
 # (path, anchor, literal): in the one line of that file that contains the anchor, the literal is cut before the scan. The
 # two entries are both in the v0.1.0 builder: the gate-phrase mapping (gate_rows maps "spec v0.2" to the 2026-10-27 spec),
 # and the scrub rule's former run-directory name (RUN_DIR_FORMER, which rewrites raw cell files from the old name). Any
-# other line of that file, or any other file, that contains a literal is flagged.
+# other line of that file, or any other file, that contains a literal is flagged. The v0.2.2 builder and its test spell out three
+# labels once, in the site's copy-guard list of banned words, which must name them.
 ALLOWED_LITERALS = {
     ("results/v0.1.0/build_bundle.py", 'text.replace("spec v0.2", "spec revision of 2026-10-27")', "spec v0.2"),
     ("results/v0.1.0/build_bundle.py", 'RUN_DIR_FORMER = "runs/20261030-v31-test"', "runs/20261030-v31-test"),
+    ("results/v0.2.2/build_bundle.py", '"public bundle", "test fixture"', '"v0.3", "measurement release", "internal release"'),
+    ("tests/test_results_bundle_v022.py", '"public bundle", "test fixture"', '"v0.3", "measurement release", "internal release"'),
 }
 BINARY_SUFFIXES = {".gz", ".parquet", ".png", ".jpg", ".jpeg", ".pdf", ".zip", ".duckdb", ".pyc", ".whl", ".sqlite", ".ico"}
 
@@ -132,10 +136,10 @@ def test_allowed_literals_are_each_on_exactly_one_line():
 
 
 def test_pattern_catches_each_label_form_and_not_the_current_names():
-    for label in ("v0.2", "v0.3", "v0.2.2", "Mentat-Hard v2", "mentat_hard_v3", "mentat-hard v3", "fixture v3.1",
+    for label in ("v0.2", "v0.3", "v0.2.3", "Mentat-Hard v2", "mentat_hard_v3", "mentat-hard v3", "fixture v3.1",
                   "measurement release", "measurement_release", "measurement-release", "internal release"):
         assert LABEL.search(label), label
-    for current in ("v0.1.0", "v0.1.1", "v0.2.0", "v0.2.1", "v0.10","mentat_hard_dev", "Mentat-Hard test set, revision 3.1",
+    for current in ("v0.1.0", "v0.1.1", "v0.2.0", "v0.2.1", "v0.2.2", "v0.10","mentat_hard_dev", "Mentat-Hard test set, revision 3.1",
                     "revision 3.1"):
         assert not LABEL.search(current), current
     for run in ("v31", "x-v31-y", "runs/x-v31-test/hf"):  # generic samples: the real run prefix is what the rename changes

@@ -1,0 +1,496 @@
+{
+ "schema": "mentat-bench-reference/1",
+ "release": "v0.2.2",
+ "references": [
+  {
+   "id": "haiku-5-5-reasoning",
+   "display_name": "Claude Haiku 5.5, reasoning allowed",
+   "kind": "reasoning_reference",
+   "ranked": false,
+   "model": "claude-haiku-5-5",
+   "note": "docs/audits/v0.2.0-reasoning-reference/notes.md",
+   "sample": {
+    "items": 500,
+    "relations": 300,
+    "groups": 200,
+    "weighted": true,
+    "leagues": 18,
+    "instances": 3
+   },
+   "conditions": [
+    "The test-taker may reason before it answers. The System One runs are one pass per request with no generated reasoning.",
+    "It is a hosted model (Claude Haiku 5.5). The test set, its gold and this sample's key are public, and the model's training data is not known, so memorisation of these items cannot be ruled out.",
+    "Each instance sees about 50 items in one context, about 2.8 per league, and the items of one league share one rule card. Consistency across items is possible here and not in the System One runs.",
+    "Groups are asked all at once: the kind, the bounds and the chain in one reply, in a different answer format from the System One kind-first flow.",
+    "The prompts carry the [label: Yes] and [label: No] tags of each market proposition's side, as the System One prompts do.",
+    "The three instances are three sessions of one model with the same prompt and no temperature or seed control. They are not three models.",
+    "The sample is 500 of the 7,000 test items (300 relations and 200 groups), weighted to the full test set. The intervals are conditional on these 500 items.",
+    "The value is the mean of three sessions. Session 3 scored 0.925: on one slice it set aside the reading convention for the market labels, and that slice holds 23 of its 24 relation errors. The slice was valid under the protocol and is scored as answered.",
+    "The reference is unranked, is not on the leaderboard, and changes no score."
+   ],
+   "metrics": {
+    "headline": {
+     "point": 0.95992,
+     "ci95": [
+      0.946656,
+      0.972389
+     ]
+    },
+    "relation": {
+     "point": 0.955057,
+     "ci95": [
+      0.939439,
+      0.969935
+     ]
+    },
+    "group": {
+     "point": 0.964783,
+     "ci95": [
+      0.946324,
+      0.982256
+     ]
+    }
+   },
+   "instances": [
+    {
+     "id": "1",
+     "headline": 0.977434,
+     "relation": 0.98011,
+     "group": 0.974759
+    },
+    {
+     "id": "2",
+     "headline": 0.977149,
+     "relation": 0.978878,
+     "group": 0.97542
+    },
+    {
+     "id": "3",
+     "headline": 0.925176,
+     "relation": 0.906184,
+     "group": 0.944169
+    }
+   ],
+   "agreement": {
+    "relation": {
+     "pairwise": 0.931111,
+     "fleiss_kappa": 0.912925
+    },
+    "group": {
+     "pairwise": 0.936667,
+     "fleiss_kappa": 0.92356
+    }
+   }
+  }
+ ],
+ "models_on_sample": [
+  {
+   "id": "d3_27b-q8_0",
+   "headline": {
+    "point": 0.518114,
+    "ci95": [
+     0.468617,
+     0.567405
+    ]
+   },
+   "relation": {
+    "point": 0.75572,
+    "ci95": [
+     0.694853,
+     0.818616
+    ]
+   },
+   "group": {
+    "point": 0.280508,
+    "ci95": [
+     0.204104,
+     0.353007
+    ]
+   }
+  },
+  {
+   "id": "d3_9b-q8_0",
+   "headline": {
+    "point": 0.263198,
+    "ci95": [
+     0.22197,
+     0.304871
+    ]
+   },
+   "relation": {
+    "point": 0.477633,
+    "ci95": [
+     0.40933,
+     0.544637
+    ]
+   },
+   "group": {
+    "point": 0.048763,
+    "ci95": [
+     0.005517,
+     0.094935
+    ]
+   }
+  },
+  {
+   "id": "pplx-decider_27b",
+   "headline": {
+    "point": 0.263166,
+    "ci95": [
+     0.221323,
+     0.301253
+    ]
+   },
+   "relation": {
+    "point": 0.48856,
+    "ci95": [
+     0.426373,
+     0.550668
+    ]
+   },
+   "group": {
+    "point": 0.037772,
+    "ci95": [
+     -0.022449,
+     0.090335
+    ]
+   }
+  },
+  {
+   "id": "kev_9b-bf16",
+   "headline": {
+    "point": 0.242798,
+    "ci95": [
+     0.199512,
+     0.282905
+    ]
+   },
+   "relation": {
+    "point": 0.337059,
+    "ci95": [
+     0.284422,
+     0.379196
+    ]
+   },
+   "group": {
+    "point": 0.148536,
+    "ci95": [
+     0.094724,
+     0.203996
+    ]
+   }
+  },
+  {
+   "id": "d3_4b-q8_0",
+   "headline": {
+    "point": 0.229137,
+    "ci95": [
+     0.176886,
+     0.287772
+    ]
+   },
+   "relation": {
+    "point": 0.383467,
+    "ci95": [
+     0.303571,
+     0.467294
+    ]
+   },
+   "group": {
+    "point": 0.074806,
+    "ci95": [
+     0.016791,
+     0.131343
+    ]
+   }
+  },
+  {
+   "id": "clef_27b-q8_0",
+   "headline": {
+    "point": 0.213898,
+    "ci95": [
+     0.149682,
+     0.279542
+    ]
+   },
+   "relation": {
+    "point": 0.386092,
+    "ci95": [
+     0.299652,
+     0.47348
+    ]
+   },
+   "group": {
+    "point": 0.041705,
+    "ci95": [
+     -0.025013,
+     0.112675
+    ]
+   }
+  },
+  {
+   "id": "nimble-v3_9b-q8_0",
+   "headline": {
+    "point": 0.228988,
+    "ci95": [
+     0.181428,
+     0.28016
+    ]
+   },
+   "relation": {
+    "point": 0.283019,
+    "ci95": [
+     0.213709,
+     0.36184
+    ]
+   },
+   "group": {
+    "point": 0.174958,
+    "ci95": [
+     0.12886,
+     0.21949
+    ]
+   }
+  },
+  {
+   "id": "nimble_9b-bf16",
+   "headline": {
+    "point": 0.179753,
+    "ci95": [
+     0.142136,
+     0.217555
+    ]
+   },
+   "relation": {
+    "point": 0.267573,
+    "ci95": [
+     0.209005,
+     0.33195
+    ]
+   },
+   "group": {
+    "point": 0.091934,
+    "ci95": [
+     0.04381,
+     0.140531
+    ]
+   }
+  },
+  {
+   "id": "clef-flash_9b",
+   "headline": {
+    "point": 0.133028,
+    "ci95": [
+     0.096057,
+     0.174857
+    ]
+   },
+   "relation": {
+    "point": 0.20986,
+    "ci95": [
+     0.140366,
+     0.276632
+    ]
+   },
+   "group": {
+    "point": 0.056196,
+    "ci95": [
+     0.00648,
+     0.104837
+    ]
+   }
+  },
+  {
+   "id": "tev1_4b-q8_0",
+   "headline": {
+    "point": 0.187981,
+    "ci95": [
+     0.155267,
+     0.220119
+    ]
+   },
+   "relation": {
+    "point": 0.329994,
+    "ci95": [
+     0.267261,
+     0.392369
+    ]
+   },
+   "group": {
+    "point": 0.045968,
+    "ci95": [
+     -0.018739,
+     0.105411
+    ]
+   }
+  },
+  {
+   "id": "kev_4b-q8_0",
+   "headline": {
+    "point": 0.13735,
+    "ci95": [
+     0.118568,
+     0.154116
+    ]
+   },
+   "relation": {
+    "point": 0.274701,
+    "ci95": [
+     0.237136,
+     0.308232
+    ]
+   },
+   "group": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "id": "d1_3b-q8_0",
+   "headline": {
+    "point": 0.083828,
+    "ci95": [
+     0.042494,
+     0.129785
+    ]
+   },
+   "relation": {
+    "point": 0.115837,
+    "ci95": [
+     0.04594,
+     0.190905
+    ]
+   },
+   "group": {
+    "point": 0.051819,
+    "ci95": [
+     0.007379,
+     0.107156
+    ]
+   }
+  },
+  {
+   "id": "d3_2b-q8_0",
+   "headline": {
+    "point": 0.061213,
+    "ci95": [
+     0.014249,
+     0.107933
+    ]
+   },
+   "relation": {
+    "point": 0.173322,
+    "ci95": [
+     0.110809,
+     0.2484
+    ]
+   },
+   "group": {
+    "point": -0.050895,
+    "ci95": [
+     -0.10143,
+     0.004669
+    ]
+   }
+  },
+  {
+   "id": "kev_0.8b-q8_0",
+   "headline": {
+    "point": 0.057065,
+    "ci95": [
+     -0.00919,
+     0.124317
+    ]
+   },
+   "relation": {
+    "point": 0.070553,
+    "ci95": [
+     -0.00705,
+     0.151744
+    ]
+   },
+   "group": {
+    "point": 0.043576,
+    "ci95": [
+     -0.046314,
+     0.128155
+    ]
+   }
+  },
+  {
+   "id": "tev1_0.8b-q8_0",
+   "headline": {
+    "point": 0.005847,
+    "ci95": [
+     -0.028726,
+     0.039086
+    ]
+   },
+   "relation": {
+    "point": 0.011695,
+    "ci95": [
+     -0.057451,
+     0.078172
+    ]
+   },
+   "group": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "id": "d1-omni_600m-q8_0",
+   "headline": {
+    "point": -0.002536,
+    "ci95": [
+     -0.032241,
+     0.029865
+    ]
+   },
+   "relation": {
+    "point": 0.012548,
+    "ci95": [
+     -0.047193,
+     0.068705
+    ]
+   },
+   "group": {
+    "point": -0.017621,
+    "ci95": [
+     -0.038721,
+     0.012042
+    ]
+   }
+  },
+  {
+   "id": "laya_latest",
+   "headline": {
+    "point": -0.01491,
+    "ci95": [
+     -0.038207,
+     0.013746
+    ]
+   },
+   "relation": {
+    "point": -0.016311,
+    "ci95": [
+     -0.068578,
+     0.039589
+    ]
+   },
+   "group": {
+    "point": -0.013509,
+    "ci95": [
+     -0.059079,
+     0.022869
+    ]
+   }
+  }
+ ]
+}

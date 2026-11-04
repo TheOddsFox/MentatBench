@@ -37,7 +37,7 @@ PERSONAL = ("falty", "C:\\Users", "C:/Users", "/c/Users", "AppData", "scratchpad
 PATH_KEYS = {"readme", "leaderboard_json", "leaderboard_csv", "predictions_dir", "cells_dir", "runcards_dir", "builder",
              "release_manifest", "release_gate_output", "attestations", "results_md", "results_json", "private_results_md",
              "private_results_json", "prereg", "analysis_json", "item_audit_flagged", "item_audit_verdicts", "repeats", "deviations",
-             "profiles_json", "reference_json"}
+             "profiles_json", "reference_json", "transfer_json"}
 BINARY_SUFFIXES = {".gz", ".parquet", ".bin", ".pyc", ".png", ".jpg", ".jpeg", ".pdf", ".zip", ".sqlite"}
 NO_PREDICTIONS = {"empty", "oracle"}  # the two baselines that write no predictions file (their predictions field is null)
 
@@ -420,12 +420,13 @@ def test_index_paths_exist_and_latest_is_consistent():
     idx = load(RESULTS / "index.json")
     versions = [v["version"] for v in idx["versions"]]
     latest = [v for v in idx["versions"] if v["status"] == "latest"]
-    assert len(latest) == 1 and latest[0]["version"] == idx["latest"] == "v0.2.1"
+    assert len(latest) == 1 and latest[0]["version"] == idx["latest"] == "v0.2.2"
     assert all(v["superseded_by"] in versions or v["superseded_by"] is None for v in idx["versions"])
     by_version = {v["version"]: v for v in idx["versions"]}
     assert by_version["v0.1.0"]["status"] == "superseded" and by_version["v0.1.0"]["superseded_by"] == "v0.1.1"
     assert by_version["v0.1.1"]["status"] == "superseded" and by_version["v0.1.1"]["superseded_by"] == "v0.2.0"
     assert by_version["v0.2.0"]["status"] == "superseded" and by_version["v0.2.0"]["superseded_by"] == "v0.2.1"
+    assert by_version["v0.2.1"]["status"] == "superseded" and by_version["v0.2.1"]["superseded_by"] == "v0.2.2"
     checked = 0
     for version in idx["versions"]:
         for key, value in version.items():

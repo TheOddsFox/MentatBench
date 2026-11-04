@@ -1,0 +1,394 @@
+{
+ "schema": "mentat-bench-transfer/1",
+ "release": "v0.2.2",
+ "based_on": "v0.2.1",
+ "kind": "transfer_check",
+ "ranked": false,
+ "title": "Real-question check",
+ "note": "docs/audits/v0.2.0-transfer-pilot/notes.md",
+ "deviations": "docs/audits/v0.2.0-transfer-pilot/deviations.md",
+ "source": {
+  "path": "docs/audits/v0.2.0-transfer-pilot/results.json",
+  "sha256": "ebca868f581e6b0e3bda2233a375c29cb5af9928cafa4c2ab42a8f854606ca61"
+ },
+ "items": {
+  "relations": 120,
+  "groups": 80,
+  "clusters": 89
+ },
+ "primary": {
+  "statistic": "spearman rho, pilot headline vs v0.2.0 headline",
+  "point": 0.821078,
+  "ci95": [
+   0.772059,
+   0.889706
+  ],
+  "draws": 2000,
+  "reading": "carries over",
+  "threshold": 0.6
+ },
+ "secondary": {
+  "kendall_tau_b": {
+   "point": 0.617647,
+   "ci95": [
+    0.573529,
+    0.735294
+   ]
+  },
+  "rho_relation": {
+   "point": 0.838235,
+   "ci95": [
+    0.735294,
+    0.865196
+   ]
+  },
+  "rho_group": {
+   "point": 0.311465,
+   "ci95": [
+    0.031852,
+    0.46355
+   ]
+  },
+  "resolved_pairs": {
+   "pairs": 117,
+   "kept_order": 101
+  }
+ },
+ "sensitivity": [
+  {
+   "id": "unanimous_only",
+   "label": "Unanimous judges only",
+   "relations": 116,
+   "groups": 70,
+   "point": 0.821078,
+   "ci95": [
+    0.752451,
+    0.884865
+   ],
+   "reading": "carries over"
+  },
+  {
+   "id": "excluding_changed",
+   "label": "Excluding items the reviewer changed",
+   "relations": 120,
+   "groups": 80,
+   "point": 0.821078,
+   "ci95": [
+    0.772059,
+    0.889706
+   ],
+   "reading": "carries over"
+  },
+  {
+   "id": "excluding_trivial",
+   "label": "Excluding trivial items",
+   "relations": 108,
+   "groups": 80,
+   "point": 0.823529,
+   "ci95": [
+    0.740196,
+    0.879902
+   ],
+   "reading": "carries over"
+  }
+ ],
+ "models": [
+  {
+   "id": "d3_27b-q8_0",
+   "v020_headline": 0.521211,
+   "headline": {
+    "point": 0.55666,
+    "ci95": [
+     0.475357,
+     0.622996
+    ]
+   },
+   "relation_mcc": 0.905469,
+   "group_mcc": 0.207851,
+   "relation_accuracy": 0.933333,
+   "group_accuracy": 0.3125
+  },
+  {
+   "id": "d3_9b-q8_0",
+   "v020_headline": 0.274467,
+   "headline": {
+    "point": 0.399883,
+    "ci95": [
+     0.337421,
+     0.470969
+    ]
+   },
+   "relation_mcc": 0.628825,
+   "group_mcc": 0.170942,
+   "relation_accuracy": 0.741667,
+   "group_accuracy": 0.35
+  },
+  {
+   "id": "pplx-decider_27b",
+   "v020_headline": 0.257143,
+   "headline": {
+    "point": 0.424476,
+    "ci95": [
+     0.35921,
+     0.493552
+    ]
+   },
+   "relation_mcc": 0.693737,
+   "group_mcc": 0.155216,
+   "relation_accuracy": 0.783333,
+   "group_accuracy": 0.225
+  },
+  {
+   "id": "kev_9b-bf16",
+   "v020_headline": 0.236207,
+   "headline": {
+    "point": 0.20575,
+    "ci95": [
+     0.130704,
+     0.275438
+    ]
+   },
+   "relation_mcc": 0.376517,
+   "group_mcc": 0.034983,
+   "relation_accuracy": 0.508333,
+   "group_accuracy": 0.15
+  },
+  {
+   "id": "d3_4b-q8_0",
+   "v020_headline": 0.231902,
+   "headline": {
+    "point": 0.348429,
+    "ci95": [
+     0.286441,
+     0.421697
+    ]
+   },
+   "relation_mcc": 0.667997,
+   "group_mcc": 0.02886,
+   "relation_accuracy": 0.766667,
+   "group_accuracy": 0.175
+  },
+  {
+   "id": "clef_27b-q8_0",
+   "v020_headline": 0.207694,
+   "headline": {
+    "point": 0.404765,
+    "ci95": [
+     0.338779,
+     0.468531
+    ]
+   },
+   "relation_mcc": 0.598844,
+   "group_mcc": 0.210685,
+   "relation_accuracy": 0.7,
+   "group_accuracy": 0.3125
+  },
+  {
+   "id": "nimble-v3_9b-q8_0",
+   "v020_headline": 0.199784,
+   "headline": {
+    "point": 0.337359,
+    "ci95": [
+     0.255665,
+     0.409166
+    ]
+   },
+   "relation_mcc": 0.507401,
+   "group_mcc": 0.167318,
+   "relation_accuracy": 0.65,
+   "group_accuracy": 0.2375
+  },
+  {
+   "id": "nimble_9b-bf16",
+   "v020_headline": 0.177375,
+   "headline": {
+    "point": 0.35862,
+    "ci95": [
+     0.302262,
+     0.418086
+    ]
+   },
+   "relation_mcc": 0.626947,
+   "group_mcc": 0.090292,
+   "relation_accuracy": 0.733333,
+   "group_accuracy": 0.175
+  },
+  {
+   "id": "clef-flash_9b",
+   "v020_headline": 0.173222,
+   "headline": {
+    "point": 0.37022,
+    "ci95": [
+     0.302009,
+     0.440656
+    ]
+   },
+   "relation_mcc": 0.588997,
+   "group_mcc": 0.151443,
+   "relation_accuracy": 0.708333,
+   "group_accuracy": 0.2625
+  },
+  {
+   "id": "tev1_4b-q8_0",
+   "v020_headline": 0.142255,
+   "headline": {
+    "point": 0.219156,
+    "ci95": [
+     0.148252,
+     0.288873
+    ]
+   },
+   "relation_mcc": 0.463262,
+   "group_mcc": -0.024951,
+   "relation_accuracy": 0.633333,
+   "group_accuracy": 0.2125
+  },
+  {
+   "id": "kev_4b-q8_0",
+   "v020_headline": 0.136989,
+   "headline": {
+    "point": 0.16952,
+    "ci95": [
+     0.088265,
+     0.233995
+    ]
+   },
+   "relation_mcc": 0.221764,
+   "group_mcc": 0.117277,
+   "relation_accuracy": 0.441667,
+   "group_accuracy": 0.3125
+  },
+  {
+   "id": "d1_3b-q8_0",
+   "v020_headline": 0.071002,
+   "headline": {
+    "point": 0.226894,
+    "ci95": [
+     0.145282,
+     0.307238
+    ]
+   },
+   "relation_mcc": 0.400982,
+   "group_mcc": 0.052807,
+   "relation_accuracy": 0.583333,
+   "group_accuracy": 0.275
+  },
+  {
+   "id": "d3_2b-q8_0",
+   "v020_headline": 0.052496,
+   "headline": {
+    "point": 0.258612,
+    "ci95": [
+     0.190064,
+     0.324172
+    ]
+   },
+   "relation_mcc": 0.4596,
+   "group_mcc": 0.057624,
+   "relation_accuracy": 0.625,
+   "group_accuracy": 0.2625
+  },
+  {
+   "id": "kev_0.8b-q8_0",
+   "v020_headline": 0.051527,
+   "headline": {
+    "point": 0.058846,
+    "ci95": [
+     0.018783,
+     0.102806
+    ]
+   },
+   "relation_mcc": 0.117692,
+   "group_mcc": 0.0,
+   "relation_accuracy": 0.325,
+   "group_accuracy": 0.325
+  },
+  {
+   "id": "tev1_0.8b-q8_0",
+   "v020_headline": 0.000273,
+   "headline": {
+    "point": 0.027491,
+    "ci95": [
+     -0.031697,
+     0.084554
+    ]
+   },
+   "relation_mcc": 0.069083,
+   "group_mcc": -0.014101,
+   "relation_accuracy": 0.316667,
+   "group_accuracy": 0.05
+  },
+  {
+   "id": "d1-omni_600m-q8_0",
+   "v020_headline": -0.003022,
+   "headline": {
+    "point": 0.089218,
+    "ci95": [
+     0.039405,
+     0.138429
+    ]
+   },
+   "relation_mcc": 0.058708,
+   "group_mcc": 0.119728,
+   "relation_accuracy": 0.233333,
+   "group_accuracy": 0.15
+  },
+  {
+   "id": "laya_latest",
+   "v020_headline": -0.020055,
+   "headline": {
+    "point": 0.105221,
+    "ci95": [
+     0.043585,
+     0.179225
+    ]
+   },
+   "relation_mcc": 0.099779,
+   "group_mcc": 0.110662,
+   "relation_accuracy": 0.4,
+   "group_accuracy": 0.175
+  }
+ ],
+ "anchors": [
+  {
+   "id": "heuristic",
+   "headline": {
+    "point": 0.221363,
+    "ci95": [
+     0.114788,
+     0.289703
+    ]
+   },
+   "relation_mcc": 0.336392,
+   "group_mcc": 0.106333
+  },
+  {
+   "id": "lexical",
+   "headline": {
+    "point": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "relation_mcc": 0.0,
+   "group_mcc": 0.0
+  }
+ ],
+ "conditions": [
+  "The labels are not exact gold. Three sessions of Claude Haiku 5.5 judged each item from the question text and the outcome label.",
+  "The maintainer review of 90 items was AI-assisted, which makes its human layer weaker than an unassisted review; the maintainer checked and owns those answers.",
+  "The reviewer applied a stricter ambiguity standard than the judges, and about 470 items the reviewer did not see keep the judges' readings.",
+  "Eight answers were revised after an AI consistency check, so those items were not reviewed blind.",
+  "The three judge sessions are sessions of one model, not three independent models.",
+  "The items are not a representative sample of Polymarket questions. They are 200 items in 89 clusters of related events, from one snapshot of one venue.",
+  "The models and judges saw the question text and the outcome label, not the market rules. The models also saw each event's title, but only in the binding prompt, as in v0.2.0; the judges did not see it.",
+  "The questions are public and recent, and the models' training data is not known, so memorisation of these items is possible.",
+  "The relation floors were calibrated on the v0.2.0 Mentat-Hard test set and carried over unchanged.",
+  "Each model was run once, as on the leaderboard. Group MCC is low for every model on both sets, so small differences in group order are mostly noise.",
+  "Headline levels are not comparable across the two sets: most models score higher on the pilot, so only the order is compared.",
+  "On these 200 items, under these conditions, the order carries over; the check is exploratory and changes no score, rank or leaderboard row.",
+  "The pilot's departures from its pre-registration are logged in deviations.md.",
+  "No question text is published; the repository holds market ids and sha256 hashes, and the text is refetched from Polymarket's public API."
+ ]
+}

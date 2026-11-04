@@ -335,10 +335,10 @@ def test_reference_refuses_a_point_that_is_not_the_mean_of_the_instances():
 def test_build_outputs_are_deterministic_and_are_the_committed_files():
     first = B.build_outputs()
     assert first == B.build_outputs()
-    assert set(first) == {"leaderboard.json", "leaderboard.csv", "analysis.json", "profiles.json", "index.json"}
+    assert set(first) == {"leaderboard.json", "leaderboard.csv", "analysis.json", "profiles.json"}  # no index: v0.2.2 is latest
     for name, data in first.items():
-        path = ROOT / "results" / "index.json" if name == "index.json" else V021 / name
-        assert path.read_bytes() == data, name
+        assert (V021 / name).read_bytes() == data, name
+    assert B.index_doc() is None
 
 
 def test_build_refuses_then_writes_and_checks_a_scored_reference_in_a_scratch_tree(tmp_path, monkeypatch, capsys):
@@ -364,19 +364,19 @@ def test_build_refuses_then_writes_and_checks_a_scored_reference_in_a_scratch_tr
     assert B.build(check_only=True) == 0
 
 
-def test_committed_index_names_v021_latest_and_v020_superseded_with_the_v021_files():
+def test_committed_index_hands_v021_over_to_v022_and_keeps_its_entry():
     index = load("results/index.json")
-    assert index["latest"] == "v0.2.1" and index["versions"][0]["version"] == "v0.2.1"
-    entry = index["versions"][0]
-    assert entry["status"] == "latest" and entry["superseded_by"] is None and entry["based_on"] == "v0.2.0"
-    assert "record_from" not in entry
+    assert index["latest"] == "v0.2.2" and index["versions"][0]["version"] == "v0.2.2"
+    entry = next(v for v in index["versions"] if v["version"] == "v0.2.1")
+    assert entry["status"] == "superseded" and entry["superseded_by"] == "v0.2.2" and "v0.2.2" in entry["note"]
+    assert entry["based_on"] == "v0.2.0" and "record_from" not in entry
     for key in ("analysis_json", "leaderboard_json", "leaderboard_csv", "profiles_json", "reference_json", "readme", "builder"):
         assert entry[key].startswith("results/v0.2.1/"), key
     assert entry["predictions_dir"] == "results/v0.2.0/predictions" and entry["cells_dir"] == "results/v0.2.0/cells"
     assert entry["runcards_dir"] == "release/v0.2.0/runcards"
     v020 = next(v for v in index["versions"] if v["version"] == "v0.2.0")
     assert v020["status"] == "superseded" and v020["superseded_by"] == "v0.2.1" and "v0.2.1" in v020["note"]
-    assert B.index_doc() == (ROOT / "results" / "index.json").read_bytes()  # the builder reproduces the committed index
+    assert B.index_doc() is None  # the v0.2.2 builder owns the index while v0.2.2 is its latest release
 
 
 def test_index_builder_leaves_the_index_alone_once_a_later_release_is_latest(tmp_path, monkeypatch):

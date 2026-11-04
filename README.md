@@ -1,10 +1,12 @@
-# MentatBench v0.2.1 (latest release; v0.2.0 measurements and v0.1.x record kept)
+# MentatBench v0.2.2 (latest release; v0.2.0 measurements and v0.1.x record kept)
 
 MentatBench evaluates whether a model can turn a corpus of propositions into a logically faithful representation and answer new global questions from it. This checkout contains the benchmark software, the Mentat-Hard fixtures, and a public results bundle.
 
 ## Results
 
-**v0.2.1** (the latest release) is an analysis release based on v0.2.0. It changes no leaderboard row, score or prediction. It adds exploratory material outside the leaderboard: per-model profiles of relation and group accuracy with one failure example per op ([profiles](results/v0.2.1/profiles.json)), and an unranked reasoning reference, Claude Haiku 5.5 with reasoning allowed on a 500-item sample, which has no rank and is not on the leaderboard. See [results/v0.2.1/README.md](results/v0.2.1/README.md).
+**v0.2.2** (the latest release) is an analysis release based on v0.2.1. It changes no leaderboard row, score, rank or prediction. It adds one unranked, exploratory check: the v0.2.0 order of the 17 models on 200 items built from real Polymarket questions. On these 200 items, under the conditions the file lists, the order carries over (Spearman rho 0.821, 95% interval [0.772, 0.890]); on these items the relation order also holds (0.838), and the group order holds only weakly (0.311). See [results/v0.2.2/README.md](results/v0.2.2/README.md).
+
+**v0.2.1** is an analysis release based on v0.2.0. It changes no leaderboard row, score or prediction. It adds exploratory material outside the leaderboard: per-model profiles of relation and group accuracy with one failure example per op ([profiles](results/v0.2.1/profiles.json)), and an unranked reasoning reference, Claude Haiku 5.5 with reasoning allowed on a 500-item sample, which has no rank and is not on the leaderboard. See [results/v0.2.1/README.md](results/v0.2.1/README.md).
 
 **v0.2.0** re-measures the **Mentat-Hard test set, revision 3.1** on Ollama 0.40.13: the 15 pre-registered models, two Kev models added after pre-registration (`kev_4b-q8_0` and `kev_0.8b-q8_0`, marked not pre-registered), and the baselines. The headline is the mean of relation MCC and group MCC; Q_N is a diagnostic. D3 27B ranks first, with a headline of 0.521 (95% interval 0.500 to 0.545; its rank interval is 1 to 1), and all 16 of its headline pairs are resolved in its favour after Holm correction. 117 of the 136 headline pairs among the 17 models are resolved. This is an owner re-measurement on the same machine, not an independent reproduction. The scores are scores on this benchmark's relation and group decisions, not general capability.
 
@@ -110,9 +112,15 @@ The v0.2.1 analysis release is checked by its builder, which reads committed fil
 python results/v0.2.1/build_bundle.py build --check
 ```
 
+The v0.2.2 analysis release is checked by its builder in the same way, against the transfer pilot's committed results:
+
+```bash
+python results/v0.2.2/build_bundle.py build --check
+```
+
 `--release` names a release in [`results/index.json`](results/index.json). The release must hold the cell, or carry it (`record_from`, for baseline cells only) or base it (`based_on`). The default is `v0.1.0`. It is fixed rather than `latest`, so an unflagged command keeps its meaning when a release is added. The v0.2.0 model cells are in `results/v0.2.0/cells/`. Its seven baselines are carried from v0.1.0, so `--release v0.2.0` compares them with the v0.1.0 measurement; the report's `measured_in` names the release that holds it. How scores are compared is in [docs/comparability.md](docs/comparability.md).
 
-The first rebuilds the v0.1.1 leaderboard and CSV, and their index while v0.1.1 is the latest release (from v0.2.0 on, `results/index.json` belongs to the v0.2.0 builder while v0.2.0 is the latest release, and from v0.2.1 on to the v0.2.1 builder, whose `build --check` checks it), and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
+The first rebuilds the v0.1.1 leaderboard and CSV, and their index while v0.1.1 is the latest release (from v0.2.0 on, `results/index.json` belongs to the builder of the latest release while that release is the latest; it is now the v0.2.2 builder, whose `build --check` checks it), and exits 1 on any byte difference (under a second). The second recomputes the analysis and exits 1 on any difference from the committed files. It takes about 12 minutes on the maintainer's machine.
 
 Two quick checks:
 
