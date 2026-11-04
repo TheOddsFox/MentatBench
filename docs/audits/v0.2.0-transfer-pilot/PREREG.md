@@ -70,7 +70,7 @@ itself it can only say that the order carries over, does not carry over, or that
 Polymarket's terms do not grant redistribution of question texts. The decision of 2026-11-03 is therefore to publish **ids, not
 texts**.
 
-- **Local only**, in `C:\Users\falty\Desktop\mentat\mb-runs\transfer-pilot\`, outside the repository: the snapshot (`snapshot/events.jsonl`,
+- **Local only**, in `../mb-runs/transfer-pilot/` (a sibling of the repository), outside the repository: the snapshot (`snapshot/events.jsonl`,
   with question, outcome and event text, and event titles); the pool texts (`pool_texts.jsonl`, which carry each outcome's event title);
   the judge items (`judge/slices/`); the stdin and raw outputs of every judge call (`judge/raw/`, with the stdin saved beside each raw
   output); the rebuilt texts (`rehydrated/`); the review sheets (`review/`); the fixture's `corpus.jsonl`; and every run directory the model
@@ -334,7 +334,7 @@ Fleiss' kappa over the three sessions, for relation and for group labels, with `
 
 ## Review (`analyse.py review`)
 
-The review sheet is `C:\Users\falty\Desktop\mentat\mb-runs\transfer-pilot\review\review.csv`. It is LOCAL, because it holds question text.
+The review sheet is `../mb-runs/transfer-pilot/review/review.csv`. It is LOCAL, because it holds question text.
 Its columns are `id`, `op`, `reason`, `propositions`, `judge1`, `judge2`, `judge3`, `consensus` and `your_label`. The header lines (starting
 `#`) give the vocabulary.
 
