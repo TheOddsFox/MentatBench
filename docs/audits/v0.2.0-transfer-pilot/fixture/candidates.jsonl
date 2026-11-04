@@ -1,0 +1,200 @@
+{"members": ["pm:4924146:1", "pm:4924151:0"], "op": "decide_group", "qid": "T0001", "source": "curated"}
+{"a": "pm:2316216:0", "b": "pm:4581766:1", "op": "decide_relation", "qid": "T0002"}
+{"members": ["pm:6044098:0", "pm:5080436:0"], "op": "decide_group", "qid": "T0004", "source": "curated"}
+{"a": "pm:2189974:0", "b": "pm:2189980:1", "op": "decide_relation", "qid": "T0005"}
+{"a": "pm:5375148:1", "b": "pm:3954617:0", "op": "decide_relation", "qid": "T0008"}
+{"a": "pm:2298930:1", "b": "pm:2479267:1", "op": "decide_relation", "qid": "T0011"}
+{"a": "pm:2837442:1", "b": "pm:2837443:0", "op": "decide_relation", "qid": "T0013"}
+{"members": ["pm:2152456:1", "pm:2152424:0"], "op": "decide_group", "qid": "T0014", "source": "curated"}
+{"members": ["pm:4662694:0", "pm:4662693:1", "pm:4662695:0"], "op": "decide_group", "qid": "T0017", "source": "curated"}
+{"a": "pm:4338142:1", "b": "pm:2243896:1", "op": "decide_relation", "qid": "T0020"}
+{"members": ["pm:2472997:1", "pm:2824587:1", "pm:2851505:1"], "op": "decide_group", "qid": "T0021", "source": "curated"}
+{"a": "pm:2412404:1", "b": "pm:2412403:1", "op": "decide_relation", "qid": "T0022"}
+{"members": ["pm:5062283:0", "pm:5062275:0", "pm:5062288:0", "pm:5062291:1"], "op": "decide_group", "qid": "T0023", "source": "curated"}
+{"members": ["pm:2692343:1", "pm:2155000:1", "pm:2476429:1", "pm:2663611:1", "pm:3228928:0", "pm:3682195:1", "pm:2144485:0"], "op": "decide_group", "qid": "T0026", "source": "curated"}
+{"members": ["pm:2336883:1", "pm:2336887:0", "pm:2336885:0"], "op": "decide_group", "qid": "T0027", "source": "curated"}
+{"a": "pm:2952493:1", "b": "pm:2952493:0", "op": "decide_relation", "qid": "T0028"}
+{"a": "pm:2325710:0", "b": "pm:2325706:1", "op": "decide_relation", "qid": "T0029"}
+{"members": ["pm:2430335:1", "pm:3008518:1", "pm:5179198:1", "pm:5880781:0"], "op": "decide_group", "qid": "T0030", "source": "curated"}
+{"a": "pm:2289229:0", "b": "pm:2289251:0", "op": "decide_relation", "qid": "T0032"}
+{"members": ["pm:2262268:0", "pm:2262291:0", "pm:2262269:0", "pm:2262283:1", "pm:2262288:0"], "op": "decide_group", "qid": "T0033", "source": "curated"}
+{"a": "pm:2845816:1", "b": "pm:5239514:1", "op": "decide_relation", "qid": "T0038"}
+{"a": "pm:5340070:0", "b": "pm:5880781:0", "op": "decide_relation", "qid": "T0039"}
+{"members": ["pm:4800907:1", "pm:4800906:1"], "op": "decide_group", "qid": "T0041", "source": "curated"}
+{"members": ["pm:2448518:1", "pm:2448517:1", "pm:2448511:1", "pm:2447621:0"], "op": "decide_group", "qid": "T0042", "source": "curated"}
+{"members": ["pm:2677866:0", "pm:2730116:1", "pm:2677871:1", "pm:3001462:0", "pm:2730121:1"], "op": "decide_group", "qid": "T0047", "source": "curated"}
+{"a": "pm:2557368:0", "b": "pm:2557370:1", "op": "decide_relation", "qid": "T0052"}
+{"a": "pm:5126778:0", "b": "pm:5126779:0", "op": "decide_relation", "qid": "T0057"}
+{"members": ["pm:4924088:0", "pm:4924085:0", "pm:4924086:1"], "op": "decide_group", "qid": "T0058", "source": "curated"}
+{"a": "pm:2412404:0", "b": "pm:2412402:0", "op": "decide_relation", "qid": "T0059"}
+{"members": ["pm:2584968:0", "pm:2584969:1"], "op": "decide_group", "qid": "T0060", "source": "curated"}
+{"members": ["pm:4397058:0", "pm:4397022:0"], "op": "decide_group", "qid": "T0068", "source": "curated"}
+{"a": "pm:6273753:1", "b": "pm:6273753:0", "op": "decide_relation", "qid": "T0070"}
+{"a": "pm:3494212:1", "b": "pm:2814216:0", "op": "decide_relation", "qid": "T0071"}
+{"a": "pm:2241674:1", "b": "pm:2730711:1", "op": "decide_relation", "qid": "T0072"}
+{"members": ["pm:3247642:1", "pm:5062271:0", "pm:2686769:1", "pm:2475210:0"], "op": "decide_group", "qid": "T0073", "source": "curated"}
+{"a": "pm:5179198:1", "b": "pm:5126778:0", "op": "decide_relation", "qid": "T0074"}
+{"a": "pm:2758351:1", "b": "pm:2758343:1", "op": "decide_relation", "qid": "T0075"}
+{"a": "pm:2757938:1", "b": "pm:2757938:0", "op": "decide_relation", "qid": "T0079"}
+{"a": "pm:2190157:1", "b": "pm:2190155:0", "op": "decide_relation", "qid": "T0080"}
+{"members": ["pm:3904310:0", "pm:3904271:1"], "op": "decide_group", "qid": "T0084", "source": "curated"}
+{"a": "pm:2189964:0", "b": "pm:2189970:1", "op": "decide_relation", "qid": "T0086"}
+{"members": ["pm:2190153:0", "pm:2190155:1", "pm:2190157:1"], "op": "decide_group", "qid": "T0089", "source": "curated"}
+{"members": ["pm:2668848:1", "pm:2668796:0"], "op": "decide_group", "qid": "T0097", "source": "curated"}
+{"members": ["pm:2477076:1", "pm:2477079:0", "pm:2477074:1", "pm:2477078:0", "pm:2477077:1", "pm:2476480:0", "pm:2477072:1"], "op": "decide_group", "qid": "T0098", "source": "curated"}
+{"a": "pm:2774056:0", "b": "pm:2176270:1", "op": "decide_relation", "qid": "T0099"}
+{"a": "pm:3761202:0", "b": "pm:4205714:0", "op": "decide_relation", "qid": "T0109"}
+{"a": "pm:2845811:1", "b": "pm:2845802:1", "op": "decide_relation", "qid": "T0118"}
+{"a": "pm:2481458:0", "b": "pm:2481460:1", "op": "decide_relation", "qid": "T0119"}
+{"a": "pm:2695682:0", "b": "pm:2639342:0", "op": "decide_relation", "qid": "T0120"}
+{"a": "pm:2479166:1", "b": "pm:4877189:0", "op": "decide_relation", "qid": "T0122"}
+{"a": "pm:2261152:0", "b": "pm:2261187:0", "op": "decide_relation", "qid": "T0123"}
+{"a": "pm:2851424:1", "b": "pm:2851426:0", "op": "decide_relation", "qid": "T0124"}
+{"members": ["pm:4856996:1", "pm:4856988:0", "pm:4856990:1"], "op": "decide_group", "qid": "T0125", "source": "curated"}
+{"a": "pm:6599586:1", "b": "pm:2881372:1", "op": "decide_relation", "qid": "T0127"}
+{"a": "pm:2896098:0", "b": "pm:2896085:0", "op": "decide_relation", "qid": "T0132"}
+{"a": "pm:3247642:0", "b": "pm:2646848:0", "op": "decide_relation", "qid": "T0136"}
+{"members": ["pm:2821347:0", "pm:2643406:1"], "op": "decide_group", "qid": "T0143", "source": "curated"}
+{"members": ["pm:4761459:0", "pm:5652832:0"], "op": "decide_group", "qid": "T0146", "source": "curated"}
+{"a": "pm:2941315:0", "b": "pm:2941341:0", "op": "decide_relation", "qid": "T0151"}
+{"members": ["pm:2405407:0", "pm:2408052:0", "pm:2405406:0", "pm:2408055:1", "pm:2405404:0", "pm:2405405:1", "pm:2405082:0"], "op": "decide_group", "qid": "T0155", "source": "curated"}
+{"members": ["pm:2734321:1", "pm:2734332:1", "pm:2734322:1", "pm:2734324:0", "pm:2734329:1", "pm:2734327:0", "pm:2734309:1", "pm:2734314:0"], "op": "decide_group", "qid": "T0157", "source": "curated"}
+{"a": "pm:6236199:0", "b": "pm:6236203:1", "op": "decide_relation", "qid": "T0159"}
+{"a": "pm:3257362:0", "b": "pm:3257358:0", "op": "decide_relation", "qid": "T0162"}
+{"members": ["pm:2262264:0", "pm:2262266:1", "pm:2262292:0"], "op": "decide_group", "qid": "T0165", "source": "curated"}
+{"members": ["pm:2907370:0", "pm:2553568:0", "pm:2907084:1", "pm:2907426:1", "pm:2907503:1", "pm:2907216:0", "pm:2907573:0", "pm:2907369:0"], "op": "decide_group", "qid": "T0167", "source": "curated"}
+{"a": "pm:2758343:1", "b": "pm:3779546:0", "op": "decide_relation", "qid": "T0171"}
+{"a": "pm:2412401:1", "b": "pm:2412402:1", "op": "decide_relation", "qid": "T0175"}
+{"members": ["pm:4800858:1", "pm:4800861:0", "pm:4800859:1", "pm:4800857:1"], "op": "decide_group", "qid": "T0176", "source": "curated"}
+{"members": ["pm:4916656:1", "pm:4916650:0", "pm:4916648:1"], "op": "decide_group", "qid": "T0180", "source": "curated"}
+{"members": ["pm:5311938:1", "pm:5311940:1"], "op": "decide_group", "qid": "T0182", "source": "curated"}
+{"a": "pm:2299956:1", "b": "pm:2299956:0", "op": "decide_relation", "qid": "T0183"}
+{"a": "pm:3450036:0", "b": "pm:3450036:1", "op": "decide_relation", "qid": "T0184"}
+{"a": "pm:5998481:1", "b": "pm:2264326:0", "op": "decide_relation", "qid": "T0187"}
+{"a": "pm:2433576:1", "b": "pm:2447343:1", "op": "decide_relation", "qid": "T0190"}
+{"members": ["pm:2450608:0", "pm:2477073:0", "pm:2451507:1", "pm:2433396:0"], "op": "decide_group", "qid": "T0191", "source": "curated"}
+{"a": "pm:2466411:1", "b": "pm:2159725:0", "op": "decide_relation", "qid": "T0192"}
+{"members": ["pm:2410601:0", "pm:2410609:1"], "op": "decide_group", "qid": "T0202", "source": "curated"}
+{"a": "pm:2584969:0", "b": "pm:2584968:0", "op": "decide_relation", "qid": "T0208"}
+{"a": "pm:2553491:1", "b": "pm:2289234:0", "op": "decide_relation", "qid": "T0209"}
+{"a": "pm:5190118:0", "b": "pm:5190120:1", "op": "decide_relation", "qid": "T0211"}
+{"a": "pm:3102464:1", "b": "pm:3096407:0", "op": "decide_relation", "qid": "T0214"}
+{"a": "pm:4819909:1", "b": "pm:4819909:0", "op": "decide_relation", "qid": "T0220"}
+{"a": "pm:2907369:0", "b": "pm:2907369:1", "op": "decide_relation", "qid": "T0222"}
+{"a": "pm:3257405:1", "b": "pm:3257399:1", "op": "decide_relation", "qid": "T0223"}
+{"members": ["pm:5862177:1", "pm:5862179:0", "pm:5818357:1"], "op": "decide_group", "qid": "T0224", "source": "curated"}
+{"members": ["pm:2584969:1", "pm:2771502:1", "pm:2405401:0", "pm:2880283:1", "pm:2736046:0", "pm:2896087:1", "pm:2266533:1", "pm:2152424:0"], "op": "decide_group", "qid": "T0227", "source": "curated"}
+{"a": "pm:3257486:1", "b": "pm:3919675:0", "op": "decide_relation", "qid": "T0228"}
+{"a": "pm:4095054:1", "b": "pm:4095053:0", "op": "decide_relation", "qid": "T0229"}
+{"members": ["pm:2408058:0", "pm:2408055:0", "pm:2408049:1"], "op": "decide_group", "qid": "T0230", "source": "curated"}
+{"a": "pm:2246401:1", "b": "pm:2246399:0", "op": "decide_relation", "qid": "T0234"}
+{"members": ["pm:4916650:0", "pm:4916648:0", "pm:4916656:1"], "op": "decide_group", "qid": "T0239", "source": "curated"}
+{"a": "pm:3936019:0", "b": "pm:3903980:1", "op": "decide_relation", "qid": "T0241"}
+{"a": "pm:4487273:0", "b": "pm:5190118:1", "op": "decide_relation", "qid": "T0246"}
+{"members": ["pm:2476428:1", "pm:2476421:1", "pm:2476429:0"], "op": "decide_group", "qid": "T0255", "source": "curated"}
+{"a": "pm:2321923:0", "b": "pm:2321963:1", "op": "decide_relation", "qid": "T0258"}
+{"members": ["pm:4413392:1", "pm:3096410:1"], "op": "decide_group", "qid": "T0262", "source": "curated"}
+{"a": "pm:3702042:1", "b": "pm:3702042:0", "op": "decide_relation", "qid": "T0263"}
+{"members": ["pm:3760131:1", "pm:3741863:0", "pm:3793015:0", "pm:3741864:0"], "op": "decide_group", "qid": "T0264", "source": "curated"}
+{"a": "pm:2252245:0", "b": "pm:2252246:1", "op": "decide_relation", "qid": "T0267"}
+{"members": ["pm:2942077:0", "pm:2880283:0", "pm:2880294:0", "pm:2942074:1"], "op": "decide_group", "qid": "T0271", "source": "curated"}
+{"a": "pm:4237392:1", "b": "pm:4237403:1", "op": "decide_relation", "qid": "T0276"}
+{"members": ["pm:2589813:0", "pm:2589814:1", "pm:2589810:0", "pm:2589811:1", "pm:2589812:0"], "op": "decide_group", "qid": "T0277", "source": "curated"}
+{"a": "pm:2307825:0", "b": "pm:2299955:1", "op": "decide_relation", "qid": "T0278"}
+{"members": ["pm:2325706:1", "pm:2325710:0"], "op": "decide_group", "qid": "T0283", "source": "curated"}
+{"a": "pm:4908362:0", "b": "pm:5121094:0", "op": "decide_relation", "qid": "T0286"}
+{"a": "pm:2851435:0", "b": "pm:2851417:0", "op": "decide_relation", "qid": "T0290"}
+{"a": "pm:3096416:0", "b": "pm:3096417:0", "op": "decide_relation", "qid": "T0293"}
+{"a": "pm:4916743:0", "b": "pm:4916743:1", "op": "decide_relation", "qid": "T0294"}
+{"members": ["pm:2415426:1", "pm:2448420:0", "pm:4819974:1", "pm:2832143:0", "pm:2476480:0", "pm:2737255:0", "pm:2410592:0", "pm:3736178:1"], "op": "decide_group", "qid": "T0301", "source": "curated"}
+{"members": ["pm:6268050:0", "pm:3725858:1", "pm:6268049:0", "pm:4319441:0", "pm:6066698:0"], "op": "decide_group", "qid": "T0302", "source": "curated"}
+{"members": ["pm:5880780:1", "pm:5880781:0", "pm:5880782:0"], "op": "decide_group", "qid": "T0305", "source": "curated"}
+{"members": ["pm:2350190:0", "pm:2375538:0", "pm:2375541:1", "pm:2350199:0"], "op": "decide_group", "qid": "T0307", "source": "curated"}
+{"members": ["pm:2646847:1", "pm:3670499:1", "pm:2646849:0"], "op": "decide_group", "qid": "T0308", "source": "curated"}
+{"members": ["pm:3491459:1", "pm:3491438:0", "pm:2696746:1", "pm:2696747:0", "pm:2633427:1", "pm:2633429:0"], "op": "decide_group", "qid": "T0309", "source": "curated"}
+{"members": ["pm:4339035:0", "pm:4339032:0", "pm:4409114:1", "pm:4409110:0", "pm:4339037:0", "pm:4339036:1", "pm:4339034:1"], "op": "decide_group", "qid": "T0319", "source": "curated"}
+{"a": "pm:3008506:1", "b": "pm:2692349:1", "op": "decide_relation", "qid": "T0322"}
+{"a": "pm:5863868:0", "b": "pm:5866770:0", "op": "decide_relation", "qid": "T0328"}
+{"a": "pm:2266536:1", "b": "pm:2266538:0", "op": "decide_relation", "qid": "T0333"}
+{"members": ["pm:3450054:0", "pm:3450053:0"], "op": "decide_group", "qid": "T0335", "source": "curated"}
+{"a": "pm:2757914:1", "b": "pm:2757921:1", "op": "decide_relation", "qid": "T0338"}
+{"a": "pm:4145166:1", "b": "pm:4052450:0", "op": "decide_relation", "qid": "T0339"}
+{"members": ["pm:4800822:1", "pm:4800814:1", "pm:4800816:0", "pm:4800811:0", "pm:4800823:0", "pm:4800810:0", "pm:4800820:1"], "op": "decide_group", "qid": "T0340", "source": "curated"}
+{"members": ["pm:2333713:0", "pm:3553888:0", "pm:2646926:1", "pm:2154920:1", "pm:2685911:1", "pm:2677869:1", "pm:5375148:1"], "op": "decide_group", "qid": "T0341", "source": "curated"}
+{"a": "pm:3257403:0", "b": "pm:3724228:0", "op": "decide_relation", "qid": "T0346"}
+{"a": "pm:4118938:0", "b": "pm:6638516:0", "op": "decide_relation", "qid": "T0347"}
+{"a": "pm:2845813:1", "b": "pm:2845821:1", "op": "decide_relation", "qid": "T0351"}
+{"a": "pm:2243301:1", "b": "pm:2243301:0", "op": "decide_relation", "qid": "T0355"}
+{"members": ["pm:2737922:1", "pm:2643400:1"], "op": "decide_group", "qid": "T0356", "source": "curated"}
+{"members": ["pm:4319440:0", "pm:2421094:0", "pm:6268052:0", "pm:2413327:1", "pm:6268051:0", "pm:6268050:0"], "op": "decide_group", "qid": "T0360", "source": "curated"}
+{"a": "pm:4856870:0", "b": "pm:4856870:1", "op": "decide_relation", "qid": "T0363"}
+{"a": "pm:2152422:0", "b": "pm:2692337:0", "op": "decide_relation", "qid": "T0365"}
+{"members": ["pm:5818353:1", "pm:2772196:0"], "op": "decide_group", "qid": "T0366", "source": "curated"}
+{"a": "pm:2266536:1", "b": "pm:2448517:0", "op": "decide_relation", "qid": "T0367"}
+{"members": ["pm:5121566:0", "pm:5121431:0", "pm:5121143:1", "pm:5121093:1"], "op": "decide_group", "qid": "T0368", "source": "curated"}
+{"members": ["pm:3724228:1", "pm:3746576:0"], "op": "decide_group", "qid": "T0370", "source": "curated"}
+{"a": "pm:2911846:1", "b": "pm:2845821:0", "op": "decide_relation", "qid": "T0371"}
+{"a": "pm:2231499:0", "b": "pm:2231527:0", "op": "decide_relation", "qid": "T0374"}
+{"a": "pm:2410609:0", "b": "pm:2410604:1", "op": "decide_relation", "qid": "T0376"}
+{"a": "pm:4701335:1", "b": "pm:3701044:1", "op": "decide_relation", "qid": "T0377"}
+{"members": ["pm:4800871:0", "pm:4800869:0"], "op": "decide_group", "qid": "T0378", "source": "curated"}
+{"members": ["pm:4916653:0", "pm:4916672:1"], "op": "decide_group", "qid": "T0381", "source": "curated"}
+{"a": "pm:2237168:0", "b": "pm:2237114:0", "op": "decide_relation", "qid": "T0382"}
+{"a": "pm:4619163:1", "b": "pm:4487272:1", "op": "decide_relation", "qid": "T0387"}
+{"a": "pm:2243311:0", "b": "pm:2243318:1", "op": "decide_relation", "qid": "T0391"}
+{"a": "pm:2896104:0", "b": "pm:2896107:0", "op": "decide_relation", "qid": "T0398"}
+{"a": "pm:5987204:1", "b": "pm:5987188:0", "op": "decide_relation", "qid": "T0400"}
+{"members": ["pm:3701043:1", "pm:2757939:0", "pm:3275573:0", "pm:2851423:0", "pm:4581765:0", "pm:2451499:0", "pm:6156894:0", "pm:2774056:0"], "op": "decide_group", "qid": "T0402", "source": "curated"}
+{"members": ["pm:2356475:0", "pm:2159726:0"], "op": "decide_group", "qid": "T0407", "source": "curated"}
+{"members": ["pm:3008511:1", "pm:3554681:0", "pm:3008494:0"], "op": "decide_group", "qid": "T0408", "source": "curated"}
+{"members": ["pm:2152464:1", "pm:2152456:0", "pm:2152459:1"], "op": "decide_group", "qid": "T0409", "source": "curated"}
+{"a": "pm:2308194:0", "b": "pm:2334096:0", "op": "decide_relation", "qid": "T0410"}
+{"a": "pm:4095053:0", "b": "pm:4095054:0", "op": "decide_relation", "qid": "T0416"}
+{"a": "pm:2837422:1", "b": "pm:2837435:0", "op": "decide_relation", "qid": "T0417"}
+{"members": ["pm:4701579:1", "pm:4701595:0"], "op": "decide_group", "qid": "T0419", "source": "curated"}
+{"a": "pm:2837427:1", "b": "pm:2941315:1", "op": "decide_relation", "qid": "T0420"}
+{"a": "pm:3954343:0", "b": "pm:3866512:0", "op": "decide_relation", "qid": "T0421"}
+{"members": ["pm:2837443:0", "pm:3935896:1", "pm:3778931:1"], "op": "decide_group", "qid": "T0429", "source": "curated"}
+{"a": "pm:3736127:0", "b": "pm:3736182:0", "op": "decide_relation", "qid": "T0432"}
+{"a": "pm:2479165:0", "b": "pm:2479166:1", "op": "decide_relation", "qid": "T0433"}
+{"members": ["pm:4095053:1", "pm:2430333:0", "pm:2408049:1", "pm:2771510:1", "pm:2976202:0", "pm:2814215:1", "pm:4464921:0", "pm:2192104:0"], "op": "decide_group", "qid": "T0442", "source": "curated"}
+{"members": ["pm:2686766:0", "pm:2757806:0", "pm:2686765:0", "pm:2757754:1", "pm:3399473:1", "pm:2824614:1"], "op": "decide_group", "qid": "T0444", "source": "curated"}
+{"a": "pm:6236222:1", "b": "pm:6236195:1", "op": "decide_relation", "qid": "T0445"}
+{"a": "pm:5987188:0", "b": "pm:5987195:1", "op": "decide_relation", "qid": "T0446"}
+{"a": "pm:2584969:0", "b": "pm:2584968:1", "op": "decide_relation", "qid": "T0447"}
+{"a": "pm:2584968:1", "b": "pm:2584969:1", "op": "decide_relation", "qid": "T0453"}
+{"a": "pm:2412401:1", "b": "pm:3450023:0", "op": "decide_relation", "qid": "T0460"}
+{"members": ["pm:2405407:0", "pm:2405400:0", "pm:2405405:1"], "op": "decide_group", "qid": "T0463", "source": "curated"}
+{"members": ["pm:2475212:1", "pm:2475211:0", "pm:2475210:0"], "op": "decide_group", "qid": "T0465", "source": "curated"}
+{"a": "pm:5598481:1", "b": "pm:2673643:1", "op": "decide_relation", "qid": "T0471"}
+{"a": "pm:4924057:0", "b": "pm:4924057:1", "op": "decide_relation", "qid": "T0472"}
+{"a": "pm:2241888:1", "b": "pm:4174612:0", "op": "decide_relation", "qid": "T0473"}
+{"a": "pm:2437703:1", "b": "pm:2386835:0", "op": "decide_relation", "qid": "T0476"}
+{"members": ["pm:2433923:0", "pm:2437704:0", "pm:2379517:1", "pm:2386835:1", "pm:2379490:1", "pm:2379499:1"], "op": "decide_group", "qid": "T0477", "source": "curated"}
+{"a": "pm:2772172:0", "b": "pm:2772177:1", "op": "decide_relation", "qid": "T0481"}
+{"a": "pm:3399414:0", "b": "pm:2910435:0", "op": "decide_relation", "qid": "T0482"}
+{"a": "pm:2189974:0", "b": "pm:2189980:0", "op": "decide_relation", "qid": "T0483"}
+{"a": "pm:3399427:0", "b": "pm:4906129:1", "op": "decide_relation", "qid": "T0488"}
+{"a": "pm:2673624:1", "b": "pm:5710779:0", "op": "decide_relation", "qid": "T0489"}
+{"a": "pm:5121143:1", "b": "pm:5121093:0", "op": "decide_relation", "qid": "T0491"}
+{"a": "pm:6273648:1", "b": "pm:6273768:0", "op": "decide_relation", "qid": "T0492"}
+{"members": ["pm:2448417:0", "pm:2448420:1", "pm:2448416:1", "pm:2448418:1"], "op": "decide_group", "qid": "T0493", "source": "curated"}
+{"a": "pm:5693642:0", "b": "pm:5523557:1", "op": "decide_relation", "qid": "T0495"}
+{"members": ["pm:2190155:1", "pm:3449517:0"], "op": "decide_group", "qid": "T0505", "source": "curated"}
+{"members": ["pm:3798199:1", "pm:3798512:0"], "op": "decide_group", "qid": "T0519", "source": "curated"}
+{"members": ["pm:4916791:0", "pm:4916804:0"], "op": "decide_group", "qid": "T0521", "source": "curated"}
+{"members": ["pm:2866456:0", "pm:2857396:1", "pm:2864368:0", "pm:2866618:0", "pm:2866190:0"], "op": "decide_group", "qid": "T0523", "source": "curated"}
+{"a": "pm:2556152:0", "b": "pm:2743690:1", "op": "decide_relation", "qid": "T0526"}
+{"members": ["pm:3471469:1", "pm:4046408:1", "pm:3471470:1"], "op": "decide_group", "qid": "T0527", "source": "curated"}
+{"members": ["pm:4820020:1", "pm:4820018:0", "pm:4820017:1"], "op": "decide_group", "qid": "T0529", "source": "curated"}
+{"members": ["pm:2814208:1", "pm:2814202:0", "pm:2814214:1"], "op": "decide_group", "qid": "T0532", "source": "curated"}
+{"a": "pm:2633428:0", "b": "pm:2633426:0", "op": "decide_relation", "qid": "T0534"}
+{"a": "pm:2896094:0", "b": "pm:2896081:0", "op": "decide_relation", "qid": "T0535"}
+{"a": "pm:2757806:1", "b": "pm:2757754:1", "op": "decide_relation", "qid": "T0538"}
+{"a": "pm:2907017:0", "b": "pm:2880298:1", "op": "decide_relation", "qid": "T0540"}
+{"a": "pm:2313023:1", "b": "pm:2313025:1", "op": "decide_relation", "qid": "T0545"}
+{"a": "pm:2975224:1", "b": "pm:2686771:0", "op": "decide_relation", "qid": "T0546"}
+{"a": "pm:3215008:1", "b": "pm:3215009:0", "op": "decide_relation", "qid": "T0547"}
+{"a": "pm:2262290:0", "b": "pm:2262278:0", "op": "decide_relation", "qid": "T0550"}
+{"a": "pm:2774056:1", "b": "pm:3128885:1", "op": "decide_relation", "qid": "T0554"}
+{"members": ["pm:3450019:1", "pm:3450046:1", "pm:3450035:0", "pm:3450038:1", "pm:3450054:1", "pm:3450056:0"], "op": "decide_group", "qid": "T0556", "source": "curated"}

@@ -1,0 +1,28 @@
+{
+ "agreement": {
+  "decide_group": {
+   "fleiss_kappa": 0.7885030789567008,
+   "items": 160,
+   "statuses": {
+    "dropped": 10,
+    "majority": 25,
+    "review": 2,
+    "two_agree": 3,
+    "unanimous": 120
+   }
+  },
+  "decide_relation": {
+   "fleiss_kappa": 0.929965417564032,
+   "items": 400,
+   "statuses": {
+    "dropped": 15,
+    "majority": 16,
+    "review": 1,
+    "unanimous": 368
+   }
+  }
+ },
+ "inputs": {
+  "ledger.jsonl": "4ad0e8ad264fced90c55983f78938276d00b3c95bc00a6fb7348ac866e28c80e"
+ }
+}

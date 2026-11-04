@@ -1,0 +1,13 @@
+{
+ "corpus_sha256": "9d755e3c27c371fb2f7ffc56c1d08a7414f48a92f5e92ed89628e0cf4deca3bc",
+ "files": {
+  "candidates.jsonl": "55c7607bde225f42ba14ea87930cd07b5eeb3b5526cbe9ccc87baee115d985c4",
+  "fixture.json": "fa279d038619b467fd657a5d39180938f34684a50d10c51cb145327e96543f1d",
+  "gold/meta.jsonl": "52c871dac27c122016771d29158a24b41a81169b191da6dc02e7dfd5122c7689",
+  "gold/suite_labels.jsonl": "2d5773b612f7d2912165b4e2f0cb9d08e351306946fd7bdbafc95cc4f35b601f"
+ },
+ "inputs": {
+  "selection.jsonl": "e39fd7402bc328d3d92ff7d9b6db0f28baca5d64a9e4a4ee338ca3d68b816519"
+ },
+ "schema": "mentat-bench-transfer-fixture/1"
+}

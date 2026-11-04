@@ -1,0 +1,141 @@
+{
+ "items": 200,
+ "models": {
+  "clef-flash_9b": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "clef_27b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "d1-omni_600m-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "d1_3b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "d3_27b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "d3_2b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "d3_4b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "d3_9b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "heuristic": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "kev_0.8b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "kev_4b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "kev_9b-bf16": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "laya_latest": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "lexical": {
+   "by_reason": {
+    "absent": 80
+   },
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 80,
+   "torn_final_line": 0
+  },
+  "nimble-v3_9b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "nimble_9b-bf16": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "pplx-decider_27b": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "tev1_0.8b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  },
+  "tev1_4b-q8_0": {
+   "by_reason": {},
+   "duplicate_identical": 0,
+   "items": 200,
+   "missing": 0,
+   "torn_final_line": 0
+  }
+ },
+ "schema": "mentat-bench-transfer-mapping/1"
+}
