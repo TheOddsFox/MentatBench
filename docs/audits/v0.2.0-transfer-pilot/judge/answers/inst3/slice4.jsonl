@@ -1,0 +1,47 @@
+{"answer": {"relation": "NONE"}, "id": "T0142"}
+{"answer": {"chain": [], "kind": "at_most_one", "lower": 0, "upper": 1}, "id": "T0143"}
+{"answer": {"relation": "NONE"}, "id": "T0144"}
+{"answer": {"chain": [], "kind": "none", "lower": 0, "upper": 8}, "id": "T0145"}
+{"answer": {"chain": [2, 1], "kind": "ordered_chain", "lower": 0, "upper": 2}, "id": "T0146"}
+{"answer": {"relation": "IMPLIES"}, "id": "T0147"}
+{"answer": {"chain": [], "kind": "at_least_k", "lower": 1, "upper": 4}, "id": "T0148"}
+{"answer": {"relation": "NONE"}, "id": "T0149"}
+{"answer": {"relation": "UNCLEAR"}, "id": "T0150"}
+{"answer": {"relation": "EXCLUDES"}, "id": "T0151"}
+{"answer": {"relation": "EXCLUDES"}, "id": "T0152"}
+{"answer": {"relation": "NONE"}, "id": "T0153"}
+{"answer": {"relation": "NONE"}, "id": "T0154"}
+{"answer": {"chain": [], "kind": "at_most_k", "lower": 0, "upper": 6}, "id": "T0155"}
+{"answer": {"relation": "IMPLIES"}, "id": "T0156"}
+{"answer": {"chain": [], "kind": "none", "lower": 0, "upper": 8}, "id": "T0157"}
+{"answer": {"relation": "NONE"}, "id": "T0158"}
+{"answer": {"relation": "EXCLUDES"}, "id": "T0159"}
+{"answer": {"relation": "IMPLIES"}, "id": "T0160"}
+{"answer": {"relation": "NONE"}, "id": "T0161"}
+{"answer": {"relation": "IMPLIES"}, "id": "T0162"}
+{"answer": {"chain": [], "kind": "none", "lower": 0, "upper": 8}, "id": "T0163"}
+{"answer": {"chain": [2, 1], "kind": "ordered_chain", "lower": 0, "upper": 2}, "id": "T0164"}
+{"answer": {"chain": [], "kind": "at_most_k", "lower": 0, "upper": 2}, "id": "T0165"}
+{"answer": {"chain": [], "kind": "none", "lower": 0, "upper": 7}, "id": "T0166"}
+{"answer": {"chain": [], "kind": "at_least_k", "lower": 2, "upper": 5}, "id": "T0167"}
+{"answer": {"relation": "NONE"}, "id": "T0168"}
+{"answer": {"relation": "NONE"}, "id": "T0169"}
+{"answer": {"relation": "NONE"}, "id": "T0170"}
+{"answer": {"relation": "NONE"}, "id": "T0171"}
+{"answer": {"relation": "NONE"}, "id": "T0172"}
+{"answer": {"relation": "NONE"}, "id": "T0173"}
+{"answer": {"relation": "NONE"}, "id": "T0174"}
+{"answer": {"relation": "IMPLIES"}, "id": "T0175"}
+{"answer": {"chain": [], "kind": "at_most_k", "lower": 0, "upper": 3}, "id": "T0176"}
+{"answer": {"relation": "IMPLIES"}, "id": "T0177"}
+{"answer": {"relation": "NONE"}, "id": "T0178"}
+{"answer": {"chain": [], "kind": "at_least_k", "lower": 1, "upper": 6}, "id": "T0179"}
+{"answer": {"chain": [], "kind": "at_least_k", "lower": 1, "upper": 2}, "id": "T0180"}
+{"answer": {"relation": "NONE"}, "id": "T0181"}
+{"answer": {"chain": [], "kind": "none", "lower": 0, "upper": 2}, "id": "T0182"}
+{"answer": {"relation": "EXCLUDES"}, "id": "T0183"}
+{"answer": {"relation": "EXCLUDES"}, "id": "T0184"}
+{"answer": {"chain": [], "kind": "at_most_k", "lower": 0, "upper": 5}, "id": "T0185"}
+{"answer": {"relation": "NONE"}, "id": "T0186"}
+{"answer": {"relation": "EXCLUDES"}, "id": "T0187"}
+{"answer": {"relation": "NONE"}, "id": "T0188"}
