@@ -78,3 +78,19 @@ PREREG ("Model runs") names `runcell_argv` and `run_env`. runcell refuses the pi
 ### D8. Ollama version
 The runs use Ollama 0.40.13, as the 17 v0.2.0 cells record. `ollama_models.json` records 0.40.11 for 15 of its pins, from when they were
 pinned. The child checks each model's digest, not the server version, and each run records its tag and digest.
+
+### D9. The first model attempts ran on the wrong backend and are excluded
+Recorded on 2026-11-04, before any model's predictions or scores were looked at.
+- **What went wrong:** the first attempt of all 17 models (`runs/<id>.attempt1.json`) ran on a server started with
+  `CUDA_VISIBLE_DEVICES=0` but without `GGML_VK_VISIBLE_DEVICES=-1`. Ollama found the second RTX A6000 through Vulkan and loaded every
+  model there. v0.2.0 ran CUDA only.
+- **Symptoms:** several builds were very slow. Two, `kev_9b-bf16` and `nimble_9b-bf16`, stopped in the bindings phase after four child
+  timeouts of 600 s each.
+- **What was seen:** only each attempt's exit code, status, duration and decision counts. No prediction, class or score from these
+  attempts was computed or inspected.
+- **Exclusion:** all 17 first attempts are excluded.
+- **Re-run:** all 17 models are re-run as attempt 2 (`run_models.py --retry`) on a server with v0.2.0's own GPU 0 configuration:
+  `CUDA_VISIBLE_DEVICES=0`, `GGML_VK_VISIBLE_DEVICES=-1` and `OLLAMA_NUM_PARALLEL=2`, on Ollama 0.40.13. The server log was checked to
+  list only CUDA0 before the re-run. The re-runs use one GPU, because GPU 1 held other processes at the time.
+- **Baselines:** `lexical` and `heuristic` run on CPU and are unaffected.
+- **Which attempt counts:** `predictions.py` uses each id's latest attempt.
